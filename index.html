@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BabyApp — systém pro alergie u dětí</title>
+  <meta name="description" content="Aplikace, která pomáhá rodičům zvládnout potravinové alergie u dětí systematicky a s přehledem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="#top" aria-label="BabyApp">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">BabyApp</span>
+    </a>
+
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#about">O aplikaci</a>
+      <a href="#how">Jak funguje</a>
+      <a href="#who">Pro koho</a>
+      <a href="#beta">První testeři</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+
+    <div class="lang">
+      <a class="lang__item is-active" href="/" aria-current="page">CZ</a>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <a class="lang__item" href="/en/">EN</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile" id="mobileNav" hidden>
+    <a href="#about">O aplikaci</a>
+    <a href="#how">Jak funguje</a>
+    <a href="#who">Pro koho</a>
+    <a href="#beta">První testeři</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontakt</a>
+    <div class="mobile__langs">
+      <a class="is-active" href="/">CZ</a>
+      <a href="/en/">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="badge">První testovací vlna již brzy</p>
+        <h1>Systematická pomoc pro rodiče dětí s potravinovou alergií.</h1>
+        <p class="lead">
+          Eliminační fáze, řízené testování alergenů, kalendář projevů a přehled výsledků — krok za krokem.
+        </p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#beta">Chci být prvním testerem</a>
+          <a class="btn btn--ghost" href="#newsletter">Chci dostávat novinky</a>
+        </div>
+        <p class="fine">
+          Nejde o náhradu lékaře. Je to nástroj pro přehled, vedení a srozumitelný záznam průběhu.
+        </p>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="panel__card">
+          <div class="panel__row">
+            <div class="pill">Eliminace</div>
+            <div class="pill">Testování</div>
+            <div class="pill">Kalendář</div>
+          </div>
+          <div class="panel__mock">
+            <div class="mock__line"></div>
+            <div class="mock__line short"></div>
+            <div class="mock__box"></div>
+            <div class="mock__line"></div>
+            <div class="mock__line short"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2>O aplikaci</h2>
+      <p class="section__lead">
+        BabyApp vzniká jako praktický pomocník pro dny, kdy je toho už moc: jídlo, reakce, nejistota, únava.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Přehled</h3>
+          <p>Vše důležité na jednom místě: kroky, dny, reakce, poznámky.</p>
+        </article>
+        <article class="card">
+          <h3>Struktura</h3>
+          <p>Vedení krok za krokem. Méně tápání, více jistoty.</p>
+        </article>
+        <article class="card">
+          <h3>Klid</h3>
+          <p>Jasné “co dnes” a “co sledovat”. Menší mentální zátěž.</p>
+        </article>
+        <article class="card">
+          <h3>Důvěra</h3>
+          <p>Informace podané srozumitelně, bez zbytečného strašení.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <h2>Jak funguje</h2>
+      <p class="section__lead">Jednoduchý systém, který drží celý proces pohromadě.</p>
+
+      <ol class="steps">
+        <li class="step"><span class="step__num">1</span><div><h3>Start a nastavení</h3><p>Nastavíš, co sleduješ a jaké máš cíle.</p></div></li>
+        <li class="step"><span class="step__num">2</span><div><h3>Eliminační fáze</h3><p>Jasný plán a denní kroky — bez improvizace.</p></div></li>
+        <li class="step"><span class="step__num">3</span><div><h3>Řízené testování alergenů</h3><p>Zařazování podle kroků, s připomínkami.</p></div></li>
+        <li class="step"><span class="step__num">4</span><div><h3>Kalendář projevů</h3><p>Záznamy reakcí, ekzému a poznámek v čase.</p></div></li>
+        <li class="step"><span class="step__num">5</span><div><h3>Přehledy a výsledky</h3><p>Souvislosti na jednom místě — i pro sdílení s odborníkem.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="who">
+    <div class="container">
+      <h2>Pro koho</h2>
+      <div class="split">
+        <div class="split__col"><h3>Když jsi vyčerpaná</h3><p>Struktura a vedení sníží každodenní rozhodovací únavu.</p></div>
+        <div class="split__col"><h3>Když máš podezření</h3><p>Přehled toho, co se stalo a kdy — bez ztracených poznámek.</p></div>
+        <div class="split__col"><h3>Když to řešíš dlouho</h3><p>Uvidíš trend a vzorce. Místo dojmů budeš mít záznamy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="beta">
+    <div class="container">
+      <h2>První testeři</h2>
+      <p class="section__lead">
+        Hledáme první skupinu uživatelů, kteří aplikaci otestují a pomohou ji doladit pro reálný život.
+      </p>
+
+      <div class="grid2">
+        <div class="card card--soft">
+          <h3>Co získáš</h3>
+          <ul class="list">
+            <li>Přednostní přístup do testování</li>
+            <li>Možnost ovlivnit detaily</li>
+            <li>Informace o spuštění mezi prvními</li>
+          </ul>
+        </div>
+
+        <form class="form card" id="newsletter" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Přihlásit se</h3>
+          <label>Jméno
+            <input name="name" type="text" autocomplete="name" placeholder="např. Jana" />
+          </label>
+          <label>Email <span class="req">*</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="např. jana@email.cz" />
+          </label>
+          <label>Věk dítěte (volitelné)
+            <input name="child_age" type="text" placeholder="např. 18 měsíců" />
+          </label>
+          <button class="btn btn--primary" type="submit">Chci být v první vlně</button>
+          <p class="fine">Odesláním souhlasíš se zasláním informací o testování a spuštění. Odhlášení kdykoliv.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Je to náhrada lékaře?</summary>
+          <p>Ne. Je to nástroj pro přehled a vedení. Pomáhá i v komunikaci o průběhu potíží.</p>
+        </details>
+        <details>
+          <summary>Kdy bude aplikace dostupná?</summary>
+          <p>Testování spouštíme postupně. Jakmile to bude relevantní, dáme vědět e-mailem.</p>
+        </details>
+        <details>
+          <summary>Bude aplikace česky i anglicky?</summary>
+          <p>Ano, počítáme s CZ/EN.</p>
+        </details>
+        <details>
+          <summary>Kolik to bude stát?</summary>
+          <p>Detaily zveřejníme až ve chvíli, kdy bude první verze připravená k vydání.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="contact">
+        <a class="btn btn--ghost" href="mailto:info@babyapp.cz">info@babyapp.cz</a>
+        <a class="btn btn--ghost" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> BabyApp.cz</p>
+    <p class="fine">Web slouží pro informace o aplikaci a přihlášení do testování.</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
