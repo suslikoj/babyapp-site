@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BabyApp — a step-by-step system for child food allergies</title>
-  <meta name="description" content="An app that helps parents manage child food allergies with clarity and structure." />
+  <title>Baby w/o allergies</title>
+  <meta name="description" content="Baby w/o allergies — an app that helps parents manage child food allergies with clarity and structure." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="BabyApp">
-      <span class="brand__dot" aria-hidden="true"></span>
-      <span class="brand__name">BabyApp</span>
+    <a class="brand" href="#top" aria-label="Baby w/o allergies">
+      <img class="brand__logo" src="../assets/logo.svg" alt="" aria-hidden="true">
+      <span class="brand__name">Baby w/o allergies</span>
     </a>
 
     <nav class="nav" aria-label="Main navigation">
@@ -28,9 +28,9 @@
     </nav>
 
     <div class="lang">
-      <a class="lang__item" href="/">CZ</a>
+      <a class="lang__item" href="../">CZ</a>
       <span class="lang__sep" aria-hidden="true">/</span>
-      <a class="lang__item is-active" href="/en/" aria-current="page">EN</a>
+      <a class="lang__item is-active" href="./" aria-current="page">EN</a>
     </div>
 
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
@@ -46,8 +46,8 @@
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <div class="mobile__langs">
-      <a href="/">CZ</a>
-      <a class="is-active" href="/en/">EN</a>
+      <a href="../">CZ</a>
+      <a class="is-active" href="./">EN</a>
     </div>
   </div>
 </header>
@@ -87,11 +87,41 @@
     </div>
   </section>
 
+  <!-- NEWSLETTER: button "Get updates" jumps here -->
+  <section class="section" id="newsletter">
+    <div class="container">
+      <h2>Updates</h2>
+      <p class="section__lead">
+        Leave your email and we’ll notify you when early testing opens or when there’s a relevant update.
+      </p>
+
+      <div class="grid2">
+        <div class="card card--soft">
+          <h3>What you’ll get</h3>
+          <ul class="list">
+            <li>Early testing updates</li>
+            <li>Launch news</li>
+            <li>No spam, unsubscribe anytime</li>
+          </ul>
+        </div>
+
+        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Subscribe</h3>
+          <label>Email <span class="req">*</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="e.g. jane@email.com" />
+          </label>
+          <button class="btn btn--primary" type="submit">Get updates</button>
+          <p class="fine">By submitting, you agree to receive launch/testing updates. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="about">
     <div class="container">
       <h2>About the app</h2>
       <p class="section__lead">
-        BabyApp is built for parents who need structure, clarity and relief from endless notes and uncertainty.
+        Baby w/o allergies is built for parents who need structure, clarity and relief from endless notes and uncertainty.
       </p>
 
       <div class="cards">
@@ -129,6 +159,7 @@
     </div>
   </section>
 
+  <!-- TESTERS: section background is #FFACDB -->
   <section class="section section--tint" id="beta">
     <div class="container">
       <h2>Early testers</h2>
@@ -144,13 +175,17 @@
           </ul>
         </div>
 
-        <form class="form card" id="newsletter" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
-          <h3>Sign up</h3>
-          <label>Name <input name="name" type="text" autocomplete="name" /></label>
+        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Apply for testing</h3>
+          <label>Name
+            <input name="name" type="text" autocomplete="name" />
+          </label>
           <label>Email <span class="req">*</span>
             <input name="email" type="email" autocomplete="email" required />
           </label>
-          <label>Child’s age (optional) <input name="child_age" type="text" /></label>
+          <label>Child’s age (optional)
+            <input name="child_age" type="text" />
+          </label>
           <button class="btn btn--primary" type="submit">Join the first wave</button>
           <p class="fine">You can unsubscribe anytime.</p>
         </form>
@@ -163,7 +198,7 @@
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>Is it a replacement for medical care?</summary><p>No. It’s a tracking & clarity tool.</p></details>
-        <details><summary>When will it be available?</summary><p>Testing will roll out gradually. Sign up for updates.</p></details>
+        <details><summary>When will it be available?</summary><p>Testing will roll out gradually. Subscribe for updates.</p></details>
         <details><summary>Will it support Czech and English?</summary><p>Yes.</p></details>
       </div>
     </div>
@@ -182,11 +217,12 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <p>© <span id="year"></span> BabyApp.cz</p>
-    <p class="fine">This website is for app information and early tester sign-up.</p>
+    <p>© <span id="year"></span> Baby w/o allergies</p>
+    <p class="fine">This site is for app info and early tester/newsletter sign-up.</p>
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
+<script src="../assets/main.js"></script>
 </body>
 </html>
+
