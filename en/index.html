@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BabyApp — a step-by-step system for child food allergies</title>
+  <meta name="description" content="An app that helps parents manage child food allergies with clarity and structure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="#top" aria-label="BabyApp">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">BabyApp</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="#who">Who it’s for</a>
+      <a href="#beta">Early testers</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="lang">
+      <a class="lang__item" href="/">CZ</a>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <a class="lang__item is-active" href="/en/" aria-current="page">EN</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile" id="mobileNav" hidden>
+    <a href="#about">About</a>
+    <a href="#how">How it works</a>
+    <a href="#who">Who it’s for</a>
+    <a href="#beta">Early testers</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile__langs">
+      <a href="/">CZ</a>
+      <a class="is-active" href="/en/">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="badge">First testing wave coming soon</p>
+        <h1>A step-by-step system for managing child food allergies.</h1>
+        <p class="lead">
+          Elimination phase, guided allergen testing, symptom calendar and clear summaries — all in one place.
+        </p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#beta">Join as an early tester</a>
+          <a class="btn btn--ghost" href="#newsletter">Get updates</a>
+        </div>
+        <p class="fine">Not a replacement for medical care. A tool for clarity and tracking.</p>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="panel__card">
+          <div class="panel__row">
+            <div class="pill">Elimination</div>
+            <div class="pill">Testing</div>
+            <div class="pill">Calendar</div>
+          </div>
+          <div class="panel__mock">
+            <div class="mock__line"></div>
+            <div class="mock__line short"></div>
+            <div class="mock__box"></div>
+            <div class="mock__line"></div>
+            <div class="mock__line short"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2>About the app</h2>
+      <p class="section__lead">
+        BabyApp is built for parents who need structure, clarity and relief from endless notes and uncertainty.
+      </p>
+
+      <div class="cards">
+        <article class="card"><h3>Overview</h3><p>All key info in one place: steps, days, reactions, notes.</p></article>
+        <article class="card"><h3>Structure</h3><p>Guided flow. Less guessing, more confidence.</p></article>
+        <article class="card"><h3>Relief</h3><p>Know what to do today and what to watch for.</p></article>
+        <article class="card"><h3>Trust</h3><p>Clear information without unnecessary fear.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="section__lead">A simple system that keeps the whole process together.</p>
+
+      <ol class="steps">
+        <li class="step"><span class="step__num">1</span><div><h3>Setup</h3><p>Set what you track and your goals.</p></div></li>
+        <li class="step"><span class="step__num">2</span><div><h3>Elimination phase</h3><p>A clear plan with daily steps.</p></div></li>
+        <li class="step"><span class="step__num">3</span><div><h3>Guided testing</h3><p>Step-based reintroduction with reminders.</p></div></li>
+        <li class="step"><span class="step__num">4</span><div><h3>Symptom calendar</h3><p>Track reactions, eczema and notes over time.</p></div></li>
+        <li class="step"><span class="step__num">5</span><div><h3>Summaries</h3><p>See patterns and keep a clear record.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="who">
+    <div class="container">
+      <h2>Who it’s for</h2>
+      <div class="split">
+        <div class="split__col"><h3>If you’re exhausted…</h3><p>Get structure and reduce daily decision fatigue.</p></div>
+        <div class="split__col"><h3>If you suspect an allergy…</h3><p>Keep a clear record of what happened and when.</p></div>
+        <div class="split__col"><h3>If it’s been a long journey…</h3><p>See trends and patterns — not just feelings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="beta">
+    <div class="container">
+      <h2>Early testers</h2>
+      <p class="section__lead">We’re inviting a small group of parents to test the first release.</p>
+
+      <div class="grid2">
+        <div class="card card--soft">
+          <h3>What you get</h3>
+          <ul class="list">
+            <li>Priority access to testing</li>
+            <li>A chance to influence details</li>
+            <li>Launch updates first</li>
+          </ul>
+        </div>
+
+        <form class="form card" id="newsletter" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Sign up</h3>
+          <label>Name <input name="name" type="text" autocomplete="name" /></label>
+          <label>Email <span class="req">*</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>Child’s age (optional) <input name="child_age" type="text" /></label>
+          <button class="btn btn--primary" type="submit">Join the first wave</button>
+          <p class="fine">You can unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details><summary>Is it a replacement for medical care?</summary><p>No. It’s a tracking & clarity tool.</p></details>
+        <details><summary>When will it be available?</summary><p>Testing will roll out gradually. Sign up for updates.</p></details>
+        <details><summary>Will it support Czech and English?</summary><p>Yes.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="btn btn--ghost" href="mailto:info@babyapp.cz">info@babyapp.cz</a>
+        <a class="btn btn--ghost" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> BabyApp.cz</p>
+    <p class="fine">This website is for app information and early tester sign-up.</p>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+</body>
+</html>
