@@ -7,7 +7,7 @@
   --primary:#E57373;
   --primary-2:#d65f5f;
 
-  /* Pozadí za sekcí testování (bod 5) */
+  /* Pozadí za sekcí testování */
   --tint:#FACDBD;
 
   --shadow: 0 10px 30px rgba(17,24,39,.08);
@@ -27,7 +27,7 @@ body{
 }
 .container{max-width:var(--max); margin:0 auto; padding:0 18px;}
 
-/* TOP BAR (bod 2) */
+/* TOP BAR */
 .topbar{
   position:sticky; top:0; z-index:50;
   background:var(--primary);
@@ -42,15 +42,10 @@ body{
   display:flex; align-items:center; gap:10px;
   text-decoration:none; color:#fff;
 }
-.brand__logo{
-  width:22px;
-  height:22px;
-  border-radius:8px;
-  display:block;
-}
 .brand__name{
   font-weight:800;
   letter-spacing:-.02em;
+  white-space:nowrap;
 }
 
 /* Desktop nav */
@@ -117,12 +112,34 @@ body{
   background:rgba(255,255,255,.16);
 }
 
-/* Hero */
+/* HERO */
 .hero{padding:52px 0 28px}
 .hero__grid{
   display:grid; grid-template-columns: 1.2fr .8fr;
   gap:22px; align-items:center;
 }
+
+/* Logo na bílé ploše (10× větší oproti 22px) */
+.hero__brand{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:14px;
+}
+.hero__logo{
+  width:220px;         /* ~10× */
+  max-width:60vw;      /* aby to na mobilu nepřetékalo */
+  height:auto;
+  display:block;
+}
+.hero__appname{
+  font-weight:900;
+  letter-spacing:-.02em;
+  font-size:18px;
+  margin:0;
+  color:var(--text);
+}
+
 .badge{
   display:inline-block;
   padding:6px 10px;
@@ -160,7 +177,11 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
 .section{padding:52px 0}
-.section--tint{background:var(--tint)}
+
+/* Sekce testeři – stále #FACDBD, ale zjemněná */
+.section--tint{
+  background:linear-gradient(180deg, rgba(250,205,189,.72), rgba(250,205,189,1));
+}
 .section h2{font-size:28px; margin:0 0 10px; letter-spacing:-.02em}
 .section__lead{color:var(--muted); margin:0 0 22px; max-width:760px}
 
@@ -172,7 +193,7 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   padding:18px;
   box-shadow:0 1px 0 rgba(17,24,39,.03);
 }
-.card--soft{background:rgba(255,255,255,.7)}
+.card--soft{background:rgba(255,255,255,.78)}
 .card h3{margin:0 0 6px; font-size:16px}
 .card p{margin:0; color:var(--muted)}
 
@@ -276,4 +297,7 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   .cards{grid-template-columns:repeat(2,1fr)}
   .split{grid-template-columns:1fr}
   .grid2{grid-template-columns:1fr}
+
+  .hero__brand{flex-direction:column; align-items:flex-start}
+  .hero__logo{width:220px; max-width:80vw}
 }
