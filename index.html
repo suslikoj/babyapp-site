@@ -14,7 +14,6 @@
 <header class="topbar">
   <div class="container topbar__inner">
     <a class="brand" href="#top" aria-label="Bejby bez alergií">
-      <img class="brand__logo" src="assets/logo.svg" alt="" aria-hidden="true">
       <span class="brand__name">Bejby bez alergií</span>
     </a>
 
@@ -56,6 +55,12 @@
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__copy">
+
+        <!-- LOGO NA BÍLÉM POZADÍ -->
+        <div class="hero__brand">
+          <img class="hero__logo" src="assets/logo.svg" alt="Logo Bejby bez alergií">
+        </div>
+
         <p class="badge">První testovací vlna již brzy</p>
         <h1>Systematická pomoc pro rodiče dětí s potravinovou alergií.</h1>
         <p class="lead">
@@ -89,7 +94,7 @@
     </div>
   </section>
 
-  <!-- NOVINKY: sem vede tlačítko "Chci dostávat novinky" -->
+  <!-- NOVINKY -->
   <section class="section" id="newsletter">
     <div class="container">
       <h2>Novinky o spuštění</h2>
@@ -113,7 +118,7 @@
             <input name="email" type="email" autocomplete="email" required placeholder="např. jana@email.cz" />
           </label>
           <button class="btn btn--primary" type="submit">Chci novinky</button>
-          <p class="fine">Odesláním souhlasíš se zasláním informací o spuštění a testování. Odhlášení kdykoliv.</p>
+          <p class="fine">Odhlášení kdykoliv.</p>
         </form>
       </div>
     </div>
@@ -127,22 +132,10 @@
       </p>
 
       <div class="cards">
-        <article class="card">
-          <h3>Přehled</h3>
-          <p>Vše důležité na jednom místě: kroky, dny, reakce, poznámky.</p>
-        </article>
-        <article class="card">
-          <h3>Struktura</h3>
-          <p>Vedení krok za krokem. Méně tápání, více jistoty.</p>
-        </article>
-        <article class="card">
-          <h3>Klid</h3>
-          <p>Jasné “co dnes” a “co sledovat”. Menší mentální zátěž.</p>
-        </article>
-        <article class="card">
-          <h3>Důvěra</h3>
-          <p>Informace podané srozumitelně, bez zbytečného strašení.</p>
-        </article>
+        <article class="card"><h3>Přehled</h3><p>Vše důležité na jednom místě: kroky, dny, reakce, poznámky.</p></article>
+        <article class="card"><h3>Struktura</h3><p>Vedení krok za krokem. Méně tápání, více jistoty.</p></article>
+        <article class="card"><h3>Klid</h3><p>Jasné “co dnes” a “co sledovat”. Menší mentální zátěž.</p></article>
+        <article class="card"><h3>Důvěra</h3><p>Informace podané srozumitelně, bez zbytečného strašení.</p></article>
       </div>
     </div>
   </section>
@@ -173,13 +166,10 @@
     </div>
   </section>
 
-  <!-- TESTEŘI: pozadí celé sekce je #FFACDB -->
   <section class="section section--tint" id="beta">
     <div class="container">
       <h2>První testeři</h2>
-      <p class="section__lead">
-        Hledáme první skupinu uživatelů, kteří aplikaci otestují a pomohou ji doladit pro reálný život.
-      </p>
+      <p class="section__lead">Hledáme první skupinu uživatelů, kteří aplikaci otestují a pomohou ji doladit.</p>
 
       <div class="grid2">
         <div class="card card--soft">
@@ -203,7 +193,7 @@
             <input name="child_age" type="text" placeholder="např. 18 měsíců" />
           </label>
           <button class="btn btn--primary" type="submit">Chci být v první vlně</button>
-          <p class="fine">Odesláním souhlasíš se zasláním informací o testování a spuštění. Odhlášení kdykoliv.</p>
+          <p class="fine">Odhlášení kdykoliv.</p>
         </form>
       </div>
     </div>
@@ -213,22 +203,9 @@
     <div class="container">
       <h2>FAQ</h2>
       <div class="faq">
-        <details>
-          <summary>Je to náhrada lékaře?</summary>
-          <p>Ne. Je to nástroj pro přehled a vedení. Pomáhá i v komunikaci o průběhu potíží.</p>
-        </details>
-        <details>
-          <summary>Kdy bude aplikace dostupná?</summary>
-          <p>Testování spouštíme postupně. Jakmile to bude relevantní, dáme vědět e-mailem.</p>
-        </details>
-        <details>
-          <summary>Bude aplikace česky i anglicky?</summary>
-          <p>Ano, počítáme s CZ/EN.</p>
-        </details>
-        <details>
-          <summary>Kolik to bude stát?</summary>
-          <p>Detaily zveřejníme až ve chvíli, kdy bude první verze připravená k vydání.</p>
-        </details>
+        <details><summary>Je to náhrada lékaře?</summary><p>Ne. Je to nástroj pro přehled a vedení.</p></details>
+        <details><summary>Kdy bude aplikace dostupná?</summary><p>Testování spouštíme postupně. Dáme vědět e-mailem.</p></details>
+        <details><summary>Bude aplikace česky i anglicky?</summary><p>Ano, počítáme s CZ/EN.</p></details>
       </div>
     </div>
   </section>
