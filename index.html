@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BabyApp — systém pro alergie u dětí</title>
-  <meta name="description" content="Aplikace, která pomáhá rodičům zvládnout potravinové alergie u dětí systematicky a s přehledem." />
+  <title>Bejby bez alergií</title>
+  <meta name="description" content="Bejby bez alergií — aplikace, která pomáhá rodičům zvládnout potravinové alergie u dětí systematicky a s přehledem." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="BabyApp">
-      <span class="brand__dot" aria-hidden="true"></span>
-      <span class="brand__name">BabyApp</span>
+    <a class="brand" href="#top" aria-label="Bejby bez alergií">
+      <img class="brand__logo" src="assets/logo.svg" alt="" aria-hidden="true">
+      <span class="brand__name">Bejby bez alergií</span>
     </a>
 
     <nav class="nav" aria-label="Hlavní navigace">
@@ -28,9 +28,9 @@
     </nav>
 
     <div class="lang">
-      <a class="lang__item is-active" href="/" aria-current="page">CZ</a>
+      <a class="lang__item is-active" href="./" aria-current="page">CZ</a>
       <span class="lang__sep" aria-hidden="true">/</span>
-     <a class="lang__item" href="./en/">EN</a>
+      <a class="lang__item" href="./en/">EN</a>
     </div>
 
     <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">
@@ -46,7 +46,7 @@
     <a href="#faq">FAQ</a>
     <a href="#contact">Kontakt</a>
     <div class="mobile__langs">
-      <a class="is-active" href="/">CZ</a>
+      <a class="is-active" href="./">CZ</a>
       <a href="./en/">EN</a>
     </div>
   </div>
@@ -89,11 +89,41 @@
     </div>
   </section>
 
+  <!-- NOVINKY: sem vede tlačítko "Chci dostávat novinky" -->
+  <section class="section" id="newsletter">
+    <div class="container">
+      <h2>Novinky o spuštění</h2>
+      <p class="section__lead">
+        Nech email a dáme vědět, jakmile bude otevřená testovací vlna nebo bude relevantní update.
+      </p>
+
+      <div class="grid2">
+        <div class="card card--soft">
+          <h3>Co dostaneš</h3>
+          <ul class="list">
+            <li>Info o testování mezi prvními</li>
+            <li>Novinky o spuštění</li>
+            <li>Bez spamu, odhlášení kdykoliv</li>
+          </ul>
+        </div>
+
+        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Přihlásit se k odběru</h3>
+          <label>Email <span class="req">*</span>
+            <input name="email" type="email" autocomplete="email" required placeholder="např. jana@email.cz" />
+          </label>
+          <button class="btn btn--primary" type="submit">Chci novinky</button>
+          <p class="fine">Odesláním souhlasíš se zasláním informací o spuštění a testování. Odhlášení kdykoliv.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="about">
     <div class="container">
       <h2>O aplikaci</h2>
       <p class="section__lead">
-        BabyApp vzniká jako praktický pomocník pro dny, kdy je toho už moc: jídlo, reakce, nejistota, únava.
+        Bejby bez alergií vzniká jako praktický pomocník pro dny, kdy je toho už moc: jídlo, reakce, nejistota, únava.
       </p>
 
       <div class="cards">
@@ -143,6 +173,7 @@
     </div>
   </section>
 
+  <!-- TESTEŘI: pozadí celé sekce je #FFACDB -->
   <section class="section section--tint" id="beta">
     <div class="container">
       <h2>První testeři</h2>
@@ -160,8 +191,8 @@
           </ul>
         </div>
 
-        <form class="form card" id="newsletter" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
-          <h3>Přihlásit se</h3>
+        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
+          <h3>Přihlásit se do testování</h3>
           <label>Jméno
             <input name="name" type="text" autocomplete="name" placeholder="např. Jana" />
           </label>
@@ -215,8 +246,8 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <p>© <span id="year"></span> BabyApp.cz</p>
-    <p class="fine">Web slouží pro informace o aplikaci a přihlášení do testování.</p>
+    <p>© <span id="year"></span> Bejby bez alergií</p>
+    <p class="fine">Web slouží pro informace o aplikaci a přihlášení do testování / odběru novinek.</p>
   </div>
 </footer>
 
