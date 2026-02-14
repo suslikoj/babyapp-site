@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bejby bez alergií</title>
   <meta name="description" content="Bejby bez alergií — aplikace, která pomáhá rodičům zvládnout potravinové alergie a ekzém u dětí, systematicky a s přehledem." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Brevo styles (OK v head) -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -149,7 +154,7 @@
         <li class="step"><span class="step__num">1</span><div><h3>Start a nastavení</h3><p>Personalizovaný start podle situace.</p></div></li>
         <li class="step"><span class="step__num">2</span><div><h3>Eliminační fáze</h3><p>Jasný plán a denní kroky — bez improvizace.</p></div></li>
         <li class="step"><span class="step__num">3</span><div><h3>Řízené testování alergenů</h3><p>Zařazování podle kroků, s připomínkami.</p></div></li>
-         <li class="step"><span class="step__num">4</span><div><h3>Recepty</h3><p>Recepty s automatickým filtrováním dle fáze diety či alergií.</p></div></li>
+        <li class="step"><span class="step__num">4</span><div><h3>Recepty</h3><p>Recepty s automatickým filtrováním dle fáze diety či alergií.</p></div></li>
         <li class="step"><span class="step__num">5</span><div><h3>Kalendář projevů</h3><p>Záznamy reakcí, ekzému a poznámek v čase.</p></div></li>
         <li class="step"><span class="step__num">6</span><div><h3>Přehledy a výsledky</h3><p>Souvislosti na jednom místě — i pro sdílení s odborníkem.</p></div></li>
       </ol>
@@ -182,20 +187,60 @@
           </ul>
         </div>
 
-        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
-          <h3>Přihlásit se do testování</h3>
-          <label>Jméno
-            <input name="name" type="text" autocomplete="name" placeholder="např. Jana" />
-          </label>
-          <label>Email <span class="req">*</span>
-            <input name="email" type="email" autocomplete="email" required placeholder="např. jana@email.cz" />
-          </label>
-          <label>Věk dítěte (volitelné)
-            <input name="child_age" type="text" placeholder="např. 18 měsíců" />
-          </label>
-          <button class="btn btn--primary" type="submit">Chci být v první vlně</button>
-          <p class="fine">Odhlášení kdykoliv.</p>
-        </form>
+        <!-- Brevo form – vloženo přímo do beta sekce -->
+        <div class="card brevo-card">
+          <div class="sib-form" style="text-align:left; background-color:transparent;">
+            <div id="sib-form-container" class="sib-form-container" style="background:transparent;">
+              <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:left; background-color:transparent; max-width:100%; border-radius:0; border-width:0; border-color:transparent; border-style:none;">
+                <form id="sib-form" method="POST" action="https://9d89c0af.sibforms.com/serve/MUIFAH6HBcO0XQIy7dIEGrTzvL1LklnLnds3DM_snUYto9eS5lnu_TaJbMCbKr8Q4TjinULu1Xle__d0sBy4_gM_CpNz9wv1rYvpArwW5PklLAW2FL3JeWguVYby77mDqSf2Am3hTLyRasyy0vJc7_atUR7Zlvs6e_nibqRmjk0CpW7xYnRfzpn6cruw_UWf8hqjFRbqSEHsHoTaMg==">
+
+                  <div class="sib-form-block">
+                    <p class="brevo-title">Chceš otestovat první verzi?</p>
+                  </div>
+
+                  <div class="sib-form-block">
+                    <p class="brevo-lead">Nech svůj e-mail a dáme ti vědět, jakmile otevřeme první testovací vlnu.</p>
+                  </div>
+
+                  <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                      <div class="form__label-row">
+                        <label class="entry__label brevo-label" for="EMAIL" data-required="*">
+                          Zadej svůj e-mail a buď mezi prvními, kdo aplikaci vyzkouší.
+                        </label>
+
+                        <div class="entry__field">
+                          <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="např. jana@email.cz" data-required="true" required />
+                        </div>
+                      </div>
+
+                      <label class="entry__error entry__error--primary"></label>
+
+                      <label class="entry__specification brevo-hint">
+                        Bez spamu. Odhlášení kdykoliv.
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="sib-form-block" style="text-align:left;">
+                    <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                      <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
+                      </svg>
+                      ODEBÍRAT
+                    </button>
+                  </div>
+
+                  <input type="text" name="email_address_check" value="" class="input--hidden">
+                  <input type="hidden" name="locale" value="cs">
+                  <input type="hidden" name="html_type" value="simple">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Brevo form -->
+
       </div>
     </div>
   </section>
