@@ -301,3 +301,92 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   .hero__brand{flex-direction:column; align-items:flex-start}
   .hero__logo{width:220px; max-width:80vw}
 }
+
+/* ===========================
+   Brevo – vizuální sladění
+   =========================== */
+.brevo-card{
+  padding:18px; /* stejně jako card */
+}
+
+#beta .sib-form,
+#beta .sib-container,
+#beta #sib-container,
+#beta #sib-form{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+}
+
+/* Titulek a texty ve formuláři */
+#beta .brevo-title{
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:-.02em;
+  margin:0 0 6px;
+  color:var(--text);
+}
+#beta .brevo-lead{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px;
+}
+#beta .brevo-label{
+  display:block;
+  font-weight:800 !important;
+  color:#374151 !important;
+  margin:12px 0 6px;
+  font-size:13px !important;
+}
+#beta .brevo-hint{
+  display:block;
+  margin-top:8px;
+  font-size:12px !important;
+  color:var(--muted) !important;
+}
+
+/* Inputy */
+#beta input[type="email"],
+#beta input[type="text"],
+#beta input[type="tel"],
+#beta select,
+#beta textarea{
+  width:100% !important;
+  padding:12px 12px !important;
+  border-radius:14px !important;
+  border:1px solid rgba(229,231,235,.95) !important;
+  background:#fff !important;
+  font-size:14px !important;
+  outline:none !important;
+  box-shadow:none !important;
+}
+#beta input:focus,
+#beta select:focus,
+#beta textarea:focus{
+  border-color:rgba(229,115,115,.55) !important;
+  box-shadow:0 0 0 6px rgba(229,115,115,.18) !important;
+}
+
+/* Tlačítko */
+#beta .sib-form-block__button{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  padding:12px 16px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(229,115,115,.9) !important;
+  background:var(--primary) !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:14px !important;
+  cursor:pointer !important;
+  box-shadow:0 12px 24px rgba(229,115,115,.22) !important;
+}
+#beta .sib-form-block__button:hover{
+  background:var(--primary-2) !important;
+}
+
+/* Zrušíme “cizí” hrany/pozadí z Brevo embed stylů */
+#beta .sib-form-container,
+#beta .sib-form{
+  background:transparent !important;
+}
