@@ -144,14 +144,14 @@
           </ul>
         </div>
 
-        <!-- Begin Brevo Form (Novinky CZ – s potvrzením a návratem) -->
+        <!-- Begin Brevo Form – Novinky CZ (s potvrzením a návratem) -->
 <div class="card brevo-card">
 
   <div class="sib-form" style="text-align:center;background-color:#ffffff;">
     <div id="sib-form-container" class="sib-form-container">
       <div id="sib-container"
-           class="sib-container--large sib-container--vertical"
-           style="text-align:center; background-color:#ffffff; max-width:540px; border-radius:25px; border-width:0;">
+           class="sib-container--medium sib-container--vertical"
+           style="text-align:center; background-color:#ffffff; max-width:350px; border-radius:25px; border-width:0;">
 
         <form id="sib-form-news"
               method="POST"
@@ -161,7 +161,7 @@
 
           <div style="padding: 8px 0;">
             <div style="font-size:26px;font-weight:800;font-family:Inter,Helvetica,sans-serif;color:#111827;text-align:left;">
-              Přihlásit se k odběru
+              Přihlášení k odběru
             </div>
           </div>
 
@@ -180,9 +180,7 @@
           </div>
 
           <div style="padding: 8px 0;text-align:left;">
-            <button id="brevoNewsBtn"
-                    class="btn btn--primary"
-                    type="submit">
+            <button class="btn btn--primary" type="submit">
               Chci novinky
             </button>
           </div>
@@ -193,17 +191,17 @@
 
         </form>
 
-        <!-- Hidden iframe -->
+        <!-- Hidden iframe (zabraňuje přesměrování) -->
         <iframe name="brevo_news_iframe" style="display:none;"></iframe>
 
-        <!-- Thank you message -->
+        <!-- Potvrzovací zpráva -->
         <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
           <div class="brevo-thanks__title">Díky! ❤️</div>
           <div class="brevo-thanks__text">
             Tvůj e-mail byl úspěšně odeslán.
-            Zkontroluj si prosím potvrzovací zprávu (i složku spam/hromadné).
+            Zkontroluj si prosím potvrzovací zprávu (i složku spam nebo hromadné).
             <span class="brevo-thanks__small">
-              Za chvíli se vrátíme zpět na stránku.
+              Za chvíli se formulář znovu zobrazí.
             </span>
           </div>
         </div>
