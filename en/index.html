@@ -9,12 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
+
+  <!-- Force light mode rendering even if device is in dark mode -->
   <meta name="color-scheme" content="light">
   <meta name="supported-color-schemes" content="light">
 
-  <!-- Brevo form base styles (keep in HEAD) -->
+  <!-- BEGIN Brevo (fonts + base styles) -->
+  <style>
+    @font-face {
+      font-display: block;
+      font-family: Roboto;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 600;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+    }
+    @font-face {
+      font-display: fallback;
+      font-family: Roboto;
+      font-weight: 700;
+      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+    }
+
+    #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+    #sib-container input::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+    #sib-container a { text-decoration: underline; color: #2BB2FC; }
+  </style>
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <!-- END Brevo -->
 </head>
+
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
@@ -61,7 +91,6 @@
     <div class="container hero__grid">
       <div class="hero__copy">
 
-        <!-- LOGO ON WHITE BACKGROUND -->
         <div class="hero__brand">
           <img class="hero__logo" src="../assets/logo.svg" alt="Baby w/o allergies logo">
         </div>
@@ -172,6 +201,7 @@
     </div>
   </section>
 
+  <!-- EARLY TESTERS -->
   <section class="section section--tint" id="beta">
     <div class="container">
       <h2>Early testers</h2>
@@ -187,53 +217,28 @@
           </ul>
         </div>
 
-        <!-- Brevo form inserted here (replaces Formspree) -->
-        <div class="card" style="padding:0;">
-          <style>
-            /* Local overrides so Brevo embed blends with your design */
-            .sib-form { background: transparent !important; }
-            #sib-form-container { background: transparent !important; }
-            #sib-container {
-              max-width: 100% !important;
-              border: 0 !important;
-              border-radius: 18px !important;
-              background: transparent !important;
-              padding: 18px !important;
-            }
-            /* Make Brevo input/button feel closer to your UI */
-            #sib-container input.input {
-              border-radius: 14px !important;
-              border: 1px solid rgba(229,231,235,.95) !important;
-              padding: 12px 12px !important;
-              font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-            }
-            #sib-container input.input:focus {
-              border-color: rgba(229,115,115,.55) !important;
-              box-shadow: 0 0 0 6px rgba(229,115,115,.18) !important;
-              outline: none !important;
-            }
-            #sib-container .sib-form-block__button {
-              border-radius: 999px !important;
-              padding: 12px 16px !important;
-              font-weight: 900 !important;
-              letter-spacing: -0.01em !important;
-              font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-              box-shadow: 0 12px 24px rgba(229,115,115,.22) !important;
-            }
-          </style>
-
-          <div class="sib-form" style="text-align:center; background-color:transparent;">
+        <!-- Begin Brevo Form (EN) - target iframe + thank you -->
+        <div class="card brevo-card">
+          <div class="sib-form" style="text-align:center; background-color:#ffffff;">
             <div id="sib-form-container" class="sib-form-container">
-              <div id="sib-container" class="sib-container--large sib-container--vertical">
-                <form id="sib-form" method="POST" action="https://9d89c0af.sibforms.com/serve/MUIFABn1mrAWQ7tFIkb0XZ1yWUa7vmgmveV0e7sDlAk4PB-2X5W9NEPvndz6sY-V3fB08WqyL1-TRzFHxDJ6hcyejMnGLqtqR2B_VvM297lWIQ3YTtk2P7dC5t0lcfIjdStK565-I9N2WcTWSMFCbmEd6Mn9g-qroUL1Ih_38lPIrFmM6s4CQf19sVbDrLE5xbEiq25A7LQTbRRy4Q==">
+              <div id="sib-container"
+                   class="sib-container--large sib-container--vertical"
+                   style="text-align:center; background-color:rgba(250,205,189,1); max-width:540px; border-radius:18px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
+
+                <form id="sib-form"
+                      method="POST"
+                      target="brevo_iframe_en"
+                      onsubmit="return brevoSubmitEN();"
+                      action="https://9d89c0af.sibforms.com/serve/MUIFABn1mrAWQ7tFIkb0XZ1yWUa7vmgmveV0e7sDlAk4PB-2X5W9NEPvndz6sY-V3fB08WqyL1-TRzFHxDJ6hcyejMnGLqtqR2B_VvM297lWIQ3YTtk2P7dC5t0lcfIjdStK565-I9N2WcTWSMFCbmEd6Mn9g-qroUL1Ih_38lPIrFmM6s4CQf19sVbDrLE5xbEiq25A7LQTbRRy4Q==">
+
                   <div style="padding: 8px 0;">
-                    <div class="sib-form-block" style="font-size:24px; text-align:left; font-weight:800; font-family:Inter, Arial, sans-serif; color:#111827; background-color:transparent;">
+                    <div class="sib-form-block" style="font-size:28px; text-align:left; font-weight:800; font-family:Inter, Helvetica, sans-serif; color:#111827; background-color:transparent;">
                       <p style="margin:0;">Do you want to test the first version?</p>
                     </div>
                   </div>
 
                   <div style="padding: 8px 0;">
-                    <div class="sib-form-block" style="font-size:14px; text-align:left; font-family:Inter, Arial, sans-serif; color:#6b7280; background-color:transparent;">
+                    <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#221e1e; background-color:transparent;">
                       <div class="sib-text-form-block">
                         <p style="margin:0;">Leave your email and we’ll let you know as soon as we open the first testing wave.</p>
                       </div>
@@ -243,20 +248,24 @@
                   <div style="padding: 8px 0;">
                     <div class="sib-input sib-form-block">
                       <div class="form__entry entry_block">
-                        <div class="form__label-row">
-                          <label class="entry__label" style="font-weight:800; text-align:left; font-size:13px; font-family:Inter, Arial, sans-serif; color:#374151;" for="EMAIL" data-required="*">
-                            Enter your email and be among the first to try the app.
-                          </label>
+                        <div class="form__label-row ">
+                          <label class="entry__label"
+                                 style="font-weight:800; text-align:left; font-size:14px; font-family:Inter, Helvetica, sans-serif; color:#374151;"
+                                 for="EMAIL"
+                                 data-required="*">Enter your email and be among the first to try the app.</label>
 
                           <div class="entry__field">
-                            <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e.g. jane@email.com" data-required="true" required />
+                            <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="e.g. jane@email.com" data-required="true" required />
                           </div>
                         </div>
 
-                        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; font-family:Inter, Arial, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:12px; border-color:#ff4949;">
+                        <label class="entry__error entry__error--primary"
+                               style="font-size:14px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:12px; border-color:#ff4949;">
                         </label>
-                        <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Inter, Arial, sans-serif; color:#8390A4;">
-                          Provide your email address to subscribe. For example: abc@xyz.com
+
+                        <label class="entry__specification"
+                               style="font-size:12px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#6b7280;">
+                          No spam. Confirmation email is required (please check spam/promotions too).
                         </label>
                       </div>
                     </div>
@@ -264,7 +273,11 @@
 
                   <div style="padding: 8px 0;">
                     <div class="sib-form-block" style="text-align:left">
-                      <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:14px; text-align:left; font-weight:900; font-family:Inter, Arial, sans-serif; color:#FFFFFF; background-color:#e57373; border-width:0px;" form="sib-form" type="submit">
+                      <button id="brevoBtnEN"
+                              class="sib-form-block__button sib-form-block__button-with-loader"
+                              style="font-size:16px; font-weight:900; font-family:Inter, Helvetica, sans-serif; color:#FFFFFF; background-color:#e57373; border-radius:999px; border-width:0px; padding:12px 16px;"
+                              form="sib-form"
+                              type="submit">
                         <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                           <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                         </svg>
@@ -277,11 +290,24 @@
                   <input type="hidden" name="locale" value="en">
                   <input type="hidden" name="html_type" value="simple">
                 </form>
+
+                <!-- Prevent redirect -->
+                <iframe name="brevo_iframe_en" class="brevo-iframe" title="Brevo submit target"></iframe>
+
+                <!-- Thank-you message -->
+                <div id="brevoThanksEN" class="brevo-thanks" hidden aria-live="polite">
+                  <div class="brevo-thanks__title">Thank you! ❤️</div>
+                  <div class="brevo-thanks__text">
+                    We’ve sent you a confirmation email. Open it and confirm your subscription (please check spam/promotions).
+                    <span class="brevo-thanks__small">You’ll stay on this page — feel free to continue browsing.</span>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
-        <!-- /Brevo form -->
+        <!-- End Brevo Form -->
       </div>
     </div>
   </section>
@@ -316,6 +342,20 @@
 </footer>
 
 <script src="../assets/main.js"></script>
+
+<script>
+  // EN Brevo: show thank-you message and keep the user on the page
+  function brevoSubmitEN(){
+    var thanks = document.getElementById('brevoThanksEN');
+    if (thanks) {
+      thanks.hidden = false;
+      setTimeout(function(){
+        thanks.scrollIntoView({behavior:'smooth', block:'nearest'});
+      }, 150);
+    }
+    return true; // allow submit into hidden iframe
+  }
+</script>
+
 </body>
 </html>
-
