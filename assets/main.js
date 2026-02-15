@@ -88,3 +88,23 @@ function brevoSubmit() {
   // IMPORTANT: return true so the form actually submits into the iframe
   return true;
 }
+<script>
+function brevoNewsSubmit() {
+  const form = document.getElementById("sib-form-news");
+  const thanks = document.getElementById("brevoNewsThanks");
+
+  setTimeout(() => {
+    form.style.display = "none";
+    thanks.hidden = false;
+
+    setTimeout(() => {
+      thanks.hidden = true;
+      form.reset();
+      form.style.display = "block";
+    }, 4500);
+
+  }, 800);
+
+  return true;
+}
+</script>
