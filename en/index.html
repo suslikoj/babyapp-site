@@ -10,7 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
   <meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
+  <meta name="supported-color-schemes" content="light">
+
+  <!-- Brevo form base styles (keep in HEAD) -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 <body>
 <header class="topbar">
@@ -184,20 +187,101 @@
           </ul>
         </div>
 
-        <form class="form card" action="https://formspree.io/f/TVUJ_FORM_ID" method="POST">
-          <h3>Apply for testing</h3>
-          <label>Name
-            <input name="name" type="text" autocomplete="name" placeholder="e.g. Jane" />
-          </label>
-          <label>Email <span class="req">*</span>
-            <input name="email" type="email" autocomplete="email" required placeholder="e.g. jane@email.com" />
-          </label>
-          <label>Child’s age (optional)
-            <input name="child_age" type="text" placeholder="e.g. 18 months" />
-          </label>
-          <button class="btn btn--primary" type="submit">Join the first wave</button>
-          <p class="fine">Unsubscribe anytime.</p>
-        </form>
+        <!-- Brevo form inserted here (replaces Formspree) -->
+        <div class="card" style="padding:0;">
+          <style>
+            /* Local overrides so Brevo embed blends with your design */
+            .sib-form { background: transparent !important; }
+            #sib-form-container { background: transparent !important; }
+            #sib-container {
+              max-width: 100% !important;
+              border: 0 !important;
+              border-radius: 18px !important;
+              background: transparent !important;
+              padding: 18px !important;
+            }
+            /* Make Brevo input/button feel closer to your UI */
+            #sib-container input.input {
+              border-radius: 14px !important;
+              border: 1px solid rgba(229,231,235,.95) !important;
+              padding: 12px 12px !important;
+              font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+            }
+            #sib-container input.input:focus {
+              border-color: rgba(229,115,115,.55) !important;
+              box-shadow: 0 0 0 6px rgba(229,115,115,.18) !important;
+              outline: none !important;
+            }
+            #sib-container .sib-form-block__button {
+              border-radius: 999px !important;
+              padding: 12px 16px !important;
+              font-weight: 900 !important;
+              letter-spacing: -0.01em !important;
+              font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+              box-shadow: 0 12px 24px rgba(229,115,115,.22) !important;
+            }
+          </style>
+
+          <div class="sib-form" style="text-align:center; background-color:transparent;">
+            <div id="sib-form-container" class="sib-form-container">
+              <div id="sib-container" class="sib-container--large sib-container--vertical">
+                <form id="sib-form" method="POST" action="https://9d89c0af.sibforms.com/serve/MUIFABn1mrAWQ7tFIkb0XZ1yWUa7vmgmveV0e7sDlAk4PB-2X5W9NEPvndz6sY-V3fB08WqyL1-TRzFHxDJ6hcyejMnGLqtqR2B_VvM297lWIQ3YTtk2P7dC5t0lcfIjdStK565-I9N2WcTWSMFCbmEd6Mn9g-qroUL1Ih_38lPIrFmM6s4CQf19sVbDrLE5xbEiq25A7LQTbRRy4Q==">
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="font-size:24px; text-align:left; font-weight:800; font-family:Inter, Arial, sans-serif; color:#111827; background-color:transparent;">
+                      <p style="margin:0;">Do you want to test the first version?</p>
+                    </div>
+                  </div>
+
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="font-size:14px; text-align:left; font-family:Inter, Arial, sans-serif; color:#6b7280; background-color:transparent;">
+                      <div class="sib-text-form-block">
+                        <p style="margin:0;">Leave your email and we’ll let you know as soon as we open the first testing wave.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="padding: 8px 0;">
+                    <div class="sib-input sib-form-block">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row">
+                          <label class="entry__label" style="font-weight:800; text-align:left; font-size:13px; font-family:Inter, Arial, sans-serif; color:#374151;" for="EMAIL" data-required="*">
+                            Enter your email and be among the first to try the app.
+                          </label>
+
+                          <div class="entry__field">
+                            <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e.g. jane@email.com" data-required="true" required />
+                          </div>
+                        </div>
+
+                        <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; font-family:Inter, Arial, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:12px; border-color:#ff4949;">
+                        </label>
+                        <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Inter, Arial, sans-serif; color:#8390A4;">
+                          Provide your email address to subscribe. For example: abc@xyz.com
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="text-align:left">
+                      <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:14px; text-align:left; font-weight:900; font-family:Inter, Arial, sans-serif; color:#FFFFFF; background-color:#e57373; border-width:0px;" form="sib-form" type="submit">
+                        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                          <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                        </svg>
+                        SUBSCRIBE
+                      </button>
+                    </div>
+                  </div>
+
+                  <input type="text" name="email_address_check" value="" class="input--hidden">
+                  <input type="hidden" name="locale" value="en">
+                  <input type="hidden" name="html_type" value="simple">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Brevo form -->
       </div>
     </div>
   </section>
