@@ -362,4 +362,15 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   font-size:12px;
   color:#6b7280;
 }
+/* drž web v light i při dark-mode v systému */
+html, body { background: #ffffff; color: #111827; }
+input, textarea, select, button { color: #111827; background: #ffffff; }
 
+/* iOS/Chrome občas ztmavuje pozadí inputu */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #111827;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
