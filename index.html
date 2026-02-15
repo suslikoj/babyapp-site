@@ -13,36 +13,53 @@
 <meta name="supported-color-schemes" content="light">
 
   <!-- BEGIN Brevo (fonts + base styles) -->
-  <style>
-    @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-    }
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
 
-    #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
-    #sib-container input::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
-    #sib-container a { text-decoration: underline; color: #2BB2FC; }
-  </style>
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-  <!-- END Brevo -->
+  /* PODPORA PRO OBA FORMULÁŘE */
+  #sib-container input:-ms-input-placeholder,
+  #sib-container-news input:-ms-input-placeholder {
+    text-align:left;
+    font-family:Helvetica, sans-serif;
+    color:#c0ccda;
+  }
 
-  <script>
+  #sib-container input::placeholder,
+  #sib-container-news input::placeholder {
+    text-align:left;
+    font-family:Helvetica, sans-serif;
+    color:#c0ccda;
+  }
+
+  #sib-container a,
+  #sib-container-news a {
+    text-decoration: underline;
+    color: #2BB2FC;
+  }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!-- END Brevo -->
+
+<script>
 function brevoNewsSubmit() {
   const form = document.getElementById("sib-form-news");
   const thanks = document.getElementById("brevoNewsThanks");
@@ -62,7 +79,6 @@ function brevoNewsSubmit() {
   return true;
 }
 </script>
-
 
 </head>
 
@@ -150,94 +166,91 @@ function brevoNewsSubmit() {
   </section>
 
   <!-- NOVINKY (zatím Formspree, můžeš později sjednotit taky do Brevo) -->
-  <section class="section" id="newsletter">
-    <div class="container">
-      <h2>Novinky o spuštění</h2>
-      <p class="section__lead">
-        Nech email a dáme vědět, jakmile bude otevřená testovací vlna nebo bude relevantní update.
-      </p>
+ <section class="section" id="newsletter">
+  <div class="container">
+    <h2>Novinky o spuštění</h2>
+    <p class="section__lead">
+      Nech email a dáme vědět, jakmile bude otevřená testovací vlna nebo bude relevantní update.
+    </p>
 
-      <div class="grid2">
-        <div class="card card--soft">
-          <h3>Co dostaneš</h3>
-          <ul class="list">
-            <li>Info o testování mezi prvními</li>
-            <li>Novinky o spuštění</li>
-            <li>Bez spamu, odhlášení kdykoliv</li>
-          </ul>
-        </div>
+    <div class="grid2">
+      <div class="card card--soft">
+        <h3>Co dostaneš</h3>
+        <ul class="list">
+          <li>Info o testování mezi prvními</li>
+          <li>Novinky o spuštění</li>
+          <li>Bez spamu, odhlášení kdykoliv</li>
+        </ul>
+      </div>
 
-        <!-- Begin Brevo Form – Novinky CZ (s potvrzením a návratem) -->
-<div class="card brevo-card">
+      <div class="card brevo-card">
 
-  <div class="sib-form" style="text-align:center;background-color:#ffffff;">
-    <div id="sib-form-container" class="sib-form-container">
-      <div id="sib-container"
-           class="sib-container--medium sib-container--vertical"
-           style="text-align:center; background-color:#ffffff; max-width:350px; border-radius:25px; border-width:0;">
+        <div class="sib-form" style="text-align:center;background-color:#ffffff;">
+          <div id="sib-form-container-news" class="sib-form-container">
+            <div id="sib-container-news"
+                 class="sib-container--medium sib-container--vertical"
+                 style="text-align:center; background-color:#ffffff; max-width:350px; border-radius:25px; border-width:0;">
 
-        <form id="sib-form-news"
-              method="POST"
-              target="brevo_news_iframe"
-              onsubmit="return brevoNewsSubmit();"
-              action="https://9d89c0af.sibforms.com/serve/MUIFAGA8K_bAIiA4bnLMJ-bdHwrG0__9nwC7O3_BGROWbHn4_3ubfO3HTGc8C40JJ3Mz5dHnRx-4CeDA9csZzaaToFT93bK-m3KPRiOYo-hla3xI1zEaXYhDrrc3pwkZ_1Pt0XgfEi7_OTdZlyoK4JKXnPIDFlspV3PrUA0TR6BmnhUg-iiXbS4R5O0urjMFCi9heUqQOYPWc9l1SA==">
+              <form id="sib-form-news"
+                    method="POST"
+                    target="brevo_news_iframe"
+                    onsubmit="return brevoNewsSubmit();"
+                    action="https://9d89c0af.sibforms.com/serve/MUIFAGA8K_bAIiA4bnLMJ-bdHwrG0__9nwC7O3_BGROWbHn4_3ubfO3HTGc8C40JJ3Mz5dHnRx-4CeDA9csZzaaToFT93bK-m3KPRiOYo-hla3xI1zEaXYhDrrc3pwkZ_1Pt0XgfEi7_OTdZlyoK4JKXnPIDFlspV3PrUA0TR6BmnhUg-iiXbS4R5O0urjMFCi9heUqQOYPWc9l1SA==">
 
-          <div style="padding: 8px 0;">
-            <div style="font-size:26px;font-weight:800;font-family:Inter,Helvetica,sans-serif;color:#111827;text-align:left;">
-              Přihlášení k odběru
+                <div style="padding: 8px 0;">
+                  <div style="font-size:26px;font-weight:800;font-family:Inter,Helvetica,sans-serif;color:#111827;text-align:left;">
+                    Přihlášení k odběru
+                  </div>
+                </div>
+
+                <div style="padding: 8px 0;">
+                  <div class="form__entry">
+                    <label style="font-weight:800;font-size:14px;font-family:Inter,Helvetica,sans-serif;color:#374151;text-align:left;display:block;margin-bottom:6px;">
+                      Email
+                    </label>
+                    <input class="input"
+                           type="email"
+                           name="EMAIL"
+                           autocomplete="email"
+                           placeholder="např. jana@email.cz"
+                           required />
+                  </div>
+                </div>
+
+                <div style="padding: 8px 0;text-align:left;">
+                  <button class="btn btn--primary" type="submit">
+                    Chci novinky
+                  </button>
+                </div>
+
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="cs">
+                <input type="hidden" name="html_type" value="simple">
+
+              </form>
+
+              <iframe name="brevo_news_iframe" style="display:none;"></iframe>
+
+              <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
+                <div class="brevo-thanks__title">Díky! ❤️</div>
+                <div class="brevo-thanks__text">
+                  Tvůj e-mail byl úspěšně odeslán.
+                  Zkontroluj si prosím potvrzovací zprávu (i složku spam nebo hromadné).
+                  <span class="brevo-thanks__small">
+                    Formulář se za chvíli znovu zobrazí.
+                  </span>
+                </div>
+              </div>
+
             </div>
-          </div>
-
-          <div style="padding: 8px 0;">
-            <div class="form__entry">
-              <label style="font-weight:800;font-size:14px;font-family:Inter,Helvetica,sans-serif;color:#374151;text-align:left;display:block;margin-bottom:6px;">
-                Email
-              </label>
-              <input class="input"
-                     type="email"
-                     name="EMAIL"
-                     autocomplete="email"
-                     placeholder="např. jana@email.cz"
-                     required />
-            </div>
-          </div>
-
-          <div style="padding: 8px 0;text-align:left;">
-            <button class="btn btn--primary" type="submit">
-              Chci novinky
-            </button>
-          </div>
-
-          <input type="text" name="email_address_check" value="" class="input--hidden">
-          <input type="hidden" name="locale" value="cs">
-          <input type="hidden" name="html_type" value="simple">
-
-        </form>
-
-        <!-- Hidden iframe (zabraňuje přesměrování) -->
-        <iframe name="brevo_news_iframe" style="display:none;"></iframe>
-
-        <!-- Potvrzovací zpráva -->
-        <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
-          <div class="brevo-thanks__title">Díky! ❤️</div>
-          <div class="brevo-thanks__text">
-            Tvůj e-mail byl úspěšně odeslán.
-            Zkontroluj si prosím potvrzovací zprávu (i složku spam nebo hromadné).
-            <span class="brevo-thanks__small">
-              Za chvíli se formulář znovu zobrazí.
-            </span>
           </div>
         </div>
 
       </div>
     </div>
   </div>
+</section>
 
-</div>
-<!-- End Brevo Form -->
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="about">
     <div class="container">
