@@ -391,8 +391,12 @@ input:-webkit-autofill:focus {
 }
 
 
+/* ============================ */
+/* Brevo – finální vzhled dle foto */
+/* VLOŽ NA KONEC CSS             */
+/* ============================ */
 
-/* 1) Zruš webovou kartu kolem (to dělá "dvojitou kartu") */
+/* zruš "dvojitou kartu" (webová .card) */
 .card.brevo-card{
   background: transparent !important;
   border: 0 !important;
@@ -400,59 +404,28 @@ input:-webkit-autofill:focus {
   box-shadow: none !important;
 }
 
-/* 2) Zruš bílé pozadí Brevo wrapperu (další "vrstva") */
+/* zruš bílý wrapper z Breva */
 .card.brevo-card .sib-form{
   background: transparent !important;
 }
 
-/* 3) Vycentruj a nech jen jednu kartu = #sib-container-beta */
+/* centrum a sjednocení paddingu uvnitř karty */
 .card.brevo-card #sib-container-beta{
   margin: 0 auto !important;
-  overflow: hidden; /* aby radius seděl i na vnitřní prvky */
+  overflow: hidden !important;
 }
 
-/* 4) Skryj iframe target pro submit (aby nedělal layout) */
+/* iframe target ať nedělá layout */
 .card.brevo-card .brevo-iframe{
   width: 0 !important;
   height: 0 !important;
   border: 0 !important;
-  display: block !important; /* bezpečnější než display:none u některých prohlížečů */
+  display: block !important;
 }
 
-/* 5) Oprava: tvoje staré pravidla mířila na #sib-container (bez -beta)
-      Tady je hard polish přímo pro beta container */
-#sib-container-beta{
-  border-radius: 18px !important;
-}
-
-/* input ve Brevu */
-#sib-container-beta .input{
-  border-radius: 14px !important;
-  border: 1px solid rgba(229,231,235,.95) !important;
-  padding: 12px 12px !important;
-  font-family: Inter, Helvetica, sans-serif !important;
-  background: #fff !important;
-  color: #111827 !important;
-}
-
-#sib-container-beta .input:focus{
-  border-color: rgba(229,115,115,.55) !important;
-  box-shadow: 0 0 0 6px rgba(229,115,115,.18) !important;
-  outline: none !important;
-}
-
-/* tlačítko – ponechávám tvé růžové, jen sjednotím stín */
-#sib-container-beta .sib-form-block__button{
-  box-shadow: 0 12px 24px rgba(229,115,115,.22) !important;
-}
-
-/* thanks block */
-.card.brevo-card .brevo-thanks{
-  margin: 12px 16px 16px !important;
-}
-
+/* typografie jako na fotce */
 #sib-container-beta .brevo-beta__title p{
-  color: #000000 !important;
+  color: #000 !important;
   font-weight: 900 !important;
 }
 
@@ -460,11 +433,42 @@ input:-webkit-autofill:focus {
   color: #111827 !important;
 }
 
+/* input – hranatější, nižší jako na fotce */
+#sib-container-beta .input{
+  width: 100% !important;
+  height: 38px !important;
+  border-radius: 2px !important;
+  border: 1px solid rgba(209,213,219,1) !important; /* ~šedá jako na fotce */
+  padding: 8px 10px !important;
+  background: #fff !important;
+  color: #111827 !important;
+  font-family: Inter, Helvetica, sans-serif !important;
+  box-shadow: none !important;
+}
+
+#sib-container-beta .input:focus{
+  outline: none !important;
+  border-color: rgba(209,213,219,1) !important;
+  box-shadow: none !important;
+}
+
+/* tlačítko – růžový obdélník (ne pill), bez stínu */
 #sib-container-beta .brevo-beta__btn{
   background: #E57373 !important;
   color: #ffffff !important;
   border: 0 !important;
-  border-radius: 12px !important; /* místo pill */
-  padding: 12px 18px !important;
-  box-shadow: 0 12px 24px rgba(229,115,115,.22) !important;
+  border-radius: 2px !important;  /* důležité: přebije inline 999px */
+  padding: 10px 18px !important;
+  font-weight: 900 !important;
+  box-shadow: none !important;
+}
+
+/* loader ikona pryč (na fotce není) */
+#sib-container-beta .brevo-beta__btn svg{
+  display: none !important;
+}
+
+/* malý text pod inputem */
+#sib-container-beta .entry__specification{
+  color: #9ca3af !important;
 }
