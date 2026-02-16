@@ -389,3 +389,64 @@ input:-webkit-autofill:focus {
   }
   a { color: inherit; }
 }
+
+
+
+/* 1) Zruš webovou kartu kolem (to dělá "dvojitou kartu") */
+.card.brevo-card{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 2) Zruš bílé pozadí Brevo wrapperu (další "vrstva") */
+.card.brevo-card .sib-form{
+  background: transparent !important;
+}
+
+/* 3) Vycentruj a nech jen jednu kartu = #sib-container-beta */
+.card.brevo-card #sib-container-beta{
+  margin: 0 auto !important;
+  overflow: hidden; /* aby radius seděl i na vnitřní prvky */
+}
+
+/* 4) Skryj iframe target pro submit (aby nedělal layout) */
+.card.brevo-card .brevo-iframe{
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  display: block !important; /* bezpečnější než display:none u některých prohlížečů */
+}
+
+/* 5) Oprava: tvoje staré pravidla mířila na #sib-container (bez -beta)
+      Tady je hard polish přímo pro beta container */
+#sib-container-beta{
+  border-radius: 18px !important;
+}
+
+/* input ve Brevu */
+#sib-container-beta .input{
+  border-radius: 14px !important;
+  border: 1px solid rgba(229,231,235,.95) !important;
+  padding: 12px 12px !important;
+  font-family: Inter, Helvetica, sans-serif !important;
+  background: #fff !important;
+  color: #111827 !important;
+}
+
+#sib-container-beta .input:focus{
+  border-color: rgba(229,115,115,.55) !important;
+  box-shadow: 0 0 0 6px rgba(229,115,115,.18) !important;
+  outline: none !important;
+}
+
+/* tlačítko – ponechávám tvé růžové, jen sjednotím stín */
+#sib-container-beta .sib-form-block__button{
+  box-shadow: 0 12px 24px rgba(229,115,115,.22) !important;
+}
+
+/* thanks block */
+.card.brevo-card .brevo-thanks{
+  margin: 12px 16px 16px !important;
+}
