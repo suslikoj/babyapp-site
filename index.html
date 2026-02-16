@@ -21,7 +21,8 @@
   <style>
     /* Keep site light in dark-mode devices */
     html, body { background:#ffffff !important; color:#111827 !important; }
-    input, textarea, select, button { color:#111827 !important; background:#ffffff !important; }
+   input, textarea, select { color:#111827 !important; background:#ffffff !important; }
+
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -119,32 +120,13 @@
     </div>
   </section>
 
-  <!-- NOVINKY -->
-  <section class="section" id="newsletter">
-    <div class="container">
-      <h2>Novinky o spuštění</h2>
-      <p class="section__lead">
-        Nech e-mail a dáme vědět, jakmile bude otevřená testovací vlna nebo bude relevantní update.
-      </p>
-
-      <div class="grid2">
-        <div class="card card--soft">
-          <h3>Co dostaneš</h3>
-          <ul class="list">
-            <li>Datum vydání a důležité oznámení</li>
-            <li>Nové funkce a aktualizace aplikace</li>
-            <li>Praktické tipy + nové recepty / články</li>
-            <li>Bez spamu. Odhlášení kdykoliv.</li>
-          </ul>
-        </div>
-
-        <!-- Brevo: NOVINKY CZ -->
+  <!-- Brevo: NOVINKY CZ -->
 <div class="card brevo-card">
-  <div class="sib-form" style="text-align:center;background-color:transparent;">
+  <div class="sib-form brevo-news" style="text-align:center; background-color: transparent;">
     <div id="sib-form-container-news" class="sib-form-container">
       <div id="sib-container-news"
            class="sib-container--medium sib-container--vertical"
-           style="text-align:left; max-width:350px; border-radius:18px; border-width:0; background-color:#E57373;">
+           style="text-align:center; background-color:rgba(229,115,115,1); max-width:350px; border-radius:25px; border-width:0px; border-style:solid;">
 
         <form id="sib-form-news"
               method="POST"
@@ -152,22 +134,59 @@
               onsubmit="return brevoNewsSubmit();"
               action="https://9d89c0af.sibforms.com/serve/MUIFAGA8K_bAIiA4bnLMJ-bdHwrG0__9nwC7O3_BGROWbHn4_3ubfO3HTGc8C40JJ3Mz5dHnRx-4CeDA9csZzaaToFT93bK-m3KPRiOYo-hla3xI1zEaXYhDrrc3pwkZ_1Pt0XgfEi7_OTdZlyoK4JKXnPIDFlspV3PrUA0TR6BmnhUg-iiXbS4R5O0urjMFCi9heUqQOYPWc9l1SA==">
 
-          <div class="brevo-news__title">Přihlášení k odběru</div>
-
-          <div style="padding: 6px 0;">
-            <label class="brevo-news__label" for="EMAIL_NEWS">Email</label>
-            <input class="input"
-                   type="email"
-                   id="EMAIL_NEWS"
-                   name="EMAIL"
-                   autocomplete="email"
-                   placeholder="např. jana@email.cz"
-                   required />
+          <div style="padding: 16px 0;">
+            <div class="sib-form-block brevo-news__title"
+                 style="font-size:32px; text-align:left; font-weight:800; font-family:Inter, Helvetica, sans-serif; color:#ffffff; background-color:transparent;">
+              <p style="margin:0;">Přihlášení k odběru</p>
+            </div>
           </div>
 
-          <button class="brevo-news__btn" type="submit">
-            Chci novinky
-          </button>
+          <div style="padding: 16px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label"
+                         style="font-weight:800; text-align:left; font-size:16px; font-family:Inter, Helvetica, sans-serif; color:#ffffff;"
+                         for="EMAIL_NEWS"
+                         data-required="*">Email</label>
+
+                  <div class="entry__field">
+                    <input class="input"
+                           type="email"
+                           id="EMAIL_NEWS"
+                           name="EMAIL"
+                           autocomplete="email"
+                           placeholder="např. jana@email.cz"
+                           data-required="true"
+                           required />
+                  </div>
+                </div>
+
+                <label class="entry__error entry__error--primary"
+                       style="font-size:14px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:8px; border-color:#ff4949;">
+                </label>
+
+                <label class="entry__specification"
+                       style="font-size:12px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#ffecec;">
+                  Zadejte svou e-mailovou adresu pro odběr. Např. abc@xyz.com
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 16px 0;">
+            <div class="sib-form-block" style="text-align:left">
+              <button class="sib-form-block__button sib-form-block__button-with-loader brevo-news__btn"
+                      form="sib-form-news"
+                      type="submit"
+                      style="font-size:18px; font-weight:900; font-family:Inter, Helvetica, sans-serif; color:#0d0d0d; background-color:#fafafa; border-radius:18px; border-width:0px; padding:10px 18px;">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                Chci novinky
+              </button>
+            </div>
+          </div>
 
           <input type="text" name="email_address_check" value="" class="input--hidden">
           <input type="hidden" name="locale" value="cs">
@@ -179,8 +198,7 @@
         <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
           <div class="brevo-thanks__title">Díky! ❤️</div>
           <div class="brevo-thanks__text">
-            Tvůj e-mail byl úspěšně odeslán.
-            Zkontroluj si prosím potvrzovací zprávu (i spam/hromadné).
+            Poslali jsme ti potvrzovací e-mail. Otevři ho a klikni na potvrzení (zkontroluj i spam/hromadné).
             <span class="brevo-thanks__small">Za chvíli se formulář znovu zobrazí.</span>
           </div>
         </div>
