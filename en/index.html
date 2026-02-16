@@ -20,7 +20,8 @@
 
   <style>
     html, body { background:#ffffff !important; color:#111827 !important; }
-    input, textarea, select, button { color:#111827 !important; background:#ffffff !important; }
+   input, textarea, select { color:#111827 !important; background:#ffffff !important; }
+
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -137,66 +138,93 @@
         </div>
 
         <!-- Brevo: UPDATES EN -->
-        <div class="card brevo-card">
-          <div class="sib-form" style="text-align:center;background-color:#ffffff;">
-            <div id="sib-form-container-news" class="sib-form-container">
-              <div id="sib-container-news"
-                   class="sib-container--medium sib-container--vertical"
-                   style="text-align:center; background-color:#ffffff; max-width:350px; border-radius:25px; border-width:0;">
+<div class="card brevo-card">
+  <div class="sib-form brevo-news" style="text-align:center; background-color: transparent;">
+    <div id="sib-form-container-news-en" class="sib-form-container">
+      <div id="sib-container-news-en"
+           class="sib-container--medium sib-container--vertical"
+           style="text-align:center; background-color:rgba(229,115,115,1); max-width:350px; border-radius:25px; border-width:0px; border-style:solid;">
 
-                <form id="sib-form-news"
-                      method="POST"
-                      target="brevo_news_iframe"
-                      onsubmit="return brevoNewsSubmitEN();"
-                      action="https://9d89c0af.sibforms.com/serve/MUIFAId0DiNjRs4cQU1Y78EPLYKGiyz_Mb30rXf_JF59kYF2jdJ2rSWXBKWnMEWTPtGpXYH7vfhUWpJ79NVofCPuZMMlI1z6FjXsqVU_Gma4MF_UQ-SyjpmWaHq6j9QoQ4bjkuwKzmWTVb_RFJhCqV6xUJLU0FZ1I1DbcklMg73RuNSJRJj2O5qBZPLW7EIRsaVc9A_8UjuJrvbSgw==">
+        <form id="sib-form-news-en"
+              method="POST"
+              target="brevo_news_iframe_en"
+              onsubmit="return brevoNewsSubmitEN();"
+              action="https://9d89c0af.sibforms.com/serve/MUIFAId0DiNjRs4cQU1Y78EPLYKGiyz_Mb30rXf_JF59kYF2jdJ2rSWXBKWnMEWTPtGpXYH7vfhUWpJ79NVofCPuZMMlI1z6FjXsqVU_Gma4MF_UQ-SyjpmWaHq6j9QoQ4bjkuwKzmWTVb_RFJhCqV6xUJLU0FZ1I1DbcklMg73RuNSJRJj2O5qBZPLW7EIRsaVc9A_8UjuJrvbSgw==">
 
-                  <div style="padding: 8px 0;">
-                    <div style="font-size:26px;font-weight:800;font-family:Inter,Helvetica,sans-serif;color:#111827;text-align:left;">
-                      Subscribe
-                    </div>
-                  </div>
+          <div style="padding: 16px 0;">
+            <div class="sib-form-block brevo-news__title"
+                 style="font-size:32px; text-align:left; font-weight:800; font-family:Inter, Helvetica, sans-serif; color:#ffffff; background-color:transparent;">
+              <p style="margin:0;">Subscribe</p>
+            </div>
+          </div>
 
-                  <div style="padding: 8px 0;">
-                    <div class="form__entry">
-                      <label style="font-weight:800;font-size:14px;font-family:Inter,Helvetica,sans-serif;color:#374151;text-align:left;display:block;margin-bottom:6px;">
-                        Email
-                      </label>
-                      <input class="input"
-                             type="email"
-                             name="EMAIL"
-                             autocomplete="email"
-                             placeholder="e.g. jane@email.com"
-                             required />
-                    </div>
-                  </div>
+          <div style="padding: 16px 0;">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label"
+                         style="font-weight:800; text-align:left; font-size:16px; font-family:Inter, Helvetica, sans-serif; color:#ffffff;"
+                         for="EMAIL_NEWS_EN"
+                         data-required="*">Email</label>
 
-                  <div style="padding: 8px 0;text-align:left;">
-                    <button class="btn btn--primary" type="submit">
-                      Send me updates
-                    </button>
-                  </div>
-
-                  <input type="text" name="email_address_check" value="" class="input--hidden">
-                  <input type="hidden" name="locale" value="en">
-                  <input type="hidden" name="html_type" value="simple">
-                </form>
-
-                <iframe name="brevo_news_iframe" class="brevo-iframe" title="Brevo news submit target"></iframe>
-
-                <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
-                  <div class="brevo-thanks__title">Thank you! ❤️</div>
-                  <div class="brevo-thanks__text">
-                    Your email has been submitted successfully.
-                    Please check the confirmation email (also spam/promotions).
-                    <span class="brevo-thanks__small">The form will reappear shortly.</span>
+                  <div class="entry__field">
+                    <input class="input"
+                           type="email"
+                           id="EMAIL_NEWS_EN"
+                           name="EMAIL"
+                           autocomplete="email"
+                           placeholder="e.g. jane@email.com"
+                           data-required="true"
+                           required />
                   </div>
                 </div>
 
+                <label class="entry__error entry__error--primary"
+                       style="font-size:14px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:8px; border-color:#ff4949;">
+                </label>
+
+                <label class="entry__specification"
+                       style="font-size:12px; text-align:left; font-family:Inter, Helvetica, sans-serif; color:#ffecec;">
+                  Provide your email address to subscribe. For example: abc@xyz.com
+                </label>
               </div>
             </div>
           </div>
+
+          <div style="padding: 16px 0;">
+            <div class="sib-form-block" style="text-align:left">
+              <button class="sib-form-block__button sib-form-block__button-with-loader brevo-news__btn"
+                      form="sib-form-news-en"
+                      type="submit"
+                      style="font-size:18px; font-weight:900; font-family:Inter, Helvetica, sans-serif; color:#0d0d0d; background-color:#fafafa; border-radius:18px; border-width:0px; padding:10px 18px;">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                I want updates
+              </button>
+            </div>
+          </div>
+
+          <input type="text" name="email_address_check" value="" class="input--hidden">
+          <input type="hidden" name="locale" value="en">
+          <input type="hidden" name="html_type" value="simple">
+        </form>
+
+        <iframe name="brevo_news_iframe_en" class="brevo-iframe" title="Brevo news submit target (EN)"></iframe>
+
+        <div id="brevoNewsThanksEN" class="brevo-thanks" hidden aria-live="polite">
+          <div class="brevo-thanks__title">Thank you! ❤️</div>
+          <div class="brevo-thanks__text">
+            We’ve sent you a confirmation email. Open it and confirm (please check spam/promotions).
+            <span class="brevo-thanks__small">The form will reappear shortly.</span>
+          </div>
         </div>
-        <!-- /Brevo: UPDATES EN -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Brevo: UPDATES EN -->
 
       </div>
     </div>
@@ -423,9 +451,9 @@
   })();
 
   // Brevo: UPDATES (EN)
-  function brevoNewsSubmitEN() {
-    const form = document.getElementById("sib-form-news");
-    const thanks = document.getElementById("brevoNewsThanks");
+    function brevoNewsSubmitEN() {
+    const form = document.getElementById("sib-form-news-en");
+    const thanks = document.getElementById("brevoNewsThanksEN");
     if (!form || !thanks) return true;
 
     setTimeout(() => {
@@ -444,23 +472,23 @@
 
   // Brevo: TESTERS (EN)
   function brevoBetaSubmitEN() {
-    const form = document.getElementById("sib-form-beta");
-    const thanks = document.getElementById("brevoBetaThanks");
-    if (!form || !thanks) return true;
+  const form = document.getElementById("sib-form-beta-en");
+  const thanks = document.getElementById("brevoBetaThanksEN");
+  if (!form || !thanks) return true;
+
+  setTimeout(() => {
+    form.style.display = "none";
+    thanks.hidden = false;
 
     setTimeout(() => {
-      form.style.display = "none";
-      thanks.hidden = false;
+      thanks.hidden = true;
+      form.reset();
+      form.style.display = "block";
+    }, 4500);
+  }, 800);
 
-      setTimeout(() => {
-        thanks.hidden = true;
-        form.reset();
-        form.style.display = "block";
-      }, 4500);
-    }, 800);
-
-    return true;
-  }
+  return true;
+}
 </script>
 
 </body>
