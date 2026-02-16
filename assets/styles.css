@@ -472,3 +472,7 @@ input:-webkit-autofill:focus {
 #sib-container-beta .entry__specification{
   color: #9ca3af !important;
 }
+#sib-container-beta{
+  background: rgba(255,255,255,.78) !important;
+  border-color: rgba(229,231,235,.85) !important;
+}
