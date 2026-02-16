@@ -530,3 +530,11 @@ input:-webkit-autofill:focus {
 #sib-container-news .btn.btn--primary{
   color: #fff !important;
 }
+
+/* stejné styly pro EN box */
+.card.brevo-card #sib-container-beta-en{
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  background: rgba(255,255,255,.78) !important;
+  border-color: rgba(229,231,235,.85) !important;
+}
