@@ -558,3 +558,13 @@ input:-webkit-autofill:focus {
 #sib-container-news-en .brevo-news__btn svg{
   display:none !important;
 }
+#sib-container-beta-en{
+  background: rgba(255,255,255,.78) !important;
+  border-color: rgba(229,231,235,.85) !important;
+  overflow: hidden !important;
+}
+
+/* tlačítko – stejné zaoblení jako CZ */
+#sib-container-beta-en .brevo-beta__btn{
+  border-radius: 14px !important;
+}
