@@ -139,66 +139,58 @@
         </div>
 
         <!-- Brevo: NOVINKY CZ -->
-        <div class="card brevo-card">
-          <div class="sib-form" style="text-align:center;background-color:#ffffff;">
-            <div id="sib-form-container-news" class="sib-form-container">
-              <div id="sib-container-news"
-                   class="sib-container--medium sib-container--vertical"
-                   style="text-align:center; background-color:#ffffff; max-width:350px; border-radius:25px; border-width:0;">
+<div class="card brevo-card">
+  <div class="sib-form" style="text-align:center;background-color:transparent;">
+    <div id="sib-form-container-news" class="sib-form-container">
+      <div id="sib-container-news"
+           class="sib-container--medium sib-container--vertical"
+           style="text-align:left; max-width:350px; border-radius:18px; border-width:0; background-color:#E57373;">
 
-                <form id="sib-form-news"
-                      method="POST"
-                      target="brevo_news_iframe"
-                      onsubmit="return brevoNewsSubmit();"
-                      action="https://9d89c0af.sibforms.com/serve/MUIFAGA8K_bAIiA4bnLMJ-bdHwrG0__9nwC7O3_BGROWbHn4_3ubfO3HTGc8C40JJ3Mz5dHnRx-4CeDA9csZzaaToFT93bK-m3KPRiOYo-hla3xI1zEaXYhDrrc3pwkZ_1Pt0XgfEi7_OTdZlyoK4JKXnPIDFlspV3PrUA0TR6BmnhUg-iiXbS4R5O0urjMFCi9heUqQOYPWc9l1SA==">
+        <form id="sib-form-news"
+              method="POST"
+              target="brevo_news_iframe"
+              onsubmit="return brevoNewsSubmit();"
+              action="https://9d89c0af.sibforms.com/serve/MUIFAGA8K_bAIiA4bnLMJ-bdHwrG0__9nwC7O3_BGROWbHn4_3ubfO3HTGc8C40JJ3Mz5dHnRx-4CeDA9csZzaaToFT93bK-m3KPRiOYo-hla3xI1zEaXYhDrrc3pwkZ_1Pt0XgfEi7_OTdZlyoK4JKXnPIDFlspV3PrUA0TR6BmnhUg-iiXbS4R5O0urjMFCi9heUqQOYPWc9l1SA==">
 
-                  <div style="padding: 8px 0;">
-                    <div style="font-size:26px;font-weight:800;font-family:Inter,Helvetica,sans-serif;color:#111827;text-align:left;">
-                      Přihlášení k odběru
-                    </div>
-                  </div>
+          <div class="brevo-news__title">Přihlášení k odběru</div>
 
-                  <div style="padding: 8px 0;">
-                    <div class="form__entry">
-                      <label style="font-weight:800;font-size:14px;font-family:Inter,Helvetica,sans-serif;color:#374151;text-align:left;display:block;margin-bottom:6px;">
-                        Email
-                      </label>
-                      <input class="input"
-                             type="email"
-                             name="EMAIL"
-                             autocomplete="email"
-                             placeholder="např. jana@email.cz"
-                             required />
-                    </div>
-                  </div>
+          <div style="padding: 6px 0;">
+            <label class="brevo-news__label" for="EMAIL_NEWS">Email</label>
+            <input class="input"
+                   type="email"
+                   id="EMAIL_NEWS"
+                   name="EMAIL"
+                   autocomplete="email"
+                   placeholder="např. jana@email.cz"
+                   required />
+          </div>
 
-                  <div style="padding: 8px 0;text-align:left;">
-                    <button class="btn btn--primary" type="submit">
-                      Chci novinky
-                    </button>
-                  </div>
+          <button class="brevo-news__btn" type="submit">
+            Chci novinky
+          </button>
 
-                  <input type="text" name="email_address_check" value="" class="input--hidden">
-                  <input type="hidden" name="locale" value="cs">
-                  <input type="hidden" name="html_type" value="simple">
-                </form>
+          <input type="text" name="email_address_check" value="" class="input--hidden">
+          <input type="hidden" name="locale" value="cs">
+          <input type="hidden" name="html_type" value="simple">
+        </form>
 
-                <iframe name="brevo_news_iframe" class="brevo-iframe" title="Brevo news submit target"></iframe>
+        <iframe name="brevo_news_iframe" class="brevo-iframe" title="Brevo news submit target"></iframe>
 
-                <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
-                  <div class="brevo-thanks__title">Díky! ❤️</div>
-                  <div class="brevo-thanks__text">
-                    Tvůj e-mail byl úspěšně odeslán.
-                    Zkontroluj si prosím potvrzovací zprávu (i spam/hromadné).
-                    <span class="brevo-thanks__small">Za chvíli se formulář znovu zobrazí.</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+        <div id="brevoNewsThanks" class="brevo-thanks" hidden aria-live="polite">
+          <div class="brevo-thanks__title">Díky! ❤️</div>
+          <div class="brevo-thanks__text">
+            Tvůj e-mail byl úspěšně odeslán.
+            Zkontroluj si prosím potvrzovací zprávu (i spam/hromadné).
+            <span class="brevo-thanks__small">Za chvíli se formulář znovu zobrazí.</span>
           </div>
         </div>
-        <!-- /Brevo: NOVINKY CZ -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Brevo: NOVINKY CZ -->
+
 
       </div>
     </div>
