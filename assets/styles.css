@@ -392,183 +392,125 @@ input:-webkit-autofill:focus {
 
 
 /* ============================ */
-/* BREVO – CZ FINÁL (NEWS + BETA) */
-/* VLOŽ NA KONEC styles.css       */
+/* BREVO – FINÁL (CZ)           */
+/* (NOVINKY + TESTEŘI)          */
+/* VLOŽ NA KONEC styles.css     */
 /* ============================ */
 
-/* 0) iframe targety ať nedělají layout */
+/* iframe targety ať nedělají layout */
 .brevo-iframe{
-  width: 0 !important;
-  height: 0 !important;
-  border: 0 !important;
-  display: block !important;
+  width:0 !important;
+  height:0 !important;
+  border:0 !important;
+  display:block !important;
 }
 
-/* 1) zruš "dvojitou kartu" jen u Brevo embedů */
+/* zruš "dvojitou kartu" jen u Brevo embedů */
 .card.brevo-card{
-  background: transparent !important;
-  border: 0 !important;
-  padding: 0 !important;
-  box-shadow: none !important;
+  background:transparent !important;
+  border:0 !important;
+  padding:0 !important;
+  box-shadow:none !important;
 }
 
-/* 2) zruš bílý wrapper z Breva */
+/* zruš bílé pozadí Brevo wrapperu */
 .card.brevo-card .sib-form{
-  background: transparent !important;
+  background:transparent !important;
 }
 
-/* 3) společné: thank-you box */
+/* ---------- společný thanks box ---------- */
 .card.brevo-card .brevo-thanks{
-  margin: 12px 16px 16px !important;
-  padding: 12px 14px !important;
-  border: 1px solid rgba(229,231,235,.85) !important;
-  border-radius: 16px !important;
-  background: rgba(255,255,255,.78) !important;
-  text-align: left !important;
+  margin:12px 16px 16px !important;
+  padding:12px 14px !important;
+  border:1px solid rgba(229,231,235,.85) !important;
+  border-radius:16px !important;
+  background:rgba(255,255,255,.78) !important;
+  text-align:left !important;
 }
 .card.brevo-card .brevo-thanks__title{
-  font-weight: 900 !important;
-  color: #111827 !important;
-  margin-bottom: 6px !important;
+  font-weight:900 !important;
+  color:#111827 !important;
+  margin-bottom:6px !important;
 }
 .card.brevo-card .brevo-thanks__text{
-  color: #6b7280 !important;
-  font-size: 13px !important;
-  line-height: 1.45 !important;
+  color:#6b7280 !important;
+  font-size:13px !important;
+  line-height:1.45 !important;
 }
 .card.brevo-card .brevo-thanks__small{
-  display: block !important;
-  margin-top: 6px !important;
-  font-size: 12px !important;
-  color: #6b7280 !important;
+  display:block !important;
+  margin-top:6px !important;
+  font-size:12px !important;
+  color:#6b7280 !important;
 }
 
 /* ============================ */
-/* TESTEŘI (BETA) – CZ           */
+/* BREVO: TESTEŘI (CZ)          */
 /* ============================ */
 
-/* karta – pozadí jako u "Co získáš" */
+/* pozadí boxu stejné jako card--soft (aby nesplýval) */
 #sib-container-beta{
-  margin: 0 auto !important;
-  overflow: hidden !important;
-  background: rgba(255,255,255,.78) !important;     /* stejné jako .card--soft */
-  border: 1px solid rgba(229,231,235,.85) !important;
-  border-radius: 18px !important;
+  background:rgba(255,255,255,.78) !important;
+  border-color:rgba(229,231,235,.85) !important;
 }
 
-/* input v beta */
-#sib-container-beta .input{
-  width: 100% !important;
-  height: 38px !important;
-  border-radius: 2px !important;
-  border: 1px solid rgba(209,213,219,1) !important;
-  padding: 8px 10px !important;
-  background: #fff !important;
-  color: #111827 !important;
-  font-family: Inter, Helvetica, sans-serif !important;
-  box-shadow: none !important;
-}
-#sib-container-beta .input:focus{
-  outline: none !important;
-  border-color: rgba(209,213,219,1) !important;
-  box-shadow: none !important;
-}
-
-/* TLAČÍTKO "ODEBÍRAT" – jen víc zaoblit (jinak necháváme styl) */
+/* tlačítko: jen víc zaoblit (jak chceš) */
 #sib-container-beta .brevo-beta__btn{
-  border-radius: 12px !important;   /* změna: víc zaoblené */
-  padding: 10px 18px !important;
-  font-weight: 900 !important;
-  box-shadow: none !important;
-}
-
-/* loader ikona pryč (aby to bylo čisté jako na fotkách) */
-#sib-container-beta .brevo-beta__btn svg{
-  display: none !important;
-}
-
-/* šedý text pod inputem */
-#sib-container-beta .entry__specification{
-  color: #9ca3af !important;
+  border-radius:14px !important; /* víc zaoblené */
 }
 
 /* ============================ */
-/* NOVINKY (NEWS) – CZ           */
-/* cílový vzhled: 3. fotka       */
+/* BREVO: NOVINKY (CZ)          */
 /* ============================ */
 
+/* vynutit správný červený box */
 #sib-container-news{
-  margin: 0 auto !important;
-  max-width: 350px !important;
-  overflow: hidden !important;
-
-  background: #E57373 !important;            /* růžové pozadí */
-  border: 0 !important;
-  border-radius: 18px !important;
-
-  padding: 18px !important;                  /* aby to nebylo "mini" */
-  text-align: left !important;
+  background:#E57373 !important;
+  border-radius:25px !important;
+  border:0 !important;
+  overflow:hidden !important;
 }
 
-/* Nadpis + text v news */
+/* bílá typografie uvnitř */
 #sib-container-news,
-#sib-container-news *{
-  font-family: Inter, Helvetica, sans-serif !important;
+#sib-container-news p,
+#sib-container-news .sib-form-block,
+#sib-container-news label{
+  color:#ffffff !important;
 }
 
-#sib-container-news .brevo-news__title{
-  color: #ffffff !important;
-  font-weight: 900 !important;
-  font-size: 24px !important;
-  margin: 0 0 10px !important;
-}
-
-#sib-container-news .brevo-news__label{
-  color: rgba(255,255,255,.92) !important;
-  font-weight: 800 !important;
-  font-size: 13px !important;
-  margin: 0 0 6px !important;
-  display: block !important;
-}
-
-/* Input v news */
+/* input: bílý, čitelný */
 #sib-container-news .input{
-  width: 100% !important;
-  border-radius: 2px !important;
-  border: 1px solid rgba(255,255,255,.55) !important;
-  padding: 10px 12px !important;
-  background: #ffffff !important;
-  color: #111827 !important;
-  box-shadow: none !important;
+  background:#ffffff !important;
+  color:#111827 !important;
+  border:1px solid rgba(255,255,255,.55) !important;
+  border-radius:4px !important;
+  padding:10px 12px !important;
+  box-shadow:none !important;
 }
 #sib-container-news .input::placeholder{
-  color: #9ca3af !important;
+  color:#c7cace !important;
 }
 
-/* Tlačítko v news: bílé s černým textem */
+/* malý popisek pod inputem */
+#sib-container-news .entry__specification{
+  color:#ffecec !important;
+}
+
+/* tlačítko: bílé, černý text, zaoblené */
 #sib-container-news .brevo-news__btn{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  margin-top: 12px !important;
-
-  background: #ffffff !important;
-  color: #111827 !important;
-  border: 0 !important;
-
-  border-radius: 999px !important; /* jako na 3. fotce */
-  padding: 12px 16px !important;
-
-  font-weight: 900 !important;
-  font-size: 14px !important;
-  cursor: pointer !important;
+  background:#fafafa !important;
+  color:#0d0d0d !important;
+  border:0 !important;
+  border-radius:18px !important;
+  padding:10px 18px !important;
+  font-weight:900 !important;
+  box-shadow:none !important;
 }
 
-/* Ať nám to nezkazí globální "button background white" pravidlo */
-#sib-container-news button{
-  background: #ffffff !important;
-  color: #111827 !important;
+/* loader ikonu skryj (ať je čistý button jako na fotce) */
+#sib-container-news .brevo-news__btn svg{
+  display:none !important;
 }
 
 
