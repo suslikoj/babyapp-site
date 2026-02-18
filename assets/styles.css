@@ -162,6 +162,15 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   padding:18px;
   box-shadow:var(--shadow);
 }
+.hero__panel .panel__shot{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  border-radius:var(--radius2);
+  object-fit:contain;
+  margin:0 auto;
+}
 .panel__row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px}
 .pill{
   font-size:12px; font-weight:800;
@@ -469,6 +478,7 @@ input:-webkit-autofill:focus {
   border-radius:25px !important;
   border:0 !important;
   overflow:hidden !important;
+  box-shadow:0 10px 24px rgba(17,24,39,.12) !important;
 }
 
 /* bílá typografie uvnitř */
@@ -523,6 +533,7 @@ input:-webkit-autofill:focus {
   border-radius:25px !important;
   border:0 !important;
   overflow:hidden !important;
+  box-shadow:0 10px 24px rgba(17,24,39,.12) !important;
 }
 
 #sib-container-news-en,
