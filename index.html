@@ -40,23 +40,21 @@
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="Bejby bez alergií">
+    <a class="brand" href="/" aria-label="Bejby bez alergií">
       <span class="brand__name">Bejby bez alergií</span>
     </a>
 
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="#about">O aplikaci</a>
-      <a href="#how">Jak funguje</a>
-      <a href="#who">Pro koho</a>
-      <a href="#beta">První testeři</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Kontakt</a>
+    <nav class="nav nav--primary" aria-label="Hlavní navigace">
+      <a class="is-active" href="/" aria-current="page">Aplikace</a>
+      <a href="/eczema/">Ekzém u dětí</a>
+      <a href="/signs/">Projevy potravinové alergie</a>
+      <a href="/main-suspects/">Hlavní podezřelí</a>
     </nav>
 
     <div class="lang">
-      <a class="lang__item is-active" href="./" aria-current="page">CZ</a>
+      <a class="lang__item is-active" href="/" aria-current="page">CZ</a>
       <span class="lang__sep" aria-hidden="true">/</span>
-      <a class="lang__item" href="./en/">EN</a>
+      <a class="lang__item" href="/en/">EN</a>
     </div>
 
     <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">
@@ -65,18 +63,27 @@
   </div>
 
   <div class="mobile" id="mobileNav" hidden>
+    <a class="is-active" href="/" aria-current="page">Aplikace</a>
+    <a href="/eczema/">Ekzém u dětí</a>
+    <a href="/signs/">Projevy potravinové alergie</a>
+    <a href="/main-suspects/">Hlavní podezřelí</a>
+    <div class="mobile__langs">
+      <a class="is-active" href="/">CZ</a>
+      <a href="/en/">EN</a>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Sekce aplikace">
+  <div class="container subnav__inner">
     <a href="#about">O aplikaci</a>
     <a href="#how">Jak funguje</a>
     <a href="#who">Pro koho</a>
     <a href="#beta">První testeři</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Kontakt</a>
-    <div class="mobile__langs">
-      <a class="is-active" href="./">CZ</a>
-      <a href="./en/">EN</a>
-    </div>
   </div>
-</header>
+</nav>
 
 <main id="top">
   <section class="hero">
@@ -421,7 +428,7 @@
     });
 
     // Close menu after clicking a link
-    mobileNav.querySelectorAll('a[href^="#"]').forEach(a => {
+    mobileNav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger.setAttribute('aria-expanded', 'false');
         mobileNav.hidden = true;
