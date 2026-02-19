@@ -38,23 +38,21 @@
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="Baby w/o allergies">
+    <a class="brand" href="/en/" aria-label="Baby w/o allergies">
       <span class="brand__name">Baby w/o allergies</span>
     </a>
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#how">How it works</a>
-      <a href="#who">Who it’s for</a>
-      <a href="#beta">Early testers</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav nav--primary" aria-label="Main navigation">
+      <a class="is-active" href="/en/" aria-current="page">App</a>
+      <a href="/en/eczema/">Eczema in children</a>
+      <a href="/en/signs/">Signs of food allergy</a>
+      <a href="/en/main-suspects/">Main suspects</a>
     </nav>
 
     <div class="lang">
-      <a class="lang__item" href="../">CZ</a>
+      <a class="lang__item" href="/">CZ</a>
       <span class="lang__sep" aria-hidden="true">/</span>
-      <a class="lang__item is-active" href="./" aria-current="page">EN</a>
+      <a class="lang__item is-active" href="/en/" aria-current="page">EN</a>
     </div>
 
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
@@ -63,18 +61,27 @@
   </div>
 
   <div class="mobile" id="mobileNav" hidden>
+    <a class="is-active" href="/en/" aria-current="page">App</a>
+    <a href="/en/eczema/">Eczema in children</a>
+    <a href="/en/signs/">Signs of food allergy</a>
+    <a href="/en/main-suspects/">Main suspects</a>
+    <div class="mobile__langs">
+      <a href="/">CZ</a>
+      <a class="is-active" href="/en/">EN</a>
+    </div>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="App sections">
+  <div class="container subnav__inner">
     <a href="#about">About</a>
     <a href="#how">How it works</a>
     <a href="#who">Who it’s for</a>
     <a href="#beta">Early testers</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <div class="mobile__langs">
-      <a href="../">CZ</a>
-      <a class="is-active" href="./">EN</a>
-    </div>
   </div>
-</header>
+</nav>
 
 <main id="top">
   <section class="hero">
@@ -423,7 +430,7 @@
       mobileNav.hidden = isOpen;
     });
 
-    mobileNav.querySelectorAll('a[href^="#"]').forEach(a => {
+    mobileNav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger.setAttribute('aria-expanded', 'false');
         mobileNav.hidden = true;

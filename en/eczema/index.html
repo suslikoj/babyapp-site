@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eczema in children | Baby w/o allergies</title>
+  <meta name="description" content="Eczema in children" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="/en/" aria-label="Baby app"><span class="brand__name">Baby w/o allergies</span></a>
+    <nav class="nav nav--primary" aria-label="Main navigation">
+      <a href="/en/" >App</a>
+      <a href="/en/eczema/" class="is-active" aria-current="page">Eczema in children</a>
+      <a href="/en/signs/" >Signs of food allergy</a>
+      <a href="/en/main-suspects/" >Main suspects</a>
+    </nav>
+    <div class="lang"><a class="lang__item" href="/">CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item is-active" href="/en/" aria-current="page">EN</a></div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile" id="mobileNav" hidden>
+    <a href="/en/" >App</a>
+    <a href="/en/eczema/" class="is-active" aria-current="page">Eczema in children</a>
+    <a href="/en/signs/" >Signs of food allergy</a>
+    <a href="/en/main-suspects/" >Main suspects</a>
+    <div class="mobile__langs"><a  href="/">CZ</a><a class="is-active" href="/en/">EN</a></div>
+  </div>
+</header>
+<main>
+  <section class="article-hero">
+    <img src="/assets/article-eczema.jpg" alt="Eczema in children" class="article-hero__image" />
+    <svg class="article-hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,32L60,42.7C120,53,240,75,360,85.3C480,96,600,96,720,90.7C840,85,960,75,1080,58.7C1200,43,1320,21,1380,10.7L1440,0L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/></svg>
+  </section>
+  <article class="article-content container">
+    <h2>Eczema in children<strong> </strong>A complex condition that can be addressed</h2><p>Eczema is one of the most common conditions in early childhood and can appear very soon after birth. It has many forms—sometimes intensely red, sometimes dry, itchy, oozing, or almost barely noticeable at first glance. It often worsens during illness, teething, dietary changes, or contact with irritating substances.</p><p>It is important to say this from the beginning: Eczema is not just a skin problem, and in most cases, it can be worked with and gradually improved.</p><h3>How eczema may present?</h3><p>In children, eczema may appear as:</p><ul><li>red or dry patches</li><li>itching (often very intense)</li><li>oozing</li><li>small bumps or merged red areas</li><li>redness after bathing</li><li>worsening after illness or contact with an allergen</li></ul><p>Sometimes it starts subtly—just as dry spots or mild redness—and gradually develops.</p><h3>Eczema is more than a genetic condition:</h3><p>Genetic predisposition (atopy) may play a role, but it does not cause eczema on its own. Whether it appears and how severe it becomes depends on the interaction of multiple factors.</p><p>In children under 2 years of age, eczema is most commonly associated with:</p><ul><li>food allergens (through breast milk or solid foods),</li><li>immature gut and immune function,</li><li>teething,</li><li>illnesses,</li><li>chemical exposure in the home,</li><li>overall physiological stress.</li></ul><p>In many cases, it is not a single cause but a combination of influences.</p><h3>Eczema is not primarily a skin problem</h3><p>The skin is where the issue becomes visible, but the underlying cause is often internal—especially within the gut and immune system. For this reason, focusing only on topical care without addressing root causes usually leads to temporary relief or recurring flare-ups.</p><h3>Common myth: eczema must always be moisturized</h3><p>A widespread myth suggests that eczema must constantly be moisturized. In reality, it depends on the phase of eczema.</p><ul><li>Red, inflamed eczema is often worsened by heavy creams—in this phase, the goal is usually to calm and gently dry the skin.</li><li>Oozing eczema should not be moisturized at all until it settles and heals.</li><li>Moisturizing has its place during the dry, flaky phase, when the goal is to support the skin barrier.</li></ul><p>There is no universal rule that applies to all stages of eczema.</p><p><strong>When should we take it seriously?</strong></p><p>If you notice:</p><ul><li>oozing (fluid leaking from eczema patches),</li><li>rapid worsening of the condition,</li></ul><p>the eczema may be secondarily infected. In that case, the infection needs to be addressed first—a pediatrician or dermatologist can take a swab and determine appropriate treatment based on the results.</p><h3>How does this app help manage eczema?</h3><p>Eczema affects multiple systems at once. This app therefore aims to support each of them—gradually, clearly, and without extremes.</p><p>In young children, food allergens play a central role, which is why the main tool is an elimination–exposure diet. The process begins with the first phase—“main suspects”—where the most common allergens are temporarily removed and the child’s response is observed.</p><p>The goal is not long-term restriction, but understanding patterns and returning to the most diverse diet possible.</p><p>The app guides you through this process step by step—so it remains safe, structured, and tailored specifically to young children.</p>
+    
+  </article>
+</main>
+<footer class="footer"><div class="container footer__inner"><p>© <span id="year"></span> Baby w/o allergies</p></div></footer>
+<script>
+(function(){const burger=document.getElementById('burger');const mobileNav=document.getElementById('mobileNav');if(!burger||!mobileNav)return;burger.addEventListener('click',()=>{const isOpen=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!isOpen));mobileNav.hidden=isOpen;});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.setAttribute('aria-expanded','false');mobileNav.hidden=true;}));})();
+(function(){const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
+</script>
+</body>
+</html>
