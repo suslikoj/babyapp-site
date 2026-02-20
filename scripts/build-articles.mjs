@@ -5,6 +5,17 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
+const sitemapPath = path.join(root, 'sitemap.xml');
+
+function assertValidSitemapXml(xml) {
+  if (!xml.trim().startsWith('<?xml')) {
+    throw new Error('sitemap.xml must start with an XML declaration.');
+  }
+
+  if (!/<urlset[\s>]/.test(xml) || !/<url[\s>]/.test(xml)) {
+    throw new Error('sitemap.xml must contain <urlset> and <url> tags.');
+  }
+}
 
 const pages = [
   { slug: 'eczema', lang: 'cs', title: 'Ekzém u dětí', input: 'content/cz/eczema_cz.md', output: 'eczema/index.html', hero: '/assets/article-eczema.jpg', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
@@ -152,6 +163,9 @@ ${topNav({ lang: page.lang, slug: page.slug, nav: page.nav })}
 </html>`;
 }
 
+const sitemapBeforeBuild = await fs.readFile(sitemapPath, 'utf8');
+assertValidSitemapXml(sitemapBeforeBuild);
+
 for (const page of pages) {
   const md = await fs.readFile(path.join(root, page.input), 'utf8');
   const { body, sources } = splitSources(md, page.lang);
@@ -159,4 +173,11 @@ for (const page of pages) {
   const out = path.join(root, page.output);
   await fs.mkdir(path.dirname(out), { recursive: true });
   await fs.writeFile(out, html, 'utf8');
+}
+
+const sitemapAfterBuild = await fs.readFile(sitemapPath, 'utf8');
+assertValidSitemapXml(sitemapAfterBuild);
+
+if (sitemapAfterBuild !== sitemapBeforeBuild) {
+  throw new Error('Build must not modify sitemap.xml.');
 }
