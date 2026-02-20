@@ -162,10 +162,14 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   padding:18px;
   box-shadow:var(--shadow);
 }
+.hero__panel{
+  min-height:320px;
+}
 .hero__panel .panel__shot{
   display:block;
   width:100%;
   max-width:100%;
+  aspect-ratio:9 / 16;
   height:auto;
   border-radius:var(--radius2);
   object-fit:contain;
@@ -631,6 +635,7 @@ input:-webkit-autofill:focus {
   width:min(100% - 48px, 1120px);
   margin:0 auto;
   height:320px;
+  aspect-ratio:16 / 9;
   object-fit:cover;
   display:block;
   border-radius:14px;
