@@ -8,6 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../assets/en_screenshot.png" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
 
@@ -16,7 +17,8 @@
   <meta name="supported-color-schemes" content="light">
 
   <!-- Brevo base styles -->
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="preload" as="style" href="https://sibforms.com/forms/end-form/build/sib-styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></noscript>
 
   <style>
     html, body { background:#ffffff !important; color:#111827 !important; }
@@ -89,7 +91,7 @@
       <div class="hero__copy">
 
         <div class="hero__brand">
-          <img class="hero__logo" src="../assets/logo.svg" alt="Baby w/o allergies logo">
+          <img class="hero__logo" src="../assets/logo.svg" alt="Baby w/o allergies logo" width="1574" height="404" decoding="async">
         </div>
 
         <p class="badge">Mobile app</p>
@@ -107,7 +109,7 @@
       </div>
 
       <div class="hero__panel" aria-hidden="true">
-        <img class="panel__shot" src="../assets/en_screenshot.png" alt="Baby w/o allergies app preview">
+        <img class="panel__shot" src="../assets/en_screenshot.png" alt="Baby w/o allergies app preview" width="1080" height="1920" fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>
