@@ -160,8 +160,3 @@ for (const page of pages) {
   await fs.mkdir(path.dirname(out), { recursive: true });
   await fs.writeFile(out, html, 'utf8');
 }
-
-const urls = ['/', '/en/', '/eczema/', '/signs/', '/main-suspects/', '/en/eczema/', '/en/signs/', '/en/main-suspects/'];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>https://babyapp.cz${u}</loc></url>`).join('\n')}\n</urlset>\n`;
-await fs.writeFile(path.join(root, 'sitemap.xml'), sitemap, 'utf8');
-await fs.writeFile(path.join(root, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://babyapp.cz/sitemap.xml\n', 'utf8');
