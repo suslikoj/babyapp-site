@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
-const sitemapPath = path.join(root, 'sitemap.xml');
-const legacySitemapPath = path.join(root, 'public', 'sitemap.xml');
+const sitemapPath = path.join(root, 'public', 'sitemap.xml');
+const legacySitemapPath = path.join(root, 'sitemap.xml');
 
 function assertValidSitemapXml(xml) {
   if (!xml.trim().startsWith('<?xml')) {
@@ -167,7 +167,7 @@ ${topNav({ lang: page.lang, slug: page.slug, nav: page.nav })}
 
 try {
   await fs.access(legacySitemapPath);
-  throw new Error('Legacy public/sitemap.xml must not exist. Use root sitemap.xml only.');
+  throw new Error('Legacy root sitemap.xml must not exist. Use public/sitemap.xml only.');
 } catch (error) {
   if (error?.code !== 'ENOENT') {
     throw error;
@@ -190,5 +190,5 @@ const sitemapAfterBuild = await fs.readFile(sitemapPath, 'utf8');
 assertValidSitemapXml(sitemapAfterBuild);
 
 if (sitemapAfterBuild !== sitemapBeforeBuild) {
-  throw new Error('Build must not modify root sitemap.xml.');
+  throw new Error('Build must not modify public/sitemap.xml.');
 }
