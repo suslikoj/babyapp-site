@@ -13,7 +13,6 @@ const copyTargets = [
   '_headers',
   'robots.txt',
   'sitemap.xml',
-  'sitemap.xsl',
   'assets',
   'eczema',
   'signs',
