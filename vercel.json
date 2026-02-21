@@ -35,5 +35,6 @@
         }
       ]
     }
-  ]
+  ],
+  "outputDirectory": "public"
 }
