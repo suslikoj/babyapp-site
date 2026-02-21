@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
+const publicDir = path.join(root, 'public');
 
 const DEFAULT_SITE_URL = 'https://babyapp.cz';
 const siteUrl = normalizeBaseUrl(process.env.SITE_URL ?? DEFAULT_SITE_URL);
@@ -71,7 +72,11 @@ function createRobotsTxt() {
   return `User-agent: *\nAllow: /\nSitemap: ${absoluteUrl('/sitemap.xml')}\n`;
 }
 
-await fs.writeFile(path.join(root, 'sitemap.xml'), createSitemapXml(), 'utf8');
-await fs.writeFile(path.join(root, 'robots.txt'), createRobotsTxt(), 'utf8');
+const sitemapXml = createSitemapXml();
+const robotsTxt = createRobotsTxt();
 
-console.log(`Generated sitemap.xml and robots.txt for ${siteUrl}`);
+await fs.mkdir(publicDir, { recursive: true });
+await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf8');
+await fs.writeFile(path.join(publicDir, 'robots.txt'), robotsTxt, 'utf8');
+
+console.log(`Generated public/sitemap.xml and public/robots.txt for ${siteUrl}`);

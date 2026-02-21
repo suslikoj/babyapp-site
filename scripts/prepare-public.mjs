@@ -10,9 +10,6 @@ const publicDir = path.join(root, 'public');
 const copyTargets = [
   'index.html',
   'CNAME',
-  '_headers',
-  'robots.txt',
-  'sitemap.xml',
   'assets',
   'eczema',
   'signs',
