@@ -68,11 +68,23 @@ function createSitemapXml() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries}\n</urlset>\n`;
 }
 
+function validateSitemapXml(xml) {
+  const requiredSubstrings = ['<urlset', '<url>', '<loc>'];
+  const hasRequiredSubstrings = requiredSubstrings.every((substring) => xml.includes(substring));
+  const hasValidClosingTag = xml.trimEnd().endsWith('</urlset>');
+
+  if (!hasRequiredSubstrings || !hasValidClosingTag) {
+    console.error('Generated sitemap.xml is invalid. Missing required XML tags or closing </urlset>.');
+    process.exit(1);
+  }
+}
+
 function createRobotsTxt() {
   return `User-agent: *\nAllow: /\nSitemap: ${absoluteUrl('/sitemap.xml')}\n`;
 }
 
 const sitemapXml = createSitemapXml();
+validateSitemapXml(sitemapXml);
 const robotsTxt = createRobotsTxt();
 
 await fs.mkdir(publicDir, { recursive: true });
