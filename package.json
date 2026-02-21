@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:articles",
-    "build:articles": "node scripts/build-articles.mjs"
+    "build": "npm run build:articles && npm run build:sitemap",
+    "build:articles": "node scripts/build-articles.mjs",
+    "build:sitemap": "node scripts/generate-sitemap.mjs"
   }
 }
