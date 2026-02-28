@@ -17,6 +17,11 @@ const copyTargets = [
   'en',
 ];
 
+const requiredAssetFiles = [
+  'styles.css',
+  'main.js',
+];
+
 await fs.rm(publicDir, { recursive: true, force: true });
 await fs.mkdir(publicDir, { recursive: true });
 
@@ -27,5 +32,9 @@ for (const target of copyTargets) {
 }
 
 await fs.cp(path.join(root, 'assets/favicon.png'), path.join(publicDir, 'favicon.png'));
+
+for (const file of requiredAssetFiles) {
+  await fs.access(path.join(publicDir, 'assets', file));
+}
 
 console.log(`Prepared ${copyTargets.length} deployment targets in /public`);
