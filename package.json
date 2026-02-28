@@ -3,9 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:articles && npm run build:public && npm run build:sitemap",
+    "build": "npm run build:articles && npm run build:public && npm run build:sitemap && npm run build:smoke",
     "build:articles": "node scripts/build-articles.mjs",
     "build:public": "node scripts/prepare-public.mjs",
-    "build:sitemap": "node scripts/generate-sitemap.mjs"
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
+    "build:smoke": "node scripts/smoke-check-public.mjs"
   }
 }
