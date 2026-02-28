@@ -26,4 +26,6 @@ for (const target of copyTargets) {
   await fs.cp(source, destination, { recursive: true });
 }
 
+await fs.cp(path.join(root, 'assets/favicon.png'), path.join(publicDir, 'favicon.png'));
+
 console.log(`Prepared ${copyTargets.length} deployment targets in /public`);
