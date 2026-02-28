@@ -31,6 +31,7 @@ for (const target of copyTargets) {
   await fs.cp(source, destination, { recursive: true });
 }
 
+await fs.cp(path.join(root, 'assets/favicon.ico'), path.join(publicDir, 'favicon.ico'));
 await fs.cp(path.join(root, 'assets/favicon.png'), path.join(publicDir, 'favicon.png'));
 
 for (const file of requiredAssetFiles) {
