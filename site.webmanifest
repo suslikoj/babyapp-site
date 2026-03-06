@@ -1,0 +1,19 @@
+{
+  "name": "Babyapp",
+  "short_name": "Babyapp",
+  "icons": [
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "304x304",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "304x304",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

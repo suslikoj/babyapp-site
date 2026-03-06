@@ -10,6 +10,61 @@
       ],
       "destination": "https://babyapp.cz/:path*",
       "permanent": true
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/assets/favicon.ico",
+      "permanent": true
+    },
+    {
+      "source": "/favicon.png",
+      "destination": "/assets/favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "destination": "/assets/favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/index.html",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/eczema",
+      "destination": "/eczema/",
+      "permanent": true
+    },
+    {
+      "source": "/signs",
+      "destination": "/signs/",
+      "permanent": true
+    },
+    {
+      "source": "/main-suspects",
+      "destination": "/main-suspects/",
+      "permanent": true
+    },
+    {
+      "source": "/en/eczema",
+      "destination": "/en/eczema/",
+      "permanent": true
+    },
+    {
+      "source": "/en/signs",
+      "destination": "/en/signs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/main-suspects",
+      "destination": "/en/main-suspects/",
+      "permanent": true
     }
   ],
   "headers": [

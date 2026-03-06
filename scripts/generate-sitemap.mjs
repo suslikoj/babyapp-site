@@ -46,12 +46,13 @@ function absoluteUrl(routePath) {
 function createSitemapXml() {
   const entries = routes
     .map((route) => {
-      const alternateLinks = route.alternates
-        .map((alternatePath) => {
+      const alternateLinks = [
+        ...route.alternates.map((alternatePath) => {
           const hreflang = alternatePath.startsWith('/en/') || alternatePath === '/en/' ? 'en' : 'cs';
           return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escapeXml(absoluteUrl(alternatePath))}" />`;
-        })
-        .join('\n');
+        }),
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absoluteUrl('/'))}" />`,
+      ].join('\n');
 
       return [
         '  <url>',

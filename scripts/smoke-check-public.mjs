@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 const publicDir = path.join(root, 'public');
 
-const requiredFiles = ['favicon.png', 'assets/styles.css', 'assets/main.js'];
+const requiredFiles = ['assets/favicon.ico', 'assets/favicon.png', 'site.webmanifest', 'assets/styles.css', 'assets/main.js'];
 
 async function exists(relPath) {
   try {
