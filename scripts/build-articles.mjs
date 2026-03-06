@@ -14,6 +14,31 @@ const pages = [
   { slug: 'main-suspects', lang: 'en', title: 'Main suspects', input: 'content/en/main_en.md', output: 'en/main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
 ];
 
+const SITE_URL = 'https://babyapp.cz';
+
+function absoluteUrl(pathname) {
+  return `${SITE_URL}${pathname}`;
+}
+
+function localizedPath(slug, lang) {
+  if (lang === 'en') return slug === 'app' ? '/en/' : `/en/${slug}/`;
+  return slug === 'app' ? '/' : `/${slug}/`;
+}
+
+function articleSeoLinks(page) {
+  const canonicalPath = localizedPath(page.slug, page.lang);
+  const alternateCsPath = localizedPath(page.slug, 'cs');
+  const alternateEnPath = localizedPath(page.slug, 'en');
+
+  return [
+    `<link rel="canonical" href="${absoluteUrl(canonicalPath)}" />`,
+    `<link rel="alternate" hreflang="cs" href="${absoluteUrl(alternateCsPath)}" />`,
+    `<link rel="alternate" hreflang="en" href="${absoluteUrl(alternateEnPath)}" />`,
+    `<link rel="alternate" hreflang="x-default" href="${absoluteUrl('/')}" />`,
+  ].join('\n  ');
+}
+
+
 function applyInline(text) {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
@@ -126,8 +151,12 @@ function articleHtml(page, bodyHtml, sourcesHtml) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${page.title} | ${isEn ? 'Baby w/o allergies' : 'Bejby bez alergií'}</title>
   <meta name="description" content="${page.title}" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  ${articleSeoLinks(page)}
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="304x304" />
+  <link rel="apple-touch-icon" href="/assets/favicon.png" sizes="304x304" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

@@ -9,6 +9,7 @@ const publicDir = path.join(root, 'public');
 
 const copyTargets = [
   'index.html',
+  'site.webmanifest',
   'CNAME',
   'assets',
   'eczema',
@@ -30,9 +31,6 @@ for (const target of copyTargets) {
   const destination = path.join(publicDir, target);
   await fs.cp(source, destination, { recursive: true });
 }
-
-await fs.cp(path.join(root, 'assets/favicon.ico'), path.join(publicDir, 'favicon.ico'));
-await fs.cp(path.join(root, 'assets/favicon.png'), path.join(publicDir, 'favicon.png'));
 
 for (const file of requiredAssetFiles) {
   await fs.access(path.join(publicDir, 'assets', file));
