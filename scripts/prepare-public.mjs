@@ -11,10 +11,18 @@ const copyTargets = [
   'index.html',
   'site.webmanifest',
   'CNAME',
+  '_headers',
+  'robots.txt',
+  'sitemap.xml',
   'assets',
   'eczema',
   'signs',
   'main-suspects',
+  'privacy-policy',
+  'medical-disclaimer',
+  'terms-of-use',
+  'zdroje',
+  'cs',
   'en',
 ];
 
