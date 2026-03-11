@@ -20,6 +20,19 @@ const routes = [
   { path: '/en/signs/', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'] },
   { path: '/main-suspects/', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'] },
   { path: '/en/main-suspects/', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'] },
+
+  { path: '/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'] },
+  { path: '/en/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'] },
+  { path: '/cs/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/privacy-policy/', '/en/privacy-policy/'] },
+  { path: '/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'] },
+  { path: '/en/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'] },
+  { path: '/cs/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/medical-disclaimer/', '/en/medical-disclaimer/'] },
+  { path: '/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'] },
+  { path: '/en/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'] },
+  { path: '/cs/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/terms-of-use/', '/en/terms-of-use/'] },
+  { path: '/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'] },
+  { path: '/en/sources/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'] },
+  { path: '/cs/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/zdroje/', '/en/sources/'] },
 ];
 
 function normalizeBaseUrl(url) {
