@@ -12,27 +12,23 @@ const siteUrl = normalizeBaseUrl(process.env.SITE_URL ?? DEFAULT_SITE_URL);
 const today = new Date().toISOString().slice(0, 10);
 
 const routes = [
-  { path: '/', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'] },
-  { path: '/en/', changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'] },
-  { path: '/eczema/', changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'] },
-  { path: '/en/eczema/', changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'] },
-  { path: '/signs/', changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'] },
-  { path: '/en/signs/', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'] },
-  { path: '/main-suspects/', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'] },
-  { path: '/en/main-suspects/', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'] },
+  { path: '/', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/en/', changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/eczema/', changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/en/eczema/', changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/signs/', changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/en/signs/', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/main-suspects/', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
+  { path: '/en/main-suspects/', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
 
-  { path: '/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'] },
-  { path: '/en/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'] },
-  { path: '/cs/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/privacy-policy/', '/en/privacy-policy/'] },
-  { path: '/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'] },
-  { path: '/en/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'] },
-  { path: '/cs/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/medical-disclaimer/', '/en/medical-disclaimer/'] },
-  { path: '/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'] },
-  { path: '/en/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'] },
-  { path: '/cs/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/terms-of-use/', '/en/terms-of-use/'] },
-  { path: '/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'] },
-  { path: '/en/sources/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'] },
-  { path: '/cs/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/cs/zdroje/', '/en/sources/'] },
+  { path: '/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/en/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/en/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/en/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+  { path: '/en/sources/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
 ];
 
 function normalizeBaseUrl(url) {
@@ -64,7 +60,7 @@ function createSitemapXml() {
           const hreflang = alternatePath.startsWith('/en/') || alternatePath === '/en/' ? 'en' : 'cs';
           return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escapeXml(absoluteUrl(alternatePath))}" />`;
         }),
-        `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absoluteUrl('/'))}" />`,
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absoluteUrl(route.xDefault))}" />`,
       ].join('\n');
 
       return [

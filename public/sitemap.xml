@@ -5,7 +5,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -24,8 +24,8 @@
     <loc>https://babyapp.cz/eczema/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/eczema/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/eczema/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/eczema/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -34,8 +34,8 @@
     <loc>https://babyapp.cz/en/eczema/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/eczema/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/eczema/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/eczema/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -44,8 +44,8 @@
     <loc>https://babyapp.cz/signs/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/signs/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/signs/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/signs/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -54,8 +54,8 @@
     <loc>https://babyapp.cz/en/signs/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/signs/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/signs/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/signs/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -64,8 +64,8 @@
     <loc>https://babyapp.cz/main-suspects/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/main-suspects/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/main-suspects/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/main-suspects/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -74,8 +74,8 @@
     <loc>https://babyapp.cz/en/main-suspects/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/main-suspects/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/main-suspects/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/main-suspects/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -84,8 +84,8 @@
     <loc>https://babyapp.cz/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/privacy-policy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/privacy-policy/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -94,18 +94,8 @@
     <loc>https://babyapp.cz/en/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/privacy-policy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://babyapp.cz/cs/privacy-policy/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/cs/privacy-policy/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/privacy-policy/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/privacy-policy/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -114,8 +104,8 @@
     <loc>https://babyapp.cz/medical-disclaimer/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/medical-disclaimer/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/medical-disclaimer/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -124,18 +114,8 @@
     <loc>https://babyapp.cz/en/medical-disclaimer/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/medical-disclaimer/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://babyapp.cz/cs/medical-disclaimer/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/cs/medical-disclaimer/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/medical-disclaimer/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/medical-disclaimer/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -144,8 +124,8 @@
     <loc>https://babyapp.cz/terms-of-use/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/terms-of-use/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/terms-of-use/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -154,18 +134,8 @@
     <loc>https://babyapp.cz/en/terms-of-use/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/terms-of-use/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://babyapp.cz/cs/terms-of-use/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/cs/terms-of-use/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/terms-of-use/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/terms-of-use/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -174,8 +144,8 @@
     <loc>https://babyapp.cz/zdroje/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/zdroje/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/sources/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/zdroje/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -184,18 +154,8 @@
     <loc>https://babyapp.cz/en/sources/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/zdroje/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/sources/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://babyapp.cz/cs/zdroje/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/cs/zdroje/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/sources/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/" />
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/zdroje/" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
