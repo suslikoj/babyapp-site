@@ -65,6 +65,66 @@
       "source": "/en/main-suspects",
       "destination": "/en/main-suspects/",
       "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/terms-of-use/",
+      "permanent": true
+    },
+    {
+      "source": "/medical-disclaimer",
+      "destination": "/medical-disclaimer/",
+      "permanent": true
+    },
+    {
+      "source": "/zdroje",
+      "destination": "/zdroje/",
+      "permanent": true
+    },
+    {
+      "source": "/en/privacy-policy",
+      "destination": "/en/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/en/terms-of-use",
+      "destination": "/en/terms-of-use/",
+      "permanent": true
+    },
+    {
+      "source": "/en/medical-disclaimer",
+      "destination": "/en/medical-disclaimer/",
+      "permanent": true
+    },
+    {
+      "source": "/en/sources",
+      "destination": "/en/sources/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/privacy-policy/:path*",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/terms-of-use/:path*",
+      "destination": "/terms-of-use/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/medical-disclaimer/:path*",
+      "destination": "/medical-disclaimer/",
+      "permanent": true
+    },
+    {
+      "source": "/cs/zdroje/:path*",
+      "destination": "/zdroje/",
+      "permanent": true
     }
   ],
   "headers": [
