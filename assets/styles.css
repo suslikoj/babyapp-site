@@ -115,8 +115,8 @@ body{
 /* HERO */
 .hero{padding:52px 0 28px}
 .hero__grid{
-  display:grid; grid-template-columns: 1.2fr .8fr;
-  gap:22px; align-items:center;
+  display:grid; grid-template-columns: 1.05fr .95fr;
+  gap:34px; align-items:center;
 }
 
 /* Logo na bílé ploše */
@@ -152,7 +152,7 @@ body{
 }
 h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .lead{font-size:18px; color:var(--muted); margin:0 0 18px}
-.actions{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
+.actions{display:flex; gap:14px; flex-wrap:wrap; margin:20px 0 12px}
 .fine{font-size:13px; color:var(--muted); margin:10px 0 0}
 
 .hero__panel .panel__card{
@@ -164,11 +164,13 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 }
 .hero__panel{
   min-height:320px;
+  display:flex;
+  justify-content:center;
 }
 .hero__panel .panel__shot{
   display:block;
   width:100%;
-  max-width:100%;
+  max-width:420px;
   aspect-ratio:9 / 16;
   height:auto;
   border-radius:var(--radius2);
@@ -699,9 +701,10 @@ input:-webkit-autofill:focus {
 
 .section--soft{background:linear-gradient(180deg,#fff,#fff7f8)}
 .list--big{display:grid;gap:10px;font-size:18px;max-width:760px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .feature img{width:100%;height:auto;aspect-ratio:9/16;object-fit:contain;background:#fff7f8;border-radius:14px;margin-bottom:10px}
 .about-me{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
 .about-me img{width:100%;max-width:340px;height:auto;border-radius:18px;object-fit:cover;box-shadow:var(--shadow)}
 .faq details summary{font-size:17px}
-@media (max-width:920px){.feature-grid{grid-template-columns:1fr}.about-me{grid-template-columns:1fr}.about-me img{max-width:220px}}
+@media (max-width:920px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-me{grid-template-columns:1fr}.about-me img{max-width:220px}}
+@media (max-width:640px){.feature-grid{grid-template-columns:1fr}}
