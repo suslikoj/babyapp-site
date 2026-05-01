@@ -1,269 +1,269 @@
-# **Signs of food allergy in children**
+# **Projevy potravinové alergie u dětí**
 
 
 
-## **How do you know if a child has it?**
+## **Jak poznat, že ji dítě má?**
 
-A food allergy in a baby or young child may not only show up as a rash. In some children, the reaction is quick and noticeable, while in others it takes hours or days. This is why it can be difficult to know whether a specific food is really causing the problem.
+Potravinová alergie u miminka nebo malého dítěte se nemusí projevit jen vyrážkou. U některých dětí je reakce rychlá a nápadná, u jiných přichází až po několika hodinách nebo dnech. Právě proto bývá těžké poznat, zda za obtížemi opravdu stojí konkrétní potravina.
 
-The symptoms of a food allergy are often mistaken for reflux, a sensitive tummy, teething, a cold, or common digestive problems.
+Projevy potravinové alergie se často zaměňují za reflux, citlivé bříško, růst zoubků, nachlazení nebo běžné zažívací potíže.
 
-This article summarizes **the most common symptoms of food allergy** in breastfed, non-breastfed babies, and older children.
+Tento článek shrnuje nejčastější příznaky potravinové alergie u kojených, nekojených miminek i starších dětí.
 
-## **How to recognize a food allergy in a baby?**
+## **Jak poznat potravinovou alergii u miminka?**
 
-Food allergies can affect a child's skin, digestion, stool, breathing, and behavior.
+Potravinová alergie se může projevit na kůži, trávení, stolici, dýchání i chování dítěte.
 
-Common symptoms include:
+Mezi časté projevy patří:
 
-- worsening of eczema
-- red or itchy patches on the skin
-- mucus in the stool
-- blood in the stool
-- diarrhea or more frequent bowel movements
-- bloated belly
-- colic
-- reflux or excessive blinking
-- restlessness and frequent awakenings
-- hives or swelling in rapid reactions
+- zhoršení ekzému
+- červená nebo svědivá ložiska na kůži
+- hlen ve stolici
+- krev ve stolici
+- průjem nebo častější stolice
+- nafouknuté bříško
+- koliky
+- reflux nebo nadměrné ublinkávání
+- neklid a časté buzení
+- kopřivka nebo otoky u rychlých reakcí
 
-Young children often experience multiple symptoms at once. A typical combination is skin + tummy + stool.
+U malých dětí se často objevuje více příznaků najednou. Typická kombinace bývá **kůže + bříško + stolice**.
 
-## **Can a breastfed baby have an allergy through breast milk?**
+## **Může mít kojené miminko alergii přes mateřské mléko?**
 
-Yes. In breastfed babies, allergens can enter the baby's body through breast milk. Reactions are often milder, slower, and less noticeable than in a baby who eats the food directly.
+Ano. U kojených dětí se alergeny mohou dostat do těla miminka **přes mateřské mléko.** Reakce bývají často mírnější, pomalejší a hůř rozpoznatelné než u dítěte, které danou potravinu sní přímo.
 
-In breastfed babies, allergies often manifest mainly as eczema, tummy aches, changes in stool, reflux or restlessness.
+U kojených miminek se alergie často projevuje hlavně ekzémem, bolestmi bříška, změnami stolice, refluxem nebo neklidem.
 
-## **Can a non-breastfed baby have a food allergy?**
+## **Může mít nekojené miminko potravinovou alergii?**
 
-Yes, even a non-breastfed baby can have a food allergy. The most common type is cow's milk protein allergy (CMPA), where the baby reacts to regular formula containing cow's protein.
+Ano, i nekojené miminko může mít potravinovou alergii. Nejčastěji se jedná o alergii na bílkovinu kravského mléka (ABKM), kdy dítě reaguje na **běžné umělé mléko** obsahující kravskou bílkovinu.
 
-If this allergy is suspected, it is possible to contact a pediatrician who can prescribe a special hypoallergenic or dairy-free formula suitable for children with allergies.
+Pokud je na tuto alergii podezření, je možné se obrátit na pediatra, který může předepsat speciální hypoalergenní  formuli vhodnou pro děti s alergií.
 
-## **What are the symptoms of allergies in breastfed and non-breastfed babies?**
+## **Jaké jsou projevy alergie u kojeného a nekojeného miminka?**
 
-### **Skin**
+### **Kůže**
 
-In a breastfed baby, a food allergy can manifest as:
+U kojeného miminka se potravinová alergie může projevit jako:
 
-- worsening of eczema within 24–48 hours
-- red bearings
-- itch
-- eczema oozing
+- zhoršení ekzému do 24–48 hodin
+- červená ložiska
+- svědění
+- mokvání ekzému
 
-Wetting does not always mean infection. Sometimes it can be a strong reaction of the body to a large amount of allergen. However, if the condition worsens quickly, the lesion smells, is painful, or there are signs of infection, it is necessary to discuss the condition with a doctor.
+Mokvání nemusí vždy hned znamenat infekci. Někdy může jít o silnou reakci organismu na větší množství alergenu. Pokud se ale stav rychle horší, ložisko zapáchá, je bolestivé nebo se objevují známky infekce, je potřeba řešit stav s lékařem.
 
-### **Stool**
+### **Stolice**
 
-The following may appear in the stool:
+Ve stolici se může objevit:
 
-- phlegm
-- greenish stool
-- more frequent diarrhea
-- blood streaks in small babies
-- sour smell of stool
+- hlen
+- nazelenalá stolice
+- častější průjem
+- nitky krve u malých miminek
+- kyselý zápach stolice
 
-Mucus or blood in the stool is one of the common reasons why parents start treating food allergies.
+Právě hlen nebo krev ve stolici patří mezi časté důvody, proč rodiče začnou potravinovou alergii řešit.
 
-### **Belly and reflux**
+### **Bříško a reflux**
 
-Food allergy can cause:
+Potravinová alergie může způsobovat:
 
-- colic
-- bloated belly
-- crying after eating
-- frequent farts
+- koliky
+- nafouknuté bříško
+- pláč po jídle
+- časté prdíky
 - reflux
-- violent vomiting or excessive blinking
+- prudké zvracení nebo nadměrné ublinkávání
 
-These symptoms are often mistaken for "normal stomach ache."
+Tyto projevy se často zaměňují za „běžné bolení bříška“.
 
-### **Behavior and sleep**
+### **Chování a spánek**
 
-The child may be:
+Dítě může být:
 
-- restless
-- sleep worse
-- to wake up often
-- to cry a lot
-- to seem "unsatisfiable"
+- neklidné
+- hůř spát
+- často se budit
+- hodně plakat
+- působit jako „neutišitelné“
 
-For some babies, restlessness and poor sleep are one of the first signs that something is wrong with them.
+U některých miminek je právě neklid a špatný spánek jedním z prvních signálů, že jim něco vadí.
 
-## **What are the symptoms of food allergy in older children?**
+## **Jaké jsou projevy potravinové alergie u nekojených a starších dětí?**
 
-In older children, the child reacts directly to the food they have eaten. Reactions can be immediate or delayed.
+U starších dětí dítě reaguje přímo na potravinu, kterou snědlo. Reakce mohou být rychlé nebo opožděné.
 
-We mainly distinguish:
+Rozlišujeme hlavně:
 
-- rapid IgE allergic reactions
-- delayed non-IgE reactions
-- local contact reaction
+- rychlé IgE alergické reakce
+- opožděné non-IgE reakce
+- lokální kontaktní reakce
 
-## **What does a rapid allergic reaction after eating look like?**
+## **Jak vypadá rychlá alergická reakce po jídle?**
 
-A rapid IgE reaction usually occurs within a few minutes to 2 hours after eating.
+Rychlá IgE reakce nastupuje většinou během několika minut až 2 hodin po jídle.
 
-Typical rapid manifestations are:
+Typické rychlé projevy jsou:
 
-- hives
-- skin redness
-- body itching
-- swelling of the lips, eyelids, or tongue
-- rapid vomiting
-- abdominal pain
-- diarrhea
-- wheezing
-- cough
-- difficulty breathing
+- kopřivka
+- zarudnutí kůže
+- svědění těla
+- otok rtů, očních víček nebo jazyka
+- rychlé zvracení
+- bolest břicha
+- průjem
+- sípání
+- kašel
+- ztížené dýchání
 
-Quick reactions are always important and need to be addressed with a doctor.
+Rychlé reakce jsou vždy důležité a je potřeba je řešit s lékařem.
 
-## **What is anaphylaxis and when to call for help?**
+## **Co je anafylaxe a kdy volat pomoc?**
 
-Anaphylaxis is the most severe form of allergic reaction. It occurs suddenly and rapidly, often within minutes.
+Anafylaxe je nejzávažnější forma alergické reakce. Vzniká náhle a rychle, často během minut.
 
-It can manifest as:
+Může se projevit jako:
 
-- whole-body hives
-- severe swelling
-- stuffiness
-- wheezing
-- vomiting and diarrhea
-- weakness
-- pallor
-- swoon
+- celotělová kopřivka
+- silné otoky
+- dušnost
+- sípání
+- zvracení a průjem
+- slabost
+- bledost
+- mdloba
 
-If anaphylaxis is suspected, it is necessary to call emergency services.
+Při podezření na anafylaxi je nutné volat rychlou pomoc.
 
-## **How to recognize a delayed food allergy?**
+## **Jak poznat opožděnou potravinovou alergii?**
 
-A delayed non-IgE reaction can occur 8 hours or even several days after consuming a food, which is why it is often harder to detect.
+Opožděná non-IgE reakce se může objevit za 8 hodin, ale i za několik dní po konzumaci potraviny. Proto je často hůř dohledatelná.
 
-Typical delayed manifestations are mainly on the skin, in the stool, digestion and behavior of the child.
+Typické opožděné projevy jsou hlavně na kůži, ve stolici, trávení a chování dítěte.
 
-### **Skin**
+### **Kůže**
 
-- worsening of eczema
-- itchy lesions
-- redness
+- zhoršení ekzému
+- svědivá ložiska
+- zarudnutí
 
-### **Digestion and stool**
+### **Trávení a stolice**
 
-- abdominal pain
-- flatulence
-- mucus in the stool
-- blood in the stool
-- loose or frequent stools
+- bolesti břicha
+- nadýmání
+- hlen ve stolici
+- krev ve stolici
+- řídké nebo časté stolice
 - reflux
-- vomiting 1–3 hours after eating
+- zvracení 1–3 hodiny po jídle
 
-### **Overall symptoms**
+### **Celkové projevy**
 
-- The baby is restless.
-- sleeps poorly
-- doesn't want to eat
+- miminko je neklidné
+- špatně spí
+- nechce jíst
 
-Delayed allergies are often not seen in routine allergy tests, which can be confusing for parents.
+Opožděné alergie často nejsou vidět v běžných alergologických testech, což může být pro rodiče matoucí.
 
-## **Can eczema be a sign of a food allergy?**
+## **Může být ekzém projevem potravinové alergie?**
 
-Yes. In young children, worsening eczema can be a sign of a food allergy.
+Ano. U malých dětí může být zhoršování ekzému jedním z projevů potravinové alergie.
 
-Typically, eczema gets worse after a certain food or after a food eaten by a nursing mother. The reaction may not come right away. In delayed reactions, eczema may only get worse after a few hours or the next day.
+Typické je, že se ekzém zhorší po určité potravině nebo po potravině, kterou snědla kojící maminka. Reakce nemusí přijít hned. U opožděných reakcí se může ekzém zhoršit až po několika hodinách nebo druhý den.
 
-## **Is mucus or blood in stool a sign of allergy?**
+## **Je hlen nebo krev ve stolici známkou alergie?**
 
-It could be. Mucus, greenish stool, more frequent diarrhea, or streaks of blood in a small baby may be related to a food allergy, often a reaction to cow's milk protein, for example.
+Může být. Hlen, nazelenalá stolice, častější průjmy nebo nitky krve u malého miminka mohou souviset s potravinovou alergií, často například s reakcí na bílkovinu kravského mléka.
 
-However, blood in the stool is always a reason to consult a doctor.
+Krev ve stolici je ale vždy důvod ke konzultaci s lékařem.
 
-## **Can reflux be caused by a food allergy?**
+## **Může být reflux způsoben potravinovou alergií?**
 
-Yes, reflux or excessive blinking can be one of the symptoms of a food allergy.
+Ano, reflux nebo nadměrné ublinkávání může být jedním z projevů potravinové alergie.
 
-In some children, allergies manifest as violent vomiting, in others as frequent blinking, restlessness after eating, or tummy aches.
+U některých dětí se alergie projevuje prudkým zvracením, u jiných častým ublinkáváním, neklidem po jídle nebo bolestmi bříška.
 
-## **What does a food contact reaction mean?**
+## **Co znamená kontaktní reakce na potravinu?**
 
-Some children react when they touch food. For example, around the mouth or on the hands, they may experience:
+Některé děti reagují už při dotyku s potravinou. Například kolem pusy nebo na rukou se může objevit:
 
-- redness
-- small pimples
-- itch
+- začervenání
+- drobné pupínky
+- svědění
 
-Such a reaction may not necessarily indicate a general food allergy. It may simply be a local contact irritation or sensitivity. However, it is a good idea to note the reaction and monitor for recurrence.
+Taková reakce nemusí hned znamenat celkovou potravinovou alergii. Může jít jen o lokální kontaktní podráždění nebo citlivost. Přesto je dobré si reakci poznamenat a sledovat, zda se opakuje.
 
-## **How do I know if it's really a food allergy?**
+## **Jak poznám, že jde opravdu o potravinovou alergii?**
 
-A food allergy may be indicated mainly by the fact that symptoms recur in connection with a specific food.
+Na potravinovou alergii může ukazovat hlavně to, že se příznaky opakují ve spojitosti s konkrétní potravinou.
 
-Important signals are:
+Důležité signály jsou:
 
-- a combination of symptoms, for example skin + belly + stool
-- repeated worsening after the same food
-- improvement after skipping a meal
-- deterioration after its re-inclusion
+- kombinace příznaků, například kůže + bříško + stolice
+- opakované zhoršení po stejné potravině
+- zlepšení po vynechání potraviny
+- zhoršení po jejím znovuzařazení
 
-The most reliable practical method is the elimination-exposure procedure: the food is eliminated for a certain period of time and then reintroduced in a controlled manner.
+Nejspolehlivější praktickou cestou bývá eliminačně–expoziční postup: potravina se na určitou dobu vyřadí a následně se řízeně znovu zavede.
 
-## **What is the difference between allergy and intolerance?**
+## **Jaký je rozdíl mezi alergií a intolerancí?**
 
-Intolerance is not an allergy.
+Intolerance není alergie.
 
-Intolerance is not an immune reaction, but often a problem with processing a particular food component. Examples include lactose intolerance or celiac disease.
+U intolerance nejde o imunitní reakci, ale často o problém se zpracováním určité složky potravy. Příkladem může být intolerance laktózy nebo celiakie.
 
-Typical symptoms of intolerance are:
+Typické pro intoleranci bývá:
 
-- flatulence
-- flatulence
-- abdominal pain
-- amount-dependent reaction
+- nadýmání
+- plynatost
+- bolest břicha
+- reakce závislá na množství
 
-An allergy is an inflammatory reaction of the immune system. The reaction may not depend only on the amount and may also affect the skin, stool, breathing or the general condition of the child.
+U alergie jde o zánětlivou reakci imunitního systému. Reakce nemusí záviset jen na množství a může se projevit i na kůži, stolici, dýchání nebo celkovém stavu dítěte.
 
-## **When to see a doctor?**
+## **Kdy vyhledat lékaře?**
 
-See a doctor especially if you experience:
+Lékaře vyhledejte zejména tehdy, pokud se objeví:
 
-- blood in the stool
-- the child is not doing well
-- severe colic throughout the day and night
-- vomiting after every meal
-- swelling
-- wheezing or shortness of breath
-- recurrent hives
-- severe worsening of eczema
+- krev ve stolici
+- dítě neprospívá
+- silné koliky přes den i noc
+- zvracení po každém jídle
+- otoky
+- sípání nebo dušnost
+- opakované kopřivky
+- těžké zhoršení ekzému
 
-Rapid allergic reactions, swelling, wheezing or shortness of breath always need to be addressed urgently.
+Rychlé alergické reakce, otoky, sípání nebo dušnost je potřeba řešit vždy urgentně.
 
-## **How to monitor allergy symptoms?**
+## **Jak si projevy alergie hlídat?**
 
-It is very important to keep track of food allergies. It is not enough to just remember what the child ate. It also helps to write down:
+U potravinové alergie je velmi důležité sledovat souvislosti. Nestačí si pamatovat jen to, co dítě snědlo. Pomáhá zapisovat také:
 
-- foodstuffs
-- eczema
-- stool
-- tummy
-- sleep
-- unrest
-- diseases
-- teething
-- reclassification of food
+- potraviny
+- ekzém
+- stolici
+- bříško
+- spánek
+- neklid
+- nemoci
+- růst zoubků
+- znovuzařazení potravin
 
-This makes it easier to recognize whether it is a random deterioration or a recurring reaction to a specific food.
+Díky tomu je možné lépe rozpoznat, zda jde o náhodné zhoršení, nebo opakující se reakci na konkrétní potravinu.
 
-## **Summary: How to recognize a food allergy in a child?**
+## **Shrnutí: Jak poznat potravinovou alergii u dítěte?**
 
-Food allergy can have rapid, delayed or combined manifestations.
+Potravinová alergie může mít rychlé, opožděné nebo kombinované projevy.
 
-In breastfed babies, it often manifests itself through breast milk, mainly through eczema, colic, reflux, or changes in stool.
+U kojených miminek se často projevuje přes mateřské mléko, hlavně ekzémem, bříškem, refluxem nebo změnami stolice.
 
-Immediate IgE reactions tend to be noticeable and can be dangerous. Delayed non-IgE reactions are common but harder to detect and often not seen in tests.
+Rychlé IgE reakce bývají nápadné a mohou být nebezpečné. Opožděné non-IgE reakce jsou časté, ale hůř dohledatelné a často nejsou vidět v testech.
 
-The best way to verify is to systematically monitor symptoms, an elimination phase, and then a controlled reintroduction of the food.
+Nejlepší způsob ověření bývá systematické sledování příznaků, eliminační fáze a následné řízené znovuzařazení potraviny.
 
-The **Baby w/o allergies** app will guide you through this process step by step — from recording symptoms to tracking foods to a clearer evaluation of the connections.
+Aplikace **Bejby bez alergií** tě tímto procesem provede krok za krokem — od záznamů příznaků přes sledování potravin až po přehlednější vyhodnocení souvislostí.
 
  
