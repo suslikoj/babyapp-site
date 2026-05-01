@@ -113,7 +113,7 @@ body{
 }
 
 /* HERO */
-.hero{padding:52px 0 28px}
+.hero{padding:34px 0 16px}
 .hero__grid{
   display:grid; grid-template-columns: 1.05fr .95fr;
   gap:34px; align-items:center;
@@ -191,14 +191,14 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__line.short{width:70%}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
-.section{padding:52px 0}
+.section{padding:36px 0}
 
 /* Sekce testeři */
 .section--tint{
   background:linear-gradient(180deg, rgba(250,205,189,.72), rgba(250,205,189,1));
 }
 .section h2{font-size:28px; margin:0 0 10px; letter-spacing:-.02em}
-.section__lead{color:var(--muted); margin:0 0 22px; max-width:760px}
+.section__lead{color:var(--muted); margin:0 0 16px; max-width:760px}
 
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
 .card{
@@ -701,8 +701,28 @@ input:-webkit-autofill:focus {
 
 .section--soft{background:linear-gradient(180deg,#fff,#fff7f8)}
 .list--big{display:grid;gap:10px;font-size:18px;max-width:760px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature img{width:100%;height:auto;aspect-ratio:9/16;object-fit:contain;background:#fff7f8;border-radius:14px;margin-bottom:10px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+/* Kompaktnější flow mezi hero a sekcemi */
+.hero + .section{padding-top:24px}
+
+/* Jednodušší vizuál feature karet */
+.feature{
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  padding:0;
+}
+.feature img{
+  width:100%;
+  height:auto;
+  aspect-ratio:9/16;
+  object-fit:contain;
+  background:#facdbd;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+.feature h3{margin:0 0 6px;font-size:16px}
+.feature p{margin:0;color:var(--muted)}
 .about-me{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
 .about-me img{width:100%;max-width:340px;height:auto;border-radius:18px;object-fit:cover;box-shadow:var(--shadow)}
 .faq details summary{font-size:17px}
