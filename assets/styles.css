@@ -696,3 +696,12 @@ input:-webkit-autofill:focus {
 .footer__links{display:flex;gap:14px;flex-wrap:wrap}
 .footer__links a{color:var(--muted);text-decoration:none;font-weight:600}
 .footer__links a:hover{text-decoration:underline}
+
+.section--soft{background:linear-gradient(180deg,#fff,#fff7f8)}
+.list--big{display:grid;gap:10px;font-size:18px;max-width:760px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature img{width:100%;height:auto;aspect-ratio:9/16;object-fit:contain;background:#fff7f8;border-radius:14px;margin-bottom:10px}
+.about-me{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
+.about-me img{width:100%;max-width:340px;height:auto;border-radius:18px;object-fit:cover;box-shadow:var(--shadow)}
+.faq details summary{font-size:17px}
+@media (max-width:920px){.feature-grid{grid-template-columns:1fr}.about-me{grid-template-columns:1fr}.about-me img{max-width:220px}}
