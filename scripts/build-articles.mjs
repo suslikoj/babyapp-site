@@ -14,7 +14,7 @@ const pages = [
   { slug: 'main-suspects', lang: 'en', title: 'Main suspects', input: 'content/en/main_en.md', output: 'en/main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
 ];
 
-const SITE_URL = 'https://babyapp.cz';
+const SITE_URL = 'https://www.babyapp.cz';
 
 function absoluteUrl(pathname) {
   return `${SITE_URL}${pathname}`;
@@ -119,6 +119,7 @@ function splitSources(markdown, lang) {
 function topNav({ lang, slug, nav }) {
   const isEn = lang === 'en';
   const urls = isEn ? { app: '/en/', eczema: '/en/eczema/', signs: '/en/signs/', main: '/en/main-suspects/' } : { app: '/', eczema: '/eczema/', signs: '/signs/', main: '/main-suspects/' };
+  const oppositeLangUrl = isEn ? localizedPath(slug, 'cs') : localizedPath(slug, 'en');
   return `
 <header class="topbar">
   <div class="container topbar__inner">
@@ -129,7 +130,7 @@ function topNav({ lang, slug, nav }) {
       <a href="${urls.signs}" ${slug === 'signs' ? 'class="is-active" aria-current="page"' : ''}>${nav.signs}</a>
       <a href="${urls.main}" ${slug === 'main-suspects' ? 'class="is-active" aria-current="page"' : ''}>${nav.main}</a>
     </nav>
-    <div class="lang">${isEn ? '<a class="lang__item" href="/">CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item is-active" href="/en/" aria-current="page">EN</a>' : '<a class="lang__item is-active" href="/" aria-current="page">CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item" href="/en/">EN</a>'}</div>
+    <div class="lang">${isEn ? `<a class=\"lang__item\" href=\"${oppositeLangUrl}\">CZ</a><span class=\"lang__sep\" aria-hidden=\"true\">/</span><a class=\"lang__item is-active\" href=\"${urls[slug === 'main-suspects' ? 'main' : slug]}\" aria-current=\"page\">EN</a>` : `<a class=\"lang__item is-active\" href=\"${urls[slug === 'main-suspects' ? 'main' : slug]}\" aria-current=\"page\">CZ</a><span class=\"lang__sep\" aria-hidden=\"true\">/</span><a class=\"lang__item\" href=\"${oppositeLangUrl}\">EN</a>`}</div>
     <button class="burger" id="burger" aria-label="${isEn ? 'Open menu' : 'Otevřít menu'}" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="mobile" id="mobileNav" hidden>
@@ -137,7 +138,7 @@ function topNav({ lang, slug, nav }) {
     <a href="${urls.eczema}" ${slug === 'eczema' ? 'class="is-active" aria-current="page"' : ''}>${nav.eczema}</a>
     <a href="${urls.signs}" ${slug === 'signs' ? 'class="is-active" aria-current="page"' : ''}>${nav.signs}</a>
     <a href="${urls.main}" ${slug === 'main-suspects' ? 'class="is-active" aria-current="page"' : ''}>${nav.main}</a>
-    <div class="mobile__langs"><a ${isEn ? '' : 'class="is-active"'} href="/">CZ</a><a ${isEn ? 'class="is-active"' : ''} href="/en/">EN</a></div>
+    <div class="mobile__langs"><a ${isEn ? '' : 'class=\"is-active\"'} href="${isEn ? oppositeLangUrl : urls[slug === 'main-suspects' ? 'main' : slug]}">CZ</a><a ${isEn ? 'class=\"is-active\"' : ''} href="${isEn ? urls[slug === 'main-suspects' ? 'main' : slug] : oppositeLangUrl}">EN</a></div>
   </div>
 </header>`;
 }

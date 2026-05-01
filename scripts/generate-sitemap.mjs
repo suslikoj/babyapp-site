@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 const publicDir = path.join(root, 'public');
 
-const DEFAULT_SITE_URL = 'https://babyapp.cz';
+const DEFAULT_SITE_URL = 'https://www.babyapp.cz';
 const siteUrl = normalizeBaseUrl(process.env.SITE_URL ?? DEFAULT_SITE_URL);
 const today = new Date().toISOString().slice(0, 10);
 
