@@ -1,99 +1,139 @@
-# **Phase 1 of the elimination diet – main suspects**
+# **Phase 1 of the elimination diet**
 
-In this phase, you **begin the elimination diet in a systematic and
-targeted way**.  
-The goal is not to eliminate as many foods as possible, but to
-temporarily **remove those that most commonly cause problems** and
-observe how the child’s body responds.
+## **What to plant and how to start with a baby or child?**
 
-## What comes next?
+An elimination diet is one of the most common steps when dealing with eczema, suspected food allergies, or tummy problems in a baby.
 
-During this phase, you will eliminate the following foods from the diet:
+The goal is not to eliminate as many foods as possible, but to systematically find out what bothers the child.
+
+### **What is an elimination diet for babies and when to start it?**
+
+An elimination diet means that you eliminate foods from your diet that may cause problems for a certain period of time.
+
+It is most often used for:
+
+- eczema in children
+- suspected food allergy
+- tummy aches, colic or reflux
+- mucus or blood in the stool
+
+### **What to avoid on an elimination diet for a child?**
+
+In the first phase, you focus on the so-called main suspected allergens.
+
+For 14 days you will eliminate:
 
 - milk and all dairy products
-
-- eggs
-
+- egg
 - soy
-
 - beef
+- poultry meat
 
-- poultry
+At the same time, you will also skip all products that contain these ingredients, including hidden forms (e.g. whey, casein, soy flour, etc.).
 
-At the same time, you will exclude all products that contain these
-ingredients, including their hidden forms (e.g., whey, casein, soy
-flour, soy grits, etc.).
+**Traces of allergens are not addressed**, the actual composition of the food is important.
 
-Traces of allergens are not addressed at this stage—the actual
-ingredients of foods are what matter.
+### **How long should you keep to an elimination diet?**
 
-## How long does the phase last?
+The basic length is:
 
-This phase lasts 14 days.  
-For some children, it may be appropriate to continue slightly longer,
-but no more than 1 month.
+- **14 days**
 
-During this period, you monitor changes in the child’s health,
-especially:
+For some children, it may be appropriate to keep the diet longer, but not more than:
 
-- skin condition (eczema),
+- **4 weeks**
 
-- digestion,
+During this time, you monitor whether the child's condition is improving.
 
-- overall comfort of the child.
+### **What to watch out for during an elimination diet?**
 
-## What are the important guidelines for this phase?
+It's not just about food. It's important to monitor the child's overall condition:
 
-- Do not try to “invent replacements at all costs.”
+- eczema (improvement or worsening)
+- digestion
+- stool
+- tummy
+- sleep
+- restlessness or crying
 
-- Maintain as much variety as possible within the allowed foods.
+These connections will help you understand whether the diet is working.
 
-- Focus on simple, clear meals and fresh ingredients.
+### **What are the most common mistakes made during an elimination diet?**
 
-- Do not restrict food intake; ensure sufficient nutrient intake—this is
-  the top priority.
+Elimination diets often fail not because they don't work, but because they are done haphazardly.
 
-The goal of this phase is not long-term elimination, but gaining clear
-answers.
+Most common mistakes:
 
-## What should you expect after this phase?
+- an effort to replace every food at any cost
+- too limited a diet
+- nutrient deficiency
+- frequent "violations" of the diet
 
-After completing this phase, we will evaluate together how the child’s
-condition has changed.
+The goal is not perfection, but clarity and consistency.
 
-- If there is a significant improvement in symptoms, you will continue
-  to the allergen testing phase, where eliminated foods are gradually
-  and safely reintroduced to precisely identify what causes problems for
-  the child.
+### **What to eat on an elimination diet?**
 
-- If symptoms do not improve at all or only minimally, this suggests
-  that the trigger is likely not limited to the main suspects. In that
-  case, the app will automatically suggest continuing to **phase 2 of
-  the elimination diet – complete elimination**.
+Focus on:
 
-## What does complete elimination look like in practice?
+- simple meals
+- fresh ingredients
+- the greatest possible variety within the permitted foods
 
-The complete elimination phase is the next systematic step.  
-Its goal is to:
+It is important that the child (or breastfeeding mother) has enough nutrients.
 
-- remove less common but still possible allergens.
+### **Does an elimination diet work for eczema?**
 
-This phase is shorter. Allergens are reintroduced after a few days, and
-it is evaluated which of them are truly problematic.
+Yes, in young children, an elimination diet is one of the most common ways to determine if eczema is food-related.
 
-## How does the app support you?
+If eczema improves during the diet, this is an important signal that food may play a role.
 
-During these 14 days, you will complete simple daily tasks that help
-you:
+### **What if the child's condition improves?**
 
-- understand the principles of the elimination diet,
+If there is improvement:
 
-- avoid common mistakes,
+you proceed to the next phase – allergen testing
 
-- gain confidence that you are following the diet correctly,
+In this phase, foods are gradually and safely reintroduced to determine exactly what bothers the child.
 
-- get tips for safe recipes,
+### **What if the condition doesn't improve?**
 
-- have support and a clear step-by-step structure.
+If symptoms do not improve at all or only minimally:
 
-The app guides you through the entire phase in a practical way.
+probably not just the main allergens
+
+In this case, proceed to the next phase:
+
+#### **Phase 2 of the Elimination Diet – Complete Elimination**
+
+The aim of this phase is to:
+
+- remove even less common allergens
+- refine trigger search
+
+This phase tends to be shorter and allergens are gradually reintroduced to assess which ones are causing problems.
+
+### **How do you know if an elimination diet is working?**
+
+A functioning elimination diet leads to:
+
+- improvement of eczema
+- calmer tummy
+- better sleep
+- minor restlessness
+
+Improvement may not be immediate, but gradual.
+
+### **How does the app help with an elimination diet?**
+
+An elimination diet is challenging mainly because you have to monitor a lot of things at once.
+
+The application will help you:
+
+- understand the principle of diet
+- to follow the correct procedure
+- avoid common mistakes
+- monitor symptoms and foods
+- have a clear step-by-step system
+- get tips on suitable foods
+
+For 14 days, it guides you through simple daily steps to make the whole process meaningful and manageable even during challenging times.
