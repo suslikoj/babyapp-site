@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "babyapp.cz"
+          "value": "www.babyapp.cz"
         }
       ],
-      "destination": "https://www.babyapp.cz/:path*",
+      "destination": "https://babyapp.cz/:path*",
       "permanent": true
     },
     {
@@ -24,7 +24,7 @@
           "value": "http"
         }
       ],
-      "destination": "https://www.babyapp.cz/:path*",
+      "destination": "https://babyapp.cz/:path*",
       "permanent": true
     },
     {
