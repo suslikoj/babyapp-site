@@ -14,7 +14,7 @@ const pages = [
   { slug: 'main-suspects', lang: 'en', title: 'Main suspects', input: 'content/en/main_en.md', output: 'en/main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
 ];
 
-const SITE_URL = 'https://www.babyapp.cz';
+const SITE_URL = 'https://babyapp.cz';
 
 function absoluteUrl(pathname) {
   return `${SITE_URL}${pathname}`;
