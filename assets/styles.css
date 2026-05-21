@@ -200,6 +200,15 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .section h2{font-size:28px; margin:0 0 10px; letter-spacing:-.02em}
 .section__lead{color:var(--muted); margin:0 0 16px; max-width:760px}
 
+.download-card{max-width:760px;margin:0 auto;padding:28px;border:1px solid rgba(229,231,235,.9);border-radius:24px;background:linear-gradient(180deg,#fff,#fff8f5);box-shadow:var(--shadow)}
+.download-card__eyebrow{margin:0 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--primary-2)}
+.download-card__note{margin:8px 0 20px;font-size:14px;color:#4b5563}
+.download-card__badge-link{display:inline-flex;align-items:center}
+.download-card__badge{height:56px;width:auto;max-width:100%}
+.download-card__fallback{display:none;margin-top:6px}
+@media (max-width:700px){.download-card{padding:22px;border-radius:20px}.download-card__badge{height:48px}}
+
+
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
 .card{
   background:white;
