@@ -6,18 +6,30 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 const pages = [
-  { slug: 'eczema', lang: 'cs', title: 'Ekzém u dětí', input: 'content/cz/eczema_cz.md', output: 'eczema/index.html', hero: '/assets/article-eczema.jpg', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
-  { slug: 'signs', lang: 'cs', title: 'Projevy potravinové alergie', input: 'content/cz/signs_cz.md', output: 'signs/index.html', hero: '/assets/article-signs.png', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
-  { slug: 'main-suspects', lang: 'cs', title: 'Hlavní podezřelí', input: 'content/cz/main_cz.md', output: 'main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
-  { slug: 'eczema', lang: 'en', title: 'Eczema in children', input: 'content/en/eczema_en.md', output: 'en/eczema/index.html', hero: '/assets/article-eczema.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
-  { slug: 'signs', lang: 'en', title: 'Signs of food allergy', input: 'content/en/signs_en.md', output: 'en/signs/index.html', hero: '/assets/article-signs.png', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
-  { slug: 'main-suspects', lang: 'en', title: 'Main suspects', input: 'content/en/main_en.md', output: 'en/main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
+  { slug: 'eczema', lang: 'cs', title: 'Ekzém u dětí', description: 'Jak rozpoznat ekzém u dětí, co ho může zhoršovat a jak při hledání souvislostí pomáhá aplikace Bejby bez alergií.', input: 'content/cz/eczema_cz.md', output: 'eczema/index.html', hero: '/assets/article-eczema.jpg', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
+  { slug: 'signs', lang: 'cs', title: 'Projevy potravinové alergie', description: 'Přehled častých projevů potravinové alergie u dětí a signálů, které se vyplatí systematicky sledovat.', input: 'content/cz/signs_cz.md', output: 'signs/index.html', hero: '/assets/article-signs.png', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
+  { slug: 'main-suspects', lang: 'cs', title: 'Hlavní podezřelí', description: 'První fáze eliminační diety: hlavní podezřelé potraviny, co sledovat a jak postupovat přehledně.', input: 'content/cz/main_cz.md', output: 'main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Hlavní podezřelí' } },
+  { slug: 'eczema', lang: 'en', title: 'Eczema in children', description: 'How to recognize eczema in children, what can make it worse and how Baby w/o allergies helps track context.', input: 'content/en/eczema_en.md', output: 'en/eczema/index.html', hero: '/assets/article-eczema.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
+  { slug: 'signs', lang: 'en', title: 'Signs of food allergy', description: 'Common signs of food allergy in children and the symptoms worth tracking systematically.', input: 'content/en/signs_en.md', output: 'en/signs/index.html', hero: '/assets/article-signs.png', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
+  { slug: 'main-suspects', lang: 'en', title: 'Main suspects', description: 'The first phase of an elimination diet: main suspected foods, what to watch and how to proceed clearly.', input: 'content/en/main_en.md', output: 'en/main-suspects/index.html', hero: '/assets/article-main.jpg', nav: { app: 'App', eczema: 'Eczema in children', signs: 'Signs of food allergy', main: 'Main suspects' } },
 ];
 
 const SITE_URL = 'https://babyapp.cz';
+const DEFAULT_SCREENSHOTS = {
+  cs: '/assets/cz_screenshot.png',
+  en: '/assets/en_screenshot.png',
+};
 
 function absoluteUrl(pathname) {
   return `${SITE_URL}${pathname}`;
+}
+
+function pageImage(page) {
+  return page.hero || DEFAULT_SCREENSHOTS[page.lang];
+}
+
+function metaDescription(page) {
+  return page.description || page.title;
 }
 
 function localizedPath(slug, lang) {
@@ -151,8 +163,15 @@ function articleHtml(page, bodyHtml, sourcesHtml) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${page.title} | ${isEn ? 'Baby w/o allergies' : 'Bejby bez alergií'}</title>
-  <meta name="description" content="${page.title}" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="description" content="${metaDescription(page)}" />
+  <meta name="robots" content="max-image-preview:large" />
+  <meta property="og:image" content="${absoluteUrl(pageImage(page))}" />
+  <meta property="og:title" content="${page.title} | ${isEn ? 'Baby w/o allergies' : 'Bejby bez alergií'}" />
+  <meta property="og:description" content="${metaDescription(page)}" />
+  <meta property="og:url" content="${absoluteUrl(localizedPath(page.slug, page.lang))}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="${absoluteUrl(pageImage(page))}" />
   ${articleSeoLinks(page)}
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="304x304" />
