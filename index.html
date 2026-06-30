@@ -423,13 +423,31 @@
       return (topbar?.offsetHeight || 0) + (subnav.offsetHeight || 0) + 12;
     };
 
-    const setActive = (id) => {
+    const keepActiveLinkVisible = (link) => {
+      const scroller = link.closest('.subnav__inner');
+      if (!scroller) return;
+
+      const linkCenter = link.offsetLeft + (link.offsetWidth / 2);
+      const nextScrollLeft = linkCenter - (scroller.clientWidth / 2);
+      scroller.scrollTo({
+        left: Math.max(0, nextScrollLeft),
+        behavior: 'smooth'
+      });
+    };
+
+    const setActive = (id, options = {}) => {
+      let activeLink = null;
+
       links.forEach((link) => {
         const isActive = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('is-active', isActive);
         link.setAttribute('aria-current', isActive ? 'true' : 'false');
-        if (isActive && link.closest('.subnav__inner')) link.scrollIntoView({ block: 'nearest', inline: 'center' });
+        if (isActive) activeLink = link;
       });
+
+      if (options.keepVisible && activeLink) {
+        keepActiveLinkVisible(activeLink);
+      }
     };
 
     links.forEach((link) => {
@@ -439,7 +457,7 @@
         event.preventDefault();
         const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
         window.scrollTo({ top, behavior: 'smooth' });
-        setActive(target.id);
+        setActive(target.id, { keepVisible: true });
         try { history.pushState(null, '', `#${target.id}`); } catch (e) {}
       });
     });
