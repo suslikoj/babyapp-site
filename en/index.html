@@ -133,11 +133,11 @@
           It helps you understand what may be triggering your child’s symptoms – without endless trial and error. Track foods, symptoms and patterns step by step.
         </p>
         <div class="actions">
-          <a class="btn btn--primary" href="#testing">Get it on Google Play</a>
-          <a class="btn btn--ghost" href="#newsletter">I want updates</a>
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+          <a class="btn btn--ghost" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
         </div>
         <p class="fine">
-          Available for Android • Premium free for life
+          Available on the App Store and Google Play
         </p>
       </div>
 
@@ -154,18 +154,24 @@
   <section class="section" id="who" style="content-visibility:auto;"><div class="container"><h2>Who the app is for</h2><div class="cards"><article class="card"><p>Parents of babies and young children with eczema</p></article><article class="card"><p>Families dealing with suspected food allergy or intolerance</p></article><article class="card"><p>Parents going through an elimination diet</p></article><article class="card"><p>Those who have already tried many things and need a clearer system</p></article></div></div></section>
   <section class="section" id="about" style="content-visibility:auto;"><div class="container about-me"><img src="/assets/me.jpg" alt="Jiřina, app author" loading="lazy"><div><h2>Hi, I’m Jiřina</h2><p>I’m a mum of a child with multiple allergies. I went through a period when I didn’t know what was triggering the symptoms – eczema, reactions, endless trying and uncertainty.</p><p>That’s why I created Baby without allergies, an app that helps parents manage difficult situations connected with eczema and food allergies in babies and children.</p><p>I wanted to create something parents can always have at hand and use as long-term support. I’m a nutrition consultant and a programming enthusiast.</p><p>I hope the app helps you as much as it helped me.</p></div></div></section>
 
-  <!-- GOOGLE PLAY DOWNLOAD EN -->
+  <!-- DOWNLOAD EN -->
   <section class="section section--tint" id="testing" style="content-visibility:auto;">
     <div class="container">
       <div class="download-card">
-        <p class="download-card__eyebrow">Google Play</p>
-        <h2>The testing version is now available on Google Play</h2>
-        <p class="section__lead">You can now download BabyApp directly from Google Play. Premium is free for the first 100 testers.</p>
-        <p class="download-card__note">In the testing version, Premium can be activated using a Google Play test card. This is only a test payment and no money will be charged.</p>
-        <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Get BabyApp on Google Play">
-          <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-en.png -->
-          <img class="download-card__badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" loading="lazy" decoding="async" onerror="this.closest('a').style.display='none';">
-        </a>
+        <p class="download-card__eyebrow">App Store & Google Play</p>
+        <h2>Download Baby w/o allergies</h2>
+        <p class="section__lead">Baby w/o allergies is available on the App Store and Google Play.</p>
+        <div class="store-links" aria-label="App download links">
+          <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Get BabyApp on Google Play">
+            <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-en.png -->
+            <img class="download-card__badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" loading="lazy" decoding="async" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <span class="download-card__fallback" hidden>Get it on Google Play</span>
+          </a>
+          <a class="download-card__badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer" aria-label="Download Baby w/o allergies on the App Store" data-app-store-badge="/assets/images/badges/app_store_badge_en.svg">
+            <!-- TODO: Add official App Store badge asset at /assets/images/badges/app_store_badge_en.svg and replace this fallback with the badge image. -->
+            <span class="download-card__fallback">Download on the App Store</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -175,8 +181,8 @@
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>Is this a replacement for medical care?</summary><p>No. It’s a tool for clarity and guidance.</p></details>
-        <details><summary>Is the app available for iPhone too?</summary><p>Not yet. The first testing version is currently available for Android only. An iOS version is planned later.</p></details>
-        <details><summary>What does Premium free for life mean?</summary><p>Testers who join this phase may receive permanent free access to premium features as a thank-you for helping us refine the app.</p></details>
+        <details><summary>Is the app available for iPhone too?</summary><p>Yes. The app is available for iPhone on the App Store and for Android on Google Play.</p></details>
+        <details><summary>What does Premium free for life mean?</summary><p>Information about premium features is available directly in the app.</p></details>
         <details><summary>How can I send feedback?</summary><p>You’ll be able to send feedback directly in the app or by email.</p></details>
       </div>
     </div>
@@ -310,7 +316,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <p>© <span id="year"></span> Baby w/o allergies</p>
-    <p class="fine">This site provides app information, Google Play download access, and updates.</p>
+    <p class="fine">Baby w/o allergies is available on the App Store and Google Play.</p>
     <div class="footer__links"><a href="/en/privacy-policy/">Privacy Policy</a><a href="/en/medical-disclaimer/">Medical Disclaimer</a><a href="/en/terms-of-use/">Terms of Use</a><a href="/en/sources/">Sources</a></div>
   </div>
 </footer>
@@ -336,7 +342,7 @@
     });
   })();
 
-  // App subnav active section
+  // App subnav active section and offset scrolling
   (function(){
     const subnav = document.querySelector('.subnav');
     if (!subnav) return;
@@ -348,27 +354,45 @@
 
     if (!links.length || !sections.length) return;
 
+    const headerOffset = () => {
+      const topbar = document.querySelector('.topbar');
+      const isSideNav = window.matchMedia('(min-width: 1100px)').matches;
+      return (topbar?.offsetHeight || 0) + (isSideNav ? 18 : (subnav.offsetHeight || 0) + 12);
+    };
+
     const setActive = (id) => {
       links.forEach((link) => {
         const isActive = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('is-active', isActive);
-        if (isActive) {
-          link.setAttribute('aria-current', 'true');
-        } else {
-          link.removeAttribute('aria-current');
-        }
+        link.setAttribute('aria-current', isActive ? 'true' : 'false');
+        if (isActive) link.scrollIntoView({ block: 'nearest', inline: 'center' });
       });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible?.target?.id) setActive(visible.target.id);
-    }, { rootMargin: '-32% 0px -55% 0px', threshold: [0.2, 0.4, 0.7] });
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+        window.scrollTo({ top, behavior: 'smooth' });
+        setActive(target.id);
+        try { history.pushState(null, '', `#${target.id}`); } catch (e) {}
+      });
+    });
 
-    sections.forEach((section) => observer.observe(section));
-    setActive(sections[0].id);
+    const updateActive = () => {
+      const marker = window.scrollY + headerOffset() + 80;
+      let current = sections[0];
+      sections.forEach((section) => {
+        if (section.offsetTop <= marker) current = section;
+      });
+      setActive(current.id);
+    };
+
+    updateActive();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    window.addEventListener('resize', updateActive);
   })();
 
   // Footer year

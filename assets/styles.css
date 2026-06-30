@@ -737,3 +737,72 @@ input:-webkit-autofill:focus {
 .faq details summary{font-size:17px}
 @media (max-width:920px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-me{grid-template-columns:1fr}.about-me img{max-width:220px}}
 @media (max-width:640px){.feature-grid{grid-template-columns:1fr}}
+
+/* App store CTAs and section navigation */
+html{scroll-padding-top:140px}
+.section[id]{scroll-margin-top:140px}
+.store-links{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.download-card__badge-link{min-height:56px;border-radius:12px;text-decoration:none}
+.download-card__fallback{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 16px;
+  border-radius:12px;
+  background:#111827;
+  color:#fff;
+  font-weight:800;
+  line-height:1.2;
+  text-align:center;
+}
+
+@media (min-width:1100px){
+  html{scroll-padding-top:92px}
+  .section[id]{scroll-margin-top:92px}
+  .subnav{
+    position:fixed;
+    top:96px;
+    right:max(18px, calc((100vw - var(--max)) / 2 - 154px));
+    width:148px;
+    z-index:30;
+    background:rgba(255,255,255,.94);
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(10px);
+  }
+  .subnav__inner{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    overflow:visible;
+    padding:10px;
+  }
+  .subnav a{
+    width:100%;
+    white-space:normal;
+    border-bottom:0;
+    border-left:3px solid transparent;
+    border-radius:10px;
+    padding:8px 10px;
+  }
+  .subnav a.is-active,
+  .subnav a[aria-current="true"]{
+    color:var(--primary-2);
+    background:rgba(229,115,115,.10);
+    border-left-color:var(--primary);
+  }
+}
+
+@media (max-width:700px){
+  html{scroll-padding-top:126px}
+  .section[id]{scroll-margin-top:126px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .store-links{flex-direction:column;align-items:stretch}
+  .download-card__badge-link{width:100%;justify-content:center}
+  .download-card__fallback{width:100%}
+  .subnav__inner{padding:8px 18px;gap:4px}
+  .subnav a{padding:8px 9px}
+}
