@@ -132,9 +132,13 @@
         <p class="lead">
           It helps you understand what may be triggering your child’s symptoms – without endless trial and error. Track foods, symptoms and patterns step by step.
         </p>
-        <div class="actions">
-          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
-          <a class="btn btn--ghost" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+        <div class="store-links store-links--hero" aria-label="App download links">
+          <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Get Baby w/o allergies on Google Play">
+            <img class="store-badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" loading="lazy" decoding="async">
+          </a>
+          <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer" aria-label="Download Baby w/o allergies on the App Store">
+            <img class="store-badge" src="/assets/app_store_badge_en.svg" alt="Download on the App Store" loading="lazy" decoding="async">
+          </a>
         </div>
         <p class="fine">
           Available on the App Store and Google Play
@@ -162,14 +166,11 @@
         <h2>Download Baby w/o allergies</h2>
         <p class="section__lead">Baby w/o allergies is available on the App Store and Google Play.</p>
         <div class="store-links" aria-label="App download links">
-          <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Get BabyApp on Google Play">
-            <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-en.png -->
-            <img class="download-card__badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" loading="lazy" decoding="async" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-            <span class="download-card__fallback" hidden>Get it on Google Play</span>
+          <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Get Baby w/o allergies on Google Play">
+            <img class="store-badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" loading="lazy" decoding="async">
           </a>
-          <a class="download-card__badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer" aria-label="Download Baby w/o allergies on the App Store" data-app-store-badge="/assets/images/badges/app_store_badge_en.svg">
-            <!-- TODO: Add official App Store badge asset at /assets/images/badges/app_store_badge_en.svg and replace this fallback with the badge image. -->
-            <span class="download-card__fallback">Download on the App Store</span>
+          <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=en" target="_blank" rel="noopener noreferrer" aria-label="Download Baby w/o allergies on the App Store">
+            <img class="store-badge" src="/assets/app_store_badge_en.svg" alt="Download on the App Store" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -356,8 +357,7 @@
 
     const headerOffset = () => {
       const topbar = document.querySelector('.topbar');
-      const isSideNav = window.matchMedia('(min-width: 1100px)').matches;
-      return (topbar?.offsetHeight || 0) + (isSideNav ? 18 : (subnav.offsetHeight || 0) + 12);
+      return (topbar?.offsetHeight || 0) + (subnav.offsetHeight || 0) + 12;
     };
 
     const setActive = (id) => {
@@ -365,7 +365,7 @@
         const isActive = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('is-active', isActive);
         link.setAttribute('aria-current', isActive ? 'true' : 'false');
-        if (isActive) link.scrollIntoView({ block: 'nearest', inline: 'center' });
+        if (isActive && link.closest('.subnav__inner')) link.scrollIntoView({ block: 'nearest', inline: 'center' });
       });
     };
 

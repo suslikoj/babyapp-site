@@ -132,9 +132,13 @@
         <p class="badge">Mobilní aplikace</p>
         <h1>Aplikace pro rodiče dětí s ekzémem a potravinovou alergií</h1>
         <p class="lead">Pomůže ti zjistit, co dítěti vadí – bez pokus–omyl. Sleduj příznaky, potraviny a souvislosti krok za krokem.</p>
-        <div class="actions">
-          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer">Stáhnout na Google Play</a>
-          <a class="btn btn--ghost" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer">Stáhnout v App Storu</a>
+        <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
+          <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
+            <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async">
+          </a>
+          <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu">
+            <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" loading="lazy" decoding="async">
+          </a>
         </div>
         <p class="fine">
           Dostupné na App Storu i Google Play
@@ -224,14 +228,11 @@
         <h2>Stáhněte si aplikaci Bejby bez alergií</h2>
         <p class="section__lead">Aplikaci Bejby bez alergií si můžete stáhnout na App Storu i Google Play.</p>
         <div class="store-links" aria-label="Odkazy ke stažení aplikace">
-          <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
-            <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-cs.png -->
-            <img class="download-card__badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-            <span class="download-card__fallback" hidden>Stáhnout na Google Play</span>
+          <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
+            <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async">
           </a>
-          <a class="download-card__badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu" data-app-store-badge="/assets/images/badges/app_store_badge_cs.svg">
-            <!-- TODO: Add official App Store badge asset at /assets/images/badges/app_store_badge_cs.svg and replace this fallback with the badge image. -->
-            <span class="download-card__fallback">Stáhnout v App Storu</span>
+          <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu">
+            <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -419,8 +420,7 @@
 
     const headerOffset = () => {
       const topbar = document.querySelector('.topbar');
-      const isSideNav = window.matchMedia('(min-width: 1100px)').matches;
-      return (topbar?.offsetHeight || 0) + (isSideNav ? 18 : (subnav.offsetHeight || 0) + 12);
+      return (topbar?.offsetHeight || 0) + (subnav.offsetHeight || 0) + 12;
     };
 
     const setActive = (id) => {
@@ -428,7 +428,7 @@
         const isActive = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('is-active', isActive);
         link.setAttribute('aria-current', isActive ? 'true' : 'false');
-        if (isActive) link.scrollIntoView({ block: 'nearest', inline: 'center' });
+        if (isActive && link.closest('.subnav__inner')) link.scrollIntoView({ block: 'nearest', inline: 'center' });
       });
     };
 
