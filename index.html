@@ -133,11 +133,11 @@
         <h1>Aplikace pro rodiče dětí s ekzémem a potravinovou alergií</h1>
         <p class="lead">Pomůže ti zjistit, co dítěti vadí – bez pokus–omyl. Sleduj příznaky, potraviny a souvislosti krok za krokem.</p>
         <div class="actions">
-          <a class="btn btn--primary" href="#testovani">Stáhnout na Google Play</a>
-          <a class="btn btn--ghost" href="#newsletter">Chci dostávat novinky</a>
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer">Stáhnout na Google Play</a>
+          <a class="btn btn--ghost" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer">Stáhnout v App Storu</a>
         </div>
         <p class="fine">
-          Dostupné pro Android • Premium zdarma for life
+          Dostupné na App Storu i Google Play
         </p>
       </div>
 
@@ -216,18 +216,24 @@
     </div>
   </section>
 
-  <!-- GOOGLE PLAY DOWNLOAD CZ -->
+  <!-- DOWNLOAD CZ -->
   <section class="section section--tint" id="testovani" style="content-visibility:auto;">
     <div class="container">
       <div class="download-card">
-        <p class="download-card__eyebrow">Google Play</p>
-        <h2>Testovací verze je dostupná na Google Play</h2>
-        <p class="section__lead">Aplikaci Bejby bez alergií si nyní můžete stáhnout přímo z Google Play. Pro prvních 100 testujících je Premium zdarma.</p>
-        <p class="download-card__note">Premium lze v testovací verzi aktivovat pomocí testovací platební karty v Google Play. Jde pouze o testovací platbu, žádné peníze se nestrhnou.</p>
-        <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
-          <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-cs.png -->
-          <img class="download-card__badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async" onerror="this.closest('a').style.display='none';">
-        </a>
+        <p class="download-card__eyebrow">App Store & Google Play</p>
+        <h2>Stáhněte si aplikaci Bejby bez alergií</h2>
+        <p class="section__lead">Aplikaci Bejby bez alergií si můžete stáhnout na App Storu i Google Play.</p>
+        <div class="store-links" aria-label="Odkazy ke stažení aplikace">
+          <a class="download-card__badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
+            <!-- TODO: Replace with official Google Play badge asset at /assets/google-play-badge-cs.png -->
+            <img class="download-card__badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <span class="download-card__fallback" hidden>Stáhnout na Google Play</span>
+          </a>
+          <a class="download-card__badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu" data-app-store-badge="/assets/images/badges/app_store_badge_cs.svg">
+            <!-- TODO: Add official App Store badge asset at /assets/images/badges/app_store_badge_cs.svg and replace this fallback with the badge image. -->
+            <span class="download-card__fallback">Stáhnout v App Storu</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -237,8 +243,8 @@
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>Je to náhrada lékaře?</summary><p>Ne. Je to nástroj pro přehled a vedení.</p></details>
-        <details><summary>Je aplikace dostupná i pro iPhone?</summary><p>Zatím ne. První testovací verze je dostupná pouze pro Android. iOS verze je v plánu později.</p></details>
-        <details><summary>Co znamená Premium zdarma for life?</summary><p>Testeři, kteří se zapojí do této fáze, mohou získat trvalý bezplatný přístup k prémiovým funkcím jako poděkování za pomoc s laděním aplikace.</p></details>
+        <details><summary>Je aplikace dostupná i pro iPhone?</summary><p>Ano. Aplikace je dostupná pro iPhone v App Storu a pro Android na Google Play.</p></details>
+        <details><summary>Co znamená Premium zdarma for life?</summary><p>Informace o prémiových funkcích najdete přímo v aplikaci.</p></details>
         <details><summary>Jak pošlu zpětnou vazbu?</summary><p>Zpětnou vazbu bude možné poslat přímo v aplikaci nebo e-mailem.</p></details>
       </div>
     </div>
@@ -372,7 +378,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <p>© <span id="year"></span> Bejby bez alergií</p>
-    <p class="fine">Web slouží pro informace o aplikaci, odkaz ke stažení z Google Play a odběr novinek.</p>
+    <p class="fine">Aplikaci Bejby bez alergií si můžete stáhnout na App Storu i Google Play.</p>
     <div class="footer__links"><a href="/privacy-policy/">Zásady ochrany osobních údajů</a><a href="/medical-disclaimer/">Zdravotní upozornění</a><a href="/terms-of-use/">Podmínky používání</a><a href="/zdroje/">Odborné zdroje</a></div>
   </div>
 </footer>
@@ -399,7 +405,7 @@
     });
   })();
 
-  // App subnav active section
+  // App subnav active section and offset scrolling
   (function(){
     const subnav = document.querySelector('.subnav');
     if (!subnav) return;
@@ -411,27 +417,45 @@
 
     if (!links.length || !sections.length) return;
 
+    const headerOffset = () => {
+      const topbar = document.querySelector('.topbar');
+      const isSideNav = window.matchMedia('(min-width: 1100px)').matches;
+      return (topbar?.offsetHeight || 0) + (isSideNav ? 18 : (subnav.offsetHeight || 0) + 12);
+    };
+
     const setActive = (id) => {
       links.forEach((link) => {
         const isActive = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('is-active', isActive);
-        if (isActive) {
-          link.setAttribute('aria-current', 'true');
-        } else {
-          link.removeAttribute('aria-current');
-        }
+        link.setAttribute('aria-current', isActive ? 'true' : 'false');
+        if (isActive) link.scrollIntoView({ block: 'nearest', inline: 'center' });
       });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible?.target?.id) setActive(visible.target.id);
-    }, { rootMargin: '-32% 0px -55% 0px', threshold: [0.2, 0.4, 0.7] });
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+        window.scrollTo({ top, behavior: 'smooth' });
+        setActive(target.id);
+        try { history.pushState(null, '', `#${target.id}`); } catch (e) {}
+      });
+    });
 
-    sections.forEach((section) => observer.observe(section));
-    setActive(sections[0].id);
+    const updateActive = () => {
+      const marker = window.scrollY + headerOffset() + 80;
+      let current = sections[0];
+      sections.forEach((section) => {
+        if (section.offsetTop <= marker) current = section;
+      });
+      setActive(current.id);
+    };
+
+    updateActive();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    window.addEventListener('resize', updateActive);
   })();
 
   // Footer year
