@@ -30,6 +30,18 @@
   if (y) y.textContent = new Date().getFullYear();
 })();
 
+// Keep the FAQ accordion state available to assistive technologies.
+(function () {
+  document.querySelectorAll('.faq details').forEach((item) => {
+    const summary = item.querySelector('summary');
+    if (!summary) return;
+
+    const syncState = () => summary.setAttribute('aria-expanded', String(item.open));
+    syncState();
+    item.addEventListener('toggle', syncState);
+  });
+})();
+
 /**
  * Brevo submit UX (TESTEŘI):
  * - submit -> hidden iframe (no redirect)
@@ -103,4 +115,3 @@ function brevoNewsSubmit() {
 
   return true;
 }
-

@@ -275,7 +275,10 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
   background:white;
   margin:10px 0;
 }
-.faq summary{cursor:pointer; font-weight:900}
+.faq summary{cursor:pointer; font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 auto;font-size:1.5rem;line-height:1;color:var(--primary-2);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{color:var(--muted); margin:10px 0 0}
 
 .btn{
@@ -761,3 +764,5 @@ html{scroll-padding-top:140px}
   .subnav__inner{padding:8px 18px;gap:4px}
   .subnav a{padding:8px 9px}
 }
+.feature{overflow:hidden;padding:0 0 22px}.feature img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;object-position:center;background:var(--blush)}.feature h3,.feature p{margin-left:20px;margin-right:20px}.feature h3{margin-top:18px}.btn{min-height:48px}.btn--primary{background:var(--coral);box-shadow:0 12px 24px rgba(217,95,100,.25)}
+:focus-visible{outline:3px solid #542b36;outline-offset:4px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.blog-card,.related-card,.faq summary::after{transition:none}}
