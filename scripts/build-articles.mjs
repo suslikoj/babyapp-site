@@ -19,6 +19,7 @@ const DEFAULT_SCREENSHOTS = {
   cs: '/assets/cz_screenshot.png',
   en: '/assets/en_screenshot.png',
 };
+const UPDATED = '2026-07-26';
 
 function absoluteUrl(pathname) {
   return `${SITE_URL}${pathname}`;
@@ -86,14 +87,16 @@ function markdownToHtml(md) {
     const h1 = trimmed.match(/^#\s+(.+)$/);
     const h2 = trimmed.match(/^##\s+(.+)$/);
     const h3 = trimmed.match(/^###\s+(.+)$/);
+    const h4 = trimmed.match(/^####\s+(.+)$/);
     const list = trimmed.match(/^[-*]\s+(.+)$/);
 
-    if (h1 || h2 || h3) {
+    if (h1 || h2 || h3 || h4) {
       flushParagraph();
       flushList();
-      const tag = h1 ? 'h1' : h2 ? 'h2' : 'h3';
-      const text = (h1 || h2 || h3)[1].replace(/^\*\*(.+)\*\*$/, '$1');
-      html += `<${tag}>${applyInline(text)}</${tag}>`;
+      const tag = h1 ? 'h1' : h2 ? 'h2' : h3 ? 'h3' : 'h4';
+      const text = (h1 || h2 || h3 || h4)[1].replace(/^\*\*(.+)\*\*$/, '$1');
+      const id = tag === 'h2' ? ` id="${text.toLocaleLowerCase('en').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}"` : '';
+      html += `<${tag}${id}>${applyInline(text)}</${tag}>`;
       continue;
     }
 
@@ -157,6 +160,10 @@ function topNav({ lang, slug, nav }) {
 
 function articleHtml(page, bodyHtml, sourcesHtml) {
   const isEn = page.lang === 'en';
+  const canonicalPath = localizedPath(page.slug, page.lang);
+  const headings = [...bodyHtml.matchAll(/<h2 id="([^"]+)">(.+?)<\/h2>/g)];
+  const toc = headings.length ? `<nav class="article-toc" aria-label="${isEn ? 'On this page' : 'Obsah článku'}"><strong>${isEn ? 'On this page' : 'Obsah článku'}</strong><ol>${headings.map(([, id, label]) => `<li><a href="#${id}">${label}</a></li>`).join('')}</ol></nav>` : '';
+  const related = pages.filter((item) => item.lang === page.lang && item.slug !== page.slug).map((item) => `<a class="related-card" href="${localizedPath(item.slug, item.lang)}"><span>${isEn ? 'Read next' : 'Číst dále'}</span><strong>${item.title}</strong></a>`).join('');
   return `<!doctype html>
 <html lang="${page.lang}">
 <head>
@@ -169,7 +176,7 @@ function articleHtml(page, bodyHtml, sourcesHtml) {
   <meta property="og:title" content="${page.title} | ${isEn ? 'Baby w/o allergies' : 'Bejby bez alergií'}" />
   <meta property="og:description" content="${metaDescription(page)}" />
   <meta property="og:url" content="${absoluteUrl(localizedPath(page.slug, page.lang))}" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="${absoluteUrl(pageImage(page))}" />
   ${articleSeoLinks(page)}
@@ -181,16 +188,24 @@ function articleHtml(page, bodyHtml, sourcesHtml) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: page.title, description: metaDescription(page), image: absoluteUrl(pageImage(page)), datePublished: '2026-03-01', dateModified: UPDATED, inLanguage: page.lang, mainEntityOfPage: absoluteUrl(canonicalPath), author: { '@type': 'Person', name: 'Jiřina' }, publisher: { '@type': 'Organization', name: isEn ? 'Baby w/o allergies' : 'Bejby bez alergií', url: SITE_URL, logo: { '@type': 'ImageObject', url: absoluteUrl('/assets/logo.svg') } } })}</script>
+  <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: isEn ? 'App' : 'Aplikace', item: absoluteUrl(isEn ? '/en/' : '/') }, { '@type': 'ListItem', position: 2, name: page.title, item: absoluteUrl(canonicalPath) }] })}</script>
 </head>
 <body>
 ${topNav({ lang: page.lang, slug: page.slug, nav: page.nav })}
 <main>
+  <nav class="breadcrumbs container" aria-label="${isEn ? 'Breadcrumbs' : 'Drobečková navigace'}"><a href="${isEn ? '/en/' : '/'}">${isEn ? 'App' : 'Aplikace'}</a><span aria-hidden="true">›</span><span aria-current="page">${page.title}</span></nav>
   <section class="article-hero">
-    <img src="${page.hero}" alt="${page.title}" class="article-hero__image" />
+    <img src="${page.hero}" alt="${page.title}" class="article-hero__image" width="1200" height="630" fetchpriority="high" decoding="async" />
   </section>
   <article class="article-content container">
+    <div class="article-meta"><span>${isEn ? 'Written by' : 'Autorka'}: <strong>Jiřina</strong></span><time datetime="${UPDATED}">${isEn ? 'Updated July 26, 2026' : 'Aktualizováno 26. 7. 2026'}</time></div>
+    ${toc}
     ${bodyHtml}
     ${sourcesHtml ? `<section class="article-sources"><h2>${isEn ? 'Sources' : 'Zdroje'}</h2>${sourcesHtml}</section>` : ''}
+    <aside class="medical-note"><strong>${isEn ? 'Health notice' : 'Zdravotní upozornění'}</strong><p>${isEn ? 'This article is educational and does not replace diagnosis or care from a doctor. Seek urgent medical help for breathing difficulties, swelling or suspected anaphylaxis.' : 'Článek má vzdělávací charakter a nenahrazuje diagnózu ani péči lékaře. Při dušnosti, otoku nebo podezření na anafylaxi volejte neprodleně zdravotnickou pomoc.'}</p><a href="${isEn ? '/en/medical-disclaimer/' : '/medical-disclaimer/'}">${isEn ? 'Full health notice' : 'Celé zdravotní upozornění'}</a></aside>
+    <section class="article-cta"><div><span>${isEn ? 'A clearer path for parents' : 'Přehlednější cesta pro rodiče'}</span><h2>${isEn ? 'Track foods and symptoms in one place' : 'Sledujte potraviny a projevy na jednom místě'}</h2></div><a class="btn btn--primary" href="${isEn ? '/en/#testing' : '/#testovani'}">${isEn ? 'Download the app' : 'Stáhnout aplikaci'}</a></section>
+    <section class="related"><h2>${isEn ? 'Related articles' : 'Související články'}</h2><div class="related-grid">${related}</div></section>
   </article>
 </main>
 <footer class="footer"><div class="container footer__inner"><p>© <span id="year"></span> ${isEn ? 'Baby w/o allergies' : 'Bejby bez alergií'}</p></div></footer>
