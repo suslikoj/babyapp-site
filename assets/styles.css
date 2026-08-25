@@ -866,7 +866,7 @@ h1{font-weight:560 !important}
 .subnav{border-bottom:0}
 .subnav::after{
   content:"";position:absolute;left:0;right:0;top:100%;height:22px;pointer-events:none;z-index:1;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C 240 -10 480 90 720 50 C 960 10 1200 90 1440 50 L1440 0 L0 0 Z' fill='%23FACDBD' fill-opacity='.5'/%3E%3C/svg%3E") top/100% 100% no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C 240 -10 480 90 720 50 C 960 10 1200 90 1440 50 L1440 0 L0 0 Z' fill='%23ffffff'/%3E%3C/svg%3E") top/100% 100% no-repeat;
 }
 
 /* --- gentle entrance choreography (no JS needed) --- */
