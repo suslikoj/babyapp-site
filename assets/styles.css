@@ -327,6 +327,17 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 
   .hero__brand{flex-direction:column; align-items:flex-start}
   .hero__logo{width:220px; max-width:80vw}
+
+  /* one navigation surface on small screens: the second (in-page) nav
+     row moves into the burger menu instead of sitting on its own line */
+  .subnav{display:none}
+  html{scroll-padding-top:78px}
+  .section[id]{scroll-margin-top:78px}
+
+  .topbar__inner{gap:10px}
+  .brand__name{font-size:15px}
+  .lang{margin-left:auto; gap:10px}
+  .burger{margin-left:14px}
 }
 
 /* -------------------- */
@@ -668,7 +679,10 @@ input:-webkit-autofill:focus {
 .article-content p,
 .article-content li{font-size:18px; color:#111827; line-height:1.75}
 .article-content ul{padding-left:1.3rem}
-.article-content a{color:#1f4f99}
+.article-content a{color:var(--coral)}
+.article-content .btn--primary{color:#fff}
+.article-content .related-card,
+.article-content .blog-card{color:var(--ink)}
 
 .article-sources{
   margin-top:48px;
@@ -765,8 +779,8 @@ html{scroll-padding-top:140px}
 
 
 @media (max-width:700px){
-  html{scroll-padding-top:126px}
-  .section[id]{scroll-margin-top:126px}
+  html{scroll-padding-top:78px}
+  .section[id]{scroll-margin-top:78px}
   .actions{flex-direction:column;align-items:stretch}
   .actions .btn{width:100%}
   .store-links{align-items:center}
@@ -843,13 +857,17 @@ h1{font-weight:560 !important}
 .section--tint{background:radial-gradient(520px 280px at 88% 100%, rgba(217,95,100,.14), transparent 60%), linear-gradient(180deg, rgba(250,205,189,.72), rgba(250,205,189,1))}
 .section--blog{background:radial-gradient(560px 300px at 92% 0%, rgba(217,95,100,.09), transparent 60%), var(--cream) !important}
 
-/* --- hero: wavy shoreline + floating blobs --- */
+/* --- hero: floating blobs --- */
 .hero{position:relative}
-.hero::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:56px;pointer-events:none;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C 240 90 480 -10 720 30 C 960 70 1200 -10 1440 30 L1440 80 L0 80 Z' fill='%23ffffff'/%3E%3C/svg%3E") bottom/100% 100% no-repeat;
-}
 .hero__grid{position:relative;z-index:1}
+
+/* --- wavy shoreline lives under the nav now, not the hero, so it   --- */
+/* --- travels with it and is still there once the nav sticks --- */
+.subnav{border-bottom:0}
+.subnav::after{
+  content:"";position:absolute;left:0;right:0;top:100%;height:22px;pointer-events:none;z-index:1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C 240 -10 480 90 720 50 C 960 10 1200 90 1440 50 L1440 0 L0 0 Z' fill='%23FACDBD' fill-opacity='.5'/%3E%3C/svg%3E") top/100% 100% no-repeat;
+}
 .deco-blob{position:absolute;pointer-events:none;z-index:0;opacity:.9}
 @keyframes floatA{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(-10px,-18px) rotate(6deg)}}
 @keyframes floatB{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(12px,16px) rotate(-8deg)}}
