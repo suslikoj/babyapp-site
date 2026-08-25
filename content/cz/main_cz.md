@@ -6,7 +6,7 @@ Eliminační dieta je jeden z nejčastějších kroků, když řešíš ekzém, 
 
 Cílem není vyřadit co nejvíce potravin, ale **systematicky zjistit, co dítěti vadí**.
 
-### **Co je eliminační dieta u miminka a kdy ji začít?**
+## **Co je eliminační dieta u miminka a kdy ji začít?**
 
 Eliminační dieta znamená, že na určitou dobu vyřadíš z jídelníčku potraviny, které mohou způsobovat potíže.
 
@@ -17,7 +17,7 @@ Používá se nejčastěji při:
 - bolestech bříška, kolikách nebo refluxu
 - hlenu nebo krvi ve stolici
 
-### **Co vysadit při eliminační dietě u dítěte?**
+## **Co vysadit při eliminační dietě u dítěte?**
 
 V první fázi se zaměřuješ na tzv. **hlavní podezřelé alergeny**.
 
@@ -33,7 +33,7 @@ Zároveň vynecháš i všechny výrobky, které tyto složky obsahují, včetn�
 
 **Neřeší se stopy alergenů**, důležité je skutečné složení potravin.
 
-### **Jak dlouho držet eliminační dietu?**
+## **Jak dlouho držet eliminační dietu?**
 
 Základní délka je:
 
@@ -45,7 +45,7 @@ U některých dětí může být vhodné dietu držet déle, maximálně však:
 
 Během této doby sleduješ, jestli se stav dítěte zlepšuje.
 
-### **Co sledovat během eliminační diety?**
+## **Co sledovat během eliminační diety?**
 
 Nejde jen o jídlo. Důležité je sledovat celkový stav dítěte:
 
@@ -58,7 +58,7 @@ Nejde jen o jídlo. Důležité je sledovat celkový stav dítěte:
 
 Právě tyto souvislosti ti pomůžou pochopit, jestli dieta funguje.
 
-### **Jaké jsou nejčastější chyby při eliminační dietě?**
+## **Jaké jsou nejčastější chyby při eliminační dietě?**
 
 Eliminační dieta často selhává ne proto, že nefunguje, ale protože se dělá chaoticky.
 
@@ -71,7 +71,7 @@ Nejčastější chyby:
 
 Cílem není dokonalost, ale **přehled a konzistence**.
 
-### **Co jíst při eliminační dietě?**
+## **Co jíst při eliminační dietě?**
 
 Zaměř se na:
 
@@ -81,13 +81,13 @@ Zaměř se na:
 
 Důležité je, aby dítě (nebo kojící maminka) mělo dostatek živin.
 
-### **Funguje eliminační dieta u ekzému?**
+## **Funguje eliminační dieta u ekzému?**
 
 Ano, u malých dětí je eliminační dieta jedním z nejčastějších způsobů, jak zjistit, jestli ekzém souvisí s potravinami.
 
 Pokud se ekzém během diety zlepší, je to důležitý signál, že potraviny mohou hrát roli.
 
-### **Co když se stav dítěte zlepší?**
+## **Co když se stav dítěte zlepší?**
 
 Pokud dojde ke zlepšení:
 
@@ -95,7 +95,7 @@ pokračuješ do další fáze – **testování alergenů**
 
 V této fázi se potraviny postupně a bezpečně vrací zpět, aby se přesně zjistilo, co dítěti vadí.
 
-### **Co když se stav nezlepší?**
+## **Co když se stav nezlepší?**
 
 Pokud se příznaky nezlepší vůbec nebo jen minimálně:
 
@@ -103,7 +103,7 @@ pravděpodobně nejde jen o hlavní alergeny
 
 V takovém případě se pokračuje do další fáze:
 
-#### **2. fáze eliminační diety – Kompletní vyloučení**
+### **2. fáze eliminační diety – Kompletní vyloučení**
 
 Cílem této fáze je:
 
@@ -112,7 +112,7 @@ Cílem této fáze je:
 
 Tato fáze bývá kratší a alergeny se postupně vrací zpět, aby se vyhodnotilo, které z nich způsobují potíže.
 
-### **Jak poznat, že eliminační dieta funguje?**
+## **Jak poznat, že eliminační dieta funguje?**
 
 Fungující eliminační dieta vede k:
 
@@ -123,7 +123,7 @@ Fungující eliminační dieta vede k:
 
 Zlepšení nemusí být okamžité, ale postupné.
 
-### **Jak pomáhá aplikace při eliminační dietě?**
+## **Jak pomáhá aplikace při eliminační dietě?**
 
 Eliminační dieta je náročná hlavně v tom, že musíš sledovat spoustu věcí najednou.
 
