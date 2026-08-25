@@ -6,7 +6,7 @@ An elimination diet is one of the most common steps when dealing with eczema, su
 
 The goal is not to eliminate as many foods as possible, but to systematically find out what bothers the child.
 
-### **What is an elimination diet for babies and when to start it?**
+## **What is an elimination diet for babies and when to start it?**
 
 An elimination diet means that you eliminate foods from your diet that may cause problems for a certain period of time.
 
@@ -17,7 +17,7 @@ It is most often used for:
 - tummy aches, colic or reflux
 - mucus or blood in the stool
 
-### **What to avoid on an elimination diet for a child?**
+## **What to avoid on an elimination diet for a child?**
 
 In the first phase, you focus on the so-called main suspected allergens.
 
@@ -33,7 +33,7 @@ At the same time, you will also skip all products that contain these ingredients
 
 **Traces of allergens are not addressed**, the actual composition of the food is important.
 
-### **How long should you keep to an elimination diet?**
+## **How long should you keep to an elimination diet?**
 
 The basic length is:
 
@@ -45,7 +45,7 @@ For some children, it may be appropriate to keep the diet longer, but not more t
 
 During this time, you monitor whether the child's condition is improving.
 
-### **What to watch out for during an elimination diet?**
+## **What to watch out for during an elimination diet?**
 
 It's not just about food. It's important to monitor the child's overall condition:
 
@@ -58,7 +58,7 @@ It's not just about food. It's important to monitor the child's overall conditio
 
 These connections will help you understand whether the diet is working.
 
-### **What are the most common mistakes made during an elimination diet?**
+## **What are the most common mistakes made during an elimination diet?**
 
 Elimination diets often fail not because they don't work, but because they are done haphazardly.
 
@@ -71,7 +71,7 @@ Most common mistakes:
 
 The goal is not perfection, but clarity and consistency.
 
-### **What to eat on an elimination diet?**
+## **What to eat on an elimination diet?**
 
 Focus on:
 
@@ -81,13 +81,13 @@ Focus on:
 
 It is important that the child (or breastfeeding mother) has enough nutrients.
 
-### **Does an elimination diet work for eczema?**
+## **Does an elimination diet work for eczema?**
 
 Yes, in young children, an elimination diet is one of the most common ways to determine if eczema is food-related.
 
 If eczema improves during the diet, this is an important signal that food may play a role.
 
-### **What if the child's condition improves?**
+## **What if the child's condition improves?**
 
 If there is improvement:
 
@@ -95,7 +95,7 @@ you proceed to the next phase – allergen testing
 
 In this phase, foods are gradually and safely reintroduced to determine exactly what bothers the child.
 
-### **What if the condition doesn't improve?**
+## **What if the condition doesn't improve?**
 
 If symptoms do not improve at all or only minimally:
 
@@ -103,7 +103,7 @@ probably not just the main allergens
 
 In this case, proceed to the next phase:
 
-#### **Phase 2 of the Elimination Diet – Complete Elimination**
+### **Phase 2 of the Elimination Diet – Complete Elimination**
 
 The aim of this phase is to:
 
@@ -112,7 +112,7 @@ The aim of this phase is to:
 
 This phase tends to be shorter and allergens are gradually reintroduced to assess which ones are causing problems.
 
-### **How do you know if an elimination diet is working?**
+## **How do you know if an elimination diet is working?**
 
 A functioning elimination diet leads to:
 
@@ -123,7 +123,7 @@ A functioning elimination diet leads to:
 
 Improvement may not be immediate, but gradual.
 
-### **How does the app help with an elimination diet?**
+## **How does the app help with an elimination diet?**
 
 An elimination diet is challenging mainly because you have to monitor a lot of things at once.
 
