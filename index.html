@@ -175,27 +175,15 @@
   </div>
 </header>
 
-<nav class="subnav" aria-label="Sekce aplikace">
-  <div class="container subnav__inner">
-    <a href="#problem">Problém</a>
-    <a href="#features">Funkce</a>
-    <a href="#how">Jak funguje</a>
-    <a href="#who">Pro koho</a>
-    <a href="#about">O mně</a>
-    <a href="#testovani">Stáhnout aplikaci</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Kontakt</a>
-  </div>
-</nav>
-
 <main id="top">
   <section class="hero">
+    <svg class="deco-blob deco-blob--spin" aria-hidden="true" width="66" height="66" style="top:6%;right:5%" viewBox="0 0 100 100"><path d="M50 2 L58 38 L94 42 L62 60 L72 96 L50 74 L28 96 L38 60 L6 42 L42 38 Z" fill="none" stroke="#d95f64" stroke-width="1.4" opacity=".35"/></svg>
     <div class="container hero__grid">
       <div class="hero__copy">
 
         <p class="badge">Mobilní aplikace</p>
         <h1>Aplikace pro rodiče dětí s ekzémem a potravinovou alergií</h1>
-        <p class="lead">Pomůže ti zjistit, co dítěti vadí – bez pokus–omyl. Sleduj příznaky, potraviny a souvislosti krok za krokem.</p>
+        <p class="lead">Pomůže ti přijít na to, co dítěti vadí – s klidem a přehledem. Sleduj příznaky, jídlo a souvislosti na jednom místě.</p>
         <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
           <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
             <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async">
@@ -214,9 +202,23 @@
       </div>
     </div>
   </section>
+
+  <nav class="subnav" aria-label="Sekce aplikace">
+    <div class="container subnav__inner">
+      <a href="#problem">Problém</a>
+      <a href="#features">Funkce</a>
+      <a href="#how">Jak funguje</a>
+      <a href="#who">Pro koho</a>
+      <a href="#about">O mně</a>
+      <a href="#testovani">Stáhnout aplikaci</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+  </nav>
+
   <section class="section" id="problem" style="content-visibility:auto;">
     <div class="container">
-      <h2>Taky nevíš, co dítěti vadí?</h2>
+      <h2>Nekonečné hádání, co dítěti vadí?</h2>
       <ul class="list list--big">
         <li>Ekzém se zhoršuje a nevíš proč.</li>
         <li>Každé nové jídlo je stres.</li>
@@ -228,7 +230,7 @@
 
   <section class="section section--soft" id="solution" style="content-visibility:auto;">
     <div class="container">
-      <h2>Místo chaosu jasný systém</h2>
+      <h2>Aby to konečně dávalo smysl</h2>
       <p class="section__lead">Bejby bez alergií pomáhá rodičům sledovat potraviny, příznaky a reakce v souvislostech. Vede tě od eliminační fáze až po postupné testování alergenů tak, aby byl celý proces přehlednější a zvládnutelnější.</p>
     </div>
   </section>
@@ -237,19 +239,19 @@
     <div class="container">
       <h2>Co v aplikaci najdeš</h2>
       <div class="feature-grid">
-        <article class="card feature"><div class="feature__media"><img src="assets/elimination.png" alt="Eliminační dieta v aplikaci" loading="lazy" decoding="async"></div><h3>Eliminační dieta</h3><p>Co vyřadit, na jak dlouho a co sledovat.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/testing.png" alt="Testování alergenů v aplikaci" loading="lazy" decoding="async"></div><h3>Testování alergenů</h3><p>Bezpečné a postupné znovuzařazování.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/calendar.png" alt="Kalendář projevů v aplikaci" loading="lazy" decoding="async"></div><h3>Kalendář projevů</h3><p>Ekzém, bříško, spánek i poznámky v čase.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/recipes.png" alt="Recepty v aplikaci" loading="lazy" decoding="async"></div><h3>Recepty</h3><p>Filtrované podle fáze diety a alergií.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/allergens.png" alt="Přehled alergenů v aplikaci" loading="lazy" decoding="async"></div><h3>Alergeny</h3><p>Přehledné informace na jednom místě.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/blog.png" alt="Blog v aplikaci" loading="lazy" decoding="async"></div><h3>Blog</h3><p>Vysvětlení a podpora pro rodiče.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/elimination.png" alt="Eliminační dieta v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🌱</span><h3>Eliminační dieta</h3><p>Co vyřadit, na jak dlouho a co sledovat.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/testing.png" alt="Testování alergenů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🔁</span><h3>Testování alergenů</h3><p>Bezpečné a postupné znovuzařazování.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/calendar.png" alt="Kalendář projevů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🗓️</span><h3>Kalendář projevů</h3><p>Ekzém, bříško, spánek i poznámky v čase.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/recipes.png" alt="Recepty v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🍲</span><h3>Recepty</h3><p>Filtrované podle fáze diety a alergií.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/allergens.png" alt="Přehled alergenů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🌰</span><h3>Alergeny</h3><p>Přehledné informace na jednom místě.</p></article>
+        <article class="card feature"><div class="feature__media"><img src="assets/blog.png" alt="Blog v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🪶</span><h3>Blog</h3><p>Vysvětlení a podpora pro rodiče.</p></article>
       </div>
     </div>
   </section>
 
   <section class="section" id="how" style="content-visibility:auto;">
     <div class="container">
-      <h2>Jak aplikace pomáhá krok za krokem</h2>
+      <h2>Jak tě aplikace provede</h2>
       <ol class="steps">
         <li class="step"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
         <li class="step"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
