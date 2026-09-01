@@ -176,29 +176,23 @@
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__copy">
+  <section class="hero hero--intro">
+    <div class="container hero__copy">
 
-        <p class="badge">Mobilní aplikace</p>
-        <h1>Aplikace pro rodiče dětí s ekzémem a potravinovou alergií</h1>
-        <p class="lead">Pomůže ti přijít na to, co dítěti vadí – s klidem a přehledem. Sleduj příznaky, jídlo a souvislosti na jednom místě.</p>
-        <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
-          <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
-            <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async">
-          </a>
-          <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu">
-            <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" loading="lazy" decoding="async">
-          </a>
-        </div>
-        <p class="fine">
-          Dostupné na App Storu i Google Play
-        </p>
+      <p class="badge">Mobilní aplikace</p>
+      <h1>Aplikace pro rodiče dětí s ekzémem a potravinovou alergií</h1>
+      <p class="lead">Pomůže ti přijít na to, co dítěti vadí – s klidem a přehledem. Sleduj příznaky, jídlo a souvislosti na jednom místě.</p>
+      <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
+        <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&hl=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
+          <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" loading="lazy" decoding="async">
+        </a>
+        <a class="store-badge-link" href="https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id6776690582?l=cs" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií v App Storu">
+          <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" loading="lazy" decoding="async">
+        </a>
       </div>
-
-      <div class="hero__panel" aria-hidden="true">
-        <img class="panel__shot" src="assets/cz_screenshot.png" alt="Ukázky aplikace Bejby bez alergií" width="1080" height="1920" fetchpriority="high" decoding="async">
-      </div>
+      <p class="fine">
+        Dostupné na App Storu i Google Play
+      </p>
     </div>
   </section>
 
@@ -234,16 +228,69 @@
     </div>
   </section>
 
-  <section class="section" id="features" style="content-visibility:auto;">
-    <div class="container">
+  <section class="app-showcase" id="features" style="content-visibility:auto;">
+    <div class="container app-showcase__intro">
       <h2>Co v aplikaci najdeš</h2>
-      <div class="feature-grid">
-        <article class="card feature"><div class="feature__media"><img src="assets/elimination.png" alt="Eliminační dieta v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🌱</span><h3>Eliminační dieta</h3><p>Co vyřadit, na jak dlouho a co sledovat.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/testing.png" alt="Testování alergenů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🔁</span><h3>Testování alergenů</h3><p>Bezpečné a postupné znovuzařazování.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/calendar.png" alt="Kalendář projevů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🗓️</span><h3>Kalendář projevů</h3><p>Ekzém, bříško, spánek i poznámky v čase.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/recipes.png" alt="Recepty v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🍲</span><h3>Recepty</h3><p>Filtrované podle fáze diety a alergií.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/allergens.png" alt="Přehled alergenů v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🌰</span><h3>Alergeny</h3><p>Přehledné informace na jednom místě.</p></article>
-        <article class="card feature"><div class="feature__media"><img src="assets/blog.png" alt="Blog v aplikaci" loading="lazy" decoding="async"></div><span class="feature__badge" aria-hidden="true">🪶</span><h3>Blog</h3><p>Vysvětlení a podpora pro rodiče.</p></article>
+      <p class="section__lead">Krátký scroll místo dlouhého manuálu. Ukážeme ti přesně, jak tě aplikace provede od podezření na alergii až po klidný jídelníček.</p>
+    </div>
+    <div class="container app-showcase__grid">
+      <div class="app-showcase__stage" aria-hidden="true">
+        <div class="app-showcase__phone">
+          <div class="phone__screens">
+            <img class="phone__screen is-active" data-shot="plan" src="/assets/plan_cz.png" alt="" loading="eager" decoding="async">
+            <img class="phone__screen" data-shot="hlavni" src="/assets/hlavni_cz.png" alt="" loading="lazy" decoding="async">
+            <img class="phone__screen" data-shot="test" src="/assets/test_cz.png" alt="" loading="lazy" decoding="async">
+            <img class="phone__screen" data-shot="trenink" src="/assets/trenink_cz.png" alt="" loading="lazy" decoding="async">
+            <img class="phone__screen" data-shot="log" src="/assets/log_cz.png" alt="" loading="lazy" decoding="async">
+            <img class="phone__screen" data-shot="recepty" src="/assets/recepty_cz.png" alt="" loading="lazy" decoding="async">
+            <img class="phone__screen" data-shot="blog" src="/assets/blog_cz.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <img class="phone__frame" src="/assets/frame1.png" alt="">
+        </div>
+      </div>
+      <div class="app-showcase__steps">
+        <article class="showcase-step is-active" data-shot="plan">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">1</span>
+          <h3>Najdi svůj další krok</h3>
+          <p>Krátký dotazník o věku, stravě a příznacích miminka. Aplikace hned doporučí, jaký program je pro vás ten pravý – a kdy je čas kontaktovat odborníka.</p>
+        </article>
+        <article class="showcase-step" data-shot="hlavni">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/hlavni_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">2</span>
+          <h3>Projdi řízenou eliminační dietou</h3>
+          <p>Denní kroky – co vyřadit, na jak dlouho a co sledovat. Uvidíš, jestli se stav miminka zlepšuje, bez zbytečného tápání.</p>
+        </article>
+        <article class="showcase-step" data-shot="test">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/test_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">3</span>
+          <h3>Otestuj alergeny krok za krokem</h3>
+          <p>Bezpečně a postupně vracíš potraviny zpět, abys přesně zjistila, co je skutečný spouštěč.</p>
+        </article>
+        <article class="showcase-step" data-shot="trenink">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/trenink_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">4</span>
+          <h3>Nauč tělíčko alergen snášet</h3>
+          <p>Jakmile je alergen vyřešený, aplikace pomůže s postupným dávkováním, udržovacím plánem a připomínkami.</p>
+        </article>
+        <article class="showcase-step" data-shot="log">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/log_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">5</span>
+          <h3>Zápis symptomů za pár vteřin</h3>
+          <p>Zkopíruješ poslední záznam a jen upravíš, co se změnilo. Ekzém, bříško, spánek i stolice – zapsané bleskově.</p>
+        </article>
+        <article class="showcase-step" data-shot="recepty">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/recepty_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">6</span>
+          <h3>Recepty přesně na míru dietě</h3>
+          <p>Automaticky filtrované podle aktuální fáze diety nebo testovaných alergenů. Nemusíš už kontrolovat každé složení sama.</p>
+        </article>
+        <article class="showcase-step" data-shot="blog">
+          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/blog_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+          <span class="showcase-step__num">7</span>
+          <h3>Odpovědi na vše kolem alergií</h3>
+          <p>Články o eliminační dietě, zavádění potravin, péči o ekzém a testování alergenů – srozumitelně a na jednom místě.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -481,6 +528,29 @@
     });
   })();
 
+  // App showcase: sync the sticky phone screen with the step nearest viewport center
+  (function(){
+    const showcase = document.querySelector('.app-showcase');
+    if (!showcase) return;
+
+    const steps = [...showcase.querySelectorAll('.showcase-step')];
+    const screens = [...showcase.querySelectorAll('.phone__screen')];
+    if (!steps.length || !screens.length || !('IntersectionObserver' in window)) return;
+
+    const setActive = (name) => {
+      steps.forEach((step) => step.classList.toggle('is-active', step.dataset.shot === name));
+      screens.forEach((img) => img.classList.toggle('is-active', img.dataset.shot === name));
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.dataset.shot);
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+    steps.forEach((step) => observer.observe(step));
+  })();
+
   // App subnav active section and offset scrolling
   (function(){
     const subnav = document.querySelector('.subnav');
@@ -576,8 +646,6 @@
 
     return true;
   }
-
-  // Brevo: TESTEŘI (CZ)
 </script>
 
 </body>
