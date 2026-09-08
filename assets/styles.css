@@ -221,7 +221,8 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__line.short{width:70%}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
-.section{padding:36px 0}
+.section{padding:36px 0; contain-intrinsic-size:0 700px}
+.app-showcase{contain-intrinsic-size:0 3600px}
 
 /* Sekce testeři */
 .section--tint{
@@ -444,7 +445,7 @@ input:-webkit-autofill:focus {
 /* Extra hard-lock proti dark režimu prohlížeče */
 @media (prefers-color-scheme: dark) {
   :root { color-scheme: light; }
-  html, body { background:#ffffff !important; color:#111827 !important; }
+  body { background:#ffffff !important; color:#111827 !important; }
   .card, .step, .split__col, .faq details, .panel__card, .panel__mock {
     background:#ffffff !important;
     color:#111827 !important;
@@ -795,7 +796,7 @@ html{scroll-padding-top:140px}
 .section[id]{scroll-margin-top:140px}
 .store-links{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px}
 .store-links--hero{margin-top:22px}
-.download-card .store-links{justify-content:center}
+.download-card .store-links{justify-content:flex-end}
 .store-badge-link{display:inline-flex;align-items:center;justify-content:center;min-height:56px;max-width:100%;text-decoration:none;line-height:0}
 .store-badge{display:block;height:56px;width:auto;max-width:100%;object-fit:contain}
 
@@ -1058,3 +1059,66 @@ h3{font-size:clamp(1.5rem,3vw,var(--fs-h3)) !important;letter-spacing:var(--ls-h
 h4{font-size:clamp(1.3rem,2.4vw,var(--fs-h4)) !important;letter-spacing:var(--ls-h4) !important;line-height:1.2}
 h5{font-size:var(--fs-h5) !important;letter-spacing:var(--ls-h5) !important;line-height:1.25}
 h6{font-size:var(--fs-h6) !important;letter-spacing:var(--ls-h6) !important;line-height:1.3}
+
+/* ================================================================ */
+/* Phone-frame look — the whole site sits in a white "screen" inset  */
+/* from a colored backdrop, like a phone bezel (left/right/bottom).  */
+/* ================================================================ */
+html{background:#eb9c92}
+body{
+  margin:0 10px 14px;
+  background:#fff;
+  box-shadow:0 0 40px rgba(76,26,26,.12);
+}
+@media (min-width:700px){
+  body{margin:0 18px 22px}
+}
+@media (min-width:1300px){
+  body{margin:0 26px 28px}
+}
+
+/* ================================================================ */
+/* App showcase — blur/cross-fade captions instead of opacity-only   */
+/* ================================================================ */
+.showcase-step__inner{
+  filter:blur(14px);
+  transition:opacity .6s ease, filter .6s ease;
+}
+.showcase-step.is-active .showcase-step__inner{filter:blur(0)}
+@media (max-width:860px){
+  .showcase-step__inner{filter:none !important}
+}
+
+/* ================================================================ */
+/* Scroll reveal — alternating left/right steps, rising "who" cards  */
+/* ================================================================ */
+.reveal{opacity:0; transition:opacity .7s ease, transform .7s ease}
+.reveal--left{transform:translateX(-56px)}
+.reveal--right{transform:translateX(56px)}
+.reveal--up{transform:translateY(28px)}
+.reveal.in-view{opacity:1; transform:translate(0,0)}
+.cards--who .card:nth-child(2).in-view{transition-delay:.08s}
+.cards--who .card:nth-child(3).in-view{transition-delay:.16s}
+.cards--who .card:nth-child(4).in-view{transition-delay:.24s}
+.cards--who .feature__badge{display:flex}
+
+/* Newsletter: let the Brevo card fill its grid column like its sibling */
+.grid2{align-items:stretch}
+#sib-container-news,
+#sib-container-news-en{
+  max-width:100% !important;
+  width:100% !important;
+}
+
+/* Contact — a distinct coral tone per bubble */
+.contact a:nth-child(1){background:var(--primary);border-color:var(--primary);color:#fff}
+.contact a:nth-child(1):hover{background:var(--primary-2)}
+.contact a:nth-child(2){background:var(--deep);border-color:var(--deep);color:#fff}
+.contact a:nth-child(2):hover{background:#5a2f39}
+.contact a:nth-child(3){background:var(--coral);border-color:var(--coral);color:#fff}
+.contact a:nth-child(3):hover{background:#c14953}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1 !important; transform:none !important; transition:none !important}
+  .showcase-step__inner{transition:opacity .01s linear !important; filter:none !important}
+}

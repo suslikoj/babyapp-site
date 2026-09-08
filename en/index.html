@@ -37,7 +37,7 @@
   <noscript><link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></noscript>
 
   <style>
-    html, body { background:#ffffff !important; color:#111827 !important; }
+    body { background:#ffffff !important; color:#111827 !important; }
    input, textarea, select { color:#111827 !important; background:#ffffff !important; }
 
 
@@ -290,8 +290,8 @@
       </div>
     </div>
   </section>
-  <section class="section" id="how" style="content-visibility:auto;"><div class="container"><h2>How the app guides you</h2><ol class="steps"><li class="step"><span class="step__num">1</span><div><h3>Set your child’s situation</h3><p>The app adapts to where you are in the process.</p></div></li><li class="step"><span class="step__num">2</span><div><h3>Go through the elimination phase</h3><p>You get clear daily steps without unnecessary guessing.</p></div></li><li class="step"><span class="step__num">3</span><div><h3>Test allergens gradually</h3><p>Foods are reintroduced step by step and in an organized way.</p></div></li><li class="step"><span class="step__num">4</span><div><h3>See patterns more clearly</h3><p>Records help you better understand what may be triggering symptoms.</p></div></li></ol></div></section>
-  <section class="section" id="who" style="content-visibility:auto;"><div class="container"><h2>Who the app is for</h2><div class="cards"><article class="card"><p>Parents of babies and young children with eczema</p></article><article class="card"><p>Families dealing with suspected food allergy or intolerance</p></article><article class="card"><p>Parents going through an elimination diet</p></article><article class="card"><p>Those who have already tried many things and need a clearer system</p></article></div></div></section>
+  <section class="section" id="how" style="content-visibility:auto;"><div class="container"><h2>How the app guides you</h2><ol class="steps"><li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Set your child’s situation</h3><p>The app adapts to where you are in the process.</p></div></li><li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Go through the elimination phase</h3><p>You get clear daily steps without unnecessary guessing.</p></div></li><li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Test allergens gradually</h3><p>Foods are reintroduced step by step and in an organized way.</p></div></li><li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>See patterns more clearly</h3><p>Records help you better understand what may be triggering symptoms.</p></div></li></ol></div></section>
+  <section class="section" id="who" style="content-visibility:auto;"><div class="container"><h2>Who the app is for</h2><div class="cards cards--who"><article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">👶</span><p>Parents of babies and young children with eczema</p></article><article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🔍</span><p>Families dealing with suspected food allergy or intolerance</p></article><article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🥗</span><p>Parents going through an elimination diet</p></article><article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">💡</span><p>Those who have already tried many things and need a clearer system</p></article></div></div></section>
   <section class="section" id="about" style="content-visibility:auto;"><div class="container about-me"><img src="/assets/me.jpg" alt="Jiřina, app author" loading="lazy"><div><h2>Hi, I’m Jiřina</h2><p>I’m a mum of a child with multiple allergies. I went through a period when I didn’t know what was triggering the symptoms – eczema, reactions, endless trying and uncertainty.</p><p>That’s why I created Baby without allergies, an app that helps parents manage difficult situations connected with eczema and food allergies in babies and children.</p><p>I wanted to create something parents can always have at hand and use as long-term support. I’m a nutrition consultant and a programming enthusiast.</p><p>I hope the app helps you as much as it helped me.</p></div></div></section>
 
   <!-- DOWNLOAD EN -->
@@ -503,13 +503,42 @@
       screens.forEach((img) => img.classList.toggle('is-active', img.dataset.shot === name));
     };
 
+    const clearActive = () => {
+      steps.forEach((step) => step.classList.remove('is-active'));
+    };
+
+    const lastStep = steps[steps.length - 1];
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target.dataset.shot);
+        if (entry.isIntersecting) {
+          setActive(entry.target.dataset.shot);
+        } else if (entry.target === lastStep && entry.boundingClientRect.top < 0) {
+          clearActive();
+        }
       });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
     steps.forEach((step) => observer.observe(step));
+  })();
+
+  // Scroll reveal: fade/slide elements in the first time they enter view
+  (function(){
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('in-view'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .2, rootMargin: '0px 0px -10% 0px' });
+    items.forEach((el) => io.observe(el));
   })();
 
   // App subnav active section and offset scrolling

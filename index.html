@@ -38,7 +38,7 @@
 
   <style>
     /* Keep site light in dark-mode devices */
-    html, body { background:#ffffff !important; color:#111827 !important; }
+    body { background:#ffffff !important; color:#111827 !important; }
    input, textarea, select { color:#111827 !important; background:#ffffff !important; }
 
 
@@ -312,10 +312,10 @@
     <div class="container">
       <h2>Jak tě aplikace provede</h2>
       <ol class="steps">
-        <li class="step"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
-        <li class="step"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
-        <li class="step"><span class="step__num">3</span><div><h3>Postupně testuješ alergeny</h3><p>Potraviny se vrací zpět systematicky a s přehledem.</p></div></li>
-        <li class="step"><span class="step__num">4</span><div><h3>Vidíš souvislosti</h3><p>Záznamy pomáhají lépe pochopit, co dítěti skutečně vadí.</p></div></li>
+        <li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
+        <li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
+        <li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Postupně testuješ alergeny</h3><p>Potraviny se vrací zpět systematicky a s přehledem.</p></div></li>
+        <li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>Vidíš souvislosti</h3><p>Záznamy pomáhají lépe pochopit, co dítěti skutečně vadí.</p></div></li>
       </ol>
     </div>
   </section>
@@ -323,11 +323,11 @@
   <section class="section" id="who" style="content-visibility:auto;">
     <div class="container">
       <h2>Pro koho je aplikace</h2>
-      <div class="cards">
-        <article class="card"><p>Pro rodiče miminek a malých dětí s ekzémem</p></article>
-        <article class="card"><p>Pro podezření na potravinovou alergii nebo intoleranci</p></article>
-        <article class="card"><p>Pro rodiče v eliminační dietě</p></article>
-        <article class="card"><p>Pro ty, kteří už zkoušeli mnoho věcí a potřebují jasný systém</p></article>
+      <div class="cards cards--who">
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">👶</span><p>Pro rodiče miminek a malých dětí s ekzémem</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🔍</span><p>Pro podezření na potravinovou alergii nebo intoleranci</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🥗</span><p>Pro rodiče v eliminační dietě</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">💡</span><p>Pro ty, kteří už zkoušeli mnoho věcí a potřebují jasný systém</p></article>
       </div>
     </div>
   </section>
@@ -555,13 +555,43 @@
       screens.forEach((img) => img.classList.toggle('is-active', img.dataset.shot === name));
     };
 
+    const clearActive = () => {
+      steps.forEach((step) => step.classList.remove('is-active'));
+    };
+
+    const lastStep = steps[steps.length - 1];
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target.dataset.shot);
+        if (entry.isIntersecting) {
+          setActive(entry.target.dataset.shot);
+        } else if (entry.target === lastStep && entry.boundingClientRect.top < 0) {
+          // scrolled past the last caption — blur it out instead of letting it slide away
+          clearActive();
+        }
       });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
     steps.forEach((step) => observer.observe(step));
+  })();
+
+  // Scroll reveal: fade/slide elements in the first time they enter view
+  (function(){
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('in-view'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .2, rootMargin: '0px 0px -10% 0px' });
+    items.forEach((el) => io.observe(el));
   })();
 
   // App subnav active section and offset scrolling
