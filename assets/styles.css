@@ -49,7 +49,6 @@ body{
 .topbar{
   position:sticky; top:0; z-index:50;
   background:#fff;
-  border-bottom:1px solid rgba(229,115,115,.18);
 }
 .topbar__inner{
   position:relative;
@@ -106,17 +105,22 @@ body{
 /* Burger */
 .burger{
   display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
   margin-left:8px;
-  width:42px; height:42px;
-  border:1px solid rgba(229,115,115,.3);
-  background:rgba(229,115,115,.08);
+  width:58px; height:42px;
+  border:0;
+  background:var(--primary);
   border-radius:12px;
 }
 .burger span{
   display:block;
+  width:22px;
   height:2px;
-  margin:7px 10px;
-  background:var(--primary);
+  margin:0;
+  background:#fff;
   border-radius:2px
 }
 
@@ -222,7 +226,7 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
 .section{padding:36px 0; contain-intrinsic-size:0 700px}
-.app-showcase{contain-intrinsic-size:0 3600px}
+.app-showcase{contain-intrinsic-size:0 3600px; background:#fbe6e0; padding:clamp(56px,8vw,96px) 0}
 
 /* Sekce testeři */
 .section--tint{
@@ -346,7 +350,12 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 
 @media (max-width: 920px){
   .nav{display:none}
-  .burger{display:inline-block}
+  .burger{
+    display:flex;
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    margin-left:0;
+  }
   .hero__grid{grid-template-columns:1fr}
   h1{font-size:36px}
   .cards{grid-template-columns:repeat(2,1fr)}
@@ -445,7 +454,7 @@ input:-webkit-autofill:focus {
 /* Extra hard-lock proti dark režimu prohlížeče */
 @media (prefers-color-scheme: dark) {
   :root { color-scheme: light; }
-  body { background:#ffffff !important; color:#111827 !important; }
+  body { background:#f8ddd4 !important; color:#111827 !important; }
   .card, .step, .split__col, .faq details, .panel__card, .panel__mock {
     background:#ffffff !important;
     color:#111827 !important;
@@ -824,7 +833,7 @@ body{color:var(--ink);background:linear-gradient(180deg,#fff 0,#fffaf7 70%,#fff 
 .brand__logo{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:50%;padding:4px;box-shadow:0 0 0 1px rgba(229,115,115,.15)}.topbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px)}
 .hero{position:relative;overflow:hidden;padding:72px 0 48px;background:radial-gradient(circle at 80% 20%,rgba(250,205,189,.8),transparent 32%),linear-gradient(145deg,#fff 35%,#fff1ec)}
 .hero h1{max-width:720px;font-size:clamp(2.45rem,5vw,4.4rem);line-height:1.01}.hero .lead{font-size:clamp(1.05rem,2vw,1.28rem);max-width:640px}.hero__panel .panel__shot{filter:drop-shadow(0 26px 30px rgba(61,37,44,.2))}
-.section{padding:clamp(56px,8vw,96px) 0}.section:nth-of-type(even){background:rgba(255,240,235,.45)}.section h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;color:var(--deep)}
+.section{padding:clamp(56px,8vw,96px) 0}.section h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;color:var(--deep)}
 .card,.step,.split__col,.faq details{border-color:rgba(213,91,98,.13);box-shadow:0 10px 30px rgba(113,59,71,.06);transition:transform .2s ease,box-shadow .2s ease}.card:hover,.blog-card:hover,.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .feature{overflow:visible;padding:0 0 22px}.feature h3,.feature p{margin-left:20px;margin-right:20px}.feature h3{margin-top:18px}.btn{min-height:48px}.btn--primary{background:var(--coral);box-shadow:0 12px 24px rgba(217,95,100,.25)}
 .eyebrow,.download-card__eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);font-size:.75rem}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:28px}.section-heading p{max-width:520px;color:var(--muted)}
@@ -1061,21 +1070,23 @@ h5{font-size:var(--fs-h5) !important;letter-spacing:var(--ls-h5) !important;line
 h6{font-size:var(--fs-h6) !important;letter-spacing:var(--ls-h6) !important;line-height:1.3}
 
 /* ================================================================ */
-/* Phone-frame look — the whole site sits in a white "screen" inset  */
-/* from a colored backdrop, like a phone bezel (left/right/bottom).  */
+/* Phone-frame look — a thin white bezel around a warm-tinted page,  */
+/* like a phone case (left/right/bottom; top is handled by the nav). */
 /* ================================================================ */
-html{background:#eb9c92}
+html{background:#fff}
 body{
-  margin:0 10px 14px;
-  background:#fff;
-  box-shadow:0 0 40px rgba(76,26,26,.12);
+  margin:0 5px 7px;
+  background:#f8ddd4;
 }
 @media (min-width:700px){
-  body{margin:0 18px 22px}
+  body{margin:0 9px 11px}
 }
 @media (min-width:1300px){
-  body{margin:0 26px 28px}
+  body{margin:0 13px 14px}
 }
+
+/* Contact stays the one deliberately darker section on the page */
+#contact{background:#eb9c92}
 
 /* ================================================================ */
 /* App showcase — blur/cross-fade captions instead of opacity-only   */
@@ -1110,13 +1121,27 @@ body{
   width:100% !important;
 }
 
-/* Contact — a distinct coral tone per bubble */
-.contact a:nth-child(1){background:var(--primary);border-color:var(--primary);color:#fff}
-.contact a:nth-child(1):hover{background:var(--primary-2)}
-.contact a:nth-child(2){background:var(--deep);border-color:var(--deep);color:#fff}
-.contact a:nth-child(2):hover{background:#5a2f39}
-.contact a:nth-child(3){background:var(--coral);border-color:var(--coral);color:#fff}
-.contact a:nth-child(3):hover{background:#c14953}
+/* Contact — light/dark bubbles alternating, with a bolder border */
+.contact a{border-width:2px; transition:transform .25s ease, background .2s ease, color .2s ease}
+.contact a:nth-child(odd){background:#fff; border-color:var(--primary); color:var(--primary-2)}
+.contact a:nth-child(odd):hover{background:var(--primary); color:#fff}
+.contact a:nth-child(even){background:var(--coral); border-color:var(--coral); color:#fff}
+.contact a:nth-child(even):hover{background:var(--deep); border-color:var(--deep)}
+
+/* Mobile: frame the whole way round, not just sides/bottom */
+@media (max-width:700px){
+  body{margin-top:5px}
+}
+
+/* Newsletter "what you'll get" list as separate bubbles */
+.list--bubbles{list-style:none; margin:14px 0 0; padding:0; display:flex; flex-direction:column; gap:10px}
+.list--bubbles li{
+  background:rgba(229,115,115,.08);
+  border:1px solid rgba(229,115,115,.2);
+  border-radius:14px;
+  padding:10px 14px;
+  color:var(--text);
+}
 
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1 !important; transform:none !important; transition:none !important}

@@ -38,7 +38,8 @@
 
   <style>
     /* Keep site light in dark-mode devices */
-    body { background:#ffffff !important; color:#111827 !important; }
+    body { background:#f8ddd4 !important; color:#111827 !important; }
+    html { background:#ffffff !important; }
    input, textarea, select { color:#111827 !important; background:#ffffff !important; }
 
 
@@ -248,7 +249,7 @@
         </div>
       </div>
       <div class="app-showcase__steps">
-        <article class="showcase-step is-active" data-shot="plan">
+        <article class="showcase-step" data-shot="plan">
           <div class="showcase-step__inner">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">1</span>
@@ -397,7 +398,7 @@
       <div class="grid2">
         <div class="card card--soft">
           <h3>Co dostaneš</h3>
-          <ul class="list">
+          <ul class="list list--bubbles">
             <li>Novinky a důležitá oznámení</li>
             <li>Nové funkce a aktualizace aplikace</li>
             <li>Praktické tipy + nové recepty / články</li>
@@ -662,6 +663,14 @@
     updateActive();
     window.addEventListener('scroll', updateActive, { passive: true });
     window.addEventListener('resize', updateActive);
+  })();
+
+  // FAQ: open on hover instead of only on click
+  (function(){
+    document.querySelectorAll('.faq details').forEach((d) => {
+      d.addEventListener('mouseenter', () => { d.open = true; });
+      d.addEventListener('mouseleave', () => { d.open = false; });
+    });
   })();
 
   // Footer year

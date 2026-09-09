@@ -37,7 +37,8 @@
   <noscript><link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></noscript>
 
   <style>
-    body { background:#ffffff !important; color:#111827 !important; }
+    body { background:#f8ddd4 !important; color:#111827 !important; }
+    html { background:#ffffff !important; }
    input, textarea, select { color:#111827 !important; background:#ffffff !important; }
 
 
@@ -231,7 +232,7 @@
         </div>
       </div>
       <div class="app-showcase__steps">
-        <article class="showcase-step is-active" data-shot="plan">
+        <article class="showcase-step" data-shot="plan">
           <div class="showcase-step__inner">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">1</span>
@@ -346,7 +347,7 @@
       <div class="grid2">
         <div class="card card--soft">
           <h3>What you’ll get</h3>
-          <ul class="list">
+          <ul class="list list--bubbles">
             <li>Important updates and announcements</li>
 <li>New features and app updates</li>
 <li>Practical tips + new recipes / articles</li>
@@ -609,6 +610,14 @@
     updateActive();
     window.addEventListener('scroll', updateActive, { passive: true });
     window.addEventListener('resize', updateActive);
+  })();
+
+  // FAQ: open on hover instead of only on click
+  (function(){
+    document.querySelectorAll('.faq details').forEach((d) => {
+      d.addEventListener('mouseenter', () => { d.open = true; });
+      d.addEventListener('mouseleave', () => { d.open = false; });
+    });
   })();
 
   // Footer year
