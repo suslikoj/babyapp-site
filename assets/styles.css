@@ -226,7 +226,8 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
 .section{padding:36px 0; contain-intrinsic-size:0 700px}
-.app-showcase{contain-intrinsic-size:0 3600px; background:#fbe6e0; padding:clamp(56px,8vw,96px) 0}
+.app-showcase{contain-intrinsic-size:0 3600px; background:#fdf1ed; padding:clamp(56px,8vw,96px) 0}
+#problem, #who, #faq{background:#fdf1ed}
 
 /* Sekce testeři */
 .section--tint{
@@ -311,8 +312,6 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 }
 .faq summary{cursor:pointer; font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:0 0 auto;font-size:1.5rem;line-height:1;color:var(--primary-2);transition:transform .2s ease}
-.faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{color:var(--muted); margin:10px 0 0}
 
 .btn{
@@ -838,7 +837,7 @@ body{color:var(--ink);background:linear-gradient(180deg,#fff 0,#fffaf7 70%,#fff 
 .feature{overflow:visible;padding:0 0 22px}.feature h3,.feature p{margin-left:20px;margin-right:20px}.feature h3{margin-top:18px}.btn{min-height:48px}.btn--primary{background:var(--coral);box-shadow:0 12px 24px rgba(217,95,100,.25)}
 .eyebrow,.download-card__eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);font-size:.75rem}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:28px}.section-heading p{max-width:520px;color:var(--muted)}
 .section--blog{background:var(--cream)!important}.featured-article{display:grid;grid-template-columns:1.15fr 1fr;overflow:hidden;background:#fff;border:1px solid rgba(213,91,98,.14);border-radius:32px;box-shadow:var(--shadow-lg)}.featured-article img{width:100%;height:100%;min-height:360px;object-fit:cover}.featured-article>div{padding:clamp(28px,5vw,60px);align-self:center}.featured-article span,.blog-card span,.related-card span{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--coral)}.featured-article h3{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.1;margin:10px 0}.blog-grid,.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}.blog-card,.related-card{display:block;padding:28px;border:1px solid rgba(213,91,98,.14);border-radius:22px;background:#fff;color:var(--ink);text-decoration:none;transition:.2s}.blog-card h3,.related-card strong{display:block;font-size:1.25rem;margin:8px 0}.blog-card p{color:var(--muted)}
-.breadcrumbs{display:flex;gap:10px;padding-top:28px;font-size:.9rem;color:var(--muted)}.breadcrumbs a{color:var(--deep)}.article-hero{max-width:1100px;margin:24px auto 0;padding:0 18px}.article-hero__image{width:100%;max-height:560px;object-fit:cover;border-radius:32px;box-shadow:var(--shadow-lg)}.article-content{max-width:820px;padding-top:34px;padding-bottom:80px;font-size:1.08rem}.article-content h1{font-size:clamp(2.5rem,6vw,4.6rem);color:var(--deep)}.article-content h2{font-size:clamp(1.65rem,3vw,2.15rem);margin-top:2.2em;scroll-margin-top:120px}.article-content h3{font-size:1.35rem;margin-top:2em}.article-content p,.article-content li{line-height:1.78}.article-meta{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--border);padding-bottom:20px;color:var(--muted)}.article-toc{margin:28px 0;padding:24px 28px;border-radius:22px;background:var(--blush)}.article-toc ol{columns:2;padding-left:20px}.article-toc a{color:var(--deep)}.medical-note{margin:48px 0;padding:26px;border-left:5px solid var(--coral);background:#fff5f2;border-radius:8px 20px 20px 8px}.medical-note p{margin:7px 0}.article-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;margin:50px 0;padding:32px;border-radius:28px;background:var(--deep);color:#fff}.article-cta h2{color:#fff;margin:5px 0 0;font-size:1.8rem}.article-cta span{color:#ffd8cf}.related h2{margin-top:0}
+.breadcrumbs{display:flex;gap:10px;padding-top:28px;font-size:.9rem;color:var(--muted)}.breadcrumbs a{color:var(--deep)}.article-hero{max-width:1100px;margin:24px auto 0;padding:0 18px}.article-hero__image{width:100%;max-height:560px;object-fit:cover;border-radius:32px;box-shadow:var(--shadow-lg)}.article-content{max-width:820px;padding-top:34px;padding-bottom:80px;font-size:1.08rem}.article-content h1{font-size:clamp(2.5rem,6vw,4.6rem);color:var(--deep)}.article-content h2{font-size:clamp(1.65rem,3vw,2.15rem);margin-top:2.2em;scroll-margin-top:120px}.article-content h3{font-size:1.35rem;margin-top:2em}.article-content p,.article-content li{line-height:1.78}.article-meta{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--border);padding-bottom:20px;color:var(--muted)}.article-toc{margin:28px 0;padding:24px 28px;border-radius:22px;background:#fff}.article-toc ol{columns:2;padding-left:20px}.article-toc li{break-inside:avoid-column;-webkit-column-break-inside:avoid;page-break-inside:avoid;margin-bottom:10px}.article-toc a{color:var(--deep)}.medical-note{margin:48px 0;padding:26px;border-left:5px solid var(--coral);background:#fff;border-radius:8px 20px 20px 8px}.medical-note p{margin:7px 0}.article-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;margin:50px 0;padding:32px;border-radius:28px;background:var(--deep);color:#fff}.article-cta h2{color:#fff;margin:5px 0 0;font-size:1.8rem}.article-cta span{color:#ffd8cf}.related h2{margin-top:0}
 :focus-visible{outline:3px solid #542b36;outline-offset:4px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.blog-card,.related-card{transition:none}}
 @media(max-width:700px){.brand__logo{width:36px;height:36px}.brand__name{font-size:.92rem}.hero{padding-top:48px}.featured-article{grid-template-columns:1fr}.featured-article img{min-height:220px}.section-heading{display:block}.blog-grid,.related-grid{grid-template-columns:1fr}.article-toc ol{columns:1}.article-meta,.article-cta{align-items:flex-start;flex-direction:column}.article-hero__image{border-radius:20px}.article-content{font-size:1rem}}
 
@@ -917,7 +916,6 @@ h1,.section h2,.download-card h2,.article-cta h2,.article-content h1,.legal-toc 
 .store-badge-link:hover{transform:translateY(-3px) scale(1.03)}
 .step{transition:transform .25s ease,box-shadow .25s ease}
 .step:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-.faq summary::after{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
 
 @media (prefers-reduced-motion:reduce){
   .hero__copy .badge,.hero__copy h1,.hero__copy .lead,.hero__copy .store-links--hero,.hero__copy .fine,.hero__panel,.article-hero__image,.article-content>h1,.legal-layout{animation:none}
@@ -944,27 +942,34 @@ h1,.section h2,.download-card h2,.article-cta h2,.article-content h1,.legal-toc 
 .app-showcase__stage{order:2;position:sticky;top:150px;display:flex;justify-content:center}
 .app-showcase__steps{order:1;display:flex;flex-direction:column;gap:6vh}
 
-.showcase-step{
-  min-height:50vh;
-  position:relative;
-}
+/* Empty scroll-triggers only: they exist purely to give the observer
+   something to watch, and to pace the scroll — no visible content lives
+   here any more, so they can never visibly travel. */
+.showcase-step{min-height:50vh}
 .showcase-step:last-child{min-height:75vh}
 
-/* The visible caption box is pinned in place (sticky, vertically centered)
-   so switching steps only cross-fades opacity — it never visibly travels. */
-.showcase-step__inner{
+/* One sticky stage — pinned at the exact same offset as the phone
+   (.app-showcase__stage, top:150px) for the whole section — holds every
+   caption stacked in the same grid cell. Switching steps only cross-fades
+   opacity/blur between them; nothing here ever engages/disengages sticky
+   per step, so there is no position to travel. */
+.app-showcase__captions{
   position:sticky;
-  top:50%;
-  transform:translateY(-50%);
+  top:150px;
+  display:grid;
+}
+.showcase-step__inner{
+  grid-area:1/1;
   display:flex;
   flex-direction:column;
   justify-content:center;
   padding:22px 26px;
   border-radius:var(--radius2);
   opacity:0;
+  pointer-events:none;
   transition:opacity .5s ease;
 }
-.showcase-step.is-active .showcase-step__inner{opacity:1}
+.showcase-step__inner.is-active{opacity:1; pointer-events:auto}
 .showcase-step__num{
   display:inline-flex;align-items:center;justify-content:center;
   width:34px;height:34px;margin-bottom:14px;
@@ -1038,16 +1043,23 @@ h1,.section h2,.download-card h2,.article-cta h2,.article-content h1,.legal-toc 
   .app-showcase__grid{grid-template-columns:1fr}
   .app-showcase__stage{display:none}
   .app-showcase__steps{gap:44px}
-  .showcase-step{min-height:auto}
-  .showcase-step:last-child{min-height:auto}
+  .showcase-step{display:none} /* the empty scroll-triggers aren't needed without sticky */
+  .app-showcase__captions{
+    position:static;
+    display:block;
+  }
   .showcase-step__inner{
+    grid-area:auto;
     position:static !important;
     transform:none !important;
     opacity:1 !important;
+    pointer-events:auto;
     padding:0;
+    margin-bottom:44px;
     text-align:center;
     align-items:center;
   }
+  .showcase-step__inner:last-child{margin-bottom:0}
   .showcase-step__inner p{max-width:340px;margin-left:auto;margin-right:auto}
   .mini-phone{display:block}
 }
@@ -1088,6 +1100,9 @@ body{
 /* Contact stays the one deliberately darker section on the page */
 #contact{background:#eb9c92}
 
+/* Article pages read better on a lighter page background */
+body:has(.article-content){background:#fdf1ed !important}
+
 /* ================================================================ */
 /* App showcase — blur/cross-fade captions instead of opacity-only   */
 /* ================================================================ */
@@ -1095,7 +1110,7 @@ body{
   filter:blur(14px);
   transition:opacity .6s ease, filter .6s ease;
 }
-.showcase-step.is-active .showcase-step__inner{filter:blur(0)}
+.showcase-step__inner.is-active{filter:blur(0)}
 @media (max-width:860px){
   .showcase-step__inner{filter:none !important}
 }
@@ -1103,7 +1118,7 @@ body{
 /* ================================================================ */
 /* Scroll reveal — alternating left/right steps, rising "who" cards  */
 /* ================================================================ */
-.reveal{opacity:0; transition:opacity .7s ease, transform .7s ease}
+.reveal{opacity:0; transition:opacity 1.3s ease, transform 1.3s ease}
 .reveal--left{transform:translateX(-56px)}
 .reveal--right{transform:translateX(56px)}
 .reveal--up{transform:translateY(28px)}

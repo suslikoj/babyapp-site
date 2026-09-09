@@ -232,62 +232,57 @@
         </div>
       </div>
       <div class="app-showcase__steps">
-        <article class="showcase-step" data-shot="plan">
-          <div class="showcase-step__inner">
+        <div class="app-showcase__captions">
+          <article class="showcase-step__inner is-active" data-shot="plan">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">1</span>
             <h3>Find your next step</h3>
             <p>A short questionnaire about your baby’s age, feeding and symptoms. The app instantly recommends which program fits your situation – and when to contact a specialist.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="hlavni">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="hlavni">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/hlavni_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">2</span>
             <h3>Follow a guided elimination diet</h3>
             <p>Clear daily steps – what to eliminate, for how long, and what to track. See whether your baby’s symptoms are improving, without the guesswork.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="test">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="test">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/test_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">3</span>
             <h3>Test allergens step by step</h3>
             <p>Safely and gradually reintroduce foods to find out exactly what’s really triggering the reaction.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="trenink">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="trenink">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/trenink_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">4</span>
             <h3>Build tolerance, step by step</h3>
             <p>Once an allergen is cleared, follow a personalized dosing ladder, maintenance schedule and reminders.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="log">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="log">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/log_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">5</span>
             <h3>Log symptoms in seconds</h3>
             <p>Copy your last entry and just update what changed. Eczema, tummy, sleep and stool – logged in a flash.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="recepty">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="recepty">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/recipe_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">6</span>
             <h3>Recipes matched to your diet</h3>
             <p>Automatically filtered to your current elimination diet or testing stage – no more checking every label yourself.</p>
-          </div>
-        </article>
-        <article class="showcase-step" data-shot="blog">
-          <div class="showcase-step__inner">
+          </article>
+          <article class="showcase-step__inner" data-shot="blog">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/blog_en.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
             <span class="showcase-step__num">7</span>
             <h3>Answers to everything allergy-related</h3>
             <p>Articles on elimination diets, food introduction, eczema care and allergen testing – clear, all in one place.</p>
-          </div>
-        </article>
+          </article>
+        </div>
+        <div class="showcase-step" data-shot="plan" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="hlavni" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="test" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="trenink" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="log" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="recepty" aria-hidden="true"></div>
+        <div class="showcase-step" data-shot="blog" aria-hidden="true"></div>
       </div>
     </div>
   </section>
@@ -495,32 +490,33 @@
     const showcase = document.querySelector('.app-showcase');
     if (!showcase) return;
 
-    const steps = [...showcase.querySelectorAll('.showcase-step')];
+    const triggers = [...showcase.querySelectorAll('.showcase-step')];
+    const captions = [...showcase.querySelectorAll('.showcase-step__inner')];
     const screens = [...showcase.querySelectorAll('.phone__screen')];
-    if (!steps.length || !screens.length || !('IntersectionObserver' in window)) return;
+    if (!triggers.length || !captions.length || !screens.length || !('IntersectionObserver' in window)) return;
 
     const setActive = (name) => {
-      steps.forEach((step) => step.classList.toggle('is-active', step.dataset.shot === name));
+      captions.forEach((caption) => caption.classList.toggle('is-active', caption.dataset.shot === name));
       screens.forEach((img) => img.classList.toggle('is-active', img.dataset.shot === name));
     };
 
     const clearActive = () => {
-      steps.forEach((step) => step.classList.remove('is-active'));
+      captions.forEach((caption) => caption.classList.remove('is-active'));
     };
 
-    const lastStep = steps[steps.length - 1];
+    const lastTrigger = triggers[triggers.length - 1];
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActive(entry.target.dataset.shot);
-        } else if (entry.target === lastStep && entry.boundingClientRect.top < 0) {
+        } else if (entry.target === lastTrigger && entry.boundingClientRect.top < 0) {
           clearActive();
         }
       });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
-    steps.forEach((step) => observer.observe(step));
+    triggers.forEach((trigger) => observer.observe(trigger));
   })();
 
   // Scroll reveal: fade/slide elements in the first time they enter view
