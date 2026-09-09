@@ -38,7 +38,8 @@
 
   <style>
     /* Keep site light in dark-mode devices */
-    html, body { background:#ffffff !important; color:#111827 !important; }
+    body { background:#f8ddd4 !important; color:#111827 !important; }
+    html { background:#ffffff !important; }
    input, textarea, select { color:#111827 !important; background:#ffffff !important; }
 
 
@@ -149,7 +150,7 @@
       <a class="is-active" href="/" aria-current="page">Aplikace</a>
       <a href="/eczema/">Ekzém u dětí</a>
       <a href="/signs/">Projevy potravinové alergie</a>
-      <a href="/main-suspects/">Hlavní podezřelí</a>
+      <a href="/main-suspects/">Eliminační dieta</a>
     </nav>
 
     <div class="lang">
@@ -167,7 +168,7 @@
     <a class="is-active" href="/" aria-current="page">Aplikace</a>
     <a href="/eczema/">Ekzém u dětí</a>
     <a href="/signs/">Projevy potravinové alergie</a>
-    <a href="/main-suspects/">Hlavní podezřelí</a>
+    <a href="/main-suspects/">Eliminační dieta</a>
     <div class="mobile__langs">
       <a class="is-active" href="/">CZ</a>
       <a href="/en/">EN</a>
@@ -198,7 +199,6 @@
 
   <nav class="subnav" aria-label="Sekce aplikace">
     <div class="container subnav__inner">
-      <a href="#problem">Problém</a>
       <a href="#features">Funkce</a>
       <a href="#how">Jak funguje</a>
       <a href="#who">Pro koho</a>
@@ -249,47 +249,61 @@
         </div>
       </div>
       <div class="app-showcase__steps">
-        <article class="showcase-step is-active" data-shot="plan">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">1</span>
-          <h3>Najdi svůj další krok</h3>
-          <p>Krátký dotazník o věku, stravě a příznacích miminka. Aplikace hned doporučí, jaký program je pro vás ten pravý – a kdy je čas kontaktovat odborníka.</p>
+        <article class="showcase-step" data-shot="plan">
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/plan_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">1</span>
+            <h3>Najdi svůj další krok</h3>
+            <p>Krátký dotazník o věku, stravě a příznacích miminka. Aplikace hned doporučí, jaký program je pro vás ten pravý – a kdy je čas kontaktovat odborníka.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="hlavni">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/hlavni_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">2</span>
-          <h3>Projdi řízenou eliminační dietou</h3>
-          <p>Denní kroky – co vyřadit, na jak dlouho a co sledovat. Uvidíš, jestli se stav miminka zlepšuje, bez zbytečného tápání.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/hlavni_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">2</span>
+            <h3>Projdi řízenou eliminační dietou</h3>
+            <p>Denní kroky – co vyřadit, na jak dlouho a co sledovat. Uvidíš, jestli se stav miminka zlepšuje, bez zbytečného tápání.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="test">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/test_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">3</span>
-          <h3>Otestuj alergeny krok za krokem</h3>
-          <p>Bezpečně a postupně vracíš potraviny zpět, abys přesně zjistila, co je skutečný spouštěč.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/test_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">3</span>
+            <h3>Otestuj alergeny krok za krokem</h3>
+            <p>Bezpečně a postupně vracíš potraviny zpět, abys přesně zjistila, co je skutečný spouštěč.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="trenink">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/trenink_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">4</span>
-          <h3>Nauč tělíčko alergen snášet</h3>
-          <p>Jakmile je alergen vyřešený, aplikace pomůže s postupným dávkováním, udržovacím plánem a připomínkami.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/trenink_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">4</span>
+            <h3>Nauč tělíčko alergen snášet</h3>
+            <p>Jakmile je alergen vyřešený, aplikace pomůže s postupným dávkováním, udržovacím plánem a připomínkami.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="log">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/log_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">5</span>
-          <h3>Zápis symptomů za pár vteřin</h3>
-          <p>Zkopíruješ poslední záznam a jen upravíš, co se změnilo. Ekzém, bříško, spánek i stolice – zapsané bleskově.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/log_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">5</span>
+            <h3>Zápis symptomů za pár vteřin</h3>
+            <p>Zkopíruješ poslední záznam a jen upravíš, co se změnilo. Ekzém, bříško, spánek i stolice – zapsané bleskově.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="recepty">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/recepty_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">6</span>
-          <h3>Recepty přesně na míru dietě</h3>
-          <p>Automaticky filtrované podle aktuální fáze diety nebo testovaných alergenů. Nemusíš už kontrolovat každé složení sama.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/recepty_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">6</span>
+            <h3>Recepty přesně na míru dietě</h3>
+            <p>Automaticky filtrované podle aktuální fáze diety nebo testovaných alergenů. Nemusíš už kontrolovat každé složení sama.</p>
+          </div>
         </article>
         <article class="showcase-step" data-shot="blog">
-          <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/blog_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
-          <span class="showcase-step__num">7</span>
-          <h3>Odpovědi na vše kolem alergií</h3>
-          <p>Články o eliminační dietě, zavádění potravin, péči o ekzém a testování alergenů – srozumitelně a na jednom místě.</p>
+          <div class="showcase-step__inner">
+            <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><img src="/assets/blog_cz.png" alt="" loading="lazy" decoding="async"></div><img class="mini-phone__frame" src="/assets/frame1.png" alt=""></div>
+            <span class="showcase-step__num">7</span>
+            <h3>Odpovědi na vše kolem alergií</h3>
+            <p>Články o eliminační dietě, zavádění potravin, péči o ekzém a testování alergenů – srozumitelně a na jednom místě.</p>
+          </div>
         </article>
       </div>
     </div>
@@ -299,10 +313,10 @@
     <div class="container">
       <h2>Jak tě aplikace provede</h2>
       <ol class="steps">
-        <li class="step"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
-        <li class="step"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
-        <li class="step"><span class="step__num">3</span><div><h3>Postupně testuješ alergeny</h3><p>Potraviny se vrací zpět systematicky a s přehledem.</p></div></li>
-        <li class="step"><span class="step__num">4</span><div><h3>Vidíš souvislosti</h3><p>Záznamy pomáhají lépe pochopit, co dítěti skutečně vadí.</p></div></li>
+        <li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
+        <li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
+        <li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Postupně testuješ alergeny</h3><p>Potraviny se vrací zpět systematicky a s přehledem.</p></div></li>
+        <li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>Vidíš souvislosti</h3><p>Záznamy pomáhají lépe pochopit, co dítěti skutečně vadí.</p></div></li>
       </ol>
     </div>
   </section>
@@ -310,11 +324,11 @@
   <section class="section" id="who" style="content-visibility:auto;">
     <div class="container">
       <h2>Pro koho je aplikace</h2>
-      <div class="cards">
-        <article class="card"><p>Pro rodiče miminek a malých dětí s ekzémem</p></article>
-        <article class="card"><p>Pro podezření na potravinovou alergii nebo intoleranci</p></article>
-        <article class="card"><p>Pro rodiče v eliminační dietě</p></article>
-        <article class="card"><p>Pro ty, kteří už zkoušeli mnoho věcí a potřebují jasný systém</p></article>
+      <div class="cards cards--who">
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">👶</span><p>Pro rodiče miminek a malých dětí s ekzémem</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🔍</span><p>Pro podezření na potravinovou alergii nebo intoleranci</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">🥗</span><p>Pro rodiče v eliminační dietě</p></article>
+        <article class="card reveal reveal--up"><span class="feature__badge" aria-hidden="true">💡</span><p>Pro ty, kteří už zkoušeli mnoho věcí a potřebují jasný systém</p></article>
       </div>
     </div>
   </section>
@@ -354,7 +368,7 @@
   <section class="section section--blog" id="articles" style="content-visibility:auto;">
     <div class="container"><div class="section-heading"><div><p class="eyebrow">Prakticky a srozumitelně</p><h2>Průvodce pro rodiče</h2></div><p>Odborné souvislosti přeložené do kroků, které můžete probrat s pediatrem nebo alergologem.</p></div>
       <div class="featured-article"><img src="/assets/article-signs.png" alt="Projevy potravinové alergie u dětí" width="1200" height="630" loading="lazy" decoding="async"><div><span>Doporučený článek</span><h3>Jak poznat projevy potravinové alergie?</h3><p>Kožní, zažívací i rychlé reakce a situace, kdy nečekat s lékařskou pomocí.</p><a class="btn btn--primary" href="/signs/">Přečíst článek</a></div></div>
-      <div class="blog-grid"><a class="blog-card" href="/eczema/"><span>Ekzém</span><h3>Ekzém u dětí: jak ho poznat</h3><p>Možné spouštěče, péče o kůži a sledování souvislostí.</p></a><a class="blog-card" href="/main-suspects/"><span>Eliminační dieta</span><h3>Hlavní podezřelí</h3><p>Jak k první fázi přistoupit systematicky a bezpečně.</p></a></div>
+      <div class="blog-grid"><a class="blog-card" href="/eczema/"><span>Ekzém</span><h3>Ekzém u dětí: jak ho poznat</h3><p>Možné spouštěče, péče o kůži a sledování souvislostí.</p></a><a class="blog-card" href="/main-suspects/"><span>Dieta</span><h3>Eliminační dieta</h3><p>Jak k první fázi přistoupit systematicky a bezpečně.</p></a></div>
     </div>
   </section>
 
@@ -384,7 +398,7 @@
       <div class="grid2">
         <div class="card card--soft">
           <h3>Co dostaneš</h3>
-          <ul class="list">
+          <ul class="list list--bubbles">
             <li>Novinky a důležitá oznámení</li>
             <li>Nové funkce a aktualizace aplikace</li>
             <li>Praktické tipy + nové recepty / články</li>
@@ -542,13 +556,43 @@
       screens.forEach((img) => img.classList.toggle('is-active', img.dataset.shot === name));
     };
 
+    const clearActive = () => {
+      steps.forEach((step) => step.classList.remove('is-active'));
+    };
+
+    const lastStep = steps[steps.length - 1];
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target.dataset.shot);
+        if (entry.isIntersecting) {
+          setActive(entry.target.dataset.shot);
+        } else if (entry.target === lastStep && entry.boundingClientRect.top < 0) {
+          // scrolled past the last caption — blur it out instead of letting it slide away
+          clearActive();
+        }
       });
     }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
     steps.forEach((step) => observer.observe(step));
+  })();
+
+  // Scroll reveal: fade/slide elements in the first time they enter view
+  (function(){
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('in-view'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .2, rootMargin: '0px 0px -10% 0px' });
+    items.forEach((el) => io.observe(el));
   })();
 
   // App subnav active section and offset scrolling
@@ -619,6 +663,14 @@
     updateActive();
     window.addEventListener('scroll', updateActive, { passive: true });
     window.addEventListener('resize', updateActive);
+  })();
+
+  // FAQ: open on hover instead of only on click
+  (function(){
+    document.querySelectorAll('.faq details').forEach((d) => {
+      d.addEventListener('mouseenter', () => { d.open = true; });
+      d.addEventListener('mouseleave', () => { d.open = false; });
+    });
   })();
 
   // Footer year
