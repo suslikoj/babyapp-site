@@ -186,7 +186,6 @@ function articleHtml(page, bodyHtml, sourcesHtml) {
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css" />
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: page.title, description: metaDescription(page), image: absoluteUrl(pageImage(page)), datePublished: '2026-03-01', dateModified: UPDATED, inLanguage: page.lang, mainEntityOfPage: absoluteUrl(canonicalPath), author: { '@type': 'Person', name: 'Jiřina' }, publisher: { '@type': 'Organization', name: isEn ? 'Baby w/o allergies' : 'Bejby bez alergií', url: SITE_URL, logo: { '@type': 'ImageObject', url: absoluteUrl('/assets/logo.svg') } } })}</script>
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: isEn ? 'App' : 'Aplikace', item: absoluteUrl(isEn ? '/en/' : '/') }, { '@type': 'ListItem', position: 2, name: page.title, item: absoluteUrl(canonicalPath) }] })}</script>
