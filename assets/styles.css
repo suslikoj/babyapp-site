@@ -445,7 +445,6 @@ input:-webkit-autofill:focus {
 
 /* Article pages */
 .article-hero{
-  background:#fff;
   padding-top:28px;
 }
 .article-hero__image{
@@ -560,6 +559,7 @@ html{scroll-padding-top:90px}
 .section[id]{scroll-margin-top:90px}
 .store-links{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px}
 .store-links--hero{margin-top:22px}
+.store-links--cta{margin-top:0; flex-shrink:0}
 .download-card .store-links{justify-content:flex-end}
 .store-badge-link{display:inline-flex;align-items:center;justify-content:center;min-height:56px;max-width:100%;text-decoration:none;line-height:0}
 .store-badge{display:block;height:56px;width:auto;max-width:100%;object-fit:contain}
