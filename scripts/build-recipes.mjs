@@ -149,16 +149,23 @@ function recipePage(r) {
 
 // ── Seznam ─────────────────────────────────────────────────────────────
 
+const CLOCK_ICON = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+// Pořadí štítků na kartě jako v aplikaci (recipe_controller.dart).
+const CARD_TAG_ORDER = ['no_allergen', 'vegan', 'under_30', 'no_cook', 'one_pot', 'over_night', 'travel'];
+const CARD_TAG_LABELS = { ...TAG_LABELS, under_30: 'Do 30 minut' };
+
+// Karta jako v aplikaci: fotka „plave“ nad bílou kartou, název, čas, perex a štítky.
 function recipeCard(r) {
-  const total = totalTime(r);
-  const meta = [minutes(total), r.difficulty].filter(Boolean).join(' · ');
+  const time = totalTime(r) || r.activeMinutes;
+  const chips = [r.category?.name, ...CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => CARD_TAG_LABELS[k])].filter(Boolean).slice(0, 3);
   const attrs = [
     `data-category="${r.category?.slug || ''}"`,
-    `data-allergens="${[...r.contains, ...r.mayContain].join(' ')}"`,
+    `data-contains="${r.contains.join(' ')}"`,
+    `data-may="${r.mayContain.join(' ')}"`,
     `data-tags="${r.tagKeys.join(' ')}"`,
-    `data-minutes="${total || ''}"`,
+    `data-minutes="${totalTime(r) || ''}"`,
   ].join(' ');
-  return `<a class="recipe-card" href="/recepty/${r.slug}/" ${attrs}>${recipePicture(r, 600)}<div class="recipe-card__body">${r.category ? `<span>${r.category.name}</span>` : ''}<h3>${escapeHtml(r.title)}</h3>${meta ? `<p>${meta}</p>` : ''}</div></a>`;
+  return `<a class="recipe-card" href="/recepty/${r.slug}/" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}<p class="recipe-card__excerpt">${escapeHtml(r.excerpt)}</p><p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
 }
 
 function chip(group, value, label, { pressed = false } = {}) {
@@ -189,9 +196,10 @@ function listingPage() {
   <script>
   (function(){
     const box=document.getElementById('recipeFilters');const grid=document.getElementById('recipeGrid');if(!box||!grid)return;box.hidden=false;
-    const cards=[...grid.querySelectorAll('.recipe-card')];const state={category:'',free:new Set(),time:'',tag:new Set()};
-    const apply=()=>{let shown=0;cards.forEach((c)=>{const al=c.dataset.allergens.split(' ');const tags=c.dataset.tags.split(' ');const min=Number(c.dataset.minutes)||0;
-      const ok=(!state.category||c.dataset.category===state.category)&&[...state.free].every((a)=>!al.includes(a))&&(!state.time||(min&&min<=Number(state.time)))&&[...state.tag].every((t)=>tags.includes(t));
+    const cards=[...grid.querySelectorAll('.recipe-card')];const state={category:'',free:new Set(),time:'',tag:new Set()};const names=${JSON.stringify(allergenLabels)};
+    const apply=()=>{let shown=0;cards.forEach((c)=>{const has=c.dataset.contains.split(' ');const may=c.dataset.may.split(' ');const tags=c.dataset.tags.split(' ');const min=Number(c.dataset.minutes)||0;
+      const ok=(!state.category||c.dataset.category===state.category)&&[...state.free].every((a)=>!has.includes(a))&&(!state.time||(min&&min<=Number(state.time)))&&[...state.tag].every((t)=>tags.includes(t));
+      const warn=[...state.free].filter((a)=>may.includes(a)).map((a)=>names[a]||a);const w=c.querySelector('.recipe-card__warn');if(w){w.hidden=!warn.length;w.textContent=warn.length?'Může obsahovat: '+warn.join(', '):'';}
       c.hidden=!ok;if(ok)shown++;});document.getElementById('recipeCount').textContent=shown;document.getElementById('recipeEmpty').hidden=shown>0;};
     box.addEventListener('click',(e)=>{const b=e.target.closest('.filter-chip');if(!b)return;const g=b.dataset.filter,v=b.dataset.value;
       if(g==='category'||g==='time'){const same=state[g]===v&&g==='time';state[g]=same?'':v;box.querySelectorAll('[data-filter="'+g+'"]').forEach((x)=>x.setAttribute('aria-pressed',String(!same&&x.dataset.value===v)));}
