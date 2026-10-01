@@ -206,37 +206,23 @@
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="/" aria-label="Bejby bez alergií">
-      <img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">Bejby bez alergií</span>
-    </a>
-
+    <a class="brand" href="/" aria-label="Bejby bez alergií"><img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">Bejby bez alergií</span></a>
     <nav class="nav nav--primary" aria-label="Hlavní navigace">
-      <a class="is-active" href="/" aria-current="page">Aplikace</a>
-      <a href="/eczema/">Ekzém u dětí</a>
-      <a href="/signs/">Projevy potravinové alergie</a>
-      <a href="/main-suspects/">Eliminační dieta</a>
+      <a href="/" class="is-active" aria-current="page">Aplikace</a>
+      <div class="nav__group"><a href="/pruvodce/" aria-haspopup="true">Průvodce</a><div class="nav__menu"><a href="/pruvodce/potravinova-alergie/">Potravinová alergie</a><a href="/pruvodce/eliminacni-dieta/">Eliminační dieta</a><a href="/pruvodce/ekzem/">Ekzém</a><a href="/pruvodce/specificka-temata/">Specifická témata</a></div></div>
+      <a href="/recepty/">Recepty</a>
+      <a href="/o-projektu/">O projektu</a>
     </nav>
-
-    <div class="lang">
-      <a class="lang__item is-active" href="/" aria-current="page">CZ</a>
-      <span class="lang__sep" aria-hidden="true">/</span>
-      <a class="lang__item" href="/en/">EN</a>
-    </div>
-
-    <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="lang"><a class="lang__item is-active" href="/" aria-current="page">CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item" href="/en/">EN</a></div>
+    <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-
   <div class="mobile" id="mobileNav" hidden>
-    <a class="is-active" href="/" aria-current="page">Aplikace</a>
-    <a href="/eczema/">Ekzém u dětí</a>
-    <a href="/signs/">Projevy potravinové alergie</a>
-    <a href="/main-suspects/">Eliminační dieta</a>
-    <div class="mobile__langs">
-      <a class="is-active" href="/">CZ</a>
-      <a href="/en/">EN</a>
-    </div>
+    <a href="/" class="is-active" aria-current="page">Aplikace</a>
+    <a href="/pruvodce/">Průvodce</a>
+    <div class="mobile__sub"><a href="/pruvodce/potravinova-alergie/">Potravinová alergie</a><a href="/pruvodce/eliminacni-dieta/">Eliminační dieta</a><a href="/pruvodce/ekzem/">Ekzém</a><a href="/pruvodce/specificka-temata/">Specifická témata</a></div>
+    <a href="/recepty/">Recepty</a>
+    <a href="/o-projektu/">O projektu</a>
+    <div class="mobile__langs"><a class="is-active" href="/">CZ</a><a href="/en/">EN</a></div>
   </div>
 </header>
 
@@ -244,7 +230,6 @@
   <section class="hero hero--intro">
     <div class="container hero__copy">
 
-      <p class="badge">Mobilní aplikace</p>
       <h1>Aplikace pro rodiče miminek s ekzémem a potravinovou alergií</h1>
       <p class="lead">Pomůže ti přijít na to, co miminku vadí – s klidem a přehledem. Sleduj příznaky, jídlo a souvislosti na jednom místě.</p>
       <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
@@ -263,20 +248,20 @@
 
   <section class="section" id="problem" style="content-visibility:auto;">
     <div class="container">
-      <h2>Nekonečné hádání, co dítěti vadí?</h2>
+      <h2>Ekzém u miminka a podezření na potravinovou alergii?</h2>
       <ul class="list list--big">
-        <li>Ekzém se zhoršuje a nevíš proč.</li>
-        <li>Každé nové jídlo je stres.</li>
-        <li>Zkoušíš jednu věc za druhou bez jasného výsledku.</li>
-        <li>Chybí ti systém, který by držel celý proces pohromadě.</li>
+        <li>Ekzém se zhoršuje a nevíš, jestli za tím je jídlo, zoubky, nebo nemoc.</li>
+        <li>Miminko má hlen ve stolici, koliky nebo časté ublinkávání.</li>
+        <li>Zkoušíš vyřazovat potraviny, ale bez jasného výsledku.</li>
+        <li>Nevíš, jak dlouho dietu držet a kdy potraviny vracet zpět.</li>
       </ul>
     </div>
   </section>
 
   <section class="section section--soft" id="solution" style="content-visibility:auto;">
     <div class="container">
-      <h2>Aby to konečně dávalo smysl</h2>
-      <p class="section__lead">Bejby bez alergií pomáhá rodičům sledovat potraviny, příznaky a reakce v souvislostech. Vede tě od eliminační fáze až po postupné testování alergenů tak, aby byl celý proces přehlednější a zvládnutelnější.</p>
+      <h2>Jak Bejby bez alergií pomůže najít, co miminku vadí</h2>
+      <p class="section__lead">Aplikace spojuje <strong>deník příznaků a jídla</strong>, <strong>eliminační dietu</strong> a <strong>testování alergenů</strong> do jednoho postupu. Každý den víš, co jíst, co sledovat a kdy udělat další krok – při kojení i u batolete na příkrmech.</p>
     </div>
   </section>
 
@@ -389,6 +374,7 @@
         <p>Proto jsem vytvořila aplikaci Bejby bez alergií, která pomáhá rodičům zvládnout náročné situace spojené s ekzémem a potravinovými alergiemi u miminek a dětí.</p>
         <p>Chtěla jsem vytvořit něco, co budou mít rodiče stále po ruce a co jim dlouhodobě pomůže. Jsem výživová poradkyně a nadšenec do programování.</p>
         <p>Doufám, že vám aplikace pomůže tak, jako pomohla mně.</p>
+        <p><a class="btn btn--ghost" href="/o-projektu/">Celý příběh aplikace →</a></p>
       </div>
     </div>
   </section>
@@ -416,6 +402,7 @@
     <div class="container"><div class="section-heading"><div><p class="eyebrow">Prakticky a srozumitelně</p><h2>Průvodce pro rodiče</h2></div><p>Odborné souvislosti přeložené do kroků, které můžete probrat s pediatrem nebo alergologem.</p></div>
       <div class="featured-article"><picture><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Miminko se zarudlou tvářičkou" width="613" height="393" loading="lazy" decoding="async"></picture><div><span>Doporučený článek</span><h3>Jak poznat projevy potravinové alergie?</h3><p>Kožní, zažívací i rychlé reakce a situace, kdy nečekat s lékařskou pomocí.</p><a class="btn btn--primary" href="/signs/">Přečíst článek</a></div></div>
       <div class="blog-grid"><a class="blog-card" href="/eczema/"><span>Ekzém</span><h3>Ekzém u dětí: jak ho poznat</h3><p>Možné spouštěče, péče o kůži a sledování souvislostí.</p></a><a class="blog-card" href="/main-suspects/"><span>Dieta</span><h3>Eliminační dieta</h3><p>Jak k první fázi přistoupit systematicky a bezpečně.</p></a></div>
+      <p class="guide-category__more"><a href="/pruvodce/">Celý průvodce: potravinová alergie, eliminační dieta, ekzém a další témata →</a></p>
     </div>
   </section>
 
@@ -450,7 +437,7 @@
   <div class="container footer__inner">
     <p>© <span id="year"></span> Bejby bez alergií</p>
     <p class="fine">Aplikaci Bejby bez alergií si můžete stáhnout na App Storu i Google Play.</p>
-    <div class="footer__links"><a href="/eczema/">Ekzém u miminka</a><a href="/signs/">Projevy potravinové alergie</a><a href="/main-suspects/">Eliminační dieta</a><a href="/privacy-policy/">Zásady ochrany osobních údajů</a><a href="/medical-disclaimer/">Zdravotní upozornění</a><a href="/terms-of-use/">Podmínky používání</a><a href="/zdroje/">Odborné zdroje</a></div>
+    <div class="footer__links"><a href="/pruvodce/">Průvodce</a><a href="/recepty/">Recepty</a><a href="/o-projektu/">O projektu</a><a href="/eczema/">Ekzém u miminka</a><a href="/signs/">Projevy potravinové alergie</a><a href="/main-suspects/">Eliminační dieta</a><a href="/privacy-policy/">Zásady ochrany osobních údajů</a><a href="/medical-disclaimer/">Zdravotní upozornění</a><a href="/terms-of-use/">Podmínky používání</a><a href="/zdroje/">Odborné zdroje</a></div>
   </div>
 </footer>
 
