@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { categories, articles as guideArticles, categoryPath, articlePath } from '../content/pruvodce.mjs';
+import recipeData from '../content/recepty/recipes.json' with { type: 'json' };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,6 +36,10 @@ const routes = [
   { path: '/pruvodce/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.9', alternates: [] },
   ...categories.map((c) => ({ path: categoryPath(c.slug), lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] })),
   ...guideArticles.map((a) => ({ path: articlePath(a), lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: [] })),
+
+  // Recepty (CZ only, from the Storyblok snapshot)
+  { path: '/recepty/', lastmod: recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] },
+  ...recipeData.recipes.map((r) => ({ path: `/recepty/${r.slug}/`, lastmod: r.updated || r.published, changefreq: 'monthly', priority: '0.7', alternates: [] })),
 ];
 
 function normalizeBaseUrl(url) {
