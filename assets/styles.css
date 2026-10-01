@@ -1000,3 +1000,12 @@ body{
 .recipe-card__warn[hidden]{display:none}
 .recipe-card__chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:auto 0 0;padding-top:14px}
 .recipe-card__chips span{padding:6px 12px;border-radius:999px;background:rgba(229,115,115,.1);font-weight:700;font-size:.8rem}
+
+/* O projektu */
+.about-page__head{align-items:center}
+.about-page__head h1{margin:6px 0 14px}
+.about-page__quote{font-size:1.3rem;font-style:italic;color:var(--primary-2);margin:0}
+.about-page__body{margin:0 auto;padding-top:10px}
+.about-page__signature{margin-top:40px}
+.about-page__contact{margin-top:48px}
+.about-page__contact .contact{margin-top:14px}

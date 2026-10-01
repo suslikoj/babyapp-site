@@ -130,7 +130,7 @@ export function siteFooter(lang) {
   const isEn = lang === 'en';
   const links = isEn
     ? [['/en/eczema/', 'Baby eczema'], ['/en/signs/', 'Food allergy signs in babies'], ['/en/main-suspects/', 'Elimination diet'], ['/en/privacy-policy/', 'Privacy Policy'], ['/en/medical-disclaimer/', 'Medical Disclaimer'], ['/en/terms-of-use/', 'Terms of Use'], ['/en/sources/', 'Sources']]
-    : [['/pruvodce/', 'Průvodce'], ['/eczema/', 'Ekzém u miminka'], ['/signs/', 'Projevy potravinové alergie'], ['/main-suspects/', 'Eliminační dieta'], ['/privacy-policy/', 'Zásady ochrany osobních údajů'], ['/medical-disclaimer/', 'Zdravotní upozornění'], ['/terms-of-use/', 'Podmínky používání'], ['/zdroje/', 'Odborné zdroje']];
+    : [['/pruvodce/', 'Průvodce'], ['/recepty/', 'Recepty'], ['/o-projektu/', 'O projektu'], ['/eczema/', 'Ekzém u miminka'], ['/signs/', 'Projevy potravinové alergie'], ['/main-suspects/', 'Eliminační dieta'], ['/privacy-policy/', 'Zásady ochrany osobních údajů'], ['/medical-disclaimer/', 'Zdravotní upozornění'], ['/terms-of-use/', 'Podmínky používání'], ['/zdroje/', 'Odborné zdroje']];
   return `<footer class="footer"><div class="container footer__inner"><p>© <span id="year"></span> ${BRAND[lang]}</p><div class="footer__links">${links.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</div></div></footer>`;
 }
 

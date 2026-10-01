@@ -37,6 +37,7 @@ const routes = [
   ...categories.map((c) => ({ path: categoryPath(c.slug), lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] })),
   ...guideArticles.map((a) => ({ path: articlePath(a), lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: [] })),
 
+  { path: '/o-projektu/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.6', alternates: [] },
   // Recepty (CZ only, from the Storyblok snapshot)
   { path: '/recepty/', lastmod: recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] },
   ...recipeData.recipes.map((r) => ({ path: `/recepty/${r.slug}/`, lastmod: r.updated || r.published, changefreq: 'monthly', priority: '0.7', alternates: [] })),

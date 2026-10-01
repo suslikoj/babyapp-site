@@ -394,26 +394,49 @@ function categoryHubPage(category) {
   });
 }
 
-// ── Placeholders until phase 2/3 (noindex, not in sitemap) ─────────────
+// ── O projektu ─────────────────────────────────────────────────────────
 
-function placeholderPage({ path: pagePath, active, title, eyebrow, heading, text }) {
-  const main = `
-  <section class="section guide-hub">
+function aboutPage(markdown) {
+  const body = markdownToHtml(markdown);
+  const main = `  <section class="section about-page">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">${eyebrow}</p><h1>${heading}</h1></div><p>${text}</p></div>
-      <p><a class="btn btn--primary" href="/pruvodce/">Prohlédnout průvodce</a></p>
-      ${appCta('cs', CTA.diet, `${active}-cz`)}
+      <div class="about-me about-page__head">
+        <picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="Jiřina Brázdová, autorka aplikace Bejby bez alergií" width="785" height="1046" fetchpriority="high" decoding="async"></picture>
+        <div>
+          <p class="eyebrow">O projektu</p>
+          <h1>O aplikaci Bejby bez alergií</h1>
+          <p class="about-page__quote">„Pomáhá mi dávat smysl tomu, co se děje.“</p>
+        </div>
+      </div>
+      <div class="article-content about-page__body">
+        ${body}
+        <aside class="author-box about-page__signature" aria-label="Podpis"><picture><source srcset="${AUTHOR.photoWebp}" type="image/webp"><img class="author-box__photo" src="${AUTHOR.photo}" alt="${AUTHOR.name}" width="320" height="320" loading="lazy" decoding="async"></picture><div class="author-box__body"><strong class="author-box__name">Jiřina</strong><p class="author-box__role">Máma, která si tím sama prošla a rozhodla se vytvořit nástroj, který může pomoct i dalším rodičům.</p></div></aside>
+        <section class="about-page__contact" id="kontakt">
+          <h2>Kontakt</h2>
+          <p>Máte dotaz, nápad nebo zpětnou vazbu k aplikaci? Napište mi.</p>
+          <div class="contact"><a class="btn btn--ghost" href="mailto:info@babyapp.cz">info@babyapp.cz</a><a class="btn btn--ghost" href="https://www.instagram.com/babyapp.cz/" target="_blank" rel="noreferrer">Instagram</a><a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61584966073544" target="_blank" rel="noreferrer">Facebook</a></div>
+        </section>
+        ${appCta('cs', { eyebrow: 'Bejby bez alergií', heading: 'Vyzkoušejte aplikaci', text: 'Deník příznaků a jídla, eliminační dieta krok za krokem, testování alergenů a recepty – na jednom místě.' }, 'o-projektu-cz')}
+      </div>
     </div>
   </section>`;
   return renderPage({
     lang: 'cs',
-    title,
-    description: text,
-    canonical: pagePath,
+    title: 'O aplikaci Bejby bez alergií – příběh a kontakt',
+    description: 'Jak vznikla aplikace Bejby bez alergií: příběh mámy dítěte s ekzémem a potravinovými alergiemi, proč aplikace vznikla a jak mě kontaktovat.',
+    canonical: '/o-projektu/',
     alternates: null,
-    robots: 'noindex,follow',
-    image: absoluteUrl('/assets/cz_screenshot.png'),
-    nav: topNav({ lang: 'cs', active, czUrl: pagePath, enUrl: '/en/' }),
+    image: absoluteUrl('/assets/me.jpg'),
+    imageAlt: 'Jiřina Brázdová, autorka aplikace Bejby bez alergií',
+    jsonLd: [{
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'O aplikaci Bejby bez alergií',
+      url: absoluteUrl('/o-projektu/'),
+      inLanguage: 'cs',
+      mainEntity: { ...ORGANIZATION, founder: { '@type': 'Person', name: AUTHOR.name, jobTitle: 'výživová poradkyně', image: absoluteUrl(AUTHOR.photo) }, email: 'info@babyapp.cz', sameAs: ['https://www.instagram.com/babyapp.cz/', 'https://www.facebook.com/profile.php?id=61584966073544'] },
+    }],
+    nav: topNav({ lang: 'cs', active: 'about', czUrl: '/o-projektu/', enUrl: '/en/' }),
     main,
   });
 }
@@ -436,6 +459,6 @@ for (const category of categories) {
   await write(`${categoryPath(category.slug).slice(1)}index.html`, categoryHubPage(category));
 }
 
-await write('o-projektu/index.html', placeholderPage({ path: '/o-projektu/', active: 'about', title: 'O projektu | Bejby bez alergií', eyebrow: 'O projektu', heading: 'O projektu Bejby bez alergií', text: 'Brzy tu najdete příběh vzniku aplikace, kdo za ní stojí a jak nás kontaktovat.' }));
+await write('o-projektu/index.html', aboutPage(await fs.readFile(path.join(root, 'content/cz/o-projektu.md'), 'utf8')));
 
-console.log(`Built ${pages.length} legacy articles, ${guideArticles.length} guide articles, ${categories.length + 1} hubs and the O projektu placeholder.`);
+console.log(`Built ${pages.length} legacy articles, ${guideArticles.length} guide articles, ${categories.length + 1} hubs and O projektu.`);
