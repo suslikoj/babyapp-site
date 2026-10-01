@@ -1,4 +1,4 @@
-My name is Jiřina and I’m a mum of two. Baby w/o allergies (in Czech “Bejby bez alergií”) grew out of my own experience of caring for a child with eczema and food allergies.
+My name is Jiřina and I’m a mum of two. Baby Without Allergies (in Czech “Bejby bez alergií”) grew out of my own experience of caring for a child with eczema and food allergies.
 
 ## How the app came about
 
@@ -34,7 +34,7 @@ And also a tool that helps build an overview you can take to your pediatrician o
 
 Records help you see those connections more clearly.
 
-## Baby w/o allergies today
+## Baby Without Allergies today
 
 The app has been changing step by step since the beginning. I keep adding new features, recipes and information and try to build it around what really helps parents in everyday life.
 
@@ -42,7 +42,7 @@ That’s why this website is gradually growing alongside the app. I want to expl
 
 ## Why “Bejby bez alergií”?
 
-The name – “Baby without allergies” – says what I would wish for at the end of the whole journey: a child without allergies. The ideal outcome, when a child goes through elimination, testing and allergen training and the allergies are gradually overcome.
+The name – “Baby Without Allergies” – says what I would wish for at the end of the whole journey: a child without allergies. The ideal outcome, when a child goes through elimination, testing and allergen training and the allergies are gradually overcome.
 
 When I was going through all of this myself, I wished I had something like this at hand. Something that would help me bring a little more order into the whole situation.
 

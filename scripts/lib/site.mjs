@@ -14,12 +14,14 @@ export const SITE_URL = 'https://babyapp.cz';
 export const PUBLISHED = '2026-03-01';
 export const UPDATED = '2026-10-01';
 export const APP_STORE_ID = '6776690582';
+// App Store Connect → App Analytics → Campaigns: provider token (pt). Empty = links without pt.
+export const APP_STORE_PROVIDER_TOKEN = '';
 export const AUTHOR = {
   name: 'Jiřina Brázdová',
   photo: '/assets/jirina-brazdova.jpg',
   photoWebp: '/assets/jirina-brazdova.webp',
 };
-export const BRAND = { cs: 'Bejby bez alergií', en: 'Baby w/o allergies' };
+export const BRAND = { cs: 'Bejby bez alergií', en: 'Baby Without Allergies' };
 
 // Topic-specific app CTA, shared by legacy articles (by slug) and guide articles (by category).
 export const CTA = {
@@ -29,9 +31,9 @@ export const CTA = {
 };
 export const CATEGORY_CTA = { 'potravinova-alergie': CTA.signs, 'eliminacni-dieta': CTA.diet, ekzem: CTA.eczema, 'specificka-temata': CTA.signs };
 export const CTA_EN = {
-  signs: { eyebrow: 'Symptom & food diary', heading: 'Log symptoms and foods in one diary', text: 'With Baby w/o allergies you can log eczema, tummy, stool and sleep in seconds – and more easily see which food keeps coming back before a flare-up.' },
-  eczema: { eyebrow: 'Symptom calendar', heading: 'Track your baby’s eczema and find triggers', text: 'Log skin flares together with foods, illness and teething. Baby w/o allergies helps you see patterns and guides you through an elimination–challenge diet step by step.' },
-  diet: { eyebrow: 'Elimination diet step by step', heading: 'Go through the elimination diet with a clear plan', text: 'Baby w/o allergies guides you with simple daily steps – from the main suspects through testing to allergen training – and suggests recipes that fit your current diet phase.' },
+  signs: { eyebrow: 'Symptom & food diary', heading: 'Log symptoms and foods in one diary', text: 'With Baby Without Allergies you can log eczema, tummy, stool and sleep in seconds – and more easily see which food keeps coming back before a flare-up.' },
+  eczema: { eyebrow: 'Symptom calendar', heading: 'Track your baby’s eczema and find triggers', text: 'Log skin flares together with foods, illness and teething. Baby Without Allergies helps you see patterns and guides you through an elimination–challenge diet step by step.' },
+  diet: { eyebrow: 'Elimination diet step by step', heading: 'Go through the elimination diet with a clear plan', text: 'Baby Without Allergies guides you with simple daily steps – from the main suspects through testing to allergen training – and suggests recipes that fit your current diet phase.' },
 };
 export const CATEGORY_CTA_EN = { 'food-allergy': CTA_EN.signs, 'elimination-diet': CTA_EN.diet, eczema: CTA_EN.eczema, 'special-topics': CTA_EN.signs };
 
@@ -63,7 +65,8 @@ export function googlePlayUrl(lang, campaign) {
 }
 
 export function appStoreUrl(lang, campaign) {
-  return `https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id${APP_STORE_ID}?l=${lang === 'en' ? 'en' : 'cs'}&amp;pt=PROVIDER_TOKEN&amp;ct=${campaign}`;
+  const pt = APP_STORE_PROVIDER_TOKEN ? `&amp;pt=${APP_STORE_PROVIDER_TOKEN}` : '';
+  return `https://apps.apple.com/cz/app/bejby-bez-alergi%C3%AD/id${APP_STORE_ID}?l=${lang === 'en' ? 'en' : 'cs'}${pt}&amp;ct=${campaign}`;
 }
 
 // Storyblok image service: resized JPG/WebP straight from the CDN the app uses.
@@ -146,7 +149,7 @@ export const ORGANIZATION = {
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
   name: 'Bejby bez alergií',
-  alternateName: 'Baby w/o allergies',
+  alternateName: 'Baby Without Allergies',
   url: `${SITE_URL}/`,
   logo: { '@type': 'ImageObject', url: absoluteUrl('/assets/favicon.png'), width: 304, height: 304 },
 };
@@ -212,7 +215,7 @@ ${siteFooter(lang)}
 
 export function storeBadges(lang, campaign) {
   const isEn = lang === 'en';
-  return `<div class="store-links store-links--cta" aria-label="${isEn ? 'App download links' : 'Odkazy ke stažení aplikace'}"><a class="store-badge-link" href="${googlePlayUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Get Baby w/o allergies on Google Play' : 'Stáhnout aplikaci Bejby bez alergií na Google Play'}"><img class="store-badge" src="/assets/google-play-badge-${isEn ? 'en' : 'cs'}.png" alt="${isEn ? 'Get it on Google Play' : 'Stáhnout na Google Play'}" width="478" height="142" loading="lazy" decoding="async"></a><a class="store-badge-link" href="${appStoreUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Download Baby w/o allergies on the App Store' : 'Stáhnout aplikaci Bejby bez alergií v App Storu'}"><img class="store-badge" src="/assets/app_store_badge_${isEn ? 'en' : 'cs'}.svg" alt="${isEn ? 'Download on the App Store' : 'Stáhnout v App Storu'}" width="120" height="40" loading="lazy" decoding="async"></a></div>`;
+  return `<div class="store-links store-links--cta" aria-label="${isEn ? 'App download links' : 'Odkazy ke stažení aplikace'}"><a class="store-badge-link" href="${googlePlayUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Get Baby Without Allergies on Google Play' : 'Stáhnout aplikaci Bejby bez alergií na Google Play'}"><img class="store-badge" src="/assets/google-play-badge-${isEn ? 'en' : 'cs'}.png" alt="${isEn ? 'Get it on Google Play' : 'Stáhnout na Google Play'}" width="478" height="142" loading="lazy" decoding="async"></a><a class="store-badge-link" href="${appStoreUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Download Baby Without Allergies on the App Store' : 'Stáhnout aplikaci Bejby bez alergií v App Storu'}"><img class="store-badge" src="/assets/app_store_badge_${isEn ? 'en' : 'cs'}.svg" alt="${isEn ? 'Download on the App Store' : 'Stáhnout v App Storu'}" width="120" height="40" loading="lazy" decoding="async"></a></div>`;
 }
 
 export function appCta(lang, cta, campaign) {

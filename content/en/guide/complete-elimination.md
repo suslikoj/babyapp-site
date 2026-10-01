@@ -1,6 +1,6 @@
 # **Phase 2 of the elimination diet – complete elimination**
 
-You enter this phase when the child’s condition has not improved after the first phase, has improved only minimally, or has even worsened.  
+You enter this phase when the child’s condition has not improved after the [first phase](/en/main-suspects/), has improved only minimally, or has even worsened.  
 This means that the trigger of the symptoms is likely not limited to the main suspects.
 
 For a few days, you eliminate all potential allergens and then move directly to testing.

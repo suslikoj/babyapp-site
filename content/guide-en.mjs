@@ -45,7 +45,7 @@ export const categories = [
 export const legacyArticles = [
   { category: 'food-allergy', path: '/en/signs/', title: 'Signs of food allergy', description: 'How to recognize a food allergy in a baby: skin, stool, tummy, reflux and fast reactions.', order: 0 },
   { category: 'elimination-diet', path: '/en/main-suspects/', title: 'Main suspects', description: 'Phase 1 of the elimination diet: which foods to remove for 14 days and what to track.', order: 0 },
-  { category: 'eczema', path: '/en/eczema/', title: 'Eczema in children', description: 'How to recognize baby eczema, why it develops and when to moisturize.', order: 0 },
+  { category: 'eczema', path: '/en/eczema/', title: 'Baby eczema', description: 'How to recognize baby eczema, why it develops and when to moisturize.', order: 0 },
 ];
 
 export const articles = [

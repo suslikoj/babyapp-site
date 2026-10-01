@@ -85,7 +85,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/privacy-policy/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -95,7 +95,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/privacy-policy/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -105,7 +105,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/medical-disclaimer/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -115,7 +115,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/medical-disclaimer/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/medical-disclaimer/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -125,7 +125,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/terms-of-use/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -135,7 +135,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/terms-of-use/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/terms-of-use/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -145,7 +145,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/zdroje/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/sources/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/zdroje/" />
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -155,7 +155,7 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/zdroje/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/sources/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/zdroje/" />
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -603,7 +603,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/avokadova-majoneza/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avocado-mayonnaise/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -611,9 +611,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/avokadova-majoneza/</loc>
+    <loc>https://babyapp.cz/en/recipes/avocado-mayonnaise/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avocado-mayonnaise/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -623,7 +623,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/bananovy-chlebicek/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/banana-bread/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -631,9 +631,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/bananovy-chlebicek/</loc>
+    <loc>https://babyapp.cz/en/recipes/banana-bread/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/banana-bread/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -643,7 +643,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/blueberry-apple-smoothie-with-avocado/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -651,9 +651,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/</loc>
+    <loc>https://babyapp.cz/en/recipes/blueberry-apple-smoothie-with-avocado/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/blueberry-apple-smoothie-with-avocado/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -663,7 +663,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/bun-cha/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bun-cha/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha-pork-flank-with-rice-noodles-and-herbs/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bun-cha/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -671,9 +671,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/bun-cha/</loc>
+    <loc>https://babyapp.cz/en/recipes/bun-cha-pork-flank-with-rice-noodles-and-herbs/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bun-cha/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha-pork-flank-with-rice-noodles-and-herbs/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bun-cha/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -683,7 +683,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/cake-with-pumpkin-banana-cream/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -691,9 +691,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/</loc>
+    <loc>https://babyapp.cz/en/recipes/cake-with-pumpkin-banana-cream/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/cake-with-pumpkin-banana-cream/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -703,7 +703,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermented-buckwheat-bread/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -711,9 +711,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/</loc>
+    <loc>https://babyapp.cz/en/recipes/fermented-buckwheat-bread/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermented-buckwheat-bread/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -723,7 +723,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/delicate-kidney-spread-on-lard/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -731,9 +731,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/</loc>
+    <loc>https://babyapp.cz/en/recipes/delicate-kidney-spread-on-lard/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/delicate-kidney-spread-on-lard/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -743,7 +743,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/creamy-pea-cauliflower-sauce-with-bacon/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -751,9 +751,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/</loc>
+    <loc>https://babyapp.cz/en/recipes/creamy-pea-cauliflower-sauce-with-bacon/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/creamy-pea-cauliflower-sauce-with-bacon/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -763,7 +763,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/heavenly-white-bean-porridge/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -771,9 +771,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/</loc>
+    <loc>https://babyapp.cz/en/recipes/heavenly-white-bean-porridge/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/heavenly-white-bean-porridge/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -781,20 +781,20 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/recepty/apple/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/apple/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/apple/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/apple/" />
+    <loc>https://babyapp.cz/recepty/pecena-jablka/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/pecena-jablka/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/baked-apples-stuffed-with-oat-nut-crumble/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/pecena-jablka/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/apple/</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/apple/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/apple/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/apple/" />
+    <loc>https://babyapp.cz/en/recipes/baked-apples-stuffed-with-oat-nut-crumble/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/pecena-jablka/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/baked-apples-stuffed-with-oat-nut-crumble/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/pecena-jablka/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -803,7 +803,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/zeleninove-hranolky/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/baked-vegetable-fries/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -811,9 +811,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/zeleninove-hranolky/</loc>
+    <loc>https://babyapp.cz/en/recipes/baked-vegetable-fries/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/baked-vegetable-fries/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -823,7 +823,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgers-with-sweet-potato-and-celery-fries/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -831,9 +831,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/</loc>
+    <loc>https://babyapp.cz/en/recipes/portobello-burgers-with-sweet-potato-and-celery-fries/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgers-with-sweet-potato-and-celery-fries/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -843,7 +843,7 @@
   <url>
     <loc>https://babyapp.cz/recepty/vyvar/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/vyvar/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/broth/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/vyvar/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -851,9 +851,9 @@
   </url>
 
   <url>
-    <loc>https://babyapp.cz/en/recipes/vyvar/</loc>
+    <loc>https://babyapp.cz/en/recipes/broth/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/vyvar/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/broth/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/vyvar/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>

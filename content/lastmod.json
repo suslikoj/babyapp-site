@@ -1,0 +1,234 @@
+{
+  "/": {
+    "hash": "45d42ae29a13982d17e42a3ced7f5e407516bccf",
+    "date": "2026-10-01"
+  },
+  "/eczema/": {
+    "hash": "20064d2a9d3f42c29a61d3a2d11f5b2c5b65ab23",
+    "date": "2026-10-01"
+  },
+  "/en/": {
+    "hash": "0cdc75f782ac119aa5c5115149e2684a35973699",
+    "date": "2026-10-01"
+  },
+  "/en/about/": {
+    "hash": "32bbd1552b636618f3adfc61480d5099c4803a7e",
+    "date": "2026-10-01"
+  },
+  "/en/eczema/": {
+    "hash": "d630a12cf7f5b198ce1107adb3836499349b037f",
+    "date": "2026-10-01"
+  },
+  "/en/guide/": {
+    "hash": "4ca397bd08d98357242dd013dddd634ad7466fe1",
+    "date": "2026-10-01"
+  },
+  "/en/guide/eczema/": {
+    "hash": "ae86d01332baed557388689021531257b7562b06",
+    "date": "2026-10-01"
+  },
+  "/en/guide/eczema/baby-skin-rashes/": {
+    "hash": "ddd7888facab366e0935ce554aa5670ac7a60b4f",
+    "date": "2026-10-01"
+  },
+  "/en/guide/eczema/eczema-itching/": {
+    "hash": "51d1c72e6e2b120dbf83c58f49105e2bb7111db7",
+    "date": "2026-10-01"
+  },
+  "/en/guide/eczema/eczema-triggers/": {
+    "hash": "e93dcd60333aa95c07b27c2d7f0d60893cef06f2",
+    "date": "2026-10-01"
+  },
+  "/en/guide/eczema/yeast-and-eczema/": {
+    "hash": "87f70cfc0ca9fe1fab47177a95ced87c5c8f072e",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/": {
+    "hash": "df3e4f0e834ef60b2738714dc20518ffa8c8fb64",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/allergen-testing/": {
+    "hash": "9a6489952a22c3fc6fd5187047ca231b014e2cb0",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/allergen-training/": {
+    "hash": "396d8732d3a3dbb8c4735bb153777b177e66d03e",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/complete-elimination/": {
+    "hash": "6251fa29835ae0d3bea97a3e5db593cf9c46a3c2",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/non-food-triggers/": {
+    "hash": "3459e2c9175babf6ed73b00dcfa34ab47a79a152",
+    "date": "2026-10-01"
+  },
+  "/en/guide/elimination-diet/safe-foods/": {
+    "hash": "4b1dfcfb988fb26bfba5adee19b7fa5866f08e60",
+    "date": "2026-10-01"
+  },
+  "/en/guide/food-allergy/": {
+    "hash": "fee66f52b20a42463929cf67ca3fe063172a48c8",
+    "date": "2026-10-01"
+  },
+  "/en/guide/food-allergy/cross-reactive-allergies/": {
+    "hash": "481c85516482524bf92b9e0e8f2841e94b6270ea",
+    "date": "2026-10-01"
+  },
+  "/en/guide/food-allergy/how-food-allergy-develops/": {
+    "hash": "05b4602dbbfa3b22f40a462951ee11c2e856146c",
+    "date": "2026-10-01"
+  },
+  "/en/guide/food-allergy/ige-vs-non-ige/": {
+    "hash": "1d919f8dce69b567a7bbe7a2b8288943d4b86fae",
+    "date": "2026-10-01"
+  },
+  "/en/guide/food-allergy/wheat-vs-gluten/": {
+    "hash": "2bb66bc0daa29d35ae48eb0c286aa9ece97d7f71",
+    "date": "2026-10-01"
+  },
+  "/en/guide/special-topics/": {
+    "hash": "89ce14031c1d3aaf1f7576687fd92c126181ddda",
+    "date": "2026-10-01"
+  },
+  "/en/guide/special-topics/doctors-and-eczema/": {
+    "hash": "37aef1dd4dd7abb1f16afb549006b02376d50252",
+    "date": "2026-10-01"
+  },
+  "/en/guide/special-topics/histamine-intolerance/": {
+    "hash": "ec11607923fd5ab93b92cfac2a24014af757ef2a",
+    "date": "2026-10-01"
+  },
+  "/en/main-suspects/": {
+    "hash": "cf69b981ec6d08a35c44bcb90d52b8edd1cdc4df",
+    "date": "2026-10-01"
+  },
+  "/en/medical-disclaimer/": {
+    "hash": "9f1616a088586314d6c8701382333a3a065091b7",
+    "date": "2026-10-01"
+  },
+  "/en/privacy-policy/": {
+    "hash": "a715209eb17da8ec35b9b4845ff74d5a57918f03",
+    "date": "2026-10-01"
+  },
+  "/en/signs/": {
+    "hash": "4dc3fecb02fff16915759bc90f3ef3ed0a55fd6a",
+    "date": "2026-10-01"
+  },
+  "/en/sources/": {
+    "hash": "21da814975d4be6b41e32694b456faa3513de8f6",
+    "date": "2026-10-01"
+  },
+  "/en/terms-of-use/": {
+    "hash": "d293b2ffdf115660ea4a83e95b24d406ea762b82",
+    "date": "2026-10-01"
+  },
+  "/main-suspects/": {
+    "hash": "a64f052ecd642d8a57a9177fad5788372049ae8a",
+    "date": "2026-10-01"
+  },
+  "/medical-disclaimer/": {
+    "hash": "1f808403d289fa320dd211aae9f0406b11434212",
+    "date": "2026-10-01"
+  },
+  "/o-projektu/": {
+    "hash": "f13b774926cd47b87a0c53aa61603e141296061f",
+    "date": "2026-10-01"
+  },
+  "/privacy-policy/": {
+    "hash": "31ba7e1e723977327e1a84d92ba7eb9d57a50eaf",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/": {
+    "hash": "5cf7e21779337137757ab04b30c8e8a2c35046aa",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/ekzem/": {
+    "hash": "fc8ad9ccfe5b745d3a49eed7c299a933c21aa64f",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/ekzem/kozni-projevy-u-miminek/": {
+    "hash": "5f0f0284751296ecb95d6d15c5af3414e6e3eda4",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/ekzem/kvasinka-a-ekzem/": {
+    "hash": "9240777397940ba8d73087b16cd367eb31bd2882",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/ekzem/spoustece-ekzemu/": {
+    "hash": "3dcb9808d0e4a983acbba3aa0788ddc0469bdea8",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/ekzem/svedeni-u-ekzemu/": {
+    "hash": "6f921a56070660debf360dc9f08c56a49e527bb1",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/": {
+    "hash": "318432bcb42311625736a29b2acfc2a7f64c9502",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/bezpecne-potraviny/": {
+    "hash": "c86cf27fda1ba94707ce9f78f58faa41b5bda3b3",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/kompletni-vylouceni/": {
+    "hash": "62a84daf5408b111ba299ad007ee7d4c8cdc420a",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/nepotravinove-vlivy/": {
+    "hash": "86dfc3effe46ac1596e4311fc19abeb8aa4a8f0f",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/testovani-alergenu/": {
+    "hash": "b569c93e50847a0eb3c335e7467af5407ace7f13",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/eliminacni-dieta/trenink-alergenu/": {
+    "hash": "ede83770f191e9aa9444ff4f606a4bc2a53a139f",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/potravinova-alergie/": {
+    "hash": "adee81e9ca71bfe2d20c71cbc7cf6453758862f2",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/potravinova-alergie/ige-a-non-ige/": {
+    "hash": "d836bde36f80e276a5ac166ccf8dc7be5f69e698",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/": {
+    "hash": "960facb176cfa382e1721b3d18daabdd77f86c15",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/potravinova-alergie/psenice-vs-lepek/": {
+    "hash": "0b3c88cf28da94bb91c14c989e1c5a2423f8cdf2",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/potravinova-alergie/zkrizene-alergie/": {
+    "hash": "2ac84d818ca578dc4d12eb694d969b5f5aa0af6b",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/specificka-temata/": {
+    "hash": "5d16e0081390176b93bbe00ef6f8f27f7f7cc185",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/specificka-temata/histaminova-intolerance/": {
+    "hash": "0eaf0904aeee81c52e9a1d1f43628bfda1b33cdb",
+    "date": "2026-10-01"
+  },
+  "/pruvodce/specificka-temata/lekari-a-ekzem/": {
+    "hash": "20329316e0b10693096619ca3663c28ff762e3c6",
+    "date": "2026-10-01"
+  },
+  "/signs/": {
+    "hash": "c18548bb63ac624cf46d095696e58da24e59be68",
+    "date": "2026-10-01"
+  },
+  "/terms-of-use/": {
+    "hash": "da72d29a196296f6dc0bb59378f7664c09687171",
+    "date": "2026-10-01"
+  },
+  "/zdroje/": {
+    "hash": "07998c7f94e37eb42f40f20637f3ee4c8cd36d65",
+    "date": "2026-10-01"
+  }
+}

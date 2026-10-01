@@ -11,7 +11,7 @@ const NAV_CS = { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy pot
 // title = short label (navigation, breadcrumbs, related cards); seoTitle = <title>/og:title; H1 lives in the Markdown file.
 const pages = [
   {
-    slug: 'eczema', lang: 'cs', title: 'Ekzém u dětí',
+    slug: 'eczema', lang: 'cs', title: 'Ekzém u miminka',
     seoTitle: 'Ekzém u miminka: jak ho poznat a jak pečovat o kůži',
     description: 'Jak poznat ekzém u miminka, proč vzniká, co ho zhoršuje, kdy kůži promazávat a kdy s dítětem k lékaři. Praktický průvodce pro rodiče kojenců i batolat.',
     input: 'content/cz/eczema_cz.md', output: 'eczema/index.html',
@@ -41,13 +41,13 @@ const pages = [
     nav: NAV_CS,
   },
   {
-    slug: 'eczema', lang: 'en', title: 'Eczema in children',
+    slug: 'eczema', lang: 'en', title: 'Baby eczema',
     seoTitle: 'Baby Eczema or Dry Skin? Signs, Dry Patches & Causes',
     description: 'Dry patches on baby skin – eczema or just dry skin? How to recognize baby eczema, what causes it, what makes it worse and when to see a doctor.',
     input: 'content/en/eczema_en.md', output: 'en/eczema/index.html',
     hero: '/assets/article-eczema.jpg', heroWebp: '/assets/article-eczema.webp', heroSize: [4000, 6000],
     heroAlt: 'Hand covered with a small red skin rash',
-    cta: { eyebrow: 'Symptom calendar', heading: 'Track your baby’s eczema and find triggers', text: 'Log skin flares together with foods, illness and teething. Baby w/o allergies helps you see patterns and guides you through an elimination-exposure diet step by step.' },
+    cta: { eyebrow: 'Symptom calendar', heading: 'Track your baby’s eczema and find triggers', text: 'Log skin flares together with foods, illness and teething. Baby Without Allergies helps you see patterns and guides you through an elimination-exposure diet step by step.' },
     nav: NAV_EN,
   },
   {
@@ -57,7 +57,7 @@ const pages = [
     input: 'content/en/signs_en.md', output: 'en/signs/index.html',
     hero: '/assets/article-signs.png', heroWebp: '/assets/article-signs.webp', heroSize: [613, 393],
     heroAlt: 'Baby with a red, flushed cheek',
-    cta: { eyebrow: 'Symptom & food diary', heading: 'Log symptoms and foods in one diary', text: 'With Baby w/o allergies you can log eczema, tummy, stool and sleep in seconds – and more easily see which food keeps coming back before a flare-up.' },
+    cta: { eyebrow: 'Symptom & food diary', heading: 'Log symptoms and foods in one diary', text: 'With Baby Without Allergies you can log eczema, tummy, stool and sleep in seconds – and more easily see which food keeps coming back before a flare-up.' },
     nav: NAV_EN,
   },
   {
@@ -67,7 +67,7 @@ const pages = [
     input: 'content/en/main_en.md', output: 'en/main-suspects/index.html',
     hero: '/assets/article-main.jpg', heroWebp: '/assets/article-main.webp', heroSize: [3456, 3456],
     heroAlt: 'Fried eggs and a glass of milk – eggs and milk are among the main suspected foods',
-    cta: { eyebrow: 'Elimination diet step by step', heading: 'Go through phase 1 with a clear plan', text: 'Baby w/o allergies guides you through 14 days with simple daily steps, helps you track whether your baby is improving and suggests recipes that fit the current diet phase.' },
+    cta: { eyebrow: 'Elimination diet step by step', heading: 'Go through phase 1 with a clear plan', text: 'Baby Without Allergies guides you through 14 days with simple daily steps, helps you track whether your baby is improving and suggests recipes that fit the current diet phase.' },
     nav: NAV_EN,
   },
 ];
@@ -250,7 +250,7 @@ const GUIDE = {
       more: (c) => `More on ${c.toLowerCase()}`, allIn: (c) => `All articles on ${c.toLowerCase()} →`, fullGuide: 'Full guide →',
       allAbout: (c) => `Everything on ${c.toLowerCase()} →`, otherTopics: 'Other topics:', otherTopicsLabel: 'Other topics', chipsLabel: 'Guide categories', catEyebrow: 'Guide',
       hubEyebrow: 'A guide for parents', hubH1: 'A guide to eczema and food allergy in children',
-      hubLead: 'Articles from the Baby w/o allergies app: how to recognize allergy and eczema in a baby, how to go through an elimination diet and how to bring foods back safely.',
+      hubLead: 'Articles from the Baby Without Allergies app: how to recognize allergy and eczema in a baby, how to go through an elimination diet and how to bring foods back safely.',
       hubTitle: 'Guide to Eczema and Food Allergy in Babies and Children',
       hubDescription: 'Clear articles for parents of babies and toddlers: food allergy, the elimination diet step by step, eczema, itching, histamine and treatment.',
     },
@@ -465,12 +465,12 @@ const ABOUT = {
     jobTitle: 'výživová poradkyně',
   },
   en: {
-    path: '/en/about/', source: 'content/en/about.md', eyebrow: 'About', h1: 'About the Baby w/o allergies app', quote: '“It helps me make sense of what’s going on.”',
-    photoAlt: 'Jiřina Brázdová, creator of the Baby w/o allergies app', signatureLabel: 'Signature', signature: 'A mum who went through it herself and decided to create a tool that can help other parents too.',
+    path: '/en/about/', source: 'content/en/about.md', eyebrow: 'About', h1: 'About the Baby Without Allergies app', quote: '“It helps me make sense of what’s going on.”',
+    photoAlt: 'Jiřina Brázdová, creator of the Baby Without Allergies app', signatureLabel: 'Signature', signature: 'A mum who went through it herself and decided to create a tool that can help other parents too.',
     contactId: 'contact', contact: 'Contact', contactText: 'Do you have a question, an idea or feedback about the app? Write to me.',
-    cta: { eyebrow: 'Baby w/o allergies', heading: 'Try the app', text: 'A symptom and food diary, a step-by-step elimination diet, allergen testing and recipes – all in one place.' }, campaign: 'about-en',
-    title: 'About the Baby w/o allergies App – Our Story and Contact',
-    description: 'How the Baby w/o allergies app came about: the story of a mum of a child with eczema and food allergies, why the app exists and how to get in touch.',
+    cta: { eyebrow: 'Baby Without Allergies', heading: 'Try the app', text: 'A symptom and food diary, a step-by-step elimination diet, allergen testing and recipes – all in one place.' }, campaign: 'about-en',
+    title: 'About the Baby Without Allergies App – Our Story and Contact',
+    description: 'How the Baby Without Allergies app came about: the story of a mum of a child with eczema and food allergies, why the app exists and how to get in touch.',
     jobTitle: 'Nutrition consultant',
   },
 };

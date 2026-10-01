@@ -8,6 +8,14 @@ import path from 'node:path';
 import { root } from './lib/site.mjs';
 
 const OUTPUT = path.join(root, 'content/recepty/recipes.json');
+const OVERRIDES = JSON.parse(await fs.readFile(path.join(root, 'content/recepty/slug-overrides.json'), 'utf8'));
+
+// URL slug from a title: lowercase ASCII, words joined by dashes, at most ~60 characters.
+function slugify(text) {
+  const slug = String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  if (slug.length <= 60) return slug;
+  return slug.slice(0, 61).replace(/-[^-]*$/, '');
+}
 const TOKEN = process.env.STORYBLOK_TOKEN;
 
 const DIFFICULTY_LABELS = { easy: true, medium: true, hard: true };
@@ -70,7 +78,14 @@ async function main() {
   const allergenList = (ids) => [...new Set((ids || []).map((id) => allergenByUuid[id]).filter(Boolean))];
 
   const webRecipes = recipes.filter((story) => String(story.content?.component).toLowerCase() === 'recipe' && story.content.web === true);
-  const slugByUuid = Object.fromEntries(webRecipes.map((story) => [story.uuid, story.slug]));
+  // Web slugs: Storyblok fields web_slug / web_slug_en win, then content/recepty/slug-overrides.json,
+  // then the Storyblok slug (CZ) or the English title (EN).
+  const webSlug = (story) => (story.content.web_slug || '').trim() || OVERRIDES[story.slug]?.cs || story.slug;
+  const webSlugEn = (story) => {
+    const en = enByUuid[story.uuid];
+    return (story.content.web_slug_en || '').trim() || OVERRIDES[story.slug]?.en || slugify(en?.content?.title || story.content.title || story.slug);
+  };
+  const slugByUuid = Object.fromEntries(webRecipes.map((story) => [story.uuid, webSlug(story)]));
 
   const texts = (c, fallbackName) => ({
     title: (c.title || fallbackName).trim(),
@@ -93,7 +108,9 @@ async function main() {
     const en = enByUuid[story.uuid];
     const nutrition = (c.nutrition || [])[0] || {};
     return {
-      slug: story.slug,
+      slug: webSlug(story),
+      slugEn: webSlugEn(story),
+      storyblokSlug: story.slug,
       ...texts(c, story.name),
       image: c.image?.filename || null,
       imageAlt: c.image?.alt || '',
