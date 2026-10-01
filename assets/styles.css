@@ -878,3 +878,15 @@ body{
   .reveal{opacity:1 !important; transform:none !important; transition:none !important}
   .showcase-step__inner{transition:opacity .01s linear !important; filter:none !important}
 }
+
+/* Article author box + topic CTA copy (SEO phase 1) */
+.author-box{display:flex;align-items:center;gap:22px;margin:56px 0 0;padding:26px 28px;border:1px solid var(--border);border-radius:22px;background:#fff;box-shadow:0 10px 30px rgba(36,28,32,.06)}
+.author-box picture{flex:0 0 auto;line-height:0}
+.author-box__photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:0}
+.author-box__eyebrow{display:block;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--primary-2)}
+.author-box__name{display:block;font-size:1.25rem;margin:4px 0 2px;color:var(--dark)}
+.article-content .author-box__role{margin:0;color:var(--dark);line-height:1.5}
+.article-content .author-box__meta{margin:6px 0 0;font-size:.92rem;color:var(--muted);line-height:1.5}
+.author-box__meta a{color:var(--primary-2);font-weight:700}
+.article-cta p{margin:10px 0 0;color:#fff;max-width:460px;line-height:1.6;font-size:1rem}
+@media(max-width:700px){.author-box{align-items:flex-start;padding:22px}.author-box__photo{width:72px;height:72px}}

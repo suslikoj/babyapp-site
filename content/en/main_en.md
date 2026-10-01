@@ -1,4 +1,4 @@
-# **Phase 1 of the elimination diet**
+# **Elimination diet for babies and breastfeeding: phase 1**
 
 ## **What to plant and how to start with a baby or child?**
 
@@ -12,8 +12,8 @@ An elimination diet means that you eliminate foods from your diet that may cause
 
 It is most often used for:
 
-- eczema in children
-- suspected food allergy
+- [eczema in children](/en/eczema/)
+- [suspected food allergy](/en/signs/)
 - tummy aches, colic or reflux
 - mucus or blood in the stool
 
@@ -83,7 +83,7 @@ It is important that the child (or breastfeeding mother) has enough nutrients.
 
 ## **Does an elimination diet work for eczema?**
 
-Yes, in young children, an elimination diet is one of the most common ways to determine if eczema is food-related.
+Yes, in young children, an elimination diet is one of the most common ways to determine if [eczema](/en/eczema/) is food-related.
 
 If eczema improves during the diet, this is an important signal that food may play a role.
 

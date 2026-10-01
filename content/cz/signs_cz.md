@@ -1,10 +1,10 @@
-# **Projevy potravinové alergie u dětí**
+# **Jak poznat potravinovou alergii u miminka**
 
 
 
 ## **Jak poznat, že ji dítě má?**
 
-Potravinová alergie u miminka nebo malého dítěte se nemusí projevit jen vyrážkou. U některých dětí je reakce rychlá a nápadná, u jiných přichází až po několika hodinách nebo dnech. Právě proto bývá těžké poznat, zda za obtížemi opravdu stojí konkrétní potravina.
+Potravinová alergie u kojenců a batolat se nemusí projevit jen vyrážkou. U některých dětí je reakce rychlá a nápadná, u jiných přichází až po několika hodinách nebo dnech. Právě proto bývá těžké poznat, zda za obtížemi opravdu stojí konkrétní potravina.
 
 Projevy potravinové alergie se často zaměňují za reflux, citlivé bříško, růst zoubků, nachlazení nebo běžné zažívací potíže.
 
@@ -169,7 +169,7 @@ Opožděné alergie často nejsou vidět v běžných alergologických testech, 
 
 ## **Může být ekzém projevem potravinové alergie?**
 
-Ano. U malých dětí může být zhoršování ekzému jedním z projevů potravinové alergie.
+Ano. U malých dětí může být zhoršování [ekzému](/eczema/) jedním z projevů potravinové alergie.
 
 Typické je, že se ekzém zhorší po určité potravině nebo po potravině, kterou snědla kojící maminka. Reakce nemusí přijít hned. U opožděných reakcí se může ekzém zhoršit až po několika hodinách nebo druhý den.
 
@@ -206,7 +206,7 @@ Důležité signály jsou:
 - zlepšení po vynechání potraviny
 - zhoršení po jejím znovuzařazení
 
-Nejspolehlivější praktickou cestou bývá eliminačně–expoziční postup: potravina se na určitou dobu vyřadí a následně se řízeně znovu zavede.
+Nejspolehlivější praktickou cestou bývá [eliminačně–expoziční postup](/main-suspects/): potravina se na určitou dobu vyřadí a následně se řízeně znovu zavede.
 
 ## **Jaký je rozdíl mezi alergií a intolerancí?**
 
@@ -262,7 +262,7 @@ U kojených miminek se často projevuje přes mateřské mléko, hlavně ekzéme
 
 Rychlé IgE reakce bývají nápadné a mohou být nebezpečné. Opožděné non-IgE reakce jsou časté, ale hůř dohledatelné a často nejsou vidět v testech.
 
-Nejlepší způsob ověření bývá systematické sledování příznaků, eliminační fáze a následné řízené znovuzařazení potraviny.
+Nejlepší způsob ověření bývá systematické sledování příznaků, [eliminační fáze](/main-suspects/) a následné řízené znovuzařazení potraviny.
 
 Aplikace **Bejby bez alergií** tě tímto procesem provede krok za krokem — od záznamů příznaků přes sledování potravin až po přehlednější vyhodnocení souvislostí.
 
