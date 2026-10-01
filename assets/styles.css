@@ -583,7 +583,7 @@ html{scroll-padding-top:90px}
 }
 
 /* 2026 visual system and editorial experience */
-.brand__logo{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:50%;padding:4px;box-shadow:0 0 0 1px rgba(229,115,115,.15)}.topbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px)}
+.brand__logo{width:42px;height:42px;object-fit:contain}.topbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px)}
 .hero{position:relative;overflow:hidden;padding:72px 0 48px;background:radial-gradient(circle at 80% 20%,rgba(250,205,189,.6),transparent 32%)}
 .hero h1{max-width:720px;font-size:clamp(2.45rem,5vw,4.4rem);line-height:1.01}.hero .lead{font-size:clamp(1.05rem,2vw,1.28rem);max-width:640px}.hero__panel .panel__shot{filter:drop-shadow(0 26px 30px rgba(36,28,32,.2))}
 .section{padding:clamp(56px,8vw,96px) 0}.section h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;color:var(--dark)}
