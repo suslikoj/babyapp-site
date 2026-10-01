@@ -10,24 +10,13 @@ import { root } from './lib/site.mjs';
 const OUTPUT = path.join(root, 'content/recepty/recipes.json');
 const TOKEN = process.env.STORYBLOK_TOKEN;
 
-// České názvy alergenů a štítků – stejné jako v aplikaci (lib/lang/cs_cz_desc.dart).
-const ALLERGEN_LABELS = {
-  legumes: 'Luštěniny', wheat: 'Pšenice', oat: 'Oves', citrus: 'Citrusy', root: 'Kořenová zelenina', tomato: 'Rajče',
-  pepper: 'Paprika', exotic: 'Exotické ovoce', fish: 'Ryby', berries: 'Bobuloviny', egg: 'Vejce', poultry: 'Kuřecí',
-  milk: 'Mléko', beef: 'Hovězí', soya: 'Sója', cocoa: 'Kakao', seeds: 'Semínka', nuts: 'Ořechy', peanuts: 'Arašídy',
-  spices: 'Koření', honey: 'Med', carob: 'Karob', crustacean: 'Korýši',
-};
-const TAG_LABELS = {
-  under_30: 'Do 30 minut', vegan: 'Veganské', no_cook: 'Bez vaření', one_pot: 'Z jednoho hrnce', over_night: 'Přes noc',
-  travel: 'Na cesty', allergen_free: 'Bez alergenů', no_allergen: 'Bez alergenů', no_allergens: 'Bez alergenů',
-};
-const DIFFICULTY_LABELS = { easy: 'jednoduché', medium: 'středně těžké', hard: 'těžké' };
+const DIFFICULTY_LABELS = { easy: true, medium: true, hard: true };
 
-async function fetchAll(params) {
+async function fetchAll(params, language) {
   const stories = [];
   for (let page = 1; page < 20; page += 1) {
     const url = new URL('https://api.storyblok.com/v2/cdn/stories');
-    for (const [key, value] of Object.entries({ ...params, token: TOKEN, per_page: '100', page: String(page), version: 'published' })) url.searchParams.set(key, value);
+    for (const [key, value] of Object.entries({ ...params, token: TOKEN, per_page: '100', page: String(page), version: 'published', ...(language ? { language } : {}) })) url.searchParams.set(key, value);
     let response;
     for (let attempt = 0; attempt < 5; attempt += 1) {
       response = await fetch(url);
@@ -69,46 +58,56 @@ async function main() {
   }
 
   const recipes = await fetchAll({ starts_with: 'recipes/' });
+  const recipesEn = await fetchAll({ starts_with: 'recipes/' }, 'en');
   const categories = await fetchAll({ starts_with: 'recipe-category/' });
+  const categoriesEn = await fetchAll({ starts_with: 'recipe-category/' }, 'en');
   const allergens = await fetchAll({ starts_with: 'allergen/' });
+  const enByUuid = Object.fromEntries(recipesEn.map((story) => [story.uuid, story]));
+  const enCategoryTitle = Object.fromEntries(categoriesEn.map((c) => [c.uuid, (c.content?.title || '').trim()]));
 
-  const categoryByUuid = Object.fromEntries(categories.map((c) => [c.uuid, { slug: c.slug, name: c.name }]));
+  const categoryByUuid = Object.fromEntries(categories.map((c) => [c.uuid, { slug: c.slug, name: c.name, nameEn: enCategoryTitle[c.uuid] || c.name }]));
   const allergenByUuid = Object.fromEntries(allergens.map((a) => [a.uuid, a.slug]));
   const allergenList = (ids) => [...new Set((ids || []).map((id) => allergenByUuid[id]).filter(Boolean))];
 
   const webRecipes = recipes.filter((story) => String(story.content?.component).toLowerCase() === 'recipe' && story.content.web === true);
   const slugByUuid = Object.fromEntries(webRecipes.map((story) => [story.uuid, story.slug]));
 
+  const texts = (c, fallbackName) => ({
+    title: (c.title || fallbackName).trim(),
+    excerpt: (c.excerpt || '').trim(),
+    imageAlt: c.image?.alt || '',
+    ingredients: (c.Ingredients || c.ingredients || []).map((i) => ({
+      name: (i.name || '').trim(),
+      amount: (i.amount || '').trim(),
+      unit: (i.unit || '').trim(),
+      note: (i.note || '').trim(),
+      optional: Boolean(i.is_optional),
+      linkedSlug: slugByUuid[i.linked_recipe] || null,
+    })).filter((i) => i.name),
+    steps: (c.steps || []).map((s) => ({ text: (s.text || '').trim(), note: (s.note || '').trim() })).filter((s) => s.text),
+    tip: richTextToParagraphs(c.prep_tip),
+  });
+
   const normalized = webRecipes.map((story) => {
     const c = story.content;
+    const en = enByUuid[story.uuid];
     const nutrition = (c.nutrition || [])[0] || {};
     return {
       slug: story.slug,
-      title: (c.title || story.name).trim(),
-      excerpt: (c.excerpt || '').trim(),
+      ...texts(c, story.name),
       image: c.image?.filename || null,
       imageAlt: c.image?.alt || '',
       category: categoryByUuid[c.category] || null,
-      tags: [...new Set((c.tags || []).map((t) => TAG_LABELS[t]).filter(Boolean))],
       tagKeys: (c.tags || []).map((t) => (t.startsWith('no_allergen') || t === 'allergen_free' ? 'no_allergen' : t)),
       servings: number(c.servings),
-      difficulty: DIFFICULTY_LABELS[c.difficulty] || null,
+      difficultyKey: DIFFICULTY_LABELS[c.difficulty] ? c.difficulty : null,
       activeMinutes: number(c.active_minutes),
       cookMinutes: number(c.cook_minutes),
       totalMinutes: number(c.total_minutes),
       nutrition: { kcal: number(nutrition.kcal), protein: number(nutrition.protein), carbs: number(nutrition.carbs), fats: number(nutrition.fats) },
       contains: allergenList(c.contains_allergens),
       mayContain: allergenList(c.may_contain_allergens),
-      ingredients: (c.Ingredients || c.ingredients || []).map((i) => ({
-        name: (i.name || '').trim(),
-        amount: (i.amount || '').trim(),
-        unit: (i.unit || '').trim(),
-        note: (i.note || '').trim(),
-        optional: Boolean(i.is_optional),
-        linkedSlug: slugByUuid[i.linked_recipe] || null,
-      })).filter((i) => i.name),
-      steps: (c.steps || []).map((s) => ({ text: (s.text || '').trim(), note: (s.note || '').trim() })).filter((s) => s.text),
-      tip: richTextToParagraphs(c.prep_tip),
+      en: en ? texts(en.content, en.name) : null,
       published: (story.first_published_at || story.published_at || story.created_at || '').slice(0, 10),
       updated: (story.published_at || story.first_published_at || '').slice(0, 10),
     };
@@ -116,8 +115,7 @@ async function main() {
 
   const snapshot = {
     totalInApp: recipes.filter((story) => String(story.content?.component).toLowerCase() === 'recipe').length,
-    categories: categories.map((c) => ({ slug: c.slug, name: c.name })),
-    allergenLabels: ALLERGEN_LABELS,
+    categories: categories.map((c) => ({ slug: c.slug, name: c.name, nameEn: enCategoryTitle[c.uuid] || c.name })),
     recipes: normalized,
   };
 

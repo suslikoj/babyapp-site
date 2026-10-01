@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { categories, categoryPath } from '../../content/pruvodce.mjs';
+import { categories as categoriesEn, categoryPath as categoryPathEn } from '../../content/guide-en.mjs';
 
 // Shared page chrome and helpers for the static generators (articles, guide, recipes).
 
@@ -27,6 +28,12 @@ export const CTA = {
   diet: { eyebrow: 'Eliminační dieta krok za krokem', heading: 'Projděte eliminační dietou s jasným plánem', text: 'Aplikace Bejby bez alergií vás vede jednoduchými denními kroky – od hlavních podezřelých přes testování až po trénink alergenů – a nabízí recepty vhodné pro aktuální fázi diety.' },
 };
 export const CATEGORY_CTA = { 'potravinova-alergie': CTA.signs, 'eliminacni-dieta': CTA.diet, ekzem: CTA.eczema, 'specificka-temata': CTA.signs };
+export const CTA_EN = {
+  signs: { eyebrow: 'Symptom & food diary', heading: 'Log symptoms and foods in one diary', text: 'With Baby w/o allergies you can log eczema, tummy, stool and sleep in seconds – and more easily see which food keeps coming back before a flare-up.' },
+  eczema: { eyebrow: 'Symptom calendar', heading: 'Track your baby’s eczema and find triggers', text: 'Log skin flares together with foods, illness and teething. Baby w/o allergies helps you see patterns and guides you through an elimination–challenge diet step by step.' },
+  diet: { eyebrow: 'Elimination diet step by step', heading: 'Go through the elimination diet with a clear plan', text: 'Baby w/o allergies guides you with simple daily steps – from the main suspects through testing to allergen training – and suggests recipes that fit your current diet phase.' },
+};
+export const CATEGORY_CTA_EN = { 'food-allergy': CTA_EN.signs, 'elimination-diet': CTA_EN.diet, eczema: CTA_EN.eczema, 'special-topics': CTA_EN.signs };
 
 export function absoluteUrl(pathname) {
   return `${SITE_URL}${pathname}`;
@@ -72,55 +79,41 @@ export function storyblokSize(url, width) {
 
 // ── Shared page chrome ─────────────────────────────────────────────────
 
-// CZ: Aplikace · Průvodce (+ categories) · Recepty · O projektu. EN keeps the original article nav.
+// Same menu in both languages: App · Guide (+ categories) · Recipes · About.
+const MENU = {
+  cs: { label: 'Hlavní navigace', app: ['/', 'Aplikace'], guide: ['/pruvodce/', 'Průvodce'], recipes: ['/recepty/', 'Recepty'], about: ['/o-projektu/', 'O projektu'], categories: () => categories.map((c) => [categoryPath(c.slug), c.title]) },
+  en: { label: 'Main navigation', app: ['/en/', 'App'], guide: ['/en/guide/', 'Guide'], recipes: ['/en/recipes/', 'Recipes'], about: ['/en/about/', 'About'], categories: () => categoriesEn.map((c) => [categoryPathEn(c.slug), c.title]) },
+};
+
 export function topNav({ lang, active, czUrl, enUrl }) {
   const isEn = lang === 'en';
+  const m = MENU[lang];
   const current = (key) => (key === active ? ' class="is-active" aria-current="page"' : '');
   const langSwitch = `<div class="lang"><a class="lang__item${isEn ? '' : ' is-active'}" href="${czUrl}"${isEn ? '' : ' aria-current="page"'}>CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item${isEn ? ' is-active' : ''}" href="${enUrl}"${isEn ? ' aria-current="page"' : ''}>EN</a></div>`;
   const mobileLangs = `<div class="mobile__langs"><a${isEn ? '' : ' class="is-active"'} href="${czUrl}">CZ</a><a${isEn ? ' class="is-active"' : ''} href="${enUrl}">EN</a></div>`;
-  const brand = `<a class="brand" href="${isEn ? '/en/' : '/'}" aria-label="${BRAND[lang]}"><img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">${BRAND[lang]}</span></a>`;
+  const brand = `<a class="brand" href="${m.app[0]}" aria-label="${BRAND[lang]}"><img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">${BRAND[lang]}</span></a>`;
   const burger = `<button class="burger" id="burger" aria-label="${isEn ? 'Open menu' : 'Otevřít menu'}" aria-expanded="false"><span></span><span></span><span></span></button>`;
-
-  if (isEn) {
-    const items = [['app', '/en/', NAV_EN.app], ['eczema', '/en/eczema/', NAV_EN.eczema], ['signs', '/en/signs/', NAV_EN.signs], ['main-suspects', '/en/main-suspects/', NAV_EN.main]];
-    const links = items.map(([key, href, label]) => `<a href="${href}"${current(key)}>${label}</a>`).join('\n      ');
-    return `
-<header class="topbar">
-  <div class="container topbar__inner">
-    ${brand}
-    <nav class="nav nav--primary" aria-label="Main navigation">
-      ${links}
-    </nav>
-    ${langSwitch}
-    ${burger}
-  </div>
-  <div class="mobile" id="mobileNav" hidden>
-    ${links}
-    ${mobileLangs}
-  </div>
-</header>`;
-  }
-
-  const categoryLinks = categories.map((c) => `<a href="${categoryPath(c.slug)}">${c.title}</a>`).join('');
+  const categoryLinks = m.categories().map(([href, title]) => `<a href="${href}">${title}</a>`).join('');
+  const link = (key) => `<a href="${m[key][0]}"${current(key)}>${m[key][1]}</a>`;
   return `
 <header class="topbar">
   <div class="container topbar__inner">
     ${brand}
-    <nav class="nav nav--primary" aria-label="Hlavní navigace">
-      <a href="/"${current('app')}>Aplikace</a>
-      <div class="nav__group"><a href="/pruvodce/"${current('guide')} aria-haspopup="true">Průvodce</a><div class="nav__menu">${categoryLinks}</div></div>
-      <a href="/recepty/"${current('recipes')}>Recepty</a>
-      <a href="/o-projektu/"${current('about')}>O projektu</a>
+    <nav class="nav nav--primary" aria-label="${m.label}">
+      ${link('app')}
+      <div class="nav__group"><a href="${m.guide[0]}"${current('guide')} aria-haspopup="true">${m.guide[1]}</a><div class="nav__menu">${categoryLinks}</div></div>
+      ${link('recipes')}
+      ${link('about')}
     </nav>
     ${langSwitch}
     ${burger}
   </div>
   <div class="mobile" id="mobileNav" hidden>
-    <a href="/"${current('app')}>Aplikace</a>
-    <a href="/pruvodce/"${current('guide')}>Průvodce</a>
+    ${link('app')}
+    ${link('guide')}
     <div class="mobile__sub">${categoryLinks}</div>
-    <a href="/recepty/"${current('recipes')}>Recepty</a>
-    <a href="/o-projektu/"${current('about')}>O projektu</a>
+    ${link('recipes')}
+    ${link('about')}
     ${mobileLangs}
   </div>
 </header>`;
@@ -129,7 +122,7 @@ export function topNav({ lang, active, czUrl, enUrl }) {
 export function siteFooter(lang) {
   const isEn = lang === 'en';
   const links = isEn
-    ? [['/en/eczema/', 'Baby eczema'], ['/en/signs/', 'Food allergy signs in babies'], ['/en/main-suspects/', 'Elimination diet'], ['/en/privacy-policy/', 'Privacy Policy'], ['/en/medical-disclaimer/', 'Medical Disclaimer'], ['/en/terms-of-use/', 'Terms of Use'], ['/en/sources/', 'Sources']]
+    ? [['/en/guide/', 'Guide'], ['/en/recipes/', 'Recipes'], ['/en/about/', 'About'], ['/en/eczema/', 'Baby eczema'], ['/en/signs/', 'Food allergy signs in babies'], ['/en/main-suspects/', 'Elimination diet'], ['/en/privacy-policy/', 'Privacy Policy'], ['/en/medical-disclaimer/', 'Medical Disclaimer'], ['/en/terms-of-use/', 'Terms of Use'], ['/en/sources/', 'Sources']]
     : [['/pruvodce/', 'Průvodce'], ['/recepty/', 'Recepty'], ['/o-projektu/', 'O projektu'], ['/eczema/', 'Ekzém u miminka'], ['/signs/', 'Projevy potravinové alergie'], ['/main-suspects/', 'Eliminační dieta'], ['/privacy-policy/', 'Zásady ochrany osobních údajů'], ['/medical-disclaimer/', 'Zdravotní upozornění'], ['/terms-of-use/', 'Podmínky používání'], ['/zdroje/', 'Odborné zdroje']];
   return `<footer class="footer"><div class="container footer__inner"><p>© <span id="year"></span> ${BRAND[lang]}</p><div class="footer__links">${links.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</div></div></footer>`;
 }

@@ -1,8 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categories, articles as guideArticles, categoryPath, articlePath, categoryItems } from '../content/pruvodce.mjs';
-import { APP_STORE_ID, AUTHOR, BRAND, CATEGORY_CTA, CTA, NAV_EN, ORGANIZATION, PUBLISHED, SITE_URL, UPDATED, absoluteUrl, appCta, appStoreUrl, breadcrumbJsonLd, breadcrumbs, campaignId, escapeHtml, googlePlayUrl, localizedPath, renderPage, root, siteFooter, storeBadges, storyblokImage, storyblokSize, stripTags, topNav, write } from './lib/site.mjs';
+import * as guideCs from '../content/pruvodce.mjs';
+import * as guideEn from '../content/guide-en.mjs';
+import { APP_STORE_ID, AUTHOR, BRAND, CATEGORY_CTA, CATEGORY_CTA_EN, CTA, CTA_EN, NAV_EN, ORGANIZATION, PUBLISHED, SITE_URL, UPDATED, absoluteUrl, appCta, appStoreUrl, breadcrumbJsonLd, breadcrumbs, campaignId, escapeHtml, googlePlayUrl, localizedPath, renderPage, root, siteFooter, storeBadges, storyblokImage, storyblokSize, stripTags, topNav, write } from './lib/site.mjs';
 
 
 const NAV_CS = { app: 'Aplikace', eczema: 'Ekzém u dětí', signs: 'Projevy potravinové alergie', main: 'Eliminační dieta' };
@@ -215,34 +216,83 @@ function articleJsonLd({ lang, headline, description, image, url, published, mod
   };
 }
 
-const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
+// ── Guide: shared per-language settings ────────────────────────────────
 
-function guideTrail(categorySlug, last) {
-  const trail = [['Průvodce', '/pruvodce/']];
-  if (categorySlug) trail.push([categoryBySlug[categorySlug].title, categoryPath(categorySlug)]);
+const GUIDE = {
+  cs: {
+    mod: guideCs,
+    root: '/pruvodce/',
+    contentDir: 'content/cz/pruvodce',
+    image: '/assets/cz_screenshot.png',
+    cta: CTA,
+    categoryCta: CATEGORY_CTA,
+    legacyCategory: { eczema: 'ekzem', signs: 'potravinova-alergie', 'main-suspects': 'eliminacni-dieta' },
+    t: {
+      guide: 'Průvodce', summary: 'Ve zkratce', faq: 'Časté otázky', faqId: 'caste-otazky', readNext: 'Číst dále',
+      more: (c) => `Další články: ${c}`, allIn: (c) => `Všechny články v kategorii ${c} →`, fullGuide: 'Celý průvodce →',
+      allAbout: (c) => `Vše o tématu ${c} →`, otherTopics: 'Další témata:', otherTopicsLabel: 'Další témata', chipsLabel: 'Kategorie průvodce', catEyebrow: 'Průvodce',
+      hubEyebrow: 'Průvodce pro rodiče', hubH1: 'Průvodce ekzémem a potravinovou alergií u dětí',
+      hubLead: 'Články z aplikace Bejby bez alergií: jak alergii a ekzém u miminka poznat, jak projít eliminační dietou a jak potraviny bezpečně vracet zpět.',
+      hubTitle: 'Průvodce ekzémem a potravinovou alergií u dětí',
+      hubDescription: 'Srozumitelné články pro rodiče miminek a batolat: potravinová alergie, eliminační dieta krok za krokem, ekzém, svědění, histamin a léčba.',
+    },
+  },
+  en: {
+    mod: guideEn,
+    root: '/en/guide/',
+    contentDir: 'content/en/guide',
+    image: '/assets/en_screenshot.png',
+    cta: CTA_EN,
+    categoryCta: CATEGORY_CTA_EN,
+    legacyCategory: { eczema: 'eczema', signs: 'food-allergy', 'main-suspects': 'elimination-diet' },
+    t: {
+      guide: 'Guide', summary: 'In short', faq: 'Frequently asked questions', faqId: 'faq', readNext: 'Read next',
+      more: (c) => `More on ${c.toLowerCase()}`, allIn: (c) => `All articles on ${c.toLowerCase()} →`, fullGuide: 'Full guide →',
+      allAbout: (c) => `Everything on ${c.toLowerCase()} →`, otherTopics: 'Other topics:', otherTopicsLabel: 'Other topics', chipsLabel: 'Guide categories', catEyebrow: 'Guide',
+      hubEyebrow: 'A guide for parents', hubH1: 'A guide to eczema and food allergy in children',
+      hubLead: 'Articles from the Baby w/o allergies app: how to recognize allergy and eczema in a baby, how to go through an elimination diet and how to bring foods back safely.',
+      hubTitle: 'Guide to Eczema and Food Allergy in Babies and Children',
+      hubDescription: 'Clear articles for parents of babies and toddlers: food allergy, the elimination diet step by step, eczema, itching, histamine and treatment.',
+    },
+  },
+};
+
+// Czech ↔ English twins (articles via the `cs` field in content/guide-en.mjs).
+function twinArticle(article, lang) {
+  return lang === 'cs' ? guideEn.articles.find((a) => a.cs === article.slug) : guideCs.articles.find((a) => a.slug === article.cs);
+}
+function twinCategory(slug, lang) {
+  return lang === 'cs' ? guideEn.categories.find((c) => c.cs === slug)?.slug : guideEn.categories.find((c) => c.slug === slug)?.cs;
+}
+function pairOf(lang, ownPath, otherPath) {
+  if (!otherPath) return null;
+  return lang === 'cs' ? { cs: ownPath, en: otherPath } : { cs: otherPath, en: ownPath };
+}
+
+function guideTrail(lang, categorySlug, last) {
+  const g = GUIDE[lang];
+  const trail = [[g.t.guide, g.root]];
+  if (categorySlug) trail.push([g.mod.categories.find((c) => c.slug === categorySlug).title, g.mod.categoryPath(categorySlug)]);
   if (last) trail.push(last);
   return trail;
 }
 
-function relatedCards(categorySlug, currentHref) {
-  const items = categoryItems(categorySlug).filter((item) => item.href !== currentHref);
-  const category = categoryBySlug[categorySlug];
-  return `<section class="related"><h2>Další články: ${category.title}</h2><div class="related-grid">${items.map((item) => `<a class="related-card" href="${item.href}"><span>Číst dále</span><strong>${item.title}</strong></a>`).join('')}</div><p class="related__more"><a href="${categoryPath(categorySlug)}">Všechny články v kategorii ${category.title} →</a> · <a href="/pruvodce/">Celý průvodce →</a></p></section>`;
+function relatedCards(lang, categorySlug, currentHref) {
+  const g = GUIDE[lang];
+  const items = g.mod.categoryItems(categorySlug).filter((item) => item.href !== currentHref);
+  const category = g.mod.categories.find((c) => c.slug === categorySlug);
+  return `<section class="related"><h2>${g.t.more(category.title)}</h2><div class="related-grid">${items.map((item) => `<a class="related-card" href="${item.href}"><span>${g.t.readNext}</span><strong>${item.title}</strong></a>`).join('')}</div><p class="related__more"><a href="${g.mod.categoryPath(categorySlug)}">${g.t.allIn(category.title)}</a> · <a href="${g.root}">${g.t.fullGuide}</a></p></section>`;
 }
 
 // ── Legacy articles (/eczema/, /signs/, /main-suspects/ + EN) ──────────
 
-const LEGACY_CATEGORY = { eczema: 'ekzem', signs: 'potravinova-alergie', 'main-suspects': 'eliminacni-dieta' };
 const LEGACY_CTA = { eczema: CTA.eczema, signs: CTA.signs, 'main-suspects': { ...CTA.diet, heading: 'Projděte 1. fází diety s jasným plánem', text: 'Aplikace Bejby bez alergií vás 14 dní vede jednoduchými denními kroky, pomáhá sledovat, jestli se stav miminka zlepšuje, a nabízí recepty vhodné pro aktuální fázi diety.' } };
 
 function legacyArticlePage(page, bodyHtml, sourcesHtml) {
   const isEn = page.lang === 'en';
   const canonicalPath = localizedPath(page.slug, page.lang);
-  const categorySlug = isEn ? null : LEGACY_CATEGORY[page.slug];
-  const trail = isEn ? [['App', '/en/'], [page.title, canonicalPath]] : guideTrail(categorySlug, [page.title, canonicalPath]);
-  const related = isEn
-    ? `<section class="related"><h2>Related articles</h2><div class="related-grid">${pages.filter((item) => item.lang === page.lang && item.slug !== page.slug).map((item) => `<a class="related-card" href="${localizedPath(item.slug, item.lang)}"><span>Read next</span><strong>${item.title}</strong></a>`).join('')}</div></section>`
-    : relatedCards(categorySlug, canonicalPath);
+  const categorySlug = GUIDE[page.lang].legacyCategory[page.slug];
+  const trail = guideTrail(page.lang, categorySlug, [page.title, canonicalPath]);
   const [heroWidth, heroHeight] = page.heroSize;
   const main = `  ${breadcrumbs(page.lang, trail)}
   <section class="article-hero">
@@ -256,7 +306,7 @@ function legacyArticlePage(page, bodyHtml, sourcesHtml) {
     ${authorBox(page.lang)}
     ${medicalNote(page.lang)}
     ${appCta(page.lang, isEn ? page.cta : LEGACY_CTA[page.slug], campaignId(page.slug, page.lang))}
-    ${related}
+    ${relatedCards(page.lang, categorySlug, canonicalPath)}
   </article>`;
   const url = absoluteUrl(canonicalPath);
   return renderPage({
@@ -270,57 +320,62 @@ function legacyArticlePage(page, bodyHtml, sourcesHtml) {
     imageAlt: page.heroAlt,
     extraHead: [`<meta property="article:published_time" content="${PUBLISHED}" />`, `<meta property="article:modified_time" content="${UPDATED}" />`, `<meta property="article:author" content="${AUTHOR.name}" />`],
     jsonLd: [articleJsonLd({ lang: page.lang, headline: page.seoTitle, description: page.description, image: absoluteUrl(page.hero), url, published: PUBLISHED, modified: UPDATED }), breadcrumbJsonLd(trail)],
-    nav: topNav({ lang: page.lang, active: isEn ? page.slug : 'guide', czUrl: localizedPath(page.slug, 'cs'), enUrl: localizedPath(page.slug, 'en') }),
+    nav: topNav({ lang: page.lang, active: 'guide', czUrl: localizedPath(page.slug, 'cs'), enUrl: localizedPath(page.slug, 'en') }),
     main,
   });
 }
 
-// ── Guide articles (/pruvodce/<kategorie>/<clanek>/) ───────────────────
+// ── Guide articles (/pruvodce/<kategorie>/<clanek>/, /en/guide/<category>/<article>/) ──
 
-function faqSection(faq) {
+function faqSection(lang, faq) {
   if (!faq?.length) return '';
-  return `<section class="article-faq"><h2 id="caste-otazky">Časté otázky</h2><div class="faq">${faq.map(({ q, a }) => `<details><summary>${q}</summary><div><p>${a}</p></div></details>`).join('')}</div></section>`;
+  const { t } = GUIDE[lang];
+  return `<section class="article-faq"><h2 id="${t.faqId}">${t.faq}</h2><div class="faq">${faq.map(({ q, a }) => `<details><summary>${q}</summary><div><p>${a}</p></div></details>`).join('')}</div></section>`;
 }
 
-function guideArticlePage(article, markdown) {
-  const href = articlePath(article);
-  const category = categoryBySlug[article.category];
+function guideArticlePage(lang, article, markdown) {
+  const g = GUIDE[lang];
+  const href = g.mod.articlePath(article);
+  const twin = twinArticle(article, lang);
+  const twinHref = twin ? GUIDE[lang === 'cs' ? 'en' : 'cs'].mod.articlePath(twin) : null;
+  const category = g.mod.categories.find((c) => c.slug === article.category);
   const body = markdownToHtml(markdown.replace(/^\s*#\s+.+\n/, ''), { headingIds: ['h2', 'h3'] });
-  const trail = guideTrail(article.category, [article.title, href]);
+  const trail = guideTrail(lang, article.category, [article.title, href]);
   const [w, h] = storyblokSize(article.cover, 1600);
   const ogImage = storyblokImage(article.cover, 1200, 630);
-  const main = `  ${breadcrumbs('cs', trail)}
+  const main = `  ${breadcrumbs(lang, trail)}
   <section class="article-hero">
     <picture><source srcset="${storyblokImage(article.cover, 1600, 0, true)}" type="image/webp"><img src="${storyblokImage(article.cover, 1600)}" alt="${escapeHtml(article.coverAlt)}" class="article-hero__image" width="${w}" height="${h}" fetchpriority="high" decoding="async" /></picture>
   </section>
   <article class="article-content container">
-    ${articleMeta('cs')}
+    ${articleMeta(lang)}
     <h1>${article.h1}</h1>
-    <div class="article-summary"><strong>Ve zkratce</strong><p>${article.summary}</p></div>
-    ${tableOfContents(body, 'cs', article.faq?.length ? [['caste-otazky', 'Časté otázky']] : [])}
+    <div class="article-summary"><strong>${g.t.summary}</strong><p>${article.summary}</p></div>
+    ${tableOfContents(body, lang, article.faq?.length ? [[g.t.faqId, g.t.faq]] : [])}
     ${body}
-    ${faqSection(article.faq)}
-    ${authorBox('cs')}
-    ${medicalNote('cs')}
-    ${appCta('cs', CATEGORY_CTA[article.category], `${article.slug}-cz`)}
-    ${relatedCards(article.category, href)}
+    ${faqSection(lang, article.faq)}
+    ${authorBox(lang)}
+    ${medicalNote(lang)}
+    ${appCta(lang, g.categoryCta[article.category], `${article.slug}-${lang === 'cs' ? 'cz' : 'en'}`)}
+    ${relatedCards(lang, article.category, href)}
   </article>`;
   const url = absoluteUrl(href);
   const faqLd = article.faq?.length
     ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: article.faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }]
     : [];
+  const alternates = pairOf(lang, href, twinHref);
   return renderPage({
-    lang: 'cs',
+    lang,
     title: article.seoTitle,
     description: article.description,
     canonical: href,
-    alternates: null,
+    alternates,
     ogType: 'article',
     image: ogImage,
     imageAlt: article.coverAlt,
     extraHead: [`<meta property="article:published_time" content="${article.published}" />`, `<meta property="article:modified_time" content="${UPDATED}" />`, `<meta property="article:author" content="${AUTHOR.name}" />`, `<meta property="article:section" content="${category.title}" />`],
-    jsonLd: [articleJsonLd({ lang: 'cs', headline: article.seoTitle, description: article.description, image: ogImage, url, published: article.published, modified: UPDATED }), breadcrumbJsonLd(trail), ...faqLd],
-    nav: topNav({ lang: 'cs', active: 'guide', czUrl: href, enUrl: '/en/' }),
+    jsonLd: [articleJsonLd({ lang, headline: article.seoTitle, description: article.description, image: ogImage, url, published: article.published, modified: UPDATED }), breadcrumbJsonLd(trail), ...faqLd],
+    nav: topNav({ lang, active: 'guide', czUrl: alternates?.cs || '/', enUrl: alternates?.en || '/en/' }),
     main,
   });
 }
@@ -331,112 +386,137 @@ function card(item, eyebrow) {
   return `<a class="blog-card" href="${item.href}"><span>${eyebrow}</span><h3>${item.title}</h3><p>${item.description}</p></a>`;
 }
 
-function guideHubPage() {
-  const trail = guideTrail(null);
-  const sections = categories.map((c) => `<section class="guide-category" id="${c.slug}">
-      <div class="guide-category__head"><h2><a href="${categoryPath(c.slug)}">${c.title}</a></h2><p>${c.intro}</p></div>
-      <div class="blog-grid">${categoryItems(c.slug).map((item) => card(item, c.title)).join('')}</div>
-      <p class="guide-category__more"><a href="${categoryPath(c.slug)}">Vše o tématu ${c.title} →</a></p>
+function collectionLd(lang, name, description, href, items) {
+  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name, description, url: absoluteUrl(href), inLanguage: lang, publisher: ORGANIZATION, mainEntity: { '@type': 'ItemList', itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(item.href), name: item.title })) } };
+}
+
+function guideHubPage(lang) {
+  const g = GUIDE[lang];
+  const { categories: cats, categoryPath: catPath, categoryItems: catItems } = g.mod;
+  const trail = guideTrail(lang, null);
+  const sections = cats.map((c) => `<section class="guide-category" id="${c.slug}">
+      <div class="guide-category__head"><h2><a href="${catPath(c.slug)}">${c.title}</a></h2><p>${c.intro}</p></div>
+      <div class="blog-grid">${catItems(c.slug).map((item) => card(item, c.title)).join('')}</div>
+      <p class="guide-category__more"><a href="${catPath(c.slug)}">${g.t.allAbout(c.title)}</a></p>
     </section>`).join('\n    ');
-  const main = `  ${breadcrumbs('cs', trail)}
-  <section class="section guide-hub">
+  const main = `  <section class="section guide-hub">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">Průvodce pro rodiče</p><h1>Průvodce ekzémem a potravinovou alergií u dětí</h1></div><p>Články z aplikace Bejby bez alergií: jak alergii a ekzém u miminka poznat, jak projít eliminační dietou a jak potraviny bezpečně vracet zpět.</p></div>
-      <nav class="guide-chips" aria-label="Kategorie průvodce">${categories.map((c) => `<a href="#${c.slug}">${c.title}</a>`).join('')}</nav>
+      <div class="section-heading"><div><p class="eyebrow">${g.t.hubEyebrow}</p><h1>${g.t.hubH1}</h1></div><p>${g.t.hubLead}</p></div>
+      <nav class="guide-chips" aria-label="${g.t.chipsLabel}">${cats.map((c) => `<a href="#${c.slug}">${c.title}</a>`).join('')}</nav>
     ${sections}
-      ${appCta('cs', CTA.diet, 'pruvodce-cz')}
+      ${appCta(lang, g.cta.diet, `${lang === 'cs' ? 'pruvodce-cz' : 'guide-en'}`)}
     </div>
   </section>`;
-  const items = categories.flatMap((c) => categoryItems(c.slug));
+  const items = cats.flatMap((c) => catItems(c.slug));
   return renderPage({
-    lang: 'cs',
-    title: 'Průvodce ekzémem a potravinovou alergií u dětí',
-    description: 'Srozumitelné články pro rodiče miminek a batolat: potravinová alergie, eliminační dieta krok za krokem, ekzém, svědění, histamin a léčba.',
-    canonical: '/pruvodce/',
-    alternates: null,
-    image: absoluteUrl('/assets/cz_screenshot.png'),
-    jsonLd: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Průvodce ekzémem a potravinovou alergií u dětí', url: absoluteUrl('/pruvodce/'), inLanguage: 'cs', publisher: ORGANIZATION, mainEntity: { '@type': 'ItemList', itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(item.href), name: item.title })) } },
-      breadcrumbJsonLd(trail),
-    ],
-    nav: topNav({ lang: 'cs', active: 'guide', czUrl: '/pruvodce/', enUrl: '/en/' }),
+    lang,
+    title: g.t.hubTitle,
+    description: g.t.hubDescription,
+    canonical: g.root,
+    alternates: { cs: GUIDE.cs.root, en: GUIDE.en.root },
+    image: absoluteUrl(g.image),
+    jsonLd: [collectionLd(lang, g.t.hubTitle, g.t.hubDescription, g.root, items), breadcrumbJsonLd(trail)],
+    nav: topNav({ lang, active: 'guide', czUrl: GUIDE.cs.root, enUrl: GUIDE.en.root }),
     main,
   });
 }
 
-function categoryHubPage(category) {
-  const href = categoryPath(category.slug);
-  const trail = guideTrail(category.slug);
-  const items = categoryItems(category.slug);
-  const others = categories.filter((c) => c.slug !== category.slug);
-  const main = `  ${breadcrumbs('cs', trail)}
+function categoryHubPage(lang, category) {
+  const g = GUIDE[lang];
+  const href = g.mod.categoryPath(category.slug);
+  const twinSlug = twinCategory(category.slug, lang);
+  const twinHref = twinSlug ? GUIDE[lang === 'cs' ? 'en' : 'cs'].mod.categoryPath(twinSlug) : null;
+  const alternates = pairOf(lang, href, twinHref);
+  const trail = guideTrail(lang, category.slug);
+  const items = g.mod.categoryItems(category.slug);
+  const others = g.mod.categories.filter((c) => c.slug !== category.slug);
+  const main = `  ${breadcrumbs(lang, trail)}
   <section class="section guide-hub">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">Průvodce</p><h1>${category.title}</h1></div><p>${category.intro}</p></div>
+      <div class="section-heading"><div><p class="eyebrow">${g.t.catEyebrow}</p><h1>${category.title}</h1></div><p>${category.intro}</p></div>
       <div class="blog-grid">${items.map((item) => card(item, category.title)).join('')}</div>
-      <nav class="guide-chips guide-chips--others" aria-label="Další témata"><span>Další témata:</span>${others.map((c) => `<a href="${categoryPath(c.slug)}">${c.title}</a>`).join('')}</nav>
-      ${appCta('cs', CATEGORY_CTA[category.slug], `${category.slug}-cz`)}
+      <nav class="guide-chips guide-chips--others" aria-label="${g.t.otherTopicsLabel}"><span>${g.t.otherTopics}</span>${others.map((c) => `<a href="${g.mod.categoryPath(c.slug)}">${c.title}</a>`).join('')}</nav>
+      ${appCta(lang, g.categoryCta[category.slug], `${category.slug}-${lang === 'cs' ? 'cz' : 'en'}`)}
     </div>
   </section>`;
   return renderPage({
-    lang: 'cs',
+    lang,
     title: category.seoTitle,
     description: category.description,
     canonical: href,
-    alternates: null,
-    image: absoluteUrl('/assets/cz_screenshot.png'),
-    jsonLd: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: category.title, description: category.description, url: absoluteUrl(href), inLanguage: 'cs', publisher: ORGANIZATION, mainEntity: { '@type': 'ItemList', itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(item.href), name: item.title })) } },
-      breadcrumbJsonLd(trail),
-    ],
-    nav: topNav({ lang: 'cs', active: 'guide', czUrl: href, enUrl: '/en/' }),
+    alternates,
+    image: absoluteUrl(g.image),
+    jsonLd: [collectionLd(lang, category.title, category.description, href, items), breadcrumbJsonLd(trail)],
+    nav: topNav({ lang, active: 'guide', czUrl: alternates?.cs || '/', enUrl: alternates?.en || '/en/' }),
     main,
   });
 }
 
-// ── O projektu ─────────────────────────────────────────────────────────
+// ── O projektu / About ─────────────────────────────────────────────────
 
-function aboutPage(markdown) {
+const ABOUT = {
+  cs: {
+    path: '/o-projektu/', source: 'content/cz/o-projektu.md', eyebrow: 'O projektu', h1: 'O aplikaci Bejby bez alergií', quote: '„Pomáhá mi dávat smysl tomu, co se děje.“',
+    photoAlt: 'Jiřina Brázdová, autorka aplikace Bejby bez alergií', signatureLabel: 'Podpis', signature: 'Máma, která si tím sama prošla a rozhodla se vytvořit nástroj, který může pomoct i dalším rodičům.',
+    contactId: 'kontakt', contact: 'Kontakt', contactText: 'Máte dotaz, nápad nebo zpětnou vazbu k aplikaci? Napište mi.',
+    cta: { eyebrow: 'Bejby bez alergií', heading: 'Vyzkoušejte aplikaci', text: 'Deník příznaků a jídla, eliminační dieta krok za krokem, testování alergenů a recepty – na jednom místě.' }, campaign: 'o-projektu-cz',
+    title: 'O aplikaci Bejby bez alergií – příběh a kontakt',
+    description: 'Jak vznikla aplikace Bejby bez alergií: příběh mámy dítěte s ekzémem a potravinovými alergiemi, proč aplikace vznikla a jak mě kontaktovat.',
+    jobTitle: 'výživová poradkyně',
+  },
+  en: {
+    path: '/en/about/', source: 'content/en/about.md', eyebrow: 'About', h1: 'About the Baby w/o allergies app', quote: '“It helps me make sense of what’s going on.”',
+    photoAlt: 'Jiřina Brázdová, creator of the Baby w/o allergies app', signatureLabel: 'Signature', signature: 'A mum who went through it herself and decided to create a tool that can help other parents too.',
+    contactId: 'contact', contact: 'Contact', contactText: 'Do you have a question, an idea or feedback about the app? Write to me.',
+    cta: { eyebrow: 'Baby w/o allergies', heading: 'Try the app', text: 'A symptom and food diary, a step-by-step elimination diet, allergen testing and recipes – all in one place.' }, campaign: 'about-en',
+    title: 'About the Baby w/o allergies App – Our Story and Contact',
+    description: 'How the Baby w/o allergies app came about: the story of a mum of a child with eczema and food allergies, why the app exists and how to get in touch.',
+    jobTitle: 'Nutrition consultant',
+  },
+};
+
+function aboutPage(lang, markdown) {
+  const a = ABOUT[lang];
   const body = markdownToHtml(markdown);
   const main = `  <section class="section about-page">
     <div class="container">
       <div class="about-me about-page__head">
-        <picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="Jiřina Brázdová, autorka aplikace Bejby bez alergií" width="785" height="1046" fetchpriority="high" decoding="async"></picture>
+        <picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="${a.photoAlt}" width="785" height="1046" fetchpriority="high" decoding="async"></picture>
         <div>
-          <p class="eyebrow">O projektu</p>
-          <h1>O aplikaci Bejby bez alergií</h1>
-          <p class="about-page__quote">„Pomáhá mi dávat smysl tomu, co se děje.“</p>
+          <p class="eyebrow">${a.eyebrow}</p>
+          <h1>${a.h1}</h1>
+          <p class="about-page__quote">${a.quote}</p>
         </div>
       </div>
       <div class="article-content about-page__body">
         ${body}
-        <aside class="author-box about-page__signature" aria-label="Podpis"><picture><source srcset="${AUTHOR.photoWebp}" type="image/webp"><img class="author-box__photo" src="${AUTHOR.photo}" alt="${AUTHOR.name}" width="320" height="320" loading="lazy" decoding="async"></picture><div class="author-box__body"><strong class="author-box__name">Jiřina</strong><p class="author-box__role">Máma, která si tím sama prošla a rozhodla se vytvořit nástroj, který může pomoct i dalším rodičům.</p></div></aside>
-        <section class="about-page__contact" id="kontakt">
-          <h2>Kontakt</h2>
-          <p>Máte dotaz, nápad nebo zpětnou vazbu k aplikaci? Napište mi.</p>
+        <aside class="author-box about-page__signature" aria-label="${a.signatureLabel}"><picture><source srcset="${AUTHOR.photoWebp}" type="image/webp"><img class="author-box__photo" src="${AUTHOR.photo}" alt="${AUTHOR.name}" width="320" height="320" loading="lazy" decoding="async"></picture><div class="author-box__body"><strong class="author-box__name">Jiřina</strong><p class="author-box__role">${a.signature}</p></div></aside>
+        <section class="about-page__contact" id="${a.contactId}">
+          <h2>${a.contact}</h2>
+          <p>${a.contactText}</p>
           <div class="contact"><a class="btn btn--ghost" href="mailto:info@babyapp.cz">info@babyapp.cz</a><a class="btn btn--ghost" href="https://www.instagram.com/babyapp.cz/" target="_blank" rel="noreferrer">Instagram</a><a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61584966073544" target="_blank" rel="noreferrer">Facebook</a></div>
         </section>
-        ${appCta('cs', { eyebrow: 'Bejby bez alergií', heading: 'Vyzkoušejte aplikaci', text: 'Deník příznaků a jídla, eliminační dieta krok za krokem, testování alergenů a recepty – na jednom místě.' }, 'o-projektu-cz')}
+        ${appCta(lang, a.cta, a.campaign)}
       </div>
     </div>
   </section>`;
   return renderPage({
-    lang: 'cs',
-    title: 'O aplikaci Bejby bez alergií – příběh a kontakt',
-    description: 'Jak vznikla aplikace Bejby bez alergií: příběh mámy dítěte s ekzémem a potravinovými alergiemi, proč aplikace vznikla a jak mě kontaktovat.',
-    canonical: '/o-projektu/',
-    alternates: null,
+    lang,
+    title: a.title,
+    description: a.description,
+    canonical: a.path,
+    alternates: { cs: ABOUT.cs.path, en: ABOUT.en.path },
     image: absoluteUrl('/assets/me.jpg'),
-    imageAlt: 'Jiřina Brázdová, autorka aplikace Bejby bez alergií',
+    imageAlt: a.photoAlt,
     jsonLd: [{
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'O aplikaci Bejby bez alergií',
-      url: absoluteUrl('/o-projektu/'),
-      inLanguage: 'cs',
-      mainEntity: { ...ORGANIZATION, founder: { '@type': 'Person', name: AUTHOR.name, jobTitle: 'výživová poradkyně', image: absoluteUrl(AUTHOR.photo) }, email: 'info@babyapp.cz', sameAs: ['https://www.instagram.com/babyapp.cz/', 'https://www.facebook.com/profile.php?id=61584966073544'] },
+      name: a.h1,
+      url: absoluteUrl(a.path),
+      inLanguage: lang,
+      mainEntity: { ...ORGANIZATION, founder: { '@type': 'Person', name: AUTHOR.name, jobTitle: a.jobTitle, image: absoluteUrl(AUTHOR.photo) }, email: 'info@babyapp.cz', sameAs: ['https://www.instagram.com/babyapp.cz/', 'https://www.facebook.com/profile.php?id=61584966073544'] },
     }],
-    nav: topNav({ lang: 'cs', active: 'about', czUrl: '/o-projektu/', enUrl: '/en/' }),
+    nav: topNav({ lang, active: 'about', czUrl: ABOUT.cs.path, enUrl: ABOUT.en.path }),
     main,
   });
 }
@@ -449,16 +529,17 @@ for (const page of pages) {
   await write(page.output, legacyArticlePage(page, markdownToHtml(body), sources ? markdownToHtml(sources) : ''));
 }
 
-for (const article of guideArticles) {
-  const md = await fs.readFile(path.join(root, 'content/cz/pruvodce', `${article.slug}.md`), 'utf8');
-  await write(`${articlePath(article).slice(1)}index.html`, guideArticlePage(article, md));
+for (const lang of ['cs', 'en']) {
+  const g = GUIDE[lang];
+  for (const article of g.mod.articles) {
+    const md = await fs.readFile(path.join(root, g.contentDir, `${article.slug}.md`), 'utf8');
+    await write(`${g.mod.articlePath(article).slice(1)}index.html`, guideArticlePage(lang, article, md));
+  }
+  await write(`${g.root.slice(1)}index.html`, guideHubPage(lang));
+  for (const category of g.mod.categories) {
+    await write(`${g.mod.categoryPath(category.slug).slice(1)}index.html`, categoryHubPage(lang, category));
+  }
+  await write(`${ABOUT[lang].path.slice(1)}index.html`, aboutPage(lang, await fs.readFile(path.join(root, ABOUT[lang].source), 'utf8')));
 }
 
-await write('pruvodce/index.html', guideHubPage());
-for (const category of categories) {
-  await write(`${categoryPath(category.slug).slice(1)}index.html`, categoryHubPage(category));
-}
-
-await write('o-projektu/index.html', aboutPage(await fs.readFile(path.join(root, 'content/cz/o-projektu.md'), 'utf8')));
-
-console.log(`Built ${pages.length} legacy articles, ${guideArticles.length} guide articles, ${categories.length + 1} hubs and O projektu.`);
+console.log(`Built ${pages.length} legacy articles, ${guideCs.articles.length}+${guideEn.articles.length} guide articles, hubs and About pages (cs + en).`);

@@ -205,37 +205,23 @@
 <body>
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="/en/" aria-label="Baby w/o allergies">
-      <img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">Baby w/o allergies</span>
-    </a>
-
+    <a class="brand" href="/en/" aria-label="Baby w/o allergies"><img class="brand__logo" src="/assets/logo.svg" alt="" width="42" height="42"><span class="brand__name">Baby w/o allergies</span></a>
     <nav class="nav nav--primary" aria-label="Main navigation">
-      <a class="is-active" href="/en/" aria-current="page">App</a>
-      <a href="/en/eczema/">Eczema in children</a>
-      <a href="/en/signs/">Signs of food allergy</a>
-      <a href="/en/main-suspects/">Main suspects</a>
+      <a href="/en/" class="is-active" aria-current="page">App</a>
+      <div class="nav__group"><a href="/en/guide/" aria-haspopup="true">Guide</a><div class="nav__menu"><a href="/en/guide/food-allergy/">Food allergy</a><a href="/en/guide/elimination-diet/">Elimination diet</a><a href="/en/guide/eczema/">Eczema</a><a href="/en/guide/special-topics/">Special topics</a></div></div>
+      <a href="/en/recipes/">Recipes</a>
+      <a href="/en/about/">About</a>
     </nav>
-
-    <div class="lang">
-      <a class="lang__item" href="/">CZ</a>
-      <span class="lang__sep" aria-hidden="true">/</span>
-      <a class="lang__item is-active" href="/en/" aria-current="page">EN</a>
-    </div>
-
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="lang"><a class="lang__item" href="/">CZ</a><span class="lang__sep" aria-hidden="true">/</span><a class="lang__item is-active" href="/en/" aria-current="page">EN</a></div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-
   <div class="mobile" id="mobileNav" hidden>
-    <a class="is-active" href="/en/" aria-current="page">App</a>
-    <a href="/en/eczema/">Eczema in children</a>
-    <a href="/en/signs/">Signs of food allergy</a>
-    <a href="/en/main-suspects/">Main suspects</a>
-    <div class="mobile__langs">
-      <a href="/">CZ</a>
-      <a class="is-active" href="/en/">EN</a>
-    </div>
+    <a href="/en/" class="is-active" aria-current="page">App</a>
+    <a href="/en/guide/">Guide</a>
+    <div class="mobile__sub"><a href="/en/guide/food-allergy/">Food allergy</a><a href="/en/guide/elimination-diet/">Elimination diet</a><a href="/en/guide/eczema/">Eczema</a><a href="/en/guide/special-topics/">Special topics</a></div>
+    <a href="/en/recipes/">Recipes</a>
+    <a href="/en/about/">About</a>
+    <div class="mobile__langs"><a href="/">CZ</a><a class="is-active" href="/en/">EN</a></div>
   </div>
 </header>
 
@@ -340,7 +326,7 @@
   </section>
   <section class="section" id="how" style="content-visibility:auto;"><div class="container"><h2>How the app guides you</h2><ol class="steps"><li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Set your child’s situation</h3><p>The app adapts to where you are in the process.</p></div></li><li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Go through the elimination phase</h3><p>You get clear daily steps without unnecessary guessing.</p></div></li><li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Test allergens gradually</h3><p>Foods are reintroduced step by step and in an organized way.</p></div></li><li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>See patterns more clearly</h3><p>Records help you better understand what may be triggering symptoms.</p></div></li></ol></div></section>
   <section class="section" id="who" style="content-visibility:auto;"><div class="container"><h2>Who the app is for</h2><div class="cards cards--who"><article class="card reveal reveal--up"><p>Parents of babies and young children with eczema</p></article><article class="card reveal reveal--up"><p>Families dealing with suspected food allergy or intolerance</p></article><article class="card reveal reveal--up"><p>Parents going through an elimination diet</p></article><article class="card reveal reveal--up"><p>Those who have already tried many things and need a clearer system</p></article></div></div></section>
-  <section class="section" id="about" style="content-visibility:auto;"><div class="container about-me"><picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="Jiřina Brázdová, nutrition consultant and creator of the Baby w/o allergies app" width="785" height="1046" loading="lazy" decoding="async"></picture><div><h2>Hi, I’m Jiřina</h2><p>I’m a mum of a child with multiple allergies. I went through a period when I didn’t know what was triggering the symptoms – eczema, reactions, endless trying and uncertainty.</p><p>That’s why I created Baby without allergies, an app that helps parents manage difficult situations connected with eczema and food allergies in babies and children.</p><p>I wanted to create something parents can always have at hand and use as long-term support. I’m a nutrition consultant and a programming enthusiast.</p><p>I hope the app helps you as much as it helped me.</p></div></div></section>
+  <section class="section" id="about" style="content-visibility:auto;"><div class="container about-me"><picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="Jiřina Brázdová, nutrition consultant and creator of the Baby w/o allergies app" width="785" height="1046" loading="lazy" decoding="async"></picture><div><h2>Hi, I’m Jiřina</h2><p>I’m a mum of a child with multiple allergies. I went through a period when I didn’t know what was triggering the symptoms – eczema, reactions, endless trying and uncertainty.</p><p>That’s why I created Baby without allergies, an app that helps parents manage difficult situations connected with eczema and food allergies in babies and children.</p><p>I wanted to create something parents can always have at hand and use as long-term support. I’m a nutrition consultant and a programming enthusiast.</p><p>I hope the app helps you as much as it helped me.</p><p><a class="btn btn--ghost" href="/en/about/">The whole story behind the app →</a></p></div></div></section>
 
   <!-- DOWNLOAD EN -->
   <section class="section section--tint" id="testing" style="content-visibility:auto;">
@@ -365,6 +351,7 @@
     <div class="container"><div class="section-heading"><div><p class="eyebrow">Practical, clear guidance</p><h2>Guides for parents</h2></div><p>Health context translated into practical steps to discuss with your pediatrician or allergist.</p></div>
       <div class="featured-article"><picture><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Baby with a red, flushed cheek" width="613" height="393" loading="lazy" decoding="async"></picture><div><span>Featured article</span><h3>How to recognize signs of a food allergy</h3><p>Skin, digestive and immediate reactions—and when to seek urgent medical help.</p><a class="btn btn--primary" href="/en/signs/">Read the article</a></div></div>
       <div class="blog-grid"><a class="blog-card" href="/en/eczema/"><span>Eczema</span><h3>Eczema in children</h3><p>Possible triggers, skin care and how to track patterns.</p></a><a class="blog-card" href="/en/main-suspects/"><span>Elimination diet</span><h3>Main suspects</h3><p>A structured and safer approach to the first phase.</p></a></div>
+      <p class="guide-category__more"><a href="/en/guide/">The full guide: food allergy, elimination diet, eczema and more →</a></p>
     </div>
   </section>
 
@@ -400,7 +387,7 @@
   <div class="container footer__inner">
     <p>© <span id="year"></span> Baby w/o allergies</p>
     <p class="fine">Baby w/o allergies is available on the App Store and Google Play.</p>
-    <div class="footer__links"><a href="/en/eczema/">Baby eczema</a><a href="/en/signs/">Food allergy signs in babies</a><a href="/en/main-suspects/">Elimination diet</a><a href="/en/privacy-policy/">Privacy Policy</a><a href="/en/medical-disclaimer/">Medical Disclaimer</a><a href="/en/terms-of-use/">Terms of Use</a><a href="/en/sources/">Sources</a></div>
+    <div class="footer__links"><a href="/en/guide/">Guide</a><a href="/en/recipes/">Recipes</a><a href="/en/about/">About</a><a href="/en/eczema/">Baby eczema</a><a href="/en/signs/">Food allergy signs in babies</a><a href="/en/main-suspects/">Elimination diet</a><a href="/en/privacy-policy/">Privacy Policy</a><a href="/en/medical-disclaimer/">Medical Disclaimer</a><a href="/en/terms-of-use/">Terms of Use</a><a href="/en/sources/">Sources</a></div>
   </div>
 </footer>
 

@@ -3,106 +3,61 @@
   "categories": [
     {
       "slug": "smoothies_drinks",
-      "name": "Smoothie a nápoje"
+      "name": "Smoothie a nápoje",
+      "nameEn": "Smoothies & drinks"
     },
     {
       "slug": "dips_pestos",
-      "name": "Dipy a pesta"
+      "name": "Dipy a pesta",
+      "nameEn": "Dips & pestos"
     },
     {
       "slug": "bakery",
-      "name": "Pečivo"
+      "name": "Pečivo",
+      "nameEn": "Bakery"
     },
     {
       "slug": "sides_salads",
-      "name": "Přílohy a saláty"
+      "name": "Přílohy a saláty",
+      "nameEn": "Sides & salads"
     },
     {
       "slug": "spreads",
-      "name": "Pomazánky"
+      "name": "Pomazánky",
+      "nameEn": "Spreads"
     },
     {
       "slug": "savory_snacks",
-      "name": "Slané svačiny"
+      "name": "Slané svačiny",
+      "nameEn": "Savory snacks"
     },
     {
       "slug": "sweet",
-      "name": "Sladké dobroty"
+      "name": "Sladké dobroty",
+      "nameEn": "Sweet treats"
     },
     {
       "slug": "breakfasts",
-      "name": "Snídaně"
+      "name": "Snídaně",
+      "nameEn": "Breakfast"
     },
     {
       "slug": "soups",
-      "name": "Polévky"
+      "name": "Polévky",
+      "nameEn": "Soups"
     },
     {
       "slug": "mains",
-      "name": "Hlavní jídla"
+      "name": "Hlavní jídla",
+      "nameEn": "Mains"
     }
   ],
-  "allergenLabels": {
-    "legumes": "Luštěniny",
-    "wheat": "Pšenice",
-    "oat": "Oves",
-    "citrus": "Citrusy",
-    "root": "Kořenová zelenina",
-    "tomato": "Rajče",
-    "pepper": "Paprika",
-    "exotic": "Exotické ovoce",
-    "fish": "Ryby",
-    "berries": "Bobuloviny",
-    "egg": "Vejce",
-    "poultry": "Kuřecí",
-    "milk": "Mléko",
-    "beef": "Hovězí",
-    "soya": "Sója",
-    "cocoa": "Kakao",
-    "seeds": "Semínka",
-    "nuts": "Ořechy",
-    "peanuts": "Arašídy",
-    "spices": "Koření",
-    "honey": "Med",
-    "carob": "Karob",
-    "crustacean": "Korýši"
-  },
   "recipes": [
     {
       "slug": "avokadova-majoneza",
       "title": "Avokádová majonéza",
       "excerpt": "Krémový a svěží dip z avokáda s citronovou šťávou. Skvělý doplněk k pečené zelenině nebo masu.",
-      "image": "https://a.storyblok.com/f/289317949964253/408x612/6e8538ce09/avomajo.png",
       "imageAlt": "",
-      "category": {
-        "slug": "dips_pestos",
-        "name": "Dipy a pesta"
-      },
-      "tags": [
-        "Do 30 minut",
-        "Veganské",
-        "Bez vaření"
-      ],
-      "tagKeys": [
-        "under_30",
-        "vegan",
-        "no_cook"
-      ],
-      "servings": 4,
-      "difficulty": "jednoduché",
-      "activeMinutes": 5,
-      "cookMinutes": null,
-      "totalMinutes": 5,
-      "nutrition": {
-        "kcal": 160,
-        "protein": 2,
-        "carbs": 6,
-        "fats": 15
-      },
-      "contains": [],
-      "mayContain": [
-        "citrus"
-      ],
       "ingredients": [
         {
           "name": "Avokádo zralé",
@@ -142,44 +97,345 @@
       "tip": [
         "Citronová šťáva nejen dochutí, ale zároveň zpomalí hnědnutí avokáda."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/408x612/6e8538ce09/avomajo.png",
+      "category": {
+        "slug": "dips_pestos",
+        "name": "Dipy a pesta",
+        "nameEn": "Dips & pestos"
+      },
+      "tagKeys": [
+        "under_30",
+        "vegan",
+        "no_cook"
+      ],
+      "servings": 4,
+      "difficultyKey": "easy",
+      "activeMinutes": 5,
+      "cookMinutes": null,
+      "totalMinutes": 5,
+      "nutrition": {
+        "kcal": 160,
+        "protein": 2,
+        "carbs": 6,
+        "fats": 15
+      },
+      "contains": [],
+      "mayContain": [
+        "citrus"
+      ],
+      "en": {
+        "title": "Avocado mayonnaise",
+        "excerpt": "Creamy and fresh avocado dip with lemon juice. A great addition to roasted vegetables or meat.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Ripe avocado",
+            "amount": "2",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Lemon juice",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Cut the avocado, remove the pit and scoop the flesh into a bowl.",
+            "note": ""
+          },
+          {
+            "text": "Mash with a fork or blend until smooth.",
+            "note": ""
+          },
+          {
+            "text": "Add lemon juice and salt.",
+            "note": ""
+          },
+          {
+            "text": "Mix until creamy.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "Lemon juice not only adds flavor, but also slows down the browning of the avocado."
+        ]
+      },
       "published": "2026-03-31",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "bananovy-chlebicek",
+      "title": "Banánový chlebíček",
+      "excerpt": "Vláčný banánový chlebíček bez vajec, který lze snadno upravit pro testování nebo trénování vybraných alergenů. Skvělý jako svačina nebo snídaně.",
+      "imageAlt": "",
+      "ingredients": [
+        {
+          "name": "Drcená lněná semínka",
+          "amount": "1.5",
+          "unit": "lžíce",
+          "note": "nebo 0,5 banánu navíc",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Banán",
+          "amount": "5",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rozpuštěný tuk",
+          "amount": "1",
+          "unit": "třetina (1/3) hrnku",
+          "note": "ghí, sádlo, kokosový tuk nebo máslo",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Voda či rostlinné mléko",
+          "amount": "1",
+          "unit": "polovina (1/2) hrnku",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Sůl",
+          "amount": "1",
+          "unit": "půlka lžičky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Kokosová mouka",
+          "amount": "1",
+          "unit": "polovina (1/2) hrnku",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rýžová mouka",
+          "amount": "1",
+          "unit": "polovina (1/2) hrnku",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Troubu předehřejte na 180 °C.",
+          "note": ""
+        },
+        {
+          "text": "Drcená lněná semínka smíchejte s 4 lžícemi vody a nechte asi 5 minut nabobtnat.",
+          "note": ""
+        },
+        {
+          "text": "V míse rozmačkejte 4 banány.",
+          "note": ""
+        },
+        {
+          "text": "Přidejte nabobtnalá semínka, rozpuštěný tuk, tekutinu a sůl.",
+          "note": ""
+        },
+        {
+          "text": "Promíchejte.",
+          "note": ""
+        },
+        {
+          "text": "Přidejte kokosovou a rýžovou mouku a vytvořte hladké těsto.",
+          "note": ""
+        },
+        {
+          "text": "Formu na chlebíček vyložte pečicím papírem nebo vymažte tukem.",
+          "note": ""
+        },
+        {
+          "text": "Přesuňte těsto do formy.",
+          "note": ""
+        },
+        {
+          "text": "Poslední banán podélně rozkrojte napůl a položte na povrch těsta.",
+          "note": ""
+        },
+        {
+          "text": "Lehce jej zatlačte do těsta.",
+          "note": ""
+        },
+        {
+          "text": "Pečte cca 60 minut, dokud není chlebíček propečený a zlatavý.",
+          "note": ""
+        },
+        {
+          "text": "Nechte vychladnout před krájením.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Tento recept lze snadno upravit pro zařazování nebo trénování alergenů. Díky tomu, že je pečený po dlouhou dobu, bývá dobře snášen a umožňuje rovnoměrné rozložení testované suroviny do více porcí. Například při testování mléka lze použít máslo nebo kravské mléko místo bezmléčných alternativ."
+      ],
+      "image": "https://a.storyblok.com/f/289317949964253/447x559/12552272e8/chlebik.png",
+      "category": {
+        "slug": "sweet",
+        "name": "Sladké dobroty",
+        "nameEn": "Sweet treats"
+      },
+      "tagKeys": [
+        "vegan"
+      ],
+      "servings": 12,
+      "difficultyKey": "easy",
+      "activeMinutes": 15,
+      "cookMinutes": 60,
+      "totalMinutes": 75,
+      "nutrition": {
+        "kcal": 150,
+        "protein": 2,
+        "carbs": 20,
+        "fats": 7
+      },
+      "contains": [
+        "exotic"
+      ],
+      "mayContain": [
+        "seeds"
+      ],
+      "en": {
+        "title": "Banana bread",
+        "excerpt": "A soft, egg-free banana bread that can be easily adapted for testing or training specific allergens. Great as a snack or breakfast.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Crushed flax seeds",
+            "amount": "1.5",
+            "unit": "spoon",
+            "note": "nebo 0,5 banánu navíc",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Bananas",
+            "amount": "5",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Melted fat",
+            "amount": "1",
+            "unit": "third (1/3) of a cup",
+            "note": "ghee, lard, coconut fat or butter",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Water or plant-based milk",
+            "amount": "1",
+            "unit": "half (1/2) cup",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Salt",
+            "amount": "1",
+            "unit": "half a teaspoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Coconut flour",
+            "amount": "1",
+            "unit": "half (1/2) cup",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Rice flour",
+            "amount": "1",
+            "unit": "half (1/2) cup",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Preheat the oven to 180°C.",
+            "note": ""
+          },
+          {
+            "text": "Mix the crushed flax seeds with 4 tablespoons of water and let them swell for about 5 minutes.",
+            "note": ""
+          },
+          {
+            "text": "Mash 4 bananas in a bowl.",
+            "note": ""
+          },
+          {
+            "text": "Add the seeds, melted fat, liquid and salt.",
+            "note": ""
+          },
+          {
+            "text": "Mix.",
+            "note": ""
+          },
+          {
+            "text": "Add the coconut and rice flour and make a smooth dough.",
+            "note": ""
+          },
+          {
+            "text": "Line the sandwich tin with baking paper or grease it.",
+            "note": ""
+          },
+          {
+            "text": "Transfer the dough to the mold.",
+            "note": ""
+          },
+          {
+            "text": "Cut the last banana in half lengthwise and place on the surface of the dough.",
+            "note": ""
+          },
+          {
+            "text": "Press it lightly into the dough.",
+            "note": ""
+          },
+          {
+            "text": "Bake for about 60 minutes until the bread is baked and golden.",
+            "note": ""
+          },
+          {
+            "text": "Let cool before slicing.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "This recipe can be easily adapted for allergen testing or training. Because it is baked for a long time, it tends to be well tolerated and allows for even distribution of the test ingredient across multiple servings. For example, when testing milk, butter or cow's milk can be used instead of dairy-free alternatives."
+        ]
+      },
+      "published": "2026-06-05",
       "updated": "2026-10-01"
     },
     {
       "slug": "boruvkovo-jablecne-smoothie-s-avokadem",
       "title": "Borůvkovo-jablečné smoothie s avokádem",
       "excerpt": "Ovocné smoothie s jemnou krémovou strukturou díky avokádu. Borůvky přinášejí antioxidanty (zejména anthokyany), jablko vlákninu a přirozenou sladkost. Rychlá svačina nebo lehká snídaně bez přidaného cukru.",
-      "image": "https://a.storyblok.com/f/289317949964253/612x408/431d6ad5ba/smooth.png",
       "imageAlt": "",
-      "category": {
-        "slug": "smoothies_drinks",
-        "name": "Smoothie a nápoje"
-      },
-      "tags": [
-        "Na cesty",
-        "Do 30 minut",
-        "Bez vaření"
-      ],
-      "tagKeys": [
-        "travel",
-        "under_30",
-        "no_cook"
-      ],
-      "servings": 2,
-      "difficulty": "jednoduché",
-      "activeMinutes": 5,
-      "cookMinutes": null,
-      "totalMinutes": null,
-      "nutrition": {
-        "kcal": 220,
-        "protein": 3,
-        "carbs": 28,
-        "fats": 12
-      },
-      "contains": [
-        "berries"
-      ],
-      "mayContain": [],
       "ingredients": [
         {
           "name": "Jablko",
@@ -239,6 +495,96 @@
       "tip": [
         "Pro hustší smoothie přidej méně vody, pro lehčí konzistenci naopak více. Pokud chceš chladnější variantu, použij mražené borůvky."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/431d6ad5ba/smooth.png",
+      "category": {
+        "slug": "smoothies_drinks",
+        "name": "Smoothie a nápoje",
+        "nameEn": "Smoothies & drinks"
+      },
+      "tagKeys": [
+        "travel",
+        "under_30",
+        "no_cook"
+      ],
+      "servings": 2,
+      "difficultyKey": "easy",
+      "activeMinutes": 5,
+      "cookMinutes": null,
+      "totalMinutes": 5,
+      "nutrition": {
+        "kcal": 220,
+        "protein": 3,
+        "carbs": 28,
+        "fats": 12
+      },
+      "contains": [
+        "berries"
+      ],
+      "mayContain": [],
+      "en": {
+        "title": "Blueberry-apple smoothie with avocado",
+        "excerpt": "A fruit smoothie with a delicate creamy texture thanks to avocado. Blueberries provide antioxidants (especially anthocyanins), apples provide fiber and natural sweetness. A quick snack or light breakfast with no added sugar.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Apple",
+            "amount": "1",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Blueberries",
+            "amount": "2",
+            "unit": "handfuls",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Avocado",
+            "amount": "1",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Water",
+            "amount": "0.5",
+            "unit": "cup",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Wash the apple and remove the core.",
+            "note": ""
+          },
+          {
+            "text": "Halve the avocado, remove the pulp.",
+            "note": ""
+          },
+          {
+            "text": "Put everything in a blender, add water.",
+            "note": ""
+          },
+          {
+            "text": "Mix until smooth.",
+            "note": ""
+          },
+          {
+            "text": "Serve immediately.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "For a thicker smoothie, add less water, for a lighter consistency, add more. For a colder version, use frozen blueberries."
+        ]
+      },
       "published": "2026-02-14",
       "updated": "2026-10-01"
     },
@@ -246,31 +592,7 @@
       "slug": "bun-cha",
       "title": "Bún chả – vepřový bok s rýžovými nudlemi a bylinkami",
       "excerpt": "Lehčí domácí varianta vietnamského bún chả. Marinovaný vepřový bok dodá plnou chuť a kvalitní tuky, rýžové nudle jsou přirozeně bez lepku a čerstvá zelenina s bylinkami jídlo odlehčí. Sladkokyselá zálivka podporuje trávení a vyvažuje tučnost masa.",
-      "image": "https://a.storyblok.com/f/289317949964253/612x408/1799780f9c/buncha.PNG",
       "imageAlt": "",
-      "category": {
-        "slug": "mains",
-        "name": "Hlavní jídla"
-      },
-      "tags": [
-        "Bez alergenů"
-      ],
-      "tagKeys": [
-        "no_allergen"
-      ],
-      "servings": 4,
-      "difficulty": "středně těžké",
-      "activeMinutes": 25,
-      "cookMinutes": 45,
-      "totalMinutes": 70,
-      "nutrition": {
-        "kcal": 520,
-        "protein": 26,
-        "carbs": 48,
-        "fats": 25
-      },
-      "contains": [],
-      "mayContain": [],
       "ingredients": [
         {
           "name": "Maso:",
@@ -450,6 +772,212 @@
       "tip": [
         "Pokud chceš lehčí verzi, použij menší porci masa a přidej více zeleniny a bylinek. Maso lze připravit předem a druhý den jen krátce ohřát."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/1799780f9c/buncha.PNG",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla",
+        "nameEn": "Mains"
+      },
+      "tagKeys": [
+        "no_allergen"
+      ],
+      "servings": 4,
+      "difficultyKey": "medium",
+      "activeMinutes": 25,
+      "cookMinutes": 45,
+      "totalMinutes": 70,
+      "nutrition": {
+        "kcal": 520,
+        "protein": 26,
+        "carbs": 48,
+        "fats": 25
+      },
+      "contains": [],
+      "mayContain": [],
+      "en": {
+        "title": "Bún chả – pork flank with rice noodles and herbs",
+        "excerpt": "A lighter, homemade version of Vietnamese bún chả. Marinated pork belly adds full flavor and quality fats, rice noodles are naturally gluten-free, and fresh vegetables and herbs lighten the meal. The sweet and sour dressing supports digestion and balances the fat content of the meat.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Meat:",
+            "amount": "",
+            "unit": "",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Pork flank",
+            "amount": "500",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Rice vinegar",
+            "amount": "1",
+            "unit": "spoon",
+            "note": "či jablečný",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Coconut sugar",
+            "amount": "1",
+            "unit": "spoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Salt",
+            "amount": "1",
+            "unit": "teaspoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Grated garlic",
+            "amount": "2",
+            "unit": "cloves",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Grated ginger",
+            "amount": "2",
+            "unit": "cm",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Coriander",
+            "amount": "0.5",
+            "unit": "teaspoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Noodles and vegetables:",
+            "amount": "",
+            "unit": "",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Rice noodle",
+            "amount": "150",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Sweet potato",
+            "amount": "1",
+            "unit": "pc",
+            "note": "",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Salad",
+            "amount": "4",
+            "unit": "handfuls",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Cucumber",
+            "amount": "2",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Herbs",
+            "amount": "1",
+            "unit": "handful",
+            "note": "mint, coriander",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Dressing:",
+            "amount": "",
+            "unit": "",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Water",
+            "amount": "9",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Apple cider vinegar",
+            "amount": "3",
+            "unit": "teaspoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Sweetener",
+            "amount": "1.5",
+            "unit": "spoon",
+            "note": "honey, maple syrup",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Grated ginger",
+            "amount": "1.5",
+            "unit": "teaspoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Marinate the meat: Clean the meat and cut it into slices or larger cubes. In a bowl, mix the vinegar, sugar/syrup, garlic, ginger, salt and spices. Cover the meat in the marinade thoroughly and let it sit for at least 30 minutes, ideally overnight in the refrigerator.",
+            "note": ""
+          },
+          {
+            "text": "Meat preparation: Baking: Place the meat in a baking dish, cover and bake at 160°C for 45-60 minutes, then uncover and bake briefly until crispy.\nOr pan: Sear first in a dry pan, skin side down, then turn, add the marinade and caramelize.",
+            "note": ""
+          },
+          {
+            "text": "Noodles and vegetables:\nPrepare rice noodles according to package directions. Grate sweet potato, tear lettuce, slice cucumber, and chop herbs.",
+            "note": ""
+          },
+          {
+            "text": "Dressing: Mix all the ingredients for the dressing and taste – it should be slightly sweet and sour.",
+            "note": ""
+          },
+          {
+            "text": "Serving: Place noodles, vegetables, meat in bowls and pour dressing over. Serve immediately.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "For a lighter version, use less meat and add more vegetables and herbs. The meat can be prepared in advance and reheated briefly the next day."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     },
@@ -457,35 +985,7 @@
       "slug": "dort-s-dynovo-bananovym-kremem",
       "title": "Dort s dýňovo-banánovým krémem",
       "excerpt": "Jednoduchý domácí dort vhodný k oslavě prvních narozenin. Korpus z banánového chlebíku doplňuje jemný krém z dýně, banánu a bílých fazolí.",
-      "image": "https://a.storyblok.com/f/289317949964253/433x577/88398487fc/dort.png",
       "imageAlt": "",
-      "category": {
-        "slug": "sweet",
-        "name": "Sladké dobroty"
-      },
-      "tags": [
-        "Veganské"
-      ],
-      "tagKeys": [
-        "vegan"
-      ],
-      "servings": 12,
-      "difficulty": "středně těžké",
-      "activeMinutes": 40,
-      "cookMinutes": 40,
-      "totalMinutes": 80,
-      "nutrition": {
-        "kcal": 220,
-        "protein": 4,
-        "carbs": 30,
-        "fats": 10
-      },
-      "contains": [
-        "exotic"
-      ],
-      "mayContain": [
-        "spices"
-      ],
       "ingredients": [
         {
           "name": "Těsto na korpus",
@@ -493,7 +993,7 @@
           "unit": "ks",
           "note": "",
           "optional": false,
-          "linkedSlug": null
+          "linkedSlug": "bananovy-chlebicek"
         },
         {
           "name": "Uvařené bílé fazole",
@@ -569,6 +1069,120 @@
       "tip": [
         "Krém připrav s předstihem a nech ho před zdobením dobře vychladit – bude se lépe roztírat a dort bude stabilnější."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/88398487fc/dort.png",
+      "category": {
+        "slug": "sweet",
+        "name": "Sladké dobroty",
+        "nameEn": "Sweet treats"
+      },
+      "tagKeys": [
+        "vegan"
+      ],
+      "servings": 12,
+      "difficultyKey": "medium",
+      "activeMinutes": 40,
+      "cookMinutes": 40,
+      "totalMinutes": 80,
+      "nutrition": {
+        "kcal": 220,
+        "protein": 4,
+        "carbs": 30,
+        "fats": 10
+      },
+      "contains": [
+        "exotic"
+      ],
+      "mayContain": [
+        "spices"
+      ],
+      "en": {
+        "title": "Cake with pumpkin-banana cream",
+        "excerpt": "A simple homemade cake suitable for celebrating a first birthday. The banana bread base is complemented by a delicate pumpkin, banana and white bean cream.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Dough for the crust",
+            "amount": "1",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": "bananovy-chlebicek"
+          },
+          {
+            "name": "Cooked white beans",
+            "amount": "125",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Pumpkin puree",
+            "amount": "2",
+            "unit": "cups",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Pudding",
+            "amount": "250",
+            "unit": "ml",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Bananas",
+            "amount": "2",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Grated coconut",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Coconut oil",
+            "amount": "3",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Crust:",
+            "note": ""
+          },
+          {
+            "text": "Prepare according to the banana bread recipe - divide the dough into two halves and bake each separately in a cake tin for approximately 20 minutes.",
+            "note": ""
+          },
+          {
+            "text": "Blend white beans, pumpkin puree, bananas, grated coconut, coconut oil and finished vanilla pudding until smooth.",
+            "note": ""
+          },
+          {
+            "text": "Let the cream cool.",
+            "note": ""
+          },
+          {
+            "text": "Spread the cooled cake base with cream, place the second part of the base on top and spread the cream on the sides and top of the cake.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "Prepare the cream in advance and let it cool well before decorating - it will spread better and the cake will be more stable."
+        ]
+      },
       "published": "2026-09-26",
       "updated": "2026-10-01"
     },
@@ -576,37 +1190,7 @@
       "slug": "fermentovany-pohankovy-chlebik",
       "title": "Fermentovaný pohankový chlebík",
       "excerpt": "Jednoduchý fermentovaný chléb pouze z pohanky, bez mouky a droždí. Díky přirozené fermentaci je lépe stravitelný a podporuje střevní mikrobiom.",
-      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/da795bf0b2/chlebik.png",
       "imageAlt": "",
-      "category": {
-        "slug": "bakery",
-        "name": "Pečivo"
-      },
-      "tags": [
-        "Veganské",
-        "Na cesty",
-        "Bez alergenů"
-      ],
-      "tagKeys": [
-        "vegan",
-        "travel",
-        "no_allergen"
-      ],
-      "servings": 12,
-      "difficulty": "středně těžké",
-      "activeMinutes": 15,
-      "cookMinutes": 60,
-      "totalMinutes": 75,
-      "nutrition": {
-        "kcal": 135,
-        "protein": 4,
-        "carbs": 26,
-        "fats": 1
-      },
-      "contains": [],
-      "mayContain": [
-        "seeds"
-      ],
       "ingredients": [
         {
           "name": "Pohanka",
@@ -670,6 +1254,100 @@
       "tip": [
         "Chlebík je nejlepší až po úplném vychladnutí. Pokud ho nespotřebuješ hned, můžeš ho nakrájet na plátky a zamrazit."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/da795bf0b2/chlebik.png",
+      "category": {
+        "slug": "bakery",
+        "name": "Pečivo",
+        "nameEn": "Bakery"
+      },
+      "tagKeys": [
+        "vegan",
+        "travel",
+        "no_allergen"
+      ],
+      "servings": 12,
+      "difficultyKey": "medium",
+      "activeMinutes": 15,
+      "cookMinutes": 60,
+      "totalMinutes": 75,
+      "nutrition": {
+        "kcal": 135,
+        "protein": 4,
+        "carbs": 26,
+        "fats": 1
+      },
+      "contains": [],
+      "mayContain": [
+        "seeds"
+      ],
+      "en": {
+        "title": "Fermented buckwheat bread",
+        "excerpt": "A simple fermented bread made only from buckwheat, without flour or yeast. Thanks to natural fermentation, it is more digestible and supports the intestinal microbiome.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Buckwheat",
+            "amount": "500",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Apple cider vinegar",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Seeds",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": true,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Cover the buckwheat with water, add a tablespoon of apple cider vinegar and let it soak for at least 7 hours, ideally overnight.",
+            "note": ""
+          },
+          {
+            "text": "Then drain the buckwheat, rinse thoroughly and let it drain.",
+            "note": ""
+          },
+          {
+            "text": "Add a cup of water and salt to the buckwheat and blend into a smooth, thick mixture.",
+            "note": ""
+          },
+          {
+            "text": "Depending on your taste, you can add seeds and stir briefly or leave them completely seedless.",
+            "note": ""
+          },
+          {
+            "text": "Transfer the mixture to a container, cover, and let ferment at room temperature for approximately 24 hours.",
+            "note": ""
+          },
+          {
+            "text": "After fermentation, pour the dough into a bread pan lined with baking paper.",
+            "note": ""
+          },
+          {
+            "text": "Bake in a preheated oven at 210°C for approximately 50–60 minutes, until the surface is golden.",
+            "note": ""
+          },
+          {
+            "text": "After baking, let the bread cool completely, then slice and use as regular bread.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "The bread is best when it has cooled completely. If you don't want to use it right away, you can slice it and freeze it."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     },
@@ -677,35 +1355,7 @@
       "slug": "jemna-ledvinkova-pomazanka-na-sadle",
       "title": "Jemná ledvinková pomazánka na sádle",
       "excerpt": "Velmi jemná pomazánka z vepřových ledvinek, cibule a sádla. Díky krátké tepelné úpravě a následnému mixování má hladkou strukturu a plnou chuť. Ledvinky jsou přirozeně bohaté na bílkoviny, vitaminy skupiny B a minerální látky.",
-      "image": "https://a.storyblok.com/f/289317949964253/612x408/67b35fa085/ledvinky.PNG",
       "imageAlt": "",
-      "category": {
-        "slug": "spreads",
-        "name": "Pomazánky"
-      },
-      "tags": [
-        "Do 30 minut",
-        "Z jednoho hrnce",
-        "Bez alergenů"
-      ],
-      "tagKeys": [
-        "under_30",
-        "one_pot",
-        "no_allergen"
-      ],
-      "servings": 6,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 15,
-      "totalMinutes": 25,
-      "nutrition": {
-        "kcal": 260,
-        "protein": 20,
-        "carbs": 4,
-        "fats": 18
-      },
-      "contains": [],
-      "mayContain": [],
       "ingredients": [
         {
           "name": "Vepřové ledvinky",
@@ -773,6 +1423,102 @@
       "tip": [
         "Pokud nemáš v oblibě vnitřnosti, můžeš pomazánku nejprve připravit pro dítě nebo rodinu. Díky velmi jemné chuti a krémové konzistenci není na chuti poznat, že se jedná o vnitřnosti, a často překvapí i ty, kteří je běžně nevyhledávají."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/67b35fa085/ledvinky.PNG",
+      "category": {
+        "slug": "spreads",
+        "name": "Pomazánky",
+        "nameEn": "Spreads"
+      },
+      "tagKeys": [
+        "under_30",
+        "one_pot",
+        "no_allergen"
+      ],
+      "servings": 6,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 15,
+      "totalMinutes": 25,
+      "nutrition": {
+        "kcal": 260,
+        "protein": 20,
+        "carbs": 4,
+        "fats": 18
+      },
+      "contains": [],
+      "mayContain": [],
+      "en": {
+        "title": "Delicate kidney spread on lard",
+        "excerpt": "A very delicate spread made from pork kidneys, onions and lard. Thanks to a short heat treatment and subsequent mixing, it has a smooth texture and full flavor. Kidneys are naturally rich in protein, B vitamins and minerals.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Pork kidneys",
+            "amount": "600",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Onion",
+            "amount": "2",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Garlic",
+            "amount": "6",
+            "unit": "cloves",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Lard",
+            "amount": "4",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Clean the kidneys and cut them into small cubes.",
+            "note": ""
+          },
+          {
+            "text": "Heat about half of the lard in a pan and fry the kidneys on one side.",
+            "note": ""
+          },
+          {
+            "text": "Add the chopped onion, stir and sauté for a few more minutes until the onion softens.",
+            "note": ""
+          },
+          {
+            "text": "Add the chopped garlic and cook briefly until fragrant.",
+            "note": ""
+          },
+          {
+            "text": "Remove the mixture from the stove and transfer it to a blender.",
+            "note": ""
+          },
+          {
+            "text": "Add the rest of the lard and blend into a smooth spread.",
+            "note": ""
+          },
+          {
+            "text": "Salt to taste. If you want an even finer texture, you can add a small amount of lard.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "If you don't like offal, you can make the spread first for your child or family. Thanks to its very mild flavor and creamy consistency, it's hard to tell that it's offal, and it often surprises even those who don't normally seek it out."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     },
@@ -780,33 +1526,7 @@
       "slug": "kremova-hraskovo-kvetakova-omacka-se-slaninou",
       "title": "Krémová hráškovo-květáková omáčka se slaninou",
       "excerpt": "Jemná omáčka z hrášku a květáku doplněná křupavou slaninou. Výborně se hodí k těstovinám, rýži nebo bramborám a představuje chutný způsob, jak do jídelníčku zařadit více zeleniny.",
-      "image": "https://a.storyblok.com/f/289317949964253/433x577/7b7d519135/peas.png",
       "imageAlt": "",
-      "category": {
-        "slug": "mains",
-        "name": "Hlavní jídla"
-      },
-      "tags": [
-        "Do 30 minut"
-      ],
-      "tagKeys": [
-        "under_30"
-      ],
-      "servings": 4,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 20,
-      "totalMinutes": 30,
-      "nutrition": {
-        "kcal": 260,
-        "protein": 14,
-        "carbs": 18,
-        "fats": 14
-      },
-      "contains": [
-        "legumes"
-      ],
-      "mayContain": [],
       "ingredients": [
         {
           "name": "Hrášek",
@@ -878,6 +1598,106 @@
       "tip": [
         "Hrášek patří mezi zeleninu s nejvyšším obsahem bílkovin. Ve srovnání s většinou běžné zeleniny obsahuje přibližně dvojnásobné množství bílkovin a zároveň je dobrým zdrojem vlákniny, vitamínu C a kyseliny listové."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/7b7d519135/peas.png",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla",
+        "nameEn": "Mains"
+      },
+      "tagKeys": [
+        "under_30"
+      ],
+      "servings": 4,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 20,
+      "totalMinutes": 30,
+      "nutrition": {
+        "kcal": 260,
+        "protein": 14,
+        "carbs": 18,
+        "fats": 14
+      },
+      "contains": [
+        "legumes"
+      ],
+      "mayContain": [],
+      "en": {
+        "title": "Creamy pea-cauliflower sauce with bacon",
+        "excerpt": "A delicate pea and cauliflower sauce topped with crispy bacon. It goes great with pasta, rice or potatoes and is a tasty way to get more vegetables into your diet.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Pea",
+            "amount": "500",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Cauliflower",
+            "amount": "1",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Bacon",
+            "amount": "200",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Divide the cauliflower into smaller florets.",
+            "note": ""
+          },
+          {
+            "text": "Place two-thirds of the peas in the pot along with the cauliflower.",
+            "note": ""
+          },
+          {
+            "text": "Pour water so that the vegetables are approximately half submerged, add salt and bring to a boil.",
+            "note": ""
+          },
+          {
+            "text": "Cook for approximately 20 minutes until tender, stirring occasionally during cooking.",
+            "note": ""
+          },
+          {
+            "text": "Meanwhile, fry the bacon in a pan until golden brown.",
+            "note": ""
+          },
+          {
+            "text": "Add the remaining third of the peas and sauté together for another 5–7 minutes.",
+            "note": ""
+          },
+          {
+            "text": "Drain the cooked vegetables lightly (reserve some of the liquid).",
+            "note": ""
+          },
+          {
+            "text": "Blend until smooth. If it is too thick, add a little of the reserved cooking water.",
+            "note": ""
+          },
+          {
+            "text": "Mix the sauce with the cooked side dish of your choice (such as pasta, rice or gnocchi).",
+            "note": ""
+          },
+          {
+            "text": "Finally, garnish with toasted bacon and sautéed peas.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "Peas are among the vegetables with the highest protein content. Compared to most common vegetables, they contain approximately twice the amount of protein and are also a good source of fiber, vitamin C and folic acid."
+        ]
+      },
       "published": "2026-07-27",
       "updated": "2026-10-01"
     },
@@ -885,42 +1705,7 @@
       "slug": "nebeska-kase-z-bilych-fazoli",
       "title": "Nebeská kaše z bílých fazolí",
       "excerpt": "Jemná sladká kaše z bílých fazolí, která překvapí svou krémovou konzistencí a neutrální chutí. Fazole dodají kvalitní rostlinné bílkoviny a vlákninu, spirulina nebo zelené superpotraviny podpoří příjem mikronutrientů. Skvělá snídaně nebo svačina bez obilovin.",
-      "image": "https://a.storyblok.com/f/289317949964253/612x408/855360c891/nebeska.png",
       "imageAlt": "",
-      "category": {
-        "slug": "breakfasts",
-        "name": "Snídaně"
-      },
-      "tags": [
-        "Veganské",
-        "Z jednoho hrnce",
-        "Na cesty",
-        "Přes noc"
-      ],
-      "tagKeys": [
-        "vegan",
-        "one_pot",
-        "travel",
-        "over_night"
-      ],
-      "servings": 2,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 20,
-      "totalMinutes": 30,
-      "nutrition": {
-        "kcal": 330,
-        "protein": 15,
-        "carbs": 45,
-        "fats": 7
-      },
-      "contains": [
-        "legumes"
-      ],
-      "mayContain": [
-        "nuts",
-        "exotic"
-      ],
       "ingredients": [
         {
           "name": "Bílé fazole",
@@ -992,6 +1777,112 @@
       "tip": [
         "Kaši můžeš připravit i bez spiruliny – zůstane chuťově velmi jemná. Pokud ji chystáš pro děti, začni menším množstvím superpotravin nebo je vynech úplně."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/855360c891/nebeska.png",
+      "category": {
+        "slug": "breakfasts",
+        "name": "Snídaně",
+        "nameEn": "Breakfast"
+      },
+      "tagKeys": [
+        "vegan",
+        "one_pot",
+        "travel",
+        "over_night"
+      ],
+      "servings": 2,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 20,
+      "totalMinutes": 30,
+      "nutrition": {
+        "kcal": 330,
+        "protein": 15,
+        "carbs": 45,
+        "fats": 7
+      },
+      "contains": [
+        "legumes"
+      ],
+      "mayContain": [
+        "nuts",
+        "exotic"
+      ],
+      "en": {
+        "title": "Heavenly white bean porridge",
+        "excerpt": "A delicate sweet porridge made from white beans that will surprise you with its creamy consistency and neutral taste. The beans provide high-quality plant protein and fiber, while spirulina or green superfoods support micronutrient intake. A great breakfast or snack without grains.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "White beans",
+            "amount": "250",
+            "unit": "g",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Raisins",
+            "amount": "1",
+            "unit": "handful",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Nut butter",
+            "amount": "1",
+            "unit": "spoon",
+            "note": "can be replaced with coconut oil",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Blue spirulina",
+            "amount": "1",
+            "unit": "teaspoon",
+            "note": "či zelený ječmen nebo chlorella",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Fruit",
+            "amount": "2",
+            "unit": "handfuls",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Soak the beans overnight in a sufficient amount of water.",
+            "note": ""
+          },
+          {
+            "text": "The next day, drain the water, cover the beans with clean water, and cook for approximately 20 minutes until they are soft.",
+            "note": ""
+          },
+          {
+            "text": "Drain the beans, transfer to a blender and add raisins, a cup of water and nut butter, which can be replaced with coconut oil or ghee.",
+            "note": ""
+          },
+          {
+            "text": "Add spirulina or a green superfood of your choice.",
+            "note": ""
+          },
+          {
+            "text": "Blend until smooth, creamy.",
+            "note": ""
+          },
+          {
+            "text": "Transfer to a bowl, garnish with fruit and serve.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "You can make the porridge without spirulina – it will still taste very mild. If you are making it for children, start with a smaller amount of superfoods or leave them out altogether."
+        ]
+      },
       "published": "2026-02-16",
       "updated": "2026-10-01"
     },
@@ -999,35 +1890,7 @@
       "slug": "apple",
       "title": "Pečená jablka plněná ovesno-oříškovou směsí",
       "excerpt": "Pečená jablka plněná vločkami, lískovým oříškovým máslem a rozinkami jsou přirozeně sladká, jemná a vhodná i jako zdravá svačina.",
-      "image": "https://a.storyblok.com/f/289317949964253/1024x1536/52541ad212/apple.png",
       "imageAlt": "",
-      "category": {
-        "slug": "sweet",
-        "name": "Sladké dobroty"
-      },
-      "tags": [
-        "Do 30 minut",
-        "Veganské"
-      ],
-      "tagKeys": [
-        "under_30",
-        "vegan"
-      ],
-      "servings": 4,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 19,
-      "totalMinutes": 29,
-      "nutrition": {
-        "kcal": 160,
-        "protein": 3,
-        "carbs": 23,
-        "fats": 7
-      },
-      "contains": [
-        "nuts"
-      ],
-      "mayContain": [],
       "ingredients": [
         {
           "name": "Jablko",
@@ -1099,6 +1962,108 @@
       "tip": [
         "Ke konci pečení můžeš jablka krátce zapnout pod gril, aby se povrch lehce zkaramelizoval."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/1024x1536/52541ad212/apple.png",
+      "category": {
+        "slug": "sweet",
+        "name": "Sladké dobroty",
+        "nameEn": "Sweet treats"
+      },
+      "tagKeys": [
+        "under_30",
+        "vegan"
+      ],
+      "servings": 4,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 19,
+      "totalMinutes": 29,
+      "nutrition": {
+        "kcal": 160,
+        "protein": 3,
+        "carbs": 23,
+        "fats": 7
+      },
+      "contains": [
+        "nuts",
+        "oat"
+      ],
+      "mayContain": [],
+      "en": {
+        "title": "Baked apples stuffed with oat-nut crumble",
+        "excerpt": "Baked apples stuffed with flakes, hazelnut butter and raisins are naturally sweet, delicate and suitable as a healthy snack.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Apple",
+            "amount": "4",
+            "unit": "pcs",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Oatmeal",
+            "amount": "4",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Hazelnut butter",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Raisins",
+            "amount": "2",
+            "unit": "lžíce",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Cinnamon",
+            "amount": "1",
+            "unit": "teaspoon",
+            "note": "",
+            "optional": true,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Halve the apples, remove the cores and lightly scoop out some of the pulp with a spoon.",
+            "note": ""
+          },
+          {
+            "text": "Place the scooped-out pulp in a bowl (half can be used in a smoothie or snack).",
+            "note": ""
+          },
+          {
+            "text": "Add the flakes, hazelnut butter, chopped dates and, if desired, cinnamon to the pulp.",
+            "note": ""
+          },
+          {
+            "text": "Stir the mixture thoroughly.",
+            "note": ""
+          },
+          {
+            "text": "Fill the apples generously with the prepared mixture.",
+            "note": ""
+          },
+          {
+            "text": "Place in a baking dish and bake at 180°C for 20-25 minutes until the apples are soft.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "Towards the end of baking, you can briefly place the apples under the grill to lightly caramelize the surface."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     },
@@ -1106,35 +2071,7 @@
       "slug": "zeleninove-hranolky",
       "title": "Pečené zeleninové hranolky",
       "excerpt": "Jednoduché pečené zeleninové hranolky z různých druhů zeleniny. Skvělé jako lehká příloha a zdravější alternativa klasických hranolků. Variabilní podle sezóny i tolerance.",
-      "image": "https://a.storyblok.com/f/289317949964253/612x408/cd1d891f71/hranolky.PNG",
       "imageAlt": "",
-      "category": {
-        "slug": "sides_salads",
-        "name": "Přílohy a saláty"
-      },
-      "tags": [
-        "Veganské",
-        "Z jednoho hrnce"
-      ],
-      "tagKeys": [
-        "vegan",
-        "one_pot"
-      ],
-      "servings": 4,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 40,
-      "totalMinutes": 50,
-      "nutrition": {
-        "kcal": 180,
-        "protein": 3,
-        "carbs": 20,
-        "fats": 9
-      },
-      "contains": [],
-      "mayContain": [
-        "root"
-      ],
       "ingredients": [
         {
           "name": "Zelenina",
@@ -1174,6 +2111,75 @@
       "tip": [
         "Zeleninu můžeš nakrájet ve větším množství dopředu a uložit do mrazáku. Zmražené hranolky pak peč rovnou bez rozmrazování, jen prodluž dobu pečení přibližně o 10 minut."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/cd1d891f71/hranolky.PNG",
+      "category": {
+        "slug": "sides_salads",
+        "name": "Přílohy a saláty",
+        "nameEn": "Sides & salads"
+      },
+      "tagKeys": [
+        "vegan",
+        "one_pot"
+      ],
+      "servings": 4,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 40,
+      "totalMinutes": 50,
+      "nutrition": {
+        "kcal": 180,
+        "protein": 3,
+        "carbs": 20,
+        "fats": 9
+      },
+      "contains": [],
+      "mayContain": [
+        "root"
+      ],
+      "en": {
+        "title": "Baked vegetable fries",
+        "excerpt": "Simple baked vegetable fries made from a variety of vegetables. Great as a light side dish and a healthier alternative to classic fries. Variable according to season and tolerance.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Vegetables",
+            "amount": "1",
+            "unit": "kg",
+            "note": "beets, potatoes, sweet potatoes, Brussels sprouts, celery, parsley, carrots",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Thyme",
+            "amount": "1",
+            "unit": "teaspoon",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "Clean the selected vegetables and cut them into chips or strips of similar size.",
+            "note": ""
+          },
+          {
+            "text": "Transfer it to a baking dish, add olive oil, thyme, and salt. Mix everything thoroughly.",
+            "note": ""
+          },
+          {
+            "text": "Bake in a preheated oven at 180°C for approximately 40 minutes, until the fries are soft and lightly browned on the surface.",
+            "note": ""
+          },
+          {
+            "text": "Serve immediately as a side dish or separately.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "You can cut up the vegetables in large quantities ahead of time and store them in the freezer. Then bake the frozen fries straight away without defrosting, just extend the baking time by about 10 minutes."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     },
@@ -1181,34 +2187,7 @@
       "slug": "portobello-burgery-s-batatovo-celerovymi-hranolkami",
       "title": "Portobello burgery s batátovo-celerovými hranolkami",
       "excerpt": "Šťavnatý burger z mletého masa vložený mezi dva opečené žampiony portobello místo bulky. Podávaný s avokádem, čerstvou zeleninou a batátovo-celerovými hranolkami.",
-      "image": "https://a.storyblok.com/f/289317949964253/433x577/a96a3b44ef/portobello.png",
       "imageAlt": "",
-      "category": {
-        "slug": "mains",
-        "name": "Hlavní jídla"
-      },
-      "tags": [
-        "Bez alergenů"
-      ],
-      "tagKeys": [
-        "no_allergen"
-      ],
-      "servings": 3,
-      "difficulty": "středně těžké",
-      "activeMinutes": 25,
-      "cookMinutes": 30,
-      "totalMinutes": 55,
-      "nutrition": {
-        "kcal": 610,
-        "protein": 38,
-        "carbs": 34,
-        "fats": 34
-      },
-      "contains": [],
-      "mayContain": [
-        "tomato",
-        "root"
-      ],
       "ingredients": [
         {
           "name": "Portobello žampion",
@@ -1348,6 +2327,175 @@
       "tip": [
         "Kořenový celer obsahuje méně škrobu než brambory a po upečení získá jemně oříškovou chuť. V kombinaci s batátem vytvoří vyváženější přílohu s vyšším obsahem vlákniny a pestřejším spektrem vitamínů a minerálů."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/a96a3b44ef/portobello.png",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla",
+        "nameEn": "Mains"
+      },
+      "tagKeys": [
+        "no_allergen"
+      ],
+      "servings": 3,
+      "difficultyKey": "medium",
+      "activeMinutes": 25,
+      "cookMinutes": 30,
+      "totalMinutes": 55,
+      "nutrition": {
+        "kcal": 610,
+        "protein": 38,
+        "carbs": 34,
+        "fats": 34
+      },
+      "contains": [],
+      "mayContain": [
+        "tomato",
+        "root"
+      ],
+      "en": {
+        "title": "Portobello burgers with sweet potato and celery fries",
+        "excerpt": "Juicy ground beef burger sandwiched between two roasted portobello mushrooms instead of a bun. Served with avocado, fresh vegetables and sweet potato-celery fries.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Portobello mushroom",
+            "amount": "6",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Minced meat",
+            "amount": "600",
+            "unit": "g",
+            "note": "pork, lamb, turkey",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Onion",
+            "amount": "1",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Rice flour",
+            "amount": "3",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Lard",
+            "amount": "2",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Avomayo",
+            "amount": "3",
+            "unit": "spoons",
+            "note": "",
+            "optional": false,
+            "linkedSlug": "avokadova-majoneza"
+          },
+          {
+            "name": "Cherry tomatoes",
+            "amount": "1",
+            "unit": "handful",
+            "note": "",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Red onion",
+            "amount": "1",
+            "unit": "pc",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Fresh herbs",
+            "amount": "1",
+            "unit": "handful",
+            "note": "",
+            "optional": false,
+            "linkedSlug": null
+          },
+          {
+            "name": "Sweet potato and celery fries",
+            "amount": "3",
+            "unit": "handfuls",
+            "note": "",
+            "optional": true,
+            "linkedSlug": "zeleninove-hranolky"
+          }
+        ],
+        "steps": [
+          {
+            "text": "Burgers:",
+            "note": ""
+          },
+          {
+            "text": "Finely chop the onion.",
+            "note": ""
+          },
+          {
+            "text": "Mix it with minced meat, rice flour and salt.",
+            "note": ""
+          },
+          {
+            "text": "Shape into 3 larger burgers.",
+            "note": ""
+          },
+          {
+            "text": "Heat the lard in a pan and fry the burgers over low heat for approximately 6-8 minutes on each side, until cooked through.",
+            "note": ""
+          },
+          {
+            "text": "Portobello:",
+            "note": ""
+          },
+          {
+            "text": "Remove the stems from the mushrooms.",
+            "note": ""
+          },
+          {
+            "text": "Fry them in a pan for 5 minutes on each side, until soft and lightly golden.",
+            "note": ""
+          },
+          {
+            "text": "Assembly:",
+            "note": ""
+          },
+          {
+            "text": "Spread avomayo on one mushroom.",
+            "note": ""
+          },
+          {
+            "text": "Add the meat burger, tomatoes, onions and fresh herbs.",
+            "note": ""
+          },
+          {
+            "text": "Cover with the second mushroom.",
+            "note": ""
+          },
+          {
+            "text": "Serve with sweet potato and celery fries.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "Celeriac contains less starch than potatoes and acquires a slightly nutty flavor when cooked. Combined with sweet potatoes, it creates a more balanced side dish with a higher fiber content and a wider range of vitamins and minerals."
+        ]
+      },
       "published": "2026-07-06",
       "updated": "2026-10-01"
     },
@@ -1355,31 +2503,7 @@
       "slug": "vyvar",
       "title": "Vývar",
       "excerpt": "Správně připravený vývar je jedním ze základních pilířů podpory trávení, střevní sliznice a mikrobiomu. Díky obsahu minerálů, aminokyselin, želatiny a kolagenu pomáhá při hojení propustného střeva a může výrazně podpořit léčbu ekzému a alergií. Důležitá je však délka vaření a správná volba surovin, zejména při histaminové zátěži.",
-      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/0209961900/broth.png",
       "imageAlt": "",
-      "category": {
-        "slug": "soups",
-        "name": "Polévky"
-      },
-      "tags": [],
-      "tagKeys": [],
-      "servings": 4,
-      "difficulty": "jednoduché",
-      "activeMinutes": 10,
-      "cookMinutes": 120,
-      "totalMinutes": 130,
-      "nutrition": {
-        "kcal": 35,
-        "protein": 5,
-        "carbs": null,
-        "fats": 2
-      },
-      "contains": [],
-      "mayContain": [
-        "beef",
-        "poultry",
-        "fish"
-      ],
       "ingredients": [
         {
           "name": "Drůbež",
@@ -1443,6 +2567,98 @@
       "tip": [
         "Pokud řešíš histaminovou zátěž, připravuj vývar v menším množství a po uvaření ho rozděl na porce a ihned zamraz. Dlouhé uchovávání v lednici nebo opakované ohřívání zvyšuje obsah histaminu."
       ],
+      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/0209961900/broth.png",
+      "category": {
+        "slug": "soups",
+        "name": "Polévky",
+        "nameEn": "Soups"
+      },
+      "tagKeys": [],
+      "servings": 4,
+      "difficultyKey": "easy",
+      "activeMinutes": 10,
+      "cookMinutes": 120,
+      "totalMinutes": 130,
+      "nutrition": {
+        "kcal": 35,
+        "protein": 5,
+        "carbs": null,
+        "fats": 2
+      },
+      "contains": [],
+      "mayContain": [
+        "beef",
+        "poultry",
+        "fish"
+      ],
+      "en": {
+        "title": "Broth",
+        "excerpt": "Properly prepared broth is one of the basic pillars of supporting digestion, the intestinal mucosa and the microbiome. Thanks to the content of minerals, amino acids, gelatin and collagen, it helps in healing leaky gut and can significantly support the treatment of eczema and allergies. However, the length of cooking and the right choice of ingredients are important, especially in cases of histamine overload.",
+        "imageAlt": "",
+        "ingredients": [
+          {
+            "name": "Poultry",
+            "amount": "1",
+            "unit": "serving",
+            "note": "skelet, stehno, křídla, krk, pařáty",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Rabbit",
+            "amount": "1",
+            "unit": "serving",
+            "note": "thighs, back, whole, head",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Beef / pork / lamb / venison",
+            "amount": "1",
+            "unit": "serving",
+            "note": "ribs, neck, tail, meat with bone, gizzard",
+            "optional": true,
+            "linkedSlug": null
+          },
+          {
+            "name": "Fish",
+            "amount": "1",
+            "unit": "servings",
+            "note": "hlava, vnitřnosti",
+            "optional": true,
+            "linkedSlug": null
+          }
+        ],
+        "steps": [
+          {
+            "text": "The broth naturally contains minerals (calcium, magnesium, phosphorus, potassium, sodium), amino acids (glycine, proline, glutamine) and, when cooked for a longer period, gelatin and collagen. These substances support the regeneration of the intestinal mucosa, nourish the microbiome and help reduce inflammation in the body.",
+            "note": ""
+          },
+          {
+            "text": "In case of eczema, allergies or confirmed histamine intolerance, the length of cooking is crucial. The longer the broth is simmered, the more histamine it may contain.\nIn case of histamine intolerance, it is always advisable to choose short-cooked broths. The cooking time can be gradually increased according to tolerance and improvement of symptoms (if the body is not so burdened with histamine).",
+            "note": ""
+          },
+          {
+            "text": "Poultry stock (chicken, turkey, goose, duck): 2 hours\n\nRabbit stock: 2 hours\n\nPork, lamb, beef, venison: 4 hours\n\nFish stock: 1 hour",
+            "note": ""
+          },
+          {
+            "text": "At the beginning, it is advisable to prepare broth only from meat, then from bones and only after good tolerance, add vegetables.",
+            "note": ""
+          },
+          {
+            "text": "Properly prepared broth is suitable from the beginning of solid foods. It supports the maturation of digestion, the immune system and can help reduce the risk of developing eczema and allergies at an early age.",
+            "note": ""
+          },
+          {
+            "text": "Place the meat in a pot, cover with cold water, bring to the boil and then reduce to a gentle simmer. Cook according to the type of meat, lightly salt towards the end, drain and serve or freeze after cooling.",
+            "note": ""
+          }
+        ],
+        "tip": [
+          "If you are dealing with histamine overload, prepare the broth in smaller quantities and after cooking, divide it into portions and freeze immediately. Prolonged storage in the refrigerator or repeated heating increases the histamine content."
+        ]
+      },
       "published": "2026-01-23",
       "updated": "2026-10-01"
     }

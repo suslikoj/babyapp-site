@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categories, articles as guideArticles, categoryPath, articlePath } from '../content/pruvodce.mjs';
+import * as guideCs from '../content/pruvodce.mjs';
+import * as guideEn from '../content/guide-en.mjs';
 import recipeData from '../content/recepty/recipes.json' with { type: 'json' };
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,6 +13,12 @@ const publicDir = path.join(root, 'public');
 const DEFAULT_SITE_URL = 'https://babyapp.cz';
 const siteUrl = normalizeBaseUrl(process.env.SITE_URL ?? DEFAULT_SITE_URL);
 // lastmod = date of the last real content change of each page (update it when the page changes).
+
+// Both language versions of a page, linked to each other via hreflang (x-default = Czech).
+function pair({ cs, en }, changefreq, priority, lastmod) {
+  const alternates = en ? [cs, en] : [];
+  return [cs, en].filter(Boolean).map((p) => ({ path: p, lastmod, changefreq, priority: p.startsWith('/en/') ? String((Number(priority) - 0.1).toFixed(1)) : priority, alternates, xDefault: cs }));
+}
 
 const routes = [
   { path: '/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
@@ -32,15 +39,19 @@ const routes = [
   { path: '/zdroje/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
   { path: '/en/sources/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
 
-  // Průvodce (CZ only – no hreflang alternates until EN versions exist)
-  { path: '/pruvodce/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.9', alternates: [] },
-  ...categories.map((c) => ({ path: categoryPath(c.slug), lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] })),
-  ...guideArticles.map((a) => ({ path: articlePath(a), lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: [] })),
-
-  { path: '/o-projektu/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.6', alternates: [] },
-  // Recepty (CZ only, from the Storyblok snapshot)
-  { path: '/recepty/', lastmod: recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] },
-  ...recipeData.recipes.map((r) => ({ path: `/recepty/${r.slug}/`, lastmod: r.updated || r.published, changefreq: 'monthly', priority: '0.7', alternates: [] })),
+  // Průvodce / Guide, O projektu / About, Recepty / Recipes – Czech and English twins
+  ...pair({ cs: '/pruvodce/', en: '/en/guide/' }, 'weekly', '0.9', '2026-10-01'),
+  ...guideCs.categories.flatMap((c) => {
+    const en = guideEn.categories.find((e) => e.cs === c.slug);
+    return pair({ cs: guideCs.categoryPath(c.slug), en: en && guideEn.categoryPath(en.slug) }, 'weekly', '0.8', '2026-10-01');
+  }),
+  ...guideCs.articles.flatMap((a) => {
+    const en = guideEn.articles.find((e) => e.cs === a.slug);
+    return pair({ cs: guideCs.articlePath(a), en: en && guideEn.articlePath(en) }, 'monthly', '0.8', '2026-10-01');
+  }),
+  ...pair({ cs: '/o-projektu/', en: '/en/about/' }, 'monthly', '0.6', '2026-10-01'),
+  ...pair({ cs: '/recepty/', en: '/en/recipes/' }, 'weekly', '0.8', recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01'),
+  ...recipeData.recipes.flatMap((r) => pair({ cs: `/recepty/${r.slug}/`, en: r.en ? `/en/recipes/${r.slug}/` : null }, 'monthly', '0.7', r.updated || r.published)),
 ];
 
 function normalizeBaseUrl(url) {

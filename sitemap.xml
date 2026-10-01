@@ -162,239 +162,701 @@
 
   <url>
     <loc>https://babyapp.cz/pruvodce/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://babyapp.cz/pruvodce/potravinova-alergie/</loc>
+    <loc>https://babyapp.cz/en/guide/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/pruvodce/potravinova-alergie/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/food-allergy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/ekzem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/eczema/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/specificka-temata/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://babyapp.cz/en/guide/special-topics/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://babyapp.cz/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/how-food-allergy-develops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/food-allergy/how-food-allergy-develops/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/how-food-allergy-develops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/jak-vznika-potravinova-alergie/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/potravinova-alergie/ige-a-non-ige/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/ige-a-non-ige/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/ige-vs-non-ige/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/ige-a-non-ige/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/food-allergy/ige-vs-non-ige/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/ige-a-non-ige/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/ige-vs-non-ige/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/ige-a-non-ige/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/potravinova-alergie/psenice-vs-lepek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/psenice-vs-lepek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/wheat-vs-gluten/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/psenice-vs-lepek/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/food-allergy/wheat-vs-gluten/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/psenice-vs-lepek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/wheat-vs-gluten/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/psenice-vs-lepek/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/potravinova-alergie/zkrizene-alergie/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/zkrizene-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/cross-reactive-allergies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/zkrizene-alergie/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/food-allergy/cross-reactive-allergies/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/potravinova-alergie/zkrizene-alergie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/food-allergy/cross-reactive-allergies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/potravinova-alergie/zkrizene-alergie/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/kompletni-vylouceni/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/kompletni-vylouceni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/complete-elimination/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/kompletni-vylouceni/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/complete-elimination/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/kompletni-vylouceni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/complete-elimination/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/kompletni-vylouceni/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/testovani-alergenu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/testovani-alergenu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/allergen-testing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/testovani-alergenu/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/allergen-testing/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/testovani-alergenu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/allergen-testing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/testovani-alergenu/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/trenink-alergenu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/trenink-alergenu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/allergen-training/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/trenink-alergenu/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/allergen-training/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/trenink-alergenu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/allergen-training/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/trenink-alergenu/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/nepotravinove-vlivy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/nepotravinove-vlivy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/non-food-triggers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/nepotravinove-vlivy/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/non-food-triggers/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/nepotravinove-vlivy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/non-food-triggers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/nepotravinove-vlivy/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/eliminacni-dieta/bezpecne-potraviny/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/bezpecne-potraviny/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/safe-foods/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/bezpecne-potraviny/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/elimination-diet/safe-foods/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/eliminacni-dieta/bezpecne-potraviny/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/elimination-diet/safe-foods/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/eliminacni-dieta/bezpecne-potraviny/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/ekzem/spoustece-ekzemu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/spoustece-ekzemu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/eczema-triggers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/spoustece-ekzemu/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/eczema/eczema-triggers/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/spoustece-ekzemu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/eczema-triggers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/spoustece-ekzemu/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/ekzem/kvasinka-a-ekzem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/kvasinka-a-ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/yeast-and-eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/kvasinka-a-ekzem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/eczema/yeast-and-eczema/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/kvasinka-a-ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/yeast-and-eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/kvasinka-a-ekzem/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/ekzem/svedeni-u-ekzemu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/svedeni-u-ekzemu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/eczema-itching/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/svedeni-u-ekzemu/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/eczema/eczema-itching/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/svedeni-u-ekzemu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/eczema-itching/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/svedeni-u-ekzemu/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/ekzem/kozni-projevy-u-miminek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/kozni-projevy-u-miminek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/baby-skin-rashes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/kozni-projevy-u-miminek/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/eczema/baby-skin-rashes/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/ekzem/kozni-projevy-u-miminek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/eczema/baby-skin-rashes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/ekzem/kozni-projevy-u-miminek/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/specificka-temata/histaminova-intolerance/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/histaminova-intolerance/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/histamine-intolerance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/histaminova-intolerance/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/guide/special-topics/histamine-intolerance/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/histaminova-intolerance/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/histamine-intolerance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/histaminova-intolerance/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/pruvodce/specificka-temata/lekari-a-ekzem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/lekari-a-ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/doctors-and-eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/lekari-a-ekzem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://babyapp.cz/en/guide/special-topics/doctors-and-eczema/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/pruvodce/specificka-temata/lekari-a-ekzem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/guide/special-topics/doctors-and-eczema/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/pruvodce/specificka-temata/lekari-a-ekzem/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://babyapp.cz/o-projektu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/o-projektu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/o-projektu/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
+    <loc>https://babyapp.cz/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/o-projektu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/o-projektu/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://babyapp.cz/recepty/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://babyapp.cz/en/recipes/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://babyapp.cz/recepty/avokadova-majoneza/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/avokadova-majoneza/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/avokadova-majoneza/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/avokadova-majoneza/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/recepty/bananovy-chlebicek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/bananovy-chlebicek/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bananovy-chlebicek/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bananovy-chlebicek/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/boruvkovo-jablecne-smoothie-s-avokadem/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/bun-cha/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bun-cha/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/bun-cha/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/bun-cha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/bun-cha/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/dort-s-dynovo-bananovym-kremem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/dort-s-dynovo-bananovym-kremem/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/fermentovany-pohankovy-chlebik/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/fermentovany-pohankovy-chlebik/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/jemna-ledvinkova-pomazanka-na-sadle/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/kremova-hraskovo-kvetakova-omacka-se-slaninou/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/nebeska-kase-z-bilych-fazoli/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/nebeska-kase-z-bilych-fazoli/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/apple/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/apple/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/apple/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/apple/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/apple/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/apple/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/apple/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/apple/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/zeleninove-hranolky/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/zeleninove-hranolky/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/zeleninove-hranolky/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/zeleninove-hranolky/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
+    <loc>https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/portobello-burgery-s-batatovo-celerovymi-hranolkami/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://babyapp.cz/recepty/vyvar/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/vyvar/" />
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://babyapp.cz/en/recipes/vyvar/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://babyapp.cz/recepty/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://babyapp.cz/en/recipes/vyvar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://babyapp.cz/recepty/vyvar/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
