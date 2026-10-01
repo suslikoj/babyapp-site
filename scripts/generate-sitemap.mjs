@@ -9,26 +9,26 @@ const publicDir = path.join(root, 'public');
 
 const DEFAULT_SITE_URL = 'https://babyapp.cz';
 const siteUrl = normalizeBaseUrl(process.env.SITE_URL ?? DEFAULT_SITE_URL);
-const today = new Date().toISOString().slice(0, 10);
+// lastmod = date of the last real content change of each page (update it when the page changes).
 
 const routes = [
-  { path: '/', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
-  { path: '/en/', changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'], xDefault: '/' },
-  { path: '/eczema/', changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
-  { path: '/en/eczema/', changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
-  { path: '/signs/', changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
-  { path: '/en/signs/', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
-  { path: '/main-suspects/', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
-  { path: '/en/main-suspects/', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
+  { path: '/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/en/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/eczema/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/en/eczema/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/signs/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/en/signs/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/main-suspects/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
+  { path: '/en/main-suspects/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
 
-  { path: '/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
-  { path: '/en/privacy-policy/', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
-  { path: '/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
-  { path: '/en/medical-disclaimer/', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
-  { path: '/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
-  { path: '/en/terms-of-use/', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
-  { path: '/zdroje/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
-  { path: '/en/sources/', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+  { path: '/privacy-policy/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/en/privacy-policy/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/medical-disclaimer/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/en/medical-disclaimer/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/terms-of-use/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/en/terms-of-use/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/zdroje/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+  { path: '/en/sources/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
 ];
 
 function normalizeBaseUrl(url) {
@@ -67,7 +67,7 @@ function createSitemapXml() {
         '  <url>',
         `    <loc>${escapeXml(absoluteUrl(route.path))}</loc>`,
         alternateLinks,
-        `    <lastmod>${today}</lastmod>`,
+        `    <lastmod>${route.lastmod}</lastmod>`,
         `    <changefreq>${route.changefreq}</changefreq>`,
         `    <priority>${route.priority}</priority>`,
         '  </url>',
@@ -100,5 +100,8 @@ const robotsTxt = createRobotsTxt();
 await fs.mkdir(publicDir, { recursive: true });
 await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf8');
 await fs.writeFile(path.join(publicDir, 'robots.txt'), robotsTxt, 'utf8');
+// Keep the committed root copies in sync too (served as-is when no build step runs, e.g. GitHub Pages).
+await fs.writeFile(path.join(root, 'sitemap.xml'), sitemapXml, 'utf8');
+await fs.writeFile(path.join(root, 'robots.txt'), robotsTxt, 'utf8');
 
 console.log(`Generated public/sitemap.xml and public/robots.txt for ${siteUrl}`);

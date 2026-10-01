@@ -9,6 +9,7 @@ const publicDir = path.join(root, 'public');
 
 const copyTargets = [
   'index.html',
+  '404.html',
   'site.webmanifest',
   'CNAME',
   '_headers',

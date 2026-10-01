@@ -1,4 +1,4 @@
-# **Signs of food allergy in children**
+# **Signs of food allergy in babies and young children**
 
 
 
@@ -169,7 +169,7 @@ Delayed allergies are often not seen in routine allergy tests, which can be conf
 
 ## **Can eczema be a sign of a food allergy?**
 
-Yes. In young children, worsening eczema can be a sign of a food allergy.
+Yes. In young children, worsening [eczema](/en/eczema/) can be a sign of a food allergy.
 
 Typically, eczema gets worse after a certain food or after a food eaten by a nursing mother. The reaction may not come right away. In delayed reactions, eczema may only get worse after a few hours or the next day.
 
@@ -206,7 +206,7 @@ Important signals are:
 - improvement after skipping a meal
 - deterioration after its re-inclusion
 
-The most reliable practical method is the elimination-exposure procedure: the food is eliminated for a certain period of time and then reintroduced in a controlled manner.
+The most reliable practical method is the [elimination-exposure procedure](/en/main-suspects/): the food is eliminated for a certain period of time and then reintroduced in a controlled manner.
 
 ## **What is the difference between allergy and intolerance?**
 
@@ -262,7 +262,7 @@ In breastfed babies, it often manifests itself through breast milk, mainly throu
 
 Immediate IgE reactions tend to be noticeable and can be dangerous. Delayed non-IgE reactions are common but harder to detect and often not seen in tests.
 
-The best way to verify is to systematically monitor symptoms, an elimination phase, and then a controlled reintroduction of the food.
+The best way to verify is to systematically monitor symptoms, an [elimination phase](/en/main-suspects/), and then a controlled reintroduction of the food.
 
 The **Baby w/o allergies** app will guide you through this process step by step — from recording symptoms to tracking foods to a clearer evaluation of the connections.
 

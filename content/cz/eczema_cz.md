@@ -1,4 +1,4 @@
-# Ekzém u dětí
+# Ekzém u miminka a malého dítěte
 
 
 
@@ -27,7 +27,7 @@ Ekzém není jen problém kůže. Ve většině případů jde o **kombinaci ví
 
 U dětí do 2 let se nejčastěji podílí:
 
-- potravinové **alergie** (přes mateřské mléko nebo příkrmy)
+- [potravinové **alergie**](/signs/) (přes mateřské mléko nebo příkrmy)
 - nezralý trávicí a imunitní systém
 - nemoci nebo růst zoubků
 - **chemie** v domácnosti (prací prostředky, kosmetika)
@@ -101,7 +101,7 @@ Aplikace pomáhá rodičům pochopit **souvislosti** a **zvládnout celý proces
 
 Zaměřuje se hlavně na:
 
-- **eliminačně–expoziční dietu**
+- [**eliminačně–expoziční dietu**](/main-suspects/)
 - sledování reakcí dítěte
 - kalendář projevů
 - přehled výsledků

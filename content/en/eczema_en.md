@@ -1,10 +1,10 @@
-# **Eczema in children**
+# **Baby eczema or dry skin? Signs, dry patches and causes**
 
 
 
 ## **How to recognize it and what really helps?**
 
-Eczema is one of **the most common** skin problems in babies and young children. It can appear in the first weeks of life and often surprises parents with how quickly it changes. It comes in many forms – sometimes it is noticeably red, sometimes dry, itchy, oozing or almost invisible at first glance. It often worsens with illness, teething, changes in diet or contact with irritants.
+Eczema is one of **the most common** skin problems in babies and young children, and at first it can look like ordinary dry patches on the skin. It can appear in the first weeks of life and often surprises parents with how quickly it changes. It comes in many forms – sometimes it is noticeably red, sometimes dry, itchy, oozing or almost invisible at first glance. It often worsens with illness, teething, changes in diet or contact with irritants.
 
 It's important to say right from the start: eczema **is not just a skin problem** and in most cases it can be worked on and gradually improved significantly.
 
@@ -27,7 +27,7 @@ Eczema is not just a skin problem. In most cases, it is a combination of multipl
 
 In children under 2 years of age, the most common involvement is:
 
-- food **allergies** (through breast milk or complementary foods)
+- [food **allergies**](/en/signs/) (through breast milk or complementary foods)
 - immature digestive and immune systems
 - diseases or teething
 - **chemistry** in the household (detergents, cosmetics)
@@ -98,7 +98,7 @@ The application helps parents understand the context and manage the entire proce
 
 It focuses mainly on:
 
-- **elimination-exposure diet**
+- [**elimination-exposure diet**](/en/main-suspects/)
 - monitoring the child's reactions
 - speech calendar
 - results overview

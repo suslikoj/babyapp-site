@@ -1,4 +1,4 @@
-# **1. fáze eliminační diety**
+# **Eliminační dieta u miminka a při kojení: 1. fáze**
 
 ## **Co vysadit a jak začít u miminka nebo dítěte?**
 
@@ -12,8 +12,8 @@ Eliminační dieta znamená, že na určitou dobu vyřadíš z jídelníčku pot
 
 Používá se nejčastěji při:
 
-- ekzému u dětí
-- podezření na potravinovou alergii
+- [ekzému u dětí](/eczema/)
+- [podezření na potravinovou alergii](/signs/)
 - bolestech bříška, kolikách nebo refluxu
 - hlenu nebo krvi ve stolici
 
@@ -83,7 +83,7 @@ Důležité je, aby dítě (nebo kojící maminka) mělo dostatek živin.
 
 ## **Funguje eliminační dieta u ekzému?**
 
-Ano, u malých dětí je eliminační dieta jedním z nejčastějších způsobů, jak zjistit, jestli ekzém souvisí s potravinami.
+Ano, u malých dětí je eliminační dieta jedním z nejčastějších způsobů, jak zjistit, jestli [ekzém](/eczema/) souvisí s potravinami.
 
 Pokud se ekzém během diety zlepší, je to důležitý signál, že potraviny mohou hrát roli.
 
