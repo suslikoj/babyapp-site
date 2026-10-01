@@ -232,7 +232,7 @@ function splitSources(markdown, lang) {
 
 // ── Shared page chrome ─────────────────────────────────────────────────
 
-// CZ: Aplikace · Průvodce (+ categories) · Recepty · O projektu · [Stáhnout]. EN keeps the original article nav.
+// CZ: Aplikace · Průvodce (+ categories) · Recepty · O projektu. EN keeps the original article nav.
 function topNav({ lang, active, czUrl, enUrl }) {
   const isEn = lang === 'en';
   const current = (key) => (key === active ? ' class="is-active" aria-current="page"' : '');
@@ -272,7 +272,6 @@ function topNav({ lang, active, czUrl, enUrl }) {
       <a href="/recepty/"${current('recipes')}>Recepty</a>
       <a href="/o-projektu/"${current('about')}>O projektu</a>
     </nav>
-    <a class="btn btn--primary nav-cta" href="/#testovani">Stáhnout aplikaci</a>
     ${langSwitch}
     ${burger}
   </div>
@@ -282,7 +281,6 @@ function topNav({ lang, active, czUrl, enUrl }) {
     <div class="mobile__sub">${categoryLinks}</div>
     <a href="/recepty/"${current('recipes')}>Recepty</a>
     <a href="/o-projektu/"${current('about')}>O projektu</a>
-    <a class="btn btn--primary mobile__cta" href="/#testovani">Stáhnout aplikaci</a>
     ${mobileLangs}
   </div>
 </header>`;
@@ -298,6 +296,7 @@ function siteFooter(lang) {
 
 function breadcrumbs(lang, trail) {
   const isEn = lang === 'en';
+  if (trail.length < 2) return '';
   const parts = trail.map(([label, href], i) => (i === trail.length - 1 ? `<span aria-current="page">${label}</span>` : `<a href="${href}">${label}</a>`));
   return `<nav class="breadcrumbs container" aria-label="${isEn ? 'Breadcrumbs' : 'Drobečková navigace'}">${parts.join('<span aria-hidden="true">›</span>')}</nav>`;
 }
@@ -438,7 +437,7 @@ function articleJsonLd({ lang, headline, description, image, url, published, mod
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 
 function guideTrail(categorySlug, last) {
-  const trail = [['Aplikace', '/'], ['Průvodce', '/pruvodce/']];
+  const trail = [['Průvodce', '/pruvodce/']];
   if (categorySlug) trail.push([categoryBySlug[categorySlug].title, categoryPath(categorySlug)]);
   if (last) trail.push(last);
   return trail;
@@ -617,7 +616,7 @@ function categoryHubPage(category) {
 // ── Placeholders until phase 2/3 (noindex, not in sitemap) ─────────────
 
 function placeholderPage({ path: pagePath, active, title, eyebrow, heading, text }) {
-  const main = `  ${breadcrumbs('cs', [['Aplikace', '/'], [eyebrow, pagePath]])}
+  const main = `
   <section class="section guide-hub">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">${eyebrow}</p><h1>${heading}</h1></div><p>${text}</p></div>
