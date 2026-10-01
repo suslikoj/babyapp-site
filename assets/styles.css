@@ -1009,3 +1009,5 @@ body{
 .about-page__signature{margin-top:40px}
 .about-page__contact{margin-top:48px}
 .about-page__contact .contact{margin-top:14px}
+.recipe-card__allergens{margin:10px 0 0;padding:4px 12px;border-radius:999px;background:rgba(214,95,95,.12);color:#9b3d3d;font-size:.8rem;font-weight:700}
+.recipe-card__allergens span{font-weight:800}

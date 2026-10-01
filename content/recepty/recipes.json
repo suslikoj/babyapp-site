@@ -55,6 +55,8 @@
   "recipes": [
     {
       "slug": "avokadova-majoneza",
+      "slugEn": "avocado-mayonnaise",
+      "storyblokSlug": "avokadova-majoneza",
       "title": "Avokádová majonéza",
       "excerpt": "Krémový a svěží dip z avokáda s citronovou šťávou. Skvělý doplněk k pečené zelenině nebo masu.",
       "imageAlt": "",
@@ -172,6 +174,8 @@
     },
     {
       "slug": "bananovy-chlebicek",
+      "slugEn": "banana-bread",
+      "storyblokSlug": "bananovy-chlebicek",
       "title": "Banánový chlebíček",
       "excerpt": "Vláčný banánový chlebíček bez vajec, který lze snadno upravit pro testování nebo trénování vybraných alergenů. Skvělý jako svačina nebo snídaně.",
       "imageAlt": "",
@@ -433,6 +437,8 @@
     },
     {
       "slug": "boruvkovo-jablecne-smoothie-s-avokadem",
+      "slugEn": "blueberry-apple-smoothie-with-avocado",
+      "storyblokSlug": "boruvkovo-jablecne-smoothie-s-avokadem",
       "title": "Borůvkovo-jablečné smoothie s avokádem",
       "excerpt": "Ovocné smoothie s jemnou krémovou strukturou díky avokádu. Borůvky přinášejí antioxidanty (zejména anthokyany), jablko vlákninu a přirozenou sladkost. Rychlá svačina nebo lehká snídaně bez přidaného cukru.",
       "imageAlt": "",
@@ -590,6 +596,8 @@
     },
     {
       "slug": "bun-cha",
+      "slugEn": "bun-cha-pork-flank-with-rice-noodles-and-herbs",
+      "storyblokSlug": "bun-cha",
       "title": "Bún chả – vepřový bok s rýžovými nudlemi a bylinkami",
       "excerpt": "Lehčí domácí varianta vietnamského bún chả. Marinovaný vepřový bok dodá plnou chuť a kvalitní tuky, rýžové nudle jsou přirozeně bez lepku a čerstvá zelenina s bylinkami jídlo odlehčí. Sladkokyselá zálivka podporuje trávení a vyvažuje tučnost masa.",
       "imageAlt": "",
@@ -983,6 +991,8 @@
     },
     {
       "slug": "dort-s-dynovo-bananovym-kremem",
+      "slugEn": "cake-with-pumpkin-banana-cream",
+      "storyblokSlug": "dort-s-dynovo-bananovym-kremem",
       "title": "Dort s dýňovo-banánovým krémem",
       "excerpt": "Jednoduchý domácí dort vhodný k oslavě prvních narozenin. Korpus z banánového chlebíku doplňuje jemný krém z dýně, banánu a bílých fazolí.",
       "imageAlt": "",
@@ -1188,6 +1198,8 @@
     },
     {
       "slug": "fermentovany-pohankovy-chlebik",
+      "slugEn": "fermented-buckwheat-bread",
+      "storyblokSlug": "fermentovany-pohankovy-chlebik",
       "title": "Fermentovaný pohankový chlebík",
       "excerpt": "Jednoduchý fermentovaný chléb pouze z pohanky, bez mouky a droždí. Díky přirozené fermentaci je lépe stravitelný a podporuje střevní mikrobiom.",
       "imageAlt": "",
@@ -1353,6 +1365,8 @@
     },
     {
       "slug": "jemna-ledvinkova-pomazanka-na-sadle",
+      "slugEn": "delicate-kidney-spread-on-lard",
+      "storyblokSlug": "jemna-ledvinkova-pomazanka-na-sadle",
       "title": "Jemná ledvinková pomazánka na sádle",
       "excerpt": "Velmi jemná pomazánka z vepřových ledvinek, cibule a sádla. Díky krátké tepelné úpravě a následnému mixování má hladkou strukturu a plnou chuť. Ledvinky jsou přirozeně bohaté na bílkoviny, vitaminy skupiny B a minerální látky.",
       "imageAlt": "",
@@ -1524,6 +1538,8 @@
     },
     {
       "slug": "kremova-hraskovo-kvetakova-omacka-se-slaninou",
+      "slugEn": "creamy-pea-cauliflower-sauce-with-bacon",
+      "storyblokSlug": "kremova-hraskovo-kvetakova-omacka-se-slaninou",
       "title": "Krémová hráškovo-květáková omáčka se slaninou",
       "excerpt": "Jemná omáčka z hrášku a květáku doplněná křupavou slaninou. Výborně se hodí k těstovinám, rýži nebo bramborám a představuje chutný způsob, jak do jídelníčku zařadit více zeleniny.",
       "imageAlt": "",
@@ -1703,6 +1719,8 @@
     },
     {
       "slug": "nebeska-kase-z-bilych-fazoli",
+      "slugEn": "heavenly-white-bean-porridge",
+      "storyblokSlug": "nebeska-kase-z-bilych-fazoli",
       "title": "Nebeská kaše z bílých fazolí",
       "excerpt": "Jemná sladká kaše z bílých fazolí, která překvapí svou krémovou konzistencí a neutrální chutí. Fazole dodají kvalitní rostlinné bílkoviny a vlákninu, spirulina nebo zelené superpotraviny podpoří příjem mikronutrientů. Skvělá snídaně nebo svačina bez obilovin.",
       "imageAlt": "",
@@ -1887,7 +1905,9 @@
       "updated": "2026-10-01"
     },
     {
-      "slug": "apple",
+      "slug": "pecena-jablka",
+      "slugEn": "baked-apples-stuffed-with-oat-nut-crumble",
+      "storyblokSlug": "apple",
       "title": "Pečená jablka plněná ovesno-oříškovou směsí",
       "excerpt": "Pečená jablka plněná vločkami, lískovým oříškovým máslem a rozinkami jsou přirozeně sladká, jemná a vhodná i jako zdravá svačina.",
       "imageAlt": "",
@@ -2069,6 +2089,8 @@
     },
     {
       "slug": "zeleninove-hranolky",
+      "slugEn": "baked-vegetable-fries",
+      "storyblokSlug": "zeleninove-hranolky",
       "title": "Pečené zeleninové hranolky",
       "excerpt": "Jednoduché pečené zeleninové hranolky z různých druhů zeleniny. Skvělé jako lehká příloha a zdravější alternativa klasických hranolků. Variabilní podle sezóny i tolerance.",
       "imageAlt": "",
@@ -2185,6 +2207,8 @@
     },
     {
       "slug": "portobello-burgery-s-batatovo-celerovymi-hranolkami",
+      "slugEn": "portobello-burgers-with-sweet-potato-and-celery-fries",
+      "storyblokSlug": "portobello-burgery-s-batatovo-celerovymi-hranolkami",
       "title": "Portobello burgery s batátovo-celerovými hranolkami",
       "excerpt": "Šťavnatý burger z mletého masa vložený mezi dva opečené žampiony portobello místo bulky. Podávaný s avokádem, čerstvou zeleninou a batátovo-celerovými hranolkami.",
       "imageAlt": "",
@@ -2354,7 +2378,7 @@
       ],
       "en": {
         "title": "Portobello burgers with sweet potato and celery fries",
-        "excerpt": "Juicy ground beef burger sandwiched between two roasted portobello mushrooms instead of a bun. Served with avocado, fresh vegetables and sweet potato-celery fries.",
+        "excerpt": "Juicy burger sandwiched between two roasted portobello mushrooms instead of a bun. Served with avocado, fresh vegetables and sweet potato-celery fries.",
         "imageAlt": "",
         "ingredients": [
           {
@@ -2501,6 +2525,8 @@
     },
     {
       "slug": "vyvar",
+      "slugEn": "broth",
+      "storyblokSlug": "vyvar",
       "title": "Vývar",
       "excerpt": "Správně připravený vývar je jedním ze základních pilířů podpory trávení, střevní sliznice a mikrobiomu. Díky obsahu minerálů, aminokyselin, želatiny a kolagenu pomáhá při hojení propustného střeva a může výrazně podpořit léčbu ekzému a alergií. Důležitá je však délka vaření a správná volba surovin, zejména při histaminové zátěži.",
       "imageAlt": "",

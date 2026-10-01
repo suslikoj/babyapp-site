@@ -91,7 +91,7 @@ Pokud se ekzém během diety zlepší, je to důležitý signál, že potraviny 
 
 Pokud dojde ke zlepšení:
 
-pokračuješ do další fáze – **testování alergenů**
+pokračuješ do další fáze – **[testování alergenů](/pruvodce/eliminacni-dieta/testovani-alergenu/)**
 
 V této fázi se potraviny postupně a bezpečně vrací zpět, aby se přesně zjistilo, co dítěti vadí.
 
@@ -101,7 +101,7 @@ Pokud se příznaky nezlepší vůbec nebo jen minimálně:
 
 pravděpodobně nejde jen o hlavní alergeny
 
-V takovém případě se pokračuje do další fáze:
+V takovém případě se pokračuje do další fáze – [kompletního vyloučení](/pruvodce/eliminacni-dieta/kompletni-vylouceni/):
 
 ### **2. fáze eliminační diety – Kompletní vyloučení**
 

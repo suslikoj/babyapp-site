@@ -264,6 +264,6 @@ Immediate IgE reactions tend to be noticeable and can be dangerous. Delayed non-
 
 The best way to verify is to systematically monitor symptoms, an [elimination phase](/en/main-suspects/), and then a controlled reintroduction of the food.
 
-The **Baby w/o allergies** app will guide you through this process step by step — from recording symptoms to tracking foods to a clearer evaluation of the connections.
+The **Baby Without Allergies** app will guide you through this process step by step — from recording symptoms to tracking foods to a clearer evaluation of the connections.
 
  

@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import * as guideCs from '../content/pruvodce.mjs';
 import * as guideEn from '../content/guide-en.mjs';
@@ -21,37 +22,37 @@ function pair({ cs, en }, changefreq, priority, lastmod) {
 }
 
 const routes = [
-  { path: '/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
-  { path: '/en/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'], xDefault: '/' },
-  { path: '/eczema/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
-  { path: '/en/eczema/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
-  { path: '/signs/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
-  { path: '/en/signs/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
-  { path: '/main-suspects/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
-  { path: '/en/main-suspects/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
+  { path: '/', lastmod: null, changefreq: 'weekly', priority: '1.0', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/en/', lastmod: null, changefreq: 'weekly', priority: '0.9', alternates: ['/', '/en/'], xDefault: '/' },
+  { path: '/eczema/', lastmod: null, changefreq: 'monthly', priority: '0.8', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/en/eczema/', lastmod: null, changefreq: 'monthly', priority: '0.7', alternates: ['/eczema/', '/en/eczema/'], xDefault: '/eczema/' },
+  { path: '/signs/', lastmod: null, changefreq: 'monthly', priority: '0.8', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/en/signs/', lastmod: null, changefreq: 'monthly', priority: '0.7', alternates: ['/signs/', '/en/signs/'], xDefault: '/signs/' },
+  { path: '/main-suspects/', lastmod: null, changefreq: 'monthly', priority: '0.8', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
+  { path: '/en/main-suspects/', lastmod: null, changefreq: 'monthly', priority: '0.7', alternates: ['/main-suspects/', '/en/main-suspects/'], xDefault: '/main-suspects/' },
 
-  { path: '/privacy-policy/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
-  { path: '/en/privacy-policy/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
-  { path: '/medical-disclaimer/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
-  { path: '/en/medical-disclaimer/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
-  { path: '/terms-of-use/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
-  { path: '/en/terms-of-use/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
-  { path: '/zdroje/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
-  { path: '/en/sources/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+  { path: '/privacy-policy/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/en/privacy-policy/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/privacy-policy/', '/en/privacy-policy/'], xDefault: '/privacy-policy/' },
+  { path: '/medical-disclaimer/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/en/medical-disclaimer/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/medical-disclaimer/', '/en/medical-disclaimer/'], xDefault: '/medical-disclaimer/' },
+  { path: '/terms-of-use/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/en/terms-of-use/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
+  { path: '/zdroje/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+  { path: '/en/sources/', lastmod: null, changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
 
   // Průvodce / Guide, O projektu / About, Recepty / Recipes – Czech and English twins
-  ...pair({ cs: '/pruvodce/', en: '/en/guide/' }, 'weekly', '0.9', '2026-10-01'),
+  ...pair({ cs: '/pruvodce/', en: '/en/guide/' }, 'weekly', '0.9', null),
   ...guideCs.categories.flatMap((c) => {
     const en = guideEn.categories.find((e) => e.cs === c.slug);
-    return pair({ cs: guideCs.categoryPath(c.slug), en: en && guideEn.categoryPath(en.slug) }, 'weekly', '0.8', '2026-10-01');
+    return pair({ cs: guideCs.categoryPath(c.slug), en: en && guideEn.categoryPath(en.slug) }, 'weekly', '0.8', null);
   }),
   ...guideCs.articles.flatMap((a) => {
     const en = guideEn.articles.find((e) => e.cs === a.slug);
-    return pair({ cs: guideCs.articlePath(a), en: en && guideEn.articlePath(en) }, 'monthly', '0.8', '2026-10-01');
+    return pair({ cs: guideCs.articlePath(a), en: en && guideEn.articlePath(en) }, 'monthly', '0.8', null);
   }),
-  ...pair({ cs: '/o-projektu/', en: '/en/about/' }, 'monthly', '0.6', '2026-10-01'),
+  ...pair({ cs: '/o-projektu/', en: '/en/about/' }, 'monthly', '0.6', null),
   ...pair({ cs: '/recepty/', en: '/en/recipes/' }, 'weekly', '0.8', recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01'),
-  ...recipeData.recipes.flatMap((r) => pair({ cs: `/recepty/${r.slug}/`, en: r.en ? `/en/recipes/${r.slug}/` : null }, 'monthly', '0.7', r.updated || r.published)),
+  ...recipeData.recipes.flatMap((r) => pair({ cs: `/recepty/${r.slug}/`, en: r.en ? `/en/recipes/${r.slugEn}/` : null }, 'monthly', '0.7', r.updated || r.published)),
 ];
 
 function normalizeBaseUrl(url) {
@@ -115,6 +116,30 @@ function validateSitemapXml(xml) {
 function createRobotsTxt() {
   return `User-agent: *\nAllow: /\nSitemap: ${absoluteUrl('/sitemap.xml')}\n`;
 }
+
+// lastmod = the real date of the last content change. Each page's HTML is fingerprinted; the date in
+// content/lastmod.json only moves when the fingerprint changes. Recipes use their Storyblok publish date.
+const MANIFEST = path.join(root, 'content/lastmod.json');
+const manifest = JSON.parse(await fs.readFile(MANIFEST, 'utf8').catch(() => '{}'));
+const today = new Date().toISOString().slice(0, 10);
+for (const route of routes) {
+  if (route.lastmod) continue;
+  const html = await fs.readFile(path.join(publicDir, route.path, 'index.html'), 'utf8').catch(() => null);
+  if (!html) {
+    route.lastmod = today;
+    continue;
+  }
+  const hash = crypto.createHash('sha1').update(html).digest('hex');
+  const known = manifest[route.path];
+  if (known?.hash === hash) {
+    route.lastmod = known.date;
+  } else {
+    route.lastmod = today;
+    manifest[route.path] = { hash, date: today };
+  }
+}
+const sortedManifest = Object.fromEntries(Object.keys(manifest).sort().map((key) => [key, manifest[key]]));
+await fs.writeFile(MANIFEST, `${JSON.stringify(sortedManifest, null, 2)}\n`, 'utf8');
 
 const sitemapXml = createSitemapXml();
 validateSitemapXml(sitemapXml);

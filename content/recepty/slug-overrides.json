@@ -1,0 +1,4 @@
+{
+  "_comment": "Web addresses for recipes whose Storyblok slug doesn't fit. Key = Storyblok slug. Prefer the fields web_slug / web_slug_en in Storyblok; this file is a fallback.",
+  "apple": { "cs": "pecena-jablka" }
+}

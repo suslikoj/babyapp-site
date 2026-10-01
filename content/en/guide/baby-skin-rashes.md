@@ -4,7 +4,7 @@
 
 The skin of young children is immature, thin and sensitive. It is therefore not uncommon for various skin manifestations to appear in the first months of life, which may at first glance resemble eczema, allergies or infections. However, in reality, these are often **temporary or specific skin reactions that have a different cause and solution**.
 
-Correct differentiation is key – **not every red spot is atopic eczema** and not every rash is related to food. However, some symptoms may be **the first signal of an overworked immune system** or the onset of an allergic reaction.
+Correct differentiation is key – **not every red spot is [atopic eczema](/en/eczema/)** and not every rash is related to food. However, some symptoms may be **the first signal of an overworked immune system** or the onset of an allergic reaction.
 
 ### **Diaper rash (diaper dermatitis)**
 

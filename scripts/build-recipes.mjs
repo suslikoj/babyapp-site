@@ -7,7 +7,7 @@ import { AUTHOR, ORGANIZATION, absoluteUrl, appCta, breadcrumbJsonLd, breadcrumb
 
 const data = JSON.parse(await fs.readFile(path.join(root, 'content/recepty/recipes.json'), 'utf8'));
 const { recipes, totalInApp } = data;
-const webSlugs = new Set(recipes.map((r) => r.slug));
+const bySlug = Object.fromEntries(recipes.map((r) => [r.slug, r]));
 
 // Labels – same wording as the app (lib/lang/cs_cz_desc.dart, en_us_desc.dart).
 const L = {
@@ -25,6 +25,7 @@ const L = {
     },
     keywordFree: (f) => `bez ${f}`,
     facts: { prep: 'Příprava', cook: 'Vaření', total: 'Celkem', servings: 'Porce', difficulty: 'Obtížnost' },
+    cardContains: 'Obsahuje:',
     contains: 'Obsahuje alergeny:', containsNone: 'žádný ze sledovaných alergenů', mayContain: 'Může obsahovat:', freeLabel: 'Podle složení je bez:',
     ingredients: 'Ingredience', servingsFor: (n) => `na ${n} ${n === 1 ? 'porci' : n < 5 ? 'porce' : 'porcí'}`, optional: '– volitelné',
     steps: 'Postup', tip: 'Tip', nutrition: 'Nutriční hodnoty (1 porce)', servingSize: '1 porce',
@@ -52,15 +53,16 @@ const L = {
     },
     keywordFree: (f) => `${f}-free`,
     facts: { prep: 'Prep', cook: 'Cook', total: 'Total', servings: 'Servings', difficulty: 'Difficulty' },
+    cardContains: 'Contains:',
     contains: 'Contains allergens:', containsNone: 'none of the tracked allergens', mayContain: 'May contain:', freeLabel: 'Free from (by ingredients):',
     ingredients: 'Ingredients', servingsFor: (n) => `for ${n} ${n === 1 ? 'serving' : 'servings'}`, optional: '– optional',
     steps: 'Method', tip: 'Tip', nutrition: 'Nutrition (1 serving)', servingSize: '1 serving',
     nutritionLabels: { kcal: 'Energy', protein: 'Protein', carbs: 'Carbs', fats: 'Fat' },
     more: 'More recipes', all: 'All recipes →', breadcrumb: 'Recipes',
-    cta: { eyebrow: 'Recipes in the app', heading: 'Find more recipes in the app', text: `The Baby w/o allergies app has ${totalInApp} recipes that are filtered automatically by your current diet phase and the allergens you are testing.` },
+    cta: { eyebrow: 'Recipes in the app', heading: 'Find more recipes in the app', text: `The Baby Without Allergies app has ${totalInApp} recipes that are filtered automatically by your current diet phase and the allergens you are testing.` },
     listEyebrow: 'Recipes from the app', listH1: 'Recipes for the elimination diet and allergies',
-    listLead: 'A selection of recipes from the Baby w/o allergies app – simple meals for breastfeeding moms and children. Each recipe lists allergens, prep time and nutrition.',
-    listTitle: 'Allergy-Friendly Recipes for the Elimination Diet | Baby w/o allergies',
+    listLead: 'A selection of recipes from the Baby Without Allergies app – simple meals for breastfeeding moms and children. Each recipe lists allergens, prep time and nutrition.',
+    listTitle: 'Allergy-Friendly Recipes for the Elimination Diet | Baby Without Allergies',
     listDescription: 'Dairy-free, egg-free and other allergy-friendly recipes for breastfeeding moms and kids. Filter by meal type, allergens and prep time.',
     filters: { category: 'Type', all: 'All', free: 'Free from', time: 'Time', t30: 'Under 30 min', t60: 'Under 60 min', tags: 'Features', count: (n) => `of ${n} recipes` },
     empty: 'No recipe on the website matches these filters right now. You’ll find more recipes in the app.', warn: 'May contain: ',
@@ -77,7 +79,7 @@ const minutes = (n) => (n ? `${n} min` : '');
 const isoDuration = (n) => (n ? `PT${Math.round(n)}M` : undefined);
 const totalTime = (r) => r.totalMinutes || ((r.activeMinutes || 0) + (r.cookMinutes || 0)) || null;
 const freeKeys = (r) => FREE_KEYS.filter((key) => !r.contains.includes(key) && !r.mayContain.includes(key));
-const recipePath = (lang, slug) => `${L[lang].root}${slug}/`;
+const recipePath = (lang, r) => `${L[lang].root}${lang === 'en' ? r.slugEn : r.slug}/`;
 
 // Language view of a recipe: texts from the matching Storyblok language (falls back to Czech).
 function view(r, lang) {
@@ -115,7 +117,7 @@ function recipeCard(lang, recipe) {
   const time = totalTime(r) || r.activeMinutes;
   const chips = [r.categoryName, ...CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => t.tags[k])].filter(Boolean).slice(0, 3);
   const attrs = [`data-category="${r.category?.slug || ''}"`, `data-contains="${r.contains.join(' ')}"`, `data-may="${r.mayContain.join(' ')}"`, `data-tags="${r.tagKeys.join(' ')}"`, `data-minutes="${totalTime(r) || ''}"`].join(' ');
-  return `<a class="recipe-card" href="${recipePath(lang, r.slug)}" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}<p class="recipe-card__excerpt">${escapeHtml(r.excerpt)}</p><p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
+  return `<a class="recipe-card" href="${recipePath(lang, r)}" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}<p class="recipe-card__excerpt">${escapeHtml(r.excerpt)}</p>${r.contains.length ? `<p class="recipe-card__allergens"><span>${t.cardContains}</span> ${r.contains.map((k) => t.allergens[k] || k).join(', ')}</p>` : ''}<p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
 }
 
 // ── Detail ─────────────────────────────────────────────────────────────
@@ -123,8 +125,8 @@ function recipeCard(lang, recipe) {
 function recipePage(lang, recipe) {
   const t = L[lang];
   const r = view(recipe, lang);
-  const href = recipePath(lang, r.slug);
-  const alternates = { cs: recipePath('cs', r.slug), en: recipePath('en', r.slug) };
+  const href = recipePath(lang, r);
+  const alternates = { cs: recipePath('cs', r), en: recipePath('en', r) };
   const trail = [[t.breadcrumb, t.root], [r.title, href]];
   const total = totalTime(r);
   const free = freeKeys(r).map((k) => t.freeFrom[k]);
@@ -133,7 +135,7 @@ function recipePage(lang, recipe) {
   const tags = CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => t.tags[k]);
 
   const ingredients = r.ingredients.map((i) => {
-    const name = i.linkedSlug && webSlugs.has(i.linkedSlug) ? `<a href="${recipePath(lang, i.linkedSlug)}">${escapeHtml(i.name)}</a>` : escapeHtml(i.name);
+    const name = i.linkedSlug && bySlug[i.linkedSlug] ? `<a href="${recipePath(lang, bySlug[i.linkedSlug])}">${escapeHtml(i.name)}</a>` : escapeHtml(i.name);
     const amount = [i.amount, i.unit].filter(Boolean).join(' ');
     return `<li>${amount ? `<span class="recipe-ingredients__amount">${escapeHtml(amount)}</span> ` : ''}${name}${i.note ? ` <span class="recipe-ingredients__note">(${escapeHtml(i.note)})</span>` : ''}${i.optional ? ` <span class="recipe-ingredients__note">${t.optional}</span>` : ''}</li>`;
   }).join('');
@@ -262,7 +264,7 @@ function listingPage(lang) {
     alternates: { cs: L.cs.root, en: L.en.root },
     image: recipes[0]?.image ? storyblokImage(recipes[0].image, 1200) : absoluteUrl(t.image),
     jsonLd: [
-      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: t.listH1, url: absoluteUrl(t.root), inLanguage: lang, publisher: ORGANIZATION, mainEntity: { '@type': 'ItemList', itemListElement: sorted.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(recipePath(lang, r.slug)) })) } },
+      { '@context': 'https://schema.org', '@type': 'CollectionPage', name: t.listH1, url: absoluteUrl(t.root), inLanguage: lang, publisher: ORGANIZATION, mainEntity: { '@type': 'ItemList', itemListElement: sorted.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: absoluteUrl(recipePath(lang, r)) })) } },
       breadcrumbJsonLd(trail),
     ],
     nav: topNav({ lang, active: 'recipes', czUrl: L.cs.root, enUrl: L.en.root }),
@@ -276,6 +278,6 @@ for (const lang of ['cs', 'en']) {
   const dir = L[lang].root.slice(1);
   await fs.rm(path.join(root, dir), { recursive: true, force: true });
   await write(`${dir}index.html`, listingPage(lang));
-  for (const r of recipes) await write(`${dir}${r.slug}/index.html`, recipePage(lang, r));
+  for (const r of recipes) await write(`${recipePath(lang, r).slice(1)}index.html`, recipePage(lang, r));
 }
 console.log(`Built /recepty/ and /en/recipes/ with ${recipes.length} recipes each.`);

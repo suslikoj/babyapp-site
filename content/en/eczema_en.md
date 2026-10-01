@@ -21,6 +21,8 @@ Eczema can take many forms. In children, it most often appears as:
 
 Sometimes it starts very inconspicuously – just as dry patches or slight redness – and develops gradually.
 
+Not every baby rash is eczema, though. How to tell it apart from diaper rash, cradle cap or impetigo is explained in [Different skin rashes in babies](/en/guide/eczema/baby-skin-rashes/).
+
 ## **Why does eczema occur in children?**
 
 Eczema is not just a skin problem. In most cases, it is a combination of multiple factors.

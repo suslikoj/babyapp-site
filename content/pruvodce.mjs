@@ -41,7 +41,7 @@ export const categories = [
 export const legacyArticles = [
   { category: 'potravinova-alergie', path: '/signs/', title: 'Projevy potravinové alergie', description: 'Jak poznat potravinovou alergii u miminka: kůže, stolice, bříško, reflux i rychlé reakce.', order: 0 },
   { category: 'eliminacni-dieta', path: '/main-suspects/', title: 'Hlavní podezřelí', description: '1. fáze eliminační diety: které potraviny na 14 dní vyřadit a co sledovat.', order: 0 },
-  { category: 'ekzem', path: '/eczema/', title: 'Ekzém u dětí', description: 'Jak ekzém u miminka poznat, proč vzniká a kdy promazávat.', order: 0 },
+  { category: 'ekzem', path: '/eczema/', title: 'Ekzém u miminka', description: 'Jak ekzém u miminka poznat, proč vzniká a kdy promazávat.', order: 0 },
 ];
 
 export const articles = [

@@ -91,7 +91,7 @@ If eczema improves during the diet, this is an important signal that food may pl
 
 If there is improvement:
 
-you proceed to the next phase – allergen testing
+you proceed to the next phase – [allergen testing](/en/guide/elimination-diet/allergen-testing/)
 
 In this phase, foods are gradually and safely reintroduced to determine exactly what bothers the child.
 
@@ -101,7 +101,7 @@ If symptoms do not improve at all or only minimally:
 
 probably not just the main allergens
 
-In this case, proceed to the next phase:
+In this case, proceed to the next phase – [complete elimination](/en/guide/elimination-diet/complete-elimination/):
 
 ### **Phase 2 of the Elimination Diet – Complete Elimination**
 

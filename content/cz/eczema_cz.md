@@ -21,6 +21,8 @@ Ekzém může mít různé podoby. U dětí se nejčastěji objevuje jako:
 
 Někdy začíná velmi nenápadně – jen jako suchá místa nebo lehké zarudnutí – a postupně se rozvíjí.
 
+Ne každá vyrážka u miminka je ale ekzém. Jak ho odlišit od opruzenin, mléčné krusty nebo impetiga, popisuje článek [Kožní projevy u miminek](/pruvodce/ekzem/kozni-projevy-u-miminek/).
+
 ## Proč vzniká ekzém u dětí?
 
 Ekzém není jen problém kůže. Ve většině případů jde o **kombinaci více faktorů**.

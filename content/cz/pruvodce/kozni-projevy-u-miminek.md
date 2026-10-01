@@ -4,7 +4,7 @@
 
 Kůže malých dětí je nezralá, tenká a citlivá. Není proto výjimkou, že se v prvních měsících života objevují různé kožní projevy, které mohou na první pohled připomínat ekzém, alergii nebo infekci. Ve skutečnosti se však často jedná o **přechodné nebo specifické kožní reakce**, které mají odlišnou příčinu i řešení.
 
-Správné rozlišení je klíčové – **ne každý červený flek je atopický ekzém** a ne každá vyrážka souvisí s potravinou. Zároveň ale platí, že některé projevy mohou být **prvním signálem přetíženého imunitního systému** nebo začínající alergické reakce.
+Správné rozlišení je klíčové – **ne každý červený flek je [atopický ekzém](/eczema/)** a ne každá vyrážka souvisí s potravinou. Zároveň ale platí, že některé projevy mohou být **prvním signálem přetíženého imunitního systému** nebo začínající alergické reakce.
 
 ### **Opruzeniny (plenková dermatitida)**
 

@@ -141,6 +141,146 @@
       "source": "/cs/zdroje/:path*",
       "destination": "/zdroje/",
       "permanent": true
+    },
+    {
+      "source": "/en/recipes/avokadova-majoneza",
+      "destination": "/en/recipes/avocado-mayonnaise/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/avokadova-majoneza/",
+      "destination": "/en/recipes/avocado-mayonnaise/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/bananovy-chlebicek",
+      "destination": "/en/recipes/banana-bread/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/bananovy-chlebicek/",
+      "destination": "/en/recipes/banana-bread/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem",
+      "destination": "/en/recipes/blueberry-apple-smoothie-with-avocado/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/boruvkovo-jablecne-smoothie-s-avokadem/",
+      "destination": "/en/recipes/blueberry-apple-smoothie-with-avocado/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/bun-cha",
+      "destination": "/en/recipes/bun-cha-pork-flank-with-rice-noodles-and-herbs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/bun-cha/",
+      "destination": "/en/recipes/bun-cha-pork-flank-with-rice-noodles-and-herbs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/dort-s-dynovo-bananovym-kremem",
+      "destination": "/en/recipes/cake-with-pumpkin-banana-cream/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/dort-s-dynovo-bananovym-kremem/",
+      "destination": "/en/recipes/cake-with-pumpkin-banana-cream/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/fermentovany-pohankovy-chlebik",
+      "destination": "/en/recipes/fermented-buckwheat-bread/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/fermentovany-pohankovy-chlebik/",
+      "destination": "/en/recipes/fermented-buckwheat-bread/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/jemna-ledvinkova-pomazanka-na-sadle",
+      "destination": "/en/recipes/delicate-kidney-spread-on-lard/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/jemna-ledvinkova-pomazanka-na-sadle/",
+      "destination": "/en/recipes/delicate-kidney-spread-on-lard/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou",
+      "destination": "/en/recipes/creamy-pea-cauliflower-sauce-with-bacon/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/kremova-hraskovo-kvetakova-omacka-se-slaninou/",
+      "destination": "/en/recipes/creamy-pea-cauliflower-sauce-with-bacon/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/nebeska-kase-z-bilych-fazoli",
+      "destination": "/en/recipes/heavenly-white-bean-porridge/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/nebeska-kase-z-bilych-fazoli/",
+      "destination": "/en/recipes/heavenly-white-bean-porridge/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/apple",
+      "destination": "/en/recipes/baked-apples-stuffed-with-oat-nut-crumble/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/apple/",
+      "destination": "/en/recipes/baked-apples-stuffed-with-oat-nut-crumble/",
+      "permanent": true
+    },
+    {
+      "source": "/recepty/apple",
+      "destination": "/recepty/pecena-jablka/",
+      "permanent": true
+    },
+    {
+      "source": "/recepty/apple/",
+      "destination": "/recepty/pecena-jablka/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/zeleninove-hranolky",
+      "destination": "/en/recipes/baked-vegetable-fries/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/zeleninove-hranolky/",
+      "destination": "/en/recipes/baked-vegetable-fries/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami",
+      "destination": "/en/recipes/portobello-burgers-with-sweet-potato-and-celery-fries/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/portobello-burgery-s-batatovo-celerovymi-hranolkami/",
+      "destination": "/en/recipes/portobello-burgers-with-sweet-potato-and-celery-fries/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/vyvar",
+      "destination": "/en/recipes/broth/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/vyvar/",
+      "destination": "/en/recipes/broth/",
+      "permanent": true
     }
   ],
   "headers": [

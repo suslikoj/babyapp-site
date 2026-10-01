@@ -1,6 +1,6 @@
 # **2. fáze eliminační diety - Kompletní vyloučení**
 
-Do této fáze vstupujete ve chvíli, kdy se **stav dítěte po první fázi nezlepšil**, případně se zlepšil jen minimálně nebo se dokonce zhoršil.  
+Do této fáze vstupujete ve chvíli, kdy se **stav dítěte po [první fázi](/main-suspects/) nezlepšil**, případně se zlepšil jen minimálně nebo se dokonce zhoršil.  
 To znamená, že spouštěč obtíží pravděpodobně neleží pouze mezi hlavními podezřelými.
 
 Vyřadíte veškeré potencionální alergeny na pár dní a následně ihned přecházíte na testování.
