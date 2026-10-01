@@ -14,7 +14,7 @@ const pages = [
   {
     slug: 'eczema', lang: 'cs', title: 'Ekzém u dětí',
     seoTitle: 'Ekzém u miminka: jak ho poznat a jak pečovat o kůži',
-    description: 'Jak poznat ekzém u miminka a malého dítěte, proč vzniká, co ho zhoršuje, kdy kůži promazávat a kdy jít k lékaři. Praktický průvodce pro rodiče.',
+    description: 'Jak poznat ekzém u miminka, proč vzniká, co ho zhoršuje, kdy kůži promazávat a kdy s dítětem k lékaři. Praktický průvodce pro rodiče kojenců i batolat.',
     input: 'content/cz/eczema_cz.md', output: 'eczema/index.html',
     hero: '/assets/article-eczema.jpg', heroWebp: '/assets/article-eczema.webp', heroSize: [4000, 6000],
     heroAlt: 'Ruka s drobnou červenou vyrážkou na kůži',
@@ -23,8 +23,8 @@ const pages = [
   },
   {
     slug: 'signs', lang: 'cs', title: 'Projevy potravinové alergie',
-    seoTitle: 'Projevy potravinové alergie u miminka a kojence',
-    description: 'Jak poznat potravinovou alergii u miminka a kojence: ekzém, hlen či krev ve stolici, koliky, reflux i rychlé reakce. Co sledovat a kdy jít k lékaři.',
+    seoTitle: 'Projevy potravinové alergie u kojenců a batolat',
+    description: 'Jak se potravinová alergie projevuje u kojených i nekojených miminek: ekzém, hlen či krev ve stolici, koliky, reflux i rychlé reakce. Kdy jít k lékaři.',
     input: 'content/cz/signs_cz.md', output: 'signs/index.html',
     hero: '/assets/article-signs.png', heroWebp: '/assets/article-signs.webp', heroSize: [613, 393],
     heroAlt: 'Miminko se zarudlou tvářičkou',

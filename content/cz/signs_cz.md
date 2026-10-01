@@ -1,10 +1,10 @@
-# **Jak poznat potravinovou alergii u miminka a kojence**
+# **Jak poznat potravinovou alergii u miminka**
 
 
 
 ## **Jak poznat, že ji dítě má?**
 
-Potravinová alergie u miminka, kojence nebo malého dítěte se nemusí projevit jen vyrážkou. U některých dětí je reakce rychlá a nápadná, u jiných přichází až po několika hodinách nebo dnech. Právě proto bývá těžké poznat, zda za obtížemi opravdu stojí konkrétní potravina.
+Potravinová alergie u kojenců a batolat se nemusí projevit jen vyrážkou. U některých dětí je reakce rychlá a nápadná, u jiných přichází až po několika hodinách nebo dnech. Právě proto bývá těžké poznat, zda za obtížemi opravdu stojí konkrétní potravina.
 
 Projevy potravinové alergie se často zaměňují za reflux, citlivé bříško, růst zoubků, nachlazení nebo běžné zažívací potíže.
 

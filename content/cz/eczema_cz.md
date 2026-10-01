@@ -1,4 +1,4 @@
-# Ekzém u miminka a malého dítěte
+# Ekzém u miminek a batolat
 
 
 

@@ -1,4 +1,4 @@
-# **Eliminační dieta u miminka a při kojení: 1. fáze**
+# **1. fáze eliminační diety při kojení i u batolat**
 
 ## **Co vysadit a jak začít u miminka nebo dítěte?**
 
