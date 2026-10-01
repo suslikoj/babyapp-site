@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { categories, articles as guideArticles, categoryPath, articlePath } from '../content/pruvodce.mjs';
+import recipeData from '../content/recepty/recipes.json' with { type: 'json' };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,6 +31,16 @@ const routes = [
   { path: '/en/terms-of-use/', lastmod: '2026-08-24', changefreq: 'yearly', priority: '0.5', alternates: ['/terms-of-use/', '/en/terms-of-use/'], xDefault: '/terms-of-use/' },
   { path: '/zdroje/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
   { path: '/en/sources/', lastmod: '2026-07-26', changefreq: 'yearly', priority: '0.5', alternates: ['/zdroje/', '/en/sources/'], xDefault: '/zdroje/' },
+
+  // Průvodce (CZ only – no hreflang alternates until EN versions exist)
+  { path: '/pruvodce/', lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.9', alternates: [] },
+  ...categories.map((c) => ({ path: categoryPath(c.slug), lastmod: '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] })),
+  ...guideArticles.map((a) => ({ path: articlePath(a), lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.8', alternates: [] })),
+
+  { path: '/o-projektu/', lastmod: '2026-10-01', changefreq: 'monthly', priority: '0.6', alternates: [] },
+  // Recepty (CZ only, from the Storyblok snapshot)
+  { path: '/recepty/', lastmod: recipeData.recipes.map((r) => r.updated).sort().at(-1) || '2026-10-01', changefreq: 'weekly', priority: '0.8', alternates: [] },
+  ...recipeData.recipes.map((r) => ({ path: `/recepty/${r.slug}/`, lastmod: r.updated || r.published, changefreq: 'monthly', priority: '0.7', alternates: [] })),
 ];
 
 function normalizeBaseUrl(url) {
@@ -55,7 +67,7 @@ function absoluteUrl(routePath) {
 function createSitemapXml() {
   const entries = routes
     .map((route) => {
-      const alternateLinks = [
+      const alternateLinks = !route.alternates.length ? '' : [
         ...route.alternates.map((alternatePath) => {
           const hreflang = alternatePath.startsWith('/en/') || alternatePath === '/en/' ? 'en' : 'cs';
           return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escapeXml(absoluteUrl(alternatePath))}" />`;
@@ -66,7 +78,7 @@ function createSitemapXml() {
       return [
         '  <url>',
         `    <loc>${escapeXml(absoluteUrl(route.path))}</loc>`,
-        alternateLinks,
+        ...(alternateLinks ? [alternateLinks] : []),
         `    <lastmod>${route.lastmod}</lastmod>`,
         `    <changefreq>${route.changefreq}</changefreq>`,
         `    <priority>${route.priority}</priority>`,

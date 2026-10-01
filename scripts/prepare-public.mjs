@@ -23,6 +23,9 @@ const copyTargets = [
   'medical-disclaimer',
   'terms-of-use',
   'zdroje',
+  'pruvodce',
+  'recepty',
+  'o-projektu',
   'cs',
   'en',
 ];

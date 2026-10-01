@@ -1,0 +1,1450 @@
+{
+  "totalInApp": 104,
+  "categories": [
+    {
+      "slug": "smoothies_drinks",
+      "name": "Smoothie a nápoje"
+    },
+    {
+      "slug": "dips_pestos",
+      "name": "Dipy a pesta"
+    },
+    {
+      "slug": "bakery",
+      "name": "Pečivo"
+    },
+    {
+      "slug": "sides_salads",
+      "name": "Přílohy a saláty"
+    },
+    {
+      "slug": "spreads",
+      "name": "Pomazánky"
+    },
+    {
+      "slug": "savory_snacks",
+      "name": "Slané svačiny"
+    },
+    {
+      "slug": "sweet",
+      "name": "Sladké dobroty"
+    },
+    {
+      "slug": "breakfasts",
+      "name": "Snídaně"
+    },
+    {
+      "slug": "soups",
+      "name": "Polévky"
+    },
+    {
+      "slug": "mains",
+      "name": "Hlavní jídla"
+    }
+  ],
+  "allergenLabels": {
+    "legumes": "Luštěniny",
+    "wheat": "Pšenice",
+    "oat": "Oves",
+    "citrus": "Citrusy",
+    "root": "Kořenová zelenina",
+    "tomato": "Rajče",
+    "pepper": "Paprika",
+    "exotic": "Exotické ovoce",
+    "fish": "Ryby",
+    "berries": "Bobuloviny",
+    "egg": "Vejce",
+    "poultry": "Kuřecí",
+    "milk": "Mléko",
+    "beef": "Hovězí",
+    "soya": "Sója",
+    "cocoa": "Kakao",
+    "seeds": "Semínka",
+    "nuts": "Ořechy",
+    "peanuts": "Arašídy",
+    "spices": "Koření",
+    "honey": "Med",
+    "carob": "Karob",
+    "crustacean": "Korýši"
+  },
+  "recipes": [
+    {
+      "slug": "avokadova-majoneza",
+      "title": "Avokádová majonéza",
+      "excerpt": "Krémový a svěží dip z avokáda s citronovou šťávou. Skvělý doplněk k pečené zelenině nebo masu.",
+      "image": "https://a.storyblok.com/f/289317949964253/408x612/6e8538ce09/avomajo.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "dips_pestos",
+        "name": "Dipy a pesta"
+      },
+      "tags": [
+        "Do 30 minut",
+        "Veganské",
+        "Bez vaření"
+      ],
+      "tagKeys": [
+        "under_30",
+        "vegan",
+        "no_cook"
+      ],
+      "servings": 4,
+      "difficulty": "jednoduché",
+      "activeMinutes": 5,
+      "cookMinutes": null,
+      "totalMinutes": 5,
+      "nutrition": {
+        "kcal": 160,
+        "protein": 2,
+        "carbs": 6,
+        "fats": 15
+      },
+      "contains": [],
+      "mayContain": [
+        "citrus"
+      ],
+      "ingredients": [
+        {
+          "name": "Avokádo zralé",
+          "amount": "2",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Citrónová šťáva",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Avokáda rozkrojte, vyjměte pecku a dužinu vydlabejte do misky.",
+          "note": ""
+        },
+        {
+          "text": "Rozmačkejte vidličkou nebo rozmixujte dohladka.",
+          "note": ""
+        },
+        {
+          "text": "Přidejte citronovou šťávu a sůl.",
+          "note": ""
+        },
+        {
+          "text": "Promíchejte do krémové konzistence.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Citronová šťáva nejen dochutí, ale zároveň zpomalí hnědnutí avokáda."
+      ],
+      "published": "2026-03-31",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "boruvkovo-jablecne-smoothie-s-avokadem",
+      "title": "Borůvkovo-jablečné smoothie s avokádem",
+      "excerpt": "Ovocné smoothie s jemnou krémovou strukturou díky avokádu. Borůvky přinášejí antioxidanty (zejména anthokyany), jablko vlákninu a přirozenou sladkost. Rychlá svačina nebo lehká snídaně bez přidaného cukru.",
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/431d6ad5ba/smooth.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "smoothies_drinks",
+        "name": "Smoothie a nápoje"
+      },
+      "tags": [
+        "Na cesty",
+        "Do 30 minut",
+        "Bez vaření"
+      ],
+      "tagKeys": [
+        "travel",
+        "under_30",
+        "no_cook"
+      ],
+      "servings": 2,
+      "difficulty": "jednoduché",
+      "activeMinutes": 5,
+      "cookMinutes": null,
+      "totalMinutes": null,
+      "nutrition": {
+        "kcal": 220,
+        "protein": 3,
+        "carbs": 28,
+        "fats": 12
+      },
+      "contains": [
+        "berries"
+      ],
+      "mayContain": [],
+      "ingredients": [
+        {
+          "name": "Jablko",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Borůvky",
+          "amount": "2",
+          "unit": "hrstě",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Avokádo",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Voda",
+          "amount": "0.5",
+          "unit": "hrnku",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Jablko omyj a zbav jadřince.",
+          "note": ""
+        },
+        {
+          "text": "Avokádo rozpůl, vyjmi dužinu.",
+          "note": ""
+        },
+        {
+          "text": "Vše vlož do mixéru, přidej vodu.",
+          "note": ""
+        },
+        {
+          "text": "Mixuj do hladké konzistence.",
+          "note": ""
+        },
+        {
+          "text": "Podávej ihned.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Pro hustší smoothie přidej méně vody, pro lehčí konzistenci naopak více. Pokud chceš chladnější variantu, použij mražené borůvky."
+      ],
+      "published": "2026-02-14",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "bun-cha",
+      "title": "Bún chả – vepřový bok s rýžovými nudlemi a bylinkami",
+      "excerpt": "Lehčí domácí varianta vietnamského bún chả. Marinovaný vepřový bok dodá plnou chuť a kvalitní tuky, rýžové nudle jsou přirozeně bez lepku a čerstvá zelenina s bylinkami jídlo odlehčí. Sladkokyselá zálivka podporuje trávení a vyvažuje tučnost masa.",
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/1799780f9c/buncha.PNG",
+      "imageAlt": "",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla"
+      },
+      "tags": [
+        "Bez alergenů"
+      ],
+      "tagKeys": [
+        "no_allergen"
+      ],
+      "servings": 4,
+      "difficulty": "středně těžké",
+      "activeMinutes": 25,
+      "cookMinutes": 45,
+      "totalMinutes": 70,
+      "nutrition": {
+        "kcal": 520,
+        "protein": 26,
+        "carbs": 48,
+        "fats": 25
+      },
+      "contains": [],
+      "mayContain": [],
+      "ingredients": [
+        {
+          "name": "Maso:",
+          "amount": "",
+          "unit": "",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Vepřový bok",
+          "amount": "500",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rýžový ocet",
+          "amount": "1",
+          "unit": "lžíce",
+          "note": "či jablečný",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Kokosový cukr",
+          "amount": "1",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Sůl",
+          "amount": "1",
+          "unit": "lžička",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Nastrouhaný česnek",
+          "amount": "2",
+          "unit": "stroužky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Nastrouhaný zázvor",
+          "amount": "2",
+          "unit": "cm",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Koriandr",
+          "amount": "0.5",
+          "unit": "lžičky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Nudle a zelenina:",
+          "amount": "",
+          "unit": "",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rýžový nudle",
+          "amount": "150",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Batáta",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Salát",
+          "amount": "4",
+          "unit": "hrsti",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Okurka",
+          "amount": "2",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Bylinky",
+          "amount": "1",
+          "unit": "hrst",
+          "note": "máta, koriandr",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Zálivka:",
+          "amount": "",
+          "unit": "",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Voda",
+          "amount": "9",
+          "unit": "lžic",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Jablečný ocet",
+          "amount": "3",
+          "unit": "lžičky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Sladidlo",
+          "amount": "1.5",
+          "unit": "lžíce",
+          "note": "med, javorový sirup",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Strouhaný zázvor",
+          "amount": "1.5",
+          "unit": "lžičky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Marinování masa: Maso očisti a nakrájej na plátky nebo větší kostky. V míse smíchej ocet, cukr/sirup, česnek, zázvor, sůl a koření. Maso v marinádě důkladně obal a nech odležet alespoň 30 minut, ideálně přes noc v lednici.",
+          "note": ""
+        },
+        {
+          "text": "Příprava masa: Pečení: Maso rozlož do zapékací misky, přikryj a peč na 160 °C 45–60 minut, poté odkryj a krátce dopeč do křupava.\nNebo pánev: Opékej nejprve na suché pánvi kůží dolů, poté obrať, přidej marinádu a nech zkaramelizovat.",
+          "note": ""
+        },
+        {
+          "text": "Nudle a zelenina: \nRýžové nudle připrav dle návodu. Batátu nastrouhej, salát natrhej, okurku nakrájej a bylinky nasekej.",
+          "note": ""
+        },
+        {
+          "text": "Zálivka: Všechny suroviny na zálivku smíchej a ochutnej – měla by být jemně sladkokyselá.",
+          "note": ""
+        },
+        {
+          "text": "Servírování: Do misek dej nudle, zeleninu, přidej maso a přelij zálivkou. Podávej ihned.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Pokud chceš lehčí verzi, použij menší porci masa a přidej více zeleniny a bylinek. Maso lze připravit předem a druhý den jen krátce ohřát."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "dort-s-dynovo-bananovym-kremem",
+      "title": "Dort s dýňovo-banánovým krémem",
+      "excerpt": "Jednoduchý domácí dort vhodný k oslavě prvních narozenin. Korpus z banánového chlebíku doplňuje jemný krém z dýně, banánu a bílých fazolí.",
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/88398487fc/dort.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "sweet",
+        "name": "Sladké dobroty"
+      },
+      "tags": [
+        "Veganské"
+      ],
+      "tagKeys": [
+        "vegan"
+      ],
+      "servings": 12,
+      "difficulty": "středně těžké",
+      "activeMinutes": 40,
+      "cookMinutes": 40,
+      "totalMinutes": 80,
+      "nutrition": {
+        "kcal": 220,
+        "protein": 4,
+        "carbs": 30,
+        "fats": 10
+      },
+      "contains": [
+        "exotic"
+      ],
+      "mayContain": [
+        "spices"
+      ],
+      "ingredients": [
+        {
+          "name": "Těsto na korpus",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Uvařené bílé fazole",
+          "amount": "125",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Dýňové pyré",
+          "amount": "2",
+          "unit": "hrnky",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Pudink",
+          "amount": "250",
+          "unit": "ml",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Banány",
+          "amount": "2",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Strouhaný kokos",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Kokosový olej",
+          "amount": "3",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Korpus:",
+          "note": ""
+        },
+        {
+          "text": "Připrav podle receptu na banánový chlebík – těsto rozděl na dvě poloviny a každou upeč zvlášť v dortové formě přibližně 20 minut.",
+          "note": ""
+        },
+        {
+          "text": "Bílé fazole, dýňové pyré, banány, strouhaný kokos, kokosový olej a hotový vanilkový pudink rozmixuj dohladka.",
+          "note": ""
+        },
+        {
+          "text": "Krém nech vychladnout.",
+          "note": ""
+        },
+        {
+          "text": "Vychladlý korpus potřete krémem, polož druhou část korpusu a potřete krémem také boky a vršek dortu.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Krém připrav s předstihem a nech ho před zdobením dobře vychladit – bude se lépe roztírat a dort bude stabilnější."
+      ],
+      "published": "2026-09-26",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "fermentovany-pohankovy-chlebik",
+      "title": "Fermentovaný pohankový chlebík",
+      "excerpt": "Jednoduchý fermentovaný chléb pouze z pohanky, bez mouky a droždí. Díky přirozené fermentaci je lépe stravitelný a podporuje střevní mikrobiom.",
+      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/da795bf0b2/chlebik.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "bakery",
+        "name": "Pečivo"
+      },
+      "tags": [
+        "Veganské",
+        "Na cesty",
+        "Bez alergenů"
+      ],
+      "tagKeys": [
+        "vegan",
+        "travel",
+        "no_allergen"
+      ],
+      "servings": 12,
+      "difficulty": "středně těžké",
+      "activeMinutes": 15,
+      "cookMinutes": 60,
+      "totalMinutes": 75,
+      "nutrition": {
+        "kcal": 135,
+        "protein": 4,
+        "carbs": 26,
+        "fats": 1
+      },
+      "contains": [],
+      "mayContain": [
+        "seeds"
+      ],
+      "ingredients": [
+        {
+          "name": "Pohanka",
+          "amount": "500",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Jablečný ocet",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Semínka",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": true,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Pohanku zalij vodou, přidej lžíci jablečného octa a nech namočenou alespoň 7 hodin, ideálně přes noc.",
+          "note": ""
+        },
+        {
+          "text": "Následně pohanku sceď, důkladně opláchni a nech okapat.",
+          "note": ""
+        },
+        {
+          "text": "K pohance přidej hrnek vody a sůl a rozmixuj do hladké, husté směsi.",
+          "note": ""
+        },
+        {
+          "text": "Podle chuti můžeš přidat semínka a krátce promíchat či nechat zcela bez semínek.",
+          "note": ""
+        },
+        {
+          "text": "Směs přendej do nádoby, přikryj a nech při pokojové teplotě fermentovat přibližně 24 hodin.",
+          "note": ""
+        },
+        {
+          "text": "Po fermentaci těsto nalij do chlebové formy vyložené pečicím papírem.",
+          "note": ""
+        },
+        {
+          "text": "Peč v troubě předehřáté na 210 °C přibližně 50–60 minut, dokud není povrch zlatavý.",
+          "note": ""
+        },
+        {
+          "text": "Po upečení nech chléb zcela vychladnout, poté krájej a používej jako klasický chléb.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Chlebík je nejlepší až po úplném vychladnutí. Pokud ho nespotřebuješ hned, můžeš ho nakrájet na plátky a zamrazit."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "jemna-ledvinkova-pomazanka-na-sadle",
+      "title": "Jemná ledvinková pomazánka na sádle",
+      "excerpt": "Velmi jemná pomazánka z vepřových ledvinek, cibule a sádla. Díky krátké tepelné úpravě a následnému mixování má hladkou strukturu a plnou chuť. Ledvinky jsou přirozeně bohaté na bílkoviny, vitaminy skupiny B a minerální látky.",
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/67b35fa085/ledvinky.PNG",
+      "imageAlt": "",
+      "category": {
+        "slug": "spreads",
+        "name": "Pomazánky"
+      },
+      "tags": [
+        "Do 30 minut",
+        "Z jednoho hrnce",
+        "Bez alergenů"
+      ],
+      "tagKeys": [
+        "under_30",
+        "one_pot",
+        "no_allergen"
+      ],
+      "servings": 6,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 15,
+      "totalMinutes": 25,
+      "nutrition": {
+        "kcal": 260,
+        "protein": 20,
+        "carbs": 4,
+        "fats": 18
+      },
+      "contains": [],
+      "mayContain": [],
+      "ingredients": [
+        {
+          "name": "Vepřové ledvinky",
+          "amount": "600",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Cibule",
+          "amount": "2",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Česnek",
+          "amount": "6",
+          "unit": "stroužků",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Sádlo",
+          "amount": "4",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Ledvinky očisti a nakrájej na menší kostky.",
+          "note": ""
+        },
+        {
+          "text": "Na pánvi rozehřej přibližně polovinu sádla a ledvinky na něm zprudka opeč z jedné strany.",
+          "note": ""
+        },
+        {
+          "text": "Přidej nakrájenou cibuli, promíchej a restuj ještě několik minut, dokud cibule nezměkne.",
+          "note": ""
+        },
+        {
+          "text": "Přidej nasekaný česnek a krátce vše dopeč, aby se rozvoněl.",
+          "note": ""
+        },
+        {
+          "text": "Směs stáhni z plotny a přesuň do mixéru.",
+          "note": ""
+        },
+        {
+          "text": "Přidej zbytek sádla a rozmixuj do hladké pomazánky.",
+          "note": ""
+        },
+        {
+          "text": "Osol dle chuti. Pokud chceš ještě jemnější strukturu, můžeš přidat další malé množství sádla.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Pokud nemáš v oblibě vnitřnosti, můžeš pomazánku nejprve připravit pro dítě nebo rodinu. Díky velmi jemné chuti a krémové konzistenci není na chuti poznat, že se jedná o vnitřnosti, a často překvapí i ty, kteří je běžně nevyhledávají."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "kremova-hraskovo-kvetakova-omacka-se-slaninou",
+      "title": "Krémová hráškovo-květáková omáčka se slaninou",
+      "excerpt": "Jemná omáčka z hrášku a květáku doplněná křupavou slaninou. Výborně se hodí k těstovinám, rýži nebo bramborám a představuje chutný způsob, jak do jídelníčku zařadit více zeleniny.",
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/7b7d519135/peas.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla"
+      },
+      "tags": [
+        "Do 30 minut"
+      ],
+      "tagKeys": [
+        "under_30"
+      ],
+      "servings": 4,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 20,
+      "totalMinutes": 30,
+      "nutrition": {
+        "kcal": 260,
+        "protein": 14,
+        "carbs": 18,
+        "fats": 14
+      },
+      "contains": [
+        "legumes"
+      ],
+      "mayContain": [],
+      "ingredients": [
+        {
+          "name": "Hrášek",
+          "amount": "500",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Květák",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Slanina",
+          "amount": "200",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Květák rozdělte na menší růžičky.",
+          "note": ""
+        },
+        {
+          "text": "Dvě třetiny hrášku vložte spolu s květákem do hrnce.",
+          "note": ""
+        },
+        {
+          "text": "Zalijte vodou tak, aby byla zelenina přibližně z poloviny ponořená, osolte a přiveďte k varu.",
+          "note": ""
+        },
+        {
+          "text": "Vařte přibližně 20 minut do změknutí a během vaření občas promíchejte.",
+          "note": ""
+        },
+        {
+          "text": "Mezitím na pánvi opečte slaninu dozlatova.",
+          "note": ""
+        },
+        {
+          "text": "Přidejte zbylou třetinu hrášku a společně restujte dalších 5–7 minut.",
+          "note": ""
+        },
+        {
+          "text": "Uvařenou zeleninu lehce slijte (část tekutiny si ponechte).",
+          "note": ""
+        },
+        {
+          "text": "Rozmixujte do hladké omáčky. Pokud je příliš hustá, přidejte trochu ponechané vody z vaření.",
+          "note": ""
+        },
+        {
+          "text": "Omáčku promíchejte s uvařenou přílohou podle výběru (například těstovinami, rýží nebo noky).",
+          "note": ""
+        },
+        {
+          "text": "Na závěr ozdobte opečenou slaninou a restovaným hráškem.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Hrášek patří mezi zeleninu s nejvyšším obsahem bílkovin. Ve srovnání s většinou běžné zeleniny obsahuje přibližně dvojnásobné množství bílkovin a zároveň je dobrým zdrojem vlákniny, vitamínu C a kyseliny listové."
+      ],
+      "published": "2026-07-27",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "nebeska-kase-z-bilych-fazoli",
+      "title": "Nebeská kaše z bílých fazolí",
+      "excerpt": "Jemná sladká kaše z bílých fazolí, která překvapí svou krémovou konzistencí a neutrální chutí. Fazole dodají kvalitní rostlinné bílkoviny a vlákninu, spirulina nebo zelené superpotraviny podpoří příjem mikronutrientů. Skvělá snídaně nebo svačina bez obilovin.",
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/855360c891/nebeska.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "breakfasts",
+        "name": "Snídaně"
+      },
+      "tags": [
+        "Veganské",
+        "Z jednoho hrnce",
+        "Na cesty",
+        "Přes noc"
+      ],
+      "tagKeys": [
+        "vegan",
+        "one_pot",
+        "travel",
+        "over_night"
+      ],
+      "servings": 2,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 20,
+      "totalMinutes": 30,
+      "nutrition": {
+        "kcal": 330,
+        "protein": 15,
+        "carbs": 45,
+        "fats": 7
+      },
+      "contains": [
+        "legumes"
+      ],
+      "mayContain": [
+        "nuts",
+        "exotic"
+      ],
+      "ingredients": [
+        {
+          "name": "Bílé fazole",
+          "amount": "250",
+          "unit": "g",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rozinky",
+          "amount": "1",
+          "unit": "hrst",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Ořechové máslo",
+          "amount": "1",
+          "unit": "lžíce",
+          "note": "lze nahradit kokosovým olejem",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Modrá spirulina",
+          "amount": "1",
+          "unit": "lžička",
+          "note": "či zelený ječmen nebo chlorella",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Ovoce",
+          "amount": "2",
+          "unit": "hrsti",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fazole přes noc namoč do dostatečného množství vody.",
+          "note": ""
+        },
+        {
+          "text": "Druhý den vodu slij, fazole zalij čistou vodou a vař přibližně 20 minut, dokud nejsou měkké.",
+          "note": ""
+        },
+        {
+          "text": "Fazole slij, přesuň do mixéru a přidej rozinky, hrnek vody a ořechové máslo, lze ho případně nahradit kokosovým olejem nebo ghí.",
+          "note": ""
+        },
+        {
+          "text": "Přidej spirulinu nebo zelenou superpotravinu dle výběru.",
+          "note": ""
+        },
+        {
+          "text": "Rozmixuj do hladké, krémové kaše.",
+          "note": ""
+        },
+        {
+          "text": "Přendej do misky, ozdob ovocem a podávej.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Kaši můžeš připravit i bez spiruliny – zůstane chuťově velmi jemná. Pokud ji chystáš pro děti, začni menším množstvím superpotravin nebo je vynech úplně."
+      ],
+      "published": "2026-02-16",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "apple",
+      "title": "Pečená jablka plněná ovesno-oříškovou směsí",
+      "excerpt": "Pečená jablka plněná vločkami, lískovým oříškovým máslem a rozinkami jsou přirozeně sladká, jemná a vhodná i jako zdravá svačina.",
+      "image": "https://a.storyblok.com/f/289317949964253/1024x1536/52541ad212/apple.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "sweet",
+        "name": "Sladké dobroty"
+      },
+      "tags": [
+        "Do 30 minut",
+        "Veganské"
+      ],
+      "tagKeys": [
+        "under_30",
+        "vegan"
+      ],
+      "servings": 4,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 19,
+      "totalMinutes": 29,
+      "nutrition": {
+        "kcal": 160,
+        "protein": 3,
+        "carbs": 23,
+        "fats": 7
+      },
+      "contains": [
+        "nuts"
+      ],
+      "mayContain": [],
+      "ingredients": [
+        {
+          "name": "Jablko",
+          "amount": "4",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Ovesné vločky",
+          "amount": "4",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Lískooříškové máslo",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rozinky",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Skořice",
+          "amount": "1",
+          "unit": "lžička",
+          "note": "",
+          "optional": true,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Jablka rozpulte, odstraňte jádřince a lžičkou lehce vydlabejte část dužiny.",
+          "note": ""
+        },
+        {
+          "text": "Vydlabanou dužinu vložte do misky (půlku lze využít do smoothie nebo svačiny).",
+          "note": ""
+        },
+        {
+          "text": "K dužině přidejte vločky, lískové máslo, nakrájené datle a případně skořici.",
+          "note": ""
+        },
+        {
+          "text": "Směs důkladně promíchejte.",
+          "note": ""
+        },
+        {
+          "text": "Jablka naplňte vrchovatě připravenou směsí.",
+          "note": ""
+        },
+        {
+          "text": "Vložte do zapékací misky a pečte při 180 °C po dobu 20–25 minut, dokud jablka nezměknou.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Ke konci pečení můžeš jablka krátce zapnout pod gril, aby se povrch lehce zkaramelizoval."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "zeleninove-hranolky",
+      "title": "Pečené zeleninové hranolky",
+      "excerpt": "Jednoduché pečené zeleninové hranolky z různých druhů zeleniny. Skvělé jako lehká příloha a zdravější alternativa klasických hranolků. Variabilní podle sezóny i tolerance.",
+      "image": "https://a.storyblok.com/f/289317949964253/612x408/cd1d891f71/hranolky.PNG",
+      "imageAlt": "",
+      "category": {
+        "slug": "sides_salads",
+        "name": "Přílohy a saláty"
+      },
+      "tags": [
+        "Veganské",
+        "Z jednoho hrnce"
+      ],
+      "tagKeys": [
+        "vegan",
+        "one_pot"
+      ],
+      "servings": 4,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 40,
+      "totalMinutes": 50,
+      "nutrition": {
+        "kcal": 180,
+        "protein": 3,
+        "carbs": 20,
+        "fats": 9
+      },
+      "contains": [],
+      "mayContain": [
+        "root"
+      ],
+      "ingredients": [
+        {
+          "name": "Zelenina",
+          "amount": "1",
+          "unit": "kg",
+          "note": "řepa, brambor, batáty, růžičková kapusta, celer, petržel, mrkev",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Tymián",
+          "amount": "1",
+          "unit": "lžička",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Zvolenou zeleninu očisti a nakrájej na hranolky nebo proužky podobné velikosti.",
+          "note": ""
+        },
+        {
+          "text": "Přendej ji do pekáče, přidej olivový olej, tymián a sůl. Vše důkladně promíchej.",
+          "note": ""
+        },
+        {
+          "text": "Peč v troubě předehřáté na 180 °C přibližně 40 minut, dokud nejsou hranolky měkké a na povrchu lehce opečené.",
+          "note": ""
+        },
+        {
+          "text": "Podávej ihned jako přílohu nebo samostatně.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Zeleninu můžeš nakrájet ve větším množství dopředu a uložit do mrazáku. Zmražené hranolky pak peč rovnou bez rozmrazování, jen prodluž dobu pečení přibližně o 10 minut."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "portobello-burgery-s-batatovo-celerovymi-hranolkami",
+      "title": "Portobello burgery s batátovo-celerovými hranolkami",
+      "excerpt": "Šťavnatý burger z mletého masa vložený mezi dva opečené žampiony portobello místo bulky. Podávaný s avokádem, čerstvou zeleninou a batátovo-celerovými hranolkami.",
+      "image": "https://a.storyblok.com/f/289317949964253/433x577/a96a3b44ef/portobello.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "mains",
+        "name": "Hlavní jídla"
+      },
+      "tags": [
+        "Bez alergenů"
+      ],
+      "tagKeys": [
+        "no_allergen"
+      ],
+      "servings": 3,
+      "difficulty": "středně těžké",
+      "activeMinutes": 25,
+      "cookMinutes": 30,
+      "totalMinutes": 55,
+      "nutrition": {
+        "kcal": 610,
+        "protein": 38,
+        "carbs": 34,
+        "fats": 34
+      },
+      "contains": [],
+      "mayContain": [
+        "tomato",
+        "root"
+      ],
+      "ingredients": [
+        {
+          "name": "Portobello žampion",
+          "amount": "6",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Mleté maso",
+          "amount": "600",
+          "unit": "g",
+          "note": "vepřové, jehněčí, krůtí",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Cibule",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Rýžová mouka",
+          "amount": "3",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Vepřové sádlo",
+          "amount": "2",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Avomajo",
+          "amount": "3",
+          "unit": "lžíce",
+          "note": "",
+          "optional": false,
+          "linkedSlug": "avokadova-majoneza"
+        },
+        {
+          "name": "Cherry rajčátka",
+          "amount": "1",
+          "unit": "hrst",
+          "note": "",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Červená cibule",
+          "amount": "1",
+          "unit": "ks",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Čerstvé bylinky",
+          "amount": "1",
+          "unit": "hrst",
+          "note": "",
+          "optional": false,
+          "linkedSlug": null
+        },
+        {
+          "name": "Batátovo-celerové hranolky",
+          "amount": "3",
+          "unit": "hrsti",
+          "note": "",
+          "optional": true,
+          "linkedSlug": "zeleninove-hranolky"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Burgery:",
+          "note": ""
+        },
+        {
+          "text": "Cibuli nakrájejte nadrobno.",
+          "note": ""
+        },
+        {
+          "text": "Smíchejte ji s mletým masem, rýžovou moukou a solí.",
+          "note": ""
+        },
+        {
+          "text": "Vytvarujte 3 větší burgery.",
+          "note": ""
+        },
+        {
+          "text": "Na pánvi rozehřejte sádlo a burgery opékejte na mírném plameni přibližně 6–8 minut z každé strany, dokud nejsou uvnitř propečené.",
+          "note": ""
+        },
+        {
+          "text": "Portobello:",
+          "note": ""
+        },
+        {
+          "text": "Žampionům odstraňte stopky.",
+          "note": ""
+        },
+        {
+          "text": "Na pánvi je opečte 5 minut z každé strany, až změknou a lehce zezlátnou.",
+          "note": ""
+        },
+        {
+          "text": "Sestavení:",
+          "note": ""
+        },
+        {
+          "text": "Na jeden žampion rozetřete avomajo.",
+          "note": ""
+        },
+        {
+          "text": "Přidejte masový burger, rajčata, cibuli a čerstvé bylinky.",
+          "note": ""
+        },
+        {
+          "text": "Přiklopte druhým žampionem.",
+          "note": ""
+        },
+        {
+          "text": "Podávejte s batátovo-celerovými hranolkami.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Kořenový celer obsahuje méně škrobu než brambory a po upečení získá jemně oříškovou chuť. V kombinaci s batátem vytvoří vyváženější přílohu s vyšším obsahem vlákniny a pestřejším spektrem vitamínů a minerálů."
+      ],
+      "published": "2026-07-06",
+      "updated": "2026-10-01"
+    },
+    {
+      "slug": "vyvar",
+      "title": "Vývar",
+      "excerpt": "Správně připravený vývar je jedním ze základních pilířů podpory trávení, střevní sliznice a mikrobiomu. Díky obsahu minerálů, aminokyselin, želatiny a kolagenu pomáhá při hojení propustného střeva a může výrazně podpořit léčbu ekzému a alergií. Důležitá je však délka vaření a správná volba surovin, zejména při histaminové zátěži.",
+      "image": "https://a.storyblok.com/f/289317949964253/1536x1024/0209961900/broth.png",
+      "imageAlt": "",
+      "category": {
+        "slug": "soups",
+        "name": "Polévky"
+      },
+      "tags": [],
+      "tagKeys": [],
+      "servings": 4,
+      "difficulty": "jednoduché",
+      "activeMinutes": 10,
+      "cookMinutes": 120,
+      "totalMinutes": 130,
+      "nutrition": {
+        "kcal": 35,
+        "protein": 5,
+        "carbs": null,
+        "fats": 2
+      },
+      "contains": [],
+      "mayContain": [
+        "beef",
+        "poultry",
+        "fish"
+      ],
+      "ingredients": [
+        {
+          "name": "Drůbež",
+          "amount": "1",
+          "unit": "porce",
+          "note": "skelet, stehno, křídla, krk, pařáty",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Králík",
+          "amount": "1",
+          "unit": "porce",
+          "note": "stehna, hřbet, celý, hlava",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Hovězí / vepřové / jehněčí / zvěřina",
+          "amount": "1",
+          "unit": "porce",
+          "note": "žebra, krk, oháňka, maso s kostí, kližka",
+          "optional": true,
+          "linkedSlug": null
+        },
+        {
+          "name": "Ryba",
+          "amount": "1",
+          "unit": "porce",
+          "note": "hlava, vnitřnosti",
+          "optional": true,
+          "linkedSlug": null
+        }
+      ],
+      "steps": [
+        {
+          "text": "Vývar přirozeně obsahuje minerální látky (vápník, hořčík, fosfor, draslík, sodík), aminokyseliny (glycin, prolin, glutamin) a při delším tažení také želatinu a kolagen. Tyto látky podporují regeneraci střevní sliznice, vyživují mikrobiom a pomáhají snižovat zánětlivost v těle.",
+          "note": ""
+        },
+        {
+          "text": "Při ekzému, alergiích nebo potvrzené histaminové intoleranci je zásadní délka vaření. Čím déle se vývar táhne, tím více histaminu může obsahovat.\nPři histaminové intoleranci je vždy vhodné volit krátce tažené vývary. Délku vaření lze postupně navyšovat podle tolerance a zlepšení příznaků (pokud není tělo tolik zatížené histaminem).",
+          "note": ""
+        },
+        {
+          "text": "Drůbeží vývar (kuře, krůta, husa, kachna): 2 hodiny\n\nKráličí vývar: 2 hodiny\n\nVepřový, jehněčí, hovězí, zvěřina: 4 hodiny\n\nRybí vývar: 1 hodina",
+          "note": ""
+        },
+        {
+          "text": "Na začátku je vhodné připravovat vývar pouze z masa, následně z kostí a až po dobré toleranci přidávejte zeleninu.",
+          "note": ""
+        },
+        {
+          "text": "Správně připravený vývar je vhodný již od začátku příkrmů. Podporuje zrání trávení, imunitní systém a může pomoci snížit riziko rozvoje ekzému a alergií v raném věku.",
+          "note": ""
+        },
+        {
+          "text": "Maso vložte do hrnce, zalijte studenou vodou, přiveďte k varu a poté stáhněte na mírný tah. Vařte podle druhu masa, ke konci lehce osolte, sceďte a podávejte či po vychladnutí zamrazte.",
+          "note": ""
+        }
+      ],
+      "tip": [
+        "Pokud řešíš histaminovou zátěž, připravuj vývar v menším množství a po uvaření ho rozděl na porce a ihned zamraz. Dlouhé uchovávání v lednici nebo opakované ohřívání zvyšuje obsah histaminu."
+      ],
+      "published": "2026-01-23",
+      "updated": "2026-10-01"
+    }
+  ]
+}
