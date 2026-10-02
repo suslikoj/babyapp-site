@@ -117,7 +117,7 @@ function recipeCard(lang, recipe) {
   const time = totalTime(r) || r.activeMinutes;
   const chips = [r.categoryName, ...CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => t.tags[k])].filter(Boolean).slice(0, 3);
   const attrs = [`data-category="${r.category?.slug || ''}"`, `data-contains="${r.contains.join(' ')}"`, `data-may="${r.mayContain.join(' ')}"`, `data-tags="${r.tagKeys.join(' ')}"`, `data-minutes="${totalTime(r) || ''}"`].join(' ');
-  return `<a class="recipe-card" href="${recipePath(lang, r)}" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}<p class="recipe-card__excerpt">${escapeHtml(r.excerpt)}</p>${r.contains.length ? `<p class="recipe-card__allergens"><span>${t.cardContains}</span> ${r.contains.map((k) => t.allergens[k] || k).join(', ')}</p>` : ''}<p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
+  return `<a class="recipe-card" href="${recipePath(lang, r)}" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}${r.contains.length ? `<p class="recipe-card__allergens"><span>${t.cardContains}</span> ${r.contains.map((k) => t.allergens[k] || k).join(', ')}</p>` : ''}<p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
 }
 
 // ── Detail ─────────────────────────────────────────────────────────────
@@ -230,10 +230,10 @@ function listingPage(lang) {
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">${t.listEyebrow}</p><h1>${t.listH1}</h1></div><p>${t.listLead}</p></div>
       <div class="recipe-filters" id="recipeFilters" hidden>
-        <div class="recipe-filters__row"><span>${f.category}</span>${chip('category', '', f.all, { pressed: true })}${categoriesUsed.map((c) => chip('category', c.slug, lang === 'en' ? c.nameEn : c.name)).join('')}</div>
-        <div class="recipe-filters__row"><span>${f.free}</span>${allergensUsed.map((k) => chip('free', k, t.allergens[k])).join('')}</div>
-        <div class="recipe-filters__row"><span>${f.time}</span>${chip('time', '30', f.t30)}${chip('time', '60', f.t60)}</div>
-        ${tagsUsed.length ? `<div class="recipe-filters__row"><span>${f.tags}</span>${tagsUsed.map((k) => chip('tag', k, t.tags[k])).join('')}</div>` : ''}
+        <div class="recipe-filters__row"><span class="recipe-filters__label">${f.category}</span><div class="recipe-filters__options">${chip('category', '', f.all, { pressed: true })}${categoriesUsed.map((c) => chip('category', c.slug, lang === 'en' ? c.nameEn : c.name)).join('')}</div></div>
+        <div class="recipe-filters__row"><span class="recipe-filters__label">${f.free}</span><div class="recipe-filters__options">${allergensUsed.map((k) => chip('free', k, t.allergens[k])).join('')}</div></div>
+        <div class="recipe-filters__row"><span class="recipe-filters__label">${f.time}</span><div class="recipe-filters__options">${chip('time', '30', f.t30)}${chip('time', '60', f.t60)}</div></div>
+        ${tagsUsed.length ? `<div class="recipe-filters__row"><span class="recipe-filters__label">${f.tags}</span><div class="recipe-filters__options">${tagsUsed.map((k) => chip('tag', k, t.tags[k])).join('')}</div></div>` : ''}
         <p class="recipe-filters__count" aria-live="polite"><span id="recipeCount">${recipes.length}</span> ${f.count(recipes.length)}</p>
       </div>
       <div class="recipe-grid" id="recipeGrid">${sorted.map((r) => recipeCard(lang, r)).join('')}</div>
