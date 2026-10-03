@@ -456,7 +456,7 @@ function categoryHubPage(lang, category) {
 
 const ABOUT = {
   cs: {
-    path: '/o-projektu/', source: 'content/cz/o-projektu.md', eyebrow: 'O projektu', h1: 'O aplikaci Bejby bez alergií', quote: '„Pomáhá mi dávat smysl tomu, co se děje.“',
+    path: '/o-projektu/', source: 'content/cz/o-projektu.md', eyebrow: 'O projektu', h1: 'O aplikaci Bejby bez alergií',
     photoAlt: 'Jiřina Brázdová, autorka aplikace Bejby bez alergií', signatureLabel: 'Podpis', signature: 'Máma, která si tím sama prošla a rozhodla se vytvořit nástroj, který může pomoct i dalším rodičům.',
     contactId: 'kontakt', contact: 'Kontakt', contactText: 'Máte dotaz, nápad nebo zpětnou vazbu k aplikaci? Napište mi.',
     cta: { eyebrow: 'Bejby bez alergií', heading: 'Vyzkoušejte aplikaci', text: 'Deník příznaků a jídla, eliminační dieta krok za krokem, testování alergenů a recepty – na jednom místě.' }, campaign: 'o-projektu-cz',
@@ -465,7 +465,7 @@ const ABOUT = {
     jobTitle: 'výživová poradkyně',
   },
   en: {
-    path: '/en/about/', source: 'content/en/about.md', eyebrow: 'About', h1: 'About the Baby Without Allergies app', quote: '“It helps me make sense of what’s going on.”',
+    path: '/en/about/', source: 'content/en/about.md', eyebrow: 'About', h1: 'About the Baby Without Allergies app',
     photoAlt: 'Jiřina Brázdová, creator of the Baby Without Allergies app', signatureLabel: 'Signature', signature: 'A mum who went through it herself and decided to create a tool that can help other parents too.',
     contactId: 'contact', contact: 'Contact', contactText: 'Do you have a question, an idea or feedback about the app? Write to me.',
     cta: { eyebrow: 'Baby Without Allergies', heading: 'Try the app', text: 'A symptom and food diary, a step-by-step elimination diet, allergen testing and recipes – all in one place.' }, campaign: 'about-en',
@@ -485,7 +485,6 @@ function aboutPage(lang, markdown) {
         <div>
           <p class="eyebrow">${a.eyebrow}</p>
           <h1>${a.h1}</h1>
-          <p class="about-page__quote">${a.quote}</p>
         </div>
       </div>
       <div class="article-content about-page__body">
