@@ -40,9 +40,9 @@ The app has been changing step by step since the beginning. I keep adding new fe
 
 That’s why this website is gradually growing alongside the app. I want to explain each topic in more detail here and create a place parents can come back to outside the app as well. You’ll find a [guide](/en/guide/) to food allergies, eczema, the elimination diet, testing and reintroducing allergens, as well as [recipes](/en/recipes/) and practical articles.
 
-## Why “Bejby bez alergií”?
+## Why “Baby Without Allergies”?
 
-The name – “Baby Without Allergies” – says what I would wish for at the end of the whole journey: a child without allergies. The ideal outcome, when a child goes through elimination, testing and allergen training and the allergies are gradually overcome.
+The name says what I would wish for at the end of the whole journey: a child without allergies. The ideal outcome, when a child goes through elimination, testing and allergen training and the allergies are gradually overcome.
 
 When I was going through all of this myself, I wished I had something like this at hand. Something that would help me bring a little more order into the whole situation.
 
