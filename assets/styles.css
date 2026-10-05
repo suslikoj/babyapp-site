@@ -1010,9 +1010,8 @@ body{
   .recipe-filters{padding:16px 0 14px;gap:14px}
   .recipe-filters__row{display:block}
   .recipe-filters__label{display:block;padding:0 16px 6px}
-  .recipe-filters__options{flex-wrap:nowrap;overflow-x:auto;padding:0 16px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .recipe-filters__options::-webkit-scrollbar{display:none}
-  .filter-chip{flex:0 0 auto;font-size:.85rem;padding:6px 12px}
+  .recipe-filters__options{flex-wrap:wrap;gap:6px;padding:0 16px}
+  .filter-chip{font-size:.82rem;padding:6px 11px}
   .recipe-filters__count{margin-left:0;padding:0 16px}
 }
 .recipe-card__time{margin-bottom:4px}
