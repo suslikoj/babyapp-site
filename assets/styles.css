@@ -232,7 +232,7 @@ h1{font-size:44px; line-height:1.08; letter-spacing:-.03em; margin:12px 0}
 .mock__box{height:90px; background:rgba(229,115,115,.10); border:1px dashed rgba(229,115,115,.35); border-radius:16px; margin:14px 0}
 
 .section{padding:36px 0; contain-intrinsic-size:0 700px}
-.app-showcase{contain-intrinsic-size:0 3600px; padding:clamp(56px,8vw,96px) 0}
+.app-showcase{contain-intrinsic-size:0 4100px; padding:clamp(56px,8vw,96px) 0}
 
 .section h2{font-size:28px; margin:0 0 10px; letter-spacing:-.02em}
 .section__lead{color:var(--muted); margin:0 0 16px; max-width:760px}
@@ -711,14 +711,6 @@ html{scroll-padding-top:90px}
   transition:opacity .5s ease;
 }
 .showcase-step__inner.is-active{opacity:1; pointer-events:auto}
-.showcase-step__num{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:34px;height:34px;margin-bottom:14px;
-  border-radius:60% 40% 55% 45% / 45% 55% 40% 60%;
-  background:rgba(229,115,115,.14);
-  color:var(--primary-2);
-  font-weight:900;font-size:14px;
-}
 .showcase-step__inner h3{margin:0 0 8px;font-size:22px}
 .showcase-step__inner p{margin:0;color:var(--muted);font-size:16px;max-width:440px}
 
