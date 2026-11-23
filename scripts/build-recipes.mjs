@@ -6,7 +6,7 @@ import path from 'node:path';
 import { AUTHOR, ORGANIZATION, absoluteUrl, appCta, breadcrumbJsonLd, breadcrumbs, escapeHtml, renderPage, root, storyblokImage, topNav, write } from './lib/site.mjs';
 
 const data = JSON.parse(await fs.readFile(path.join(root, 'content/recepty/recipes.json'), 'utf8'));
-const { recipes, totalInApp } = data;
+const { recipes, totalInApp, allergenImages = {} } = data;
 const bySlug = Object.fromEntries(recipes.map((r) => [r.slug, r]));
 
 // Labels – same wording as the app (lib/lang/cs_cz_desc.dart, en_us_desc.dart).
@@ -29,6 +29,8 @@ const L = {
     contains: 'Obsahuje alergeny:', containsNone: 'žádný ze sledovaných alergenů', mayContain: 'Může obsahovat:', freeLabel: 'Podle složení je bez:',
     ingredients: 'Ingredience', servingsFor: (n) => `na ${n} ${n === 1 ? 'porci' : n < 5 ? 'porce' : 'porcí'}`, optional: '– volitelné',
     steps: 'Postup', tip: 'Tip', nutrition: 'Nutriční hodnoty (1 porce)', servingSize: '1 porce',
+    allergensTitle: 'Alergeny', containsTitle: 'Obsahuje', mayTitle: 'Může obsahovat', noTracked: 'Neobsahuje žádný ze sledovaných alergenů.',
+    by: 'Recept od', servingsCount: 'Počet porcí:', nutritionTitle: 'Nutriční hodnoty na 1 porci', nutritionShort: { kcal: 'kcal', protein: 'Bílkoviny', fats: 'Tuky', carbs: 'Sacharidy' },
     nutritionLabels: { kcal: 'Energie', protein: 'Bílkoviny', carbs: 'Sacharidy', fats: 'Tuky' },
     more: 'Další recepty', all: 'Všechny recepty →', breadcrumb: 'Recepty',
     cta: { eyebrow: 'Recepty v aplikaci', heading: 'Další recepty najdete v aplikaci', text: `V aplikaci Bejby bez alergií je ${totalInApp} receptů, které se automaticky filtrují podle aktuální fáze diety a testovaných alergenů.` },
@@ -57,6 +59,8 @@ const L = {
     contains: 'Contains allergens:', containsNone: 'none of the tracked allergens', mayContain: 'May contain:', freeLabel: 'Free from (by ingredients):',
     ingredients: 'Ingredients', servingsFor: (n) => `for ${n} ${n === 1 ? 'serving' : 'servings'}`, optional: '– optional',
     steps: 'Method', tip: 'Tip', nutrition: 'Nutrition (1 serving)', servingSize: '1 serving',
+    allergensTitle: 'Allergens', containsTitle: 'Contains', mayTitle: 'May contain', noTracked: 'Contains none of the tracked allergens.',
+    by: 'Recipe by', servingsCount: 'Servings:', nutritionTitle: 'Nutrition per serving', nutritionShort: { kcal: 'kcal', protein: 'Protein', fats: 'Fat', carbs: 'Carbs' },
     nutritionLabels: { kcal: 'Energy', protein: 'Protein', carbs: 'Carbs', fats: 'Fat' },
     more: 'More recipes', all: 'All recipes →', breadcrumb: 'Recipes',
     cta: { eyebrow: 'Recipes in the app', heading: 'Find more recipes in the app', text: `The Baby Without Allergies app has ${totalInApp} recipes that are filtered automatically by your current diet phase and the allergens you are testing.` },
@@ -73,6 +77,7 @@ const L = {
 const FREE_KEYS = ['milk', 'egg', 'wheat', 'soya', 'nuts', 'peanuts', 'fish'];
 const CARD_TAG_ORDER = ['no_allergen', 'vegan', 'under_30', 'no_cook', 'one_pot', 'over_night', 'travel'];
 const FILTER_TAGS = ['vegan', 'no_cook', 'one_pot', 'over_night', 'travel', 'no_allergen'];
+const HAT_ICON = '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path d="M7 18h10v2H7zM6.5 16.5h11V13a4 4 0 0 0 1.5-7.6A4.5 4.5 0 0 0 12 3.5a4.5 4.5 0 0 0-7 1.9A4 4 0 0 0 6.5 13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
 const CLOCK_ICON = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
 const minutes = (n) => (n ? `${n} min` : '');
@@ -117,7 +122,7 @@ function recipeCard(lang, recipe) {
   const time = totalTime(r) || r.activeMinutes;
   const chips = [r.categoryName, ...CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => t.tags[k])].filter(Boolean).slice(0, 3);
   const attrs = [`data-category="${r.category?.slug || ''}"`, `data-contains="${r.contains.join(' ')}"`, `data-may="${r.mayContain.join(' ')}"`, `data-tags="${r.tagKeys.join(' ')}"`, `data-minutes="${totalTime(r) || ''}"`].join(' ');
-  return `<a class="recipe-card" href="${recipePath(lang, r)}" ${attrs}><div class="recipe-card__media">${recipePicture(r, 600)}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}${r.contains.length ? `<p class="recipe-card__allergens"><span>${t.cardContains}</span> ${r.contains.map((k) => t.allergens[k] || k).join(', ')}</p>` : ''}<p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
+  return `<a class="recipe-card" href="${recipePath(lang, r)}" ${attrs}><div class="recipe-card__media${r.photo ? ' recipe-card__media--photo' : ''}">${recipePicture(r, 600)}${time ? `<p class="recipe-card__time">${CLOCK_ICON}${time} min</p>` : ''}</div><div class="recipe-card__body"><h3>${escapeHtml(r.title)}</h3>${r.contains.length ? `<p class="recipe-card__allergens"><span>${t.cardContains}</span> ${r.contains.map((k) => t.allergens[k] || k).join(', ')}</p>` : ''}<p class="recipe-card__warn" hidden></p>${chips.length ? `<p class="recipe-card__chips">${chips.map((c) => `<span>${c}</span>`).join('')}</p>` : ''}</div></a>`;
 }
 
 // ── Detail ─────────────────────────────────────────────────────────────
@@ -130,44 +135,63 @@ function recipePage(lang, recipe) {
   const trail = [[t.breadcrumb, t.root], [r.title, href]];
   const total = totalTime(r);
   const free = freeKeys(r).map((k) => t.freeFrom[k]);
-  const facts = [[t.facts.prep, minutes(r.activeMinutes)], [t.facts.cook, minutes(r.cookMinutes)], [t.facts.total, minutes(total)], [t.facts.servings, r.servings ? String(r.servings) : ''], [t.facts.difficulty, t.difficulty[r.difficultyKey] || '']].filter(([, v]) => v);
   const label = (key) => t.allergens[key] || key;
   const tags = CARD_TAG_ORDER.filter((k) => r.tagKeys.includes(k)).map((k) => t.tags[k]);
 
   const ingredients = r.ingredients.map((i) => {
     const name = i.linkedSlug && bySlug[i.linkedSlug] ? `<a href="${recipePath(lang, bySlug[i.linkedSlug])}">${escapeHtml(i.name)}</a>` : escapeHtml(i.name);
     const amount = [i.amount, i.unit].filter(Boolean).join(' ');
-    return `<li>${amount ? `<span class="recipe-ingredients__amount">${escapeHtml(amount)}</span> ` : ''}${name}${i.note ? ` <span class="recipe-ingredients__note">(${escapeHtml(i.note)})</span>` : ''}${i.optional ? ` <span class="recipe-ingredients__note">${t.optional}</span>` : ''}</li>`;
+    return `<li><span class="recipe-ingredients__amount">${escapeHtml(amount)}</span><span class="recipe-ingredients__name">${name}${i.note ? ` <span class="recipe-ingredients__note">(${escapeHtml(i.note)})</span>` : ''}${i.optional ? ` <span class="recipe-ingredients__note">${t.optional}</span>` : ''}</span></li>`;
   }).join('');
   const steps = r.steps.map((s) => `<li><p>${escapeHtml(s.text)}</p>${s.note ? `<p class="recipe-steps__note">${escapeHtml(s.note)}</p>` : ''}</li>`).join('');
   const n = r.nutrition;
-  const nutrition = [[t.nutritionLabels.kcal, n.kcal ? `${n.kcal} kcal` : ''], [t.nutritionLabels.protein, n.protein ? `${n.protein} g` : ''], [t.nutritionLabels.carbs, n.carbs ? `${n.carbs} g` : ''], [t.nutritionLabels.fats, n.fats ? `${n.fats} g` : '']].filter(([, v]) => v);
+  const nutrition = [[t.nutritionShort.kcal, n.kcal ? `${n.kcal}` : ''], [t.nutritionShort.protein, n.protein ? `${n.protein} g` : ''], [t.nutritionShort.fats, n.fats ? `${n.fats} g` : ''], [t.nutritionShort.carbs, n.carbs ? `${n.carbs} g` : '']].filter(([, v]) => v);
   const related = recipes.filter((x) => x.slug !== r.slug && x.category?.slug === r.category?.slug).concat(recipes.filter((x) => x.slug !== r.slug && x.category?.slug !== r.category?.slug)).slice(0, 3);
+
+  // Allergen tiles like in the app: photo (when Storyblok has one) + name.
+  const tile = (key) => {
+    const img = allergenImages[key];
+    if (!img) return `<li class="allergen-tile allergen-tile--text"><span class="allergen-tile__name">${label(key)}</span></li>`;
+    return `<li class="allergen-tile"><span class="allergen-tile__img"><img src="${storyblokImage(img, 160, 160)}" alt="" width="80" height="80" loading="lazy" decoding="async"></span><span class="allergen-tile__name">${label(key)}</span></li>`;
+  };
+  const allergenGroup = (title, keys) => (keys.length ? `<h3>${title}</h3><ul class="allergen-tiles">${keys.map(tile).join('')}</ul>` : '');
+
+  // Author: the Storyblok author block, or Bejby bez alergií when empty.
+  const au = r.author;
+  const authorName = au?.name || ORGANIZATION.name;
+  const authorLogo = au ? (au.logo ? storyblokImage(au.logo, 120, 120) : '') : '/assets/logo.svg';
+  const authorLink = au?.url ? `<a class="recipe-author__link" href="${escapeHtml(au.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(au.url.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, ''))}</a>` : '';
 
   const main = `  ${breadcrumbs(lang, trail)}
   <article class="recipe container">
-    <header class="recipe__head">
-      <div class="recipe__image">${recipePicture(r, 900, { eager: true })}</div>
-      <div class="recipe__intro">
-        ${r.categoryName ? `<p class="eyebrow">${r.categoryName}</p>` : ''}
+    <header class="recipe-hero">
+      <div class="recipe-hero__photo${r.photo ? '' : ' recipe-hero__photo--cutout'}">${recipePicture(r, 1200, { eager: true })}</div>
+      <div class="recipe-hero__card">
+        ${r.categoryName ? `<p class="recipe-hero__category">${r.categoryName}</p>` : ''}
         <h1>${escapeHtml(r.title)}</h1>
-        <p class="recipe__excerpt">${escapeHtml(r.excerpt)}</p>
-        ${facts.length ? `<dl class="recipe-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>` : ''}
-        ${tags.length ? `<p class="recipe-tags">${tags.map((tag) => `<span>${tag}</span>`).join('')}</p>` : ''}
+        <p class="recipe-hero__meta">${total ? `<span>${CLOCK_ICON}${total} min</span>` : ''}${r.difficultyKey && t.difficulty[r.difficultyKey] ? `<span>${HAT_ICON}${t.difficulty[r.difficultyKey].charAt(0).toUpperCase()}${t.difficulty[r.difficultyKey].slice(1)}</span>` : ''}</p>
       </div>
     </header>
-    <div class="recipe-allergens">
-      <p><strong>${t.contains}</strong> ${r.contains.length ? r.contains.map(label).join(', ') : t.containsNone}</p>
-      ${r.mayContain.length ? `<p><strong>${t.mayContain}</strong> ${r.mayContain.map(label).join(', ')}</p>` : ''}
-      ${free.length ? `<p><strong>${t.freeLabel}</strong> ${free.join(', ')}</p>` : ''}
-    </div>
-    <div class="recipe__body">
-      <section class="recipe-ingredients"><h2>${t.ingredients}</h2>${r.servings ? `<p class="recipe-ingredients__servings">${t.servingsFor(r.servings)}</p>` : ''}<ul>${ingredients}</ul></section>
-      <section class="recipe-steps"><h2>${t.steps}</h2><ol>${steps}</ol>
-        ${r.tip.length ? `<aside class="recipe-tip"><strong>${t.tip}</strong>${r.tip.map((p) => `<p>${escapeHtml(p)}</p>`).join('')}</aside>` : ''}
-        ${nutrition.length ? `<div class="recipe-nutrition"><h3>${t.nutrition}</h3><dl>${nutrition.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl></div>` : ''}
-      </section>
-    </div>
+    ${r.excerpt ? `<p class="recipe__excerpt">${escapeHtml(r.excerpt)}</p>` : ''}
+    ${r.contains.length || r.mayContain.length ? `<section class="recipe-block recipe-allergens">
+      <h2>${t.allergensTitle}</h2>
+      ${allergenGroup(t.containsTitle, r.contains)}${allergenGroup(t.mayTitle, r.mayContain)}
+    </section>` : ''}
+    <section class="recipe-block recipe-author">
+      <h2>${t.by}</h2>
+      <div class="recipe-author__row">${authorLogo ? `<img class="recipe-author__logo" src="${authorLogo}" alt="" width="56" height="56" loading="lazy" decoding="async">` : `<span class="recipe-author__logo recipe-author__logo--empty" aria-hidden="true">${escapeHtml(authorName.charAt(0))}</span>`}<div><strong>${escapeHtml(authorName)}</strong>${authorLink}</div></div>
+    </section>
+    <section class="recipe-block recipe-ingredients">
+      <h2>${t.ingredients}</h2>
+      ${r.servings ? `<p class="recipe-ingredients__servings">${t.servingsCount} ${r.servings}</p>` : ''}
+      <ul>${ingredients}</ul>
+    </section>
+    <section class="recipe-block recipe-steps">
+      <h2>${t.steps}</h2>
+      <ol>${steps}</ol>
+    </section>
+    ${r.tip.length ? `<aside class="recipe-tip"><strong>${t.tip}</strong>${r.tip.map((p) => `<p>${escapeHtml(p)}</p>`).join('')}</aside>` : ''}
+    ${nutrition.length ? `<section class="recipe-block recipe-nutrition"><h2>${t.nutritionTitle}</h2><dl>${nutrition.map(([k, v]) => `<div><dd>${v}</dd><dt>${k}</dt></div>`).join('')}</dl></section>` : ''}
     ${appCta(lang, t.cta, t.campaign(r.slug))}
     ${related.length ? `<section class="related"><h2>${t.more}</h2><div class="recipe-grid">${related.map((x) => recipeCard(lang, x)).join('')}</div><p class="related__more"><a href="${t.root}">${t.all}</a></p></section>` : ''}
   </article>`;
@@ -179,7 +203,7 @@ function recipePage(lang, recipe) {
     name: r.title,
     description: r.excerpt,
     image: [image],
-    author: { '@type': 'Person', name: AUTHOR.name },
+    author: r.author ? { '@type': 'Person', name: r.author.name, url: r.author.url || undefined } : { '@type': 'Organization', name: ORGANIZATION.name },
     publisher: ORGANIZATION,
     datePublished: r.published || undefined,
     prepTime: isoDuration(r.activeMinutes),

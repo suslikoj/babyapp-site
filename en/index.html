@@ -225,14 +225,15 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top" class="home">
   <section class="hero hero--intro">
-    <div class="container hero__copy">
-
+    <div class="container hero__split">
+      <picture class="hero__art">
+        <source srcset="/assets/hero-mama.webp" type="image/webp">
+        <img src="/assets/hero-mama.png" alt="A mother breastfeeding her baby, surrounded by the main allergens – milk, egg, fish, wheat, tree nuts, peanuts, soy and shellfish" width="1400" height="808" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__copy">
       <h1>A food allergy and eczema tracker for parents of babies</h1>
-      <p class="lead">
-        It helps you understand what may be triggering your baby’s symptoms – with a clear head, not guesswork. Track foods, symptoms and patterns in one place.
-      </p>
       <div class="store-links store-links--hero" aria-label="App download links">
         <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&amp;hl=en&amp;referrer=utm_source%3Dbabyapp.cz%26utm_medium%3Dweb%26utm_campaign%3Dhome-en" target="_blank" rel="noopener noreferrer" aria-label="Get Baby Without Allergies on Google Play">
           <img class="store-badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" width="478" height="142" decoding="async">
@@ -241,18 +242,38 @@
           <img class="store-badge" src="/assets/app_store_badge_en.svg" alt="Download on the App Store" width="120" height="40" decoding="async">
         </a>
       </div>
-      <p class="fine">
-        Available on the App Store and Google Play
-      </p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="problem" style="content-visibility:auto;"><div class="container"><h2>Baby eczema and a suspected food allergy?</h2><ul class="list list--big"><li>The eczema keeps getting worse and you don’t know if it’s food, teething or illness.</li><li>Your baby has mucus in the stool, colic or frequent spit-up.</li><li>You keep removing foods without a clear result.</li><li>You’re not sure how long to keep the diet or when to bring foods back.</li></ul></div></section>
-  <section class="section section--soft" id="solution" style="content-visibility:auto;"><div class="container"><h2>How Baby Without Allergies helps you find what bothers your baby</h2><p class="section__lead">The app combines a <strong>symptom and food diary</strong>, an <strong>elimination diet</strong> and <strong>allergen testing</strong> into one clear process. Every day you know what to eat, what to track and when to take the next step – while breastfeeding or with a toddler on solids.</p></div></section>
+  <section class="section" id="problem" style="content-visibility:auto;">
+    <div class="container">
+      <h2>Baby eczema and a suspected food allergy?</h2>
+      <p class="section__lead">Maybe you’re in one of these spots. Here’s how Baby Without Allergies helps.</p>
+      <ul class="fit-list">
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">Eczema, mucus in the stool or colic – and you can’t tell if it’s food, teething or a bug.</p>
+          <p class="fit__help">Log everything that might be connected in a moment, and the app helps you make sense of it.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">You keep cutting foods out, but nothing really changes.</p>
+          <p class="fit__help">You get an elimination plan, day by day – what to skip and for how long.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">You don’t know when or how to bring foods back.</p>
+          <p class="fit__help">The app walks you through allergen testing one step at a time.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">At the doctor’s, the details slip your mind.</p>
+          <p class="fit__help">Export your records to a PDF and bring the whole picture along.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section class="app-showcase" id="features" style="content-visibility:auto;">
     <div class="container app-showcase__intro">
       <h2>What you’ll find in the app</h2>
-      <p class="section__lead">A short scroll instead of a long manual. Here’s exactly how the app guides you from a suspected allergy to a calm mealtime.</p>
     </div>
     <div class="container app-showcase__grid">
       <div class="app-showcase__stage" aria-hidden="true">
@@ -274,43 +295,35 @@
         <div class="app-showcase__captions">
           <article class="showcase-step__inner is-active" data-shot="vynechat">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_vynechat_en.webp" type="image/webp"><img src="/assets/app_vynechat_en.png" alt="Choosing which allergens to leave out in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Choose what to leave out</h3>
-            <p>Pick the allergens to remove from your diet. The app suggests a starting set of main suspects and flags cross-reactions – like other poultry.</p>
+            <h3>Set up your elimination diet</h3>
           </article>
           <article class="showcase-step__inner" data-shot="plan">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_plan_en.webp" type="image/webp"><img src="/assets/app_plan_en.png" alt="“Main suspects” elimination diet plan with a day counter in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Your diet plan, day by day</h3>
-            <p>The home screen shows which day of the diet you’re on and how long until your check-in. Log the day or an eaten allergen with a single tap.</p>
+            <h3>Follow it day by day</h3>
           </article>
           <article class="showcase-step__inner" data-shot="jidla">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_jidla_en.webp" type="image/webp"><img src="/assets/app_jidla_en.png" alt="List of foods you can eat and foods to leave out in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>What to eat and what not</h3>
-            <p>A clear overview of the allergens and foods you can eat – and the ones you’re leaving out for now. Download it as a printable PDF for the fridge.</p>
+            <h3>Your food list, always at hand</h3>
           </article>
           <article class="showcase-step__inner" data-shot="zapis">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_zapis_en.webp" type="image/webp"><img src="/assets/app_zapis_en.png" alt="Quick symptom log copied from the last entry in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Log symptoms in seconds</h3>
-            <p>If nothing changed, just confirm the day was the same and your last entry is copied. Otherwise update only what’s different – eczema, tummy, stool, reflux and sleep.</p>
           </article>
           <article class="showcase-step__inner" data-shot="graf">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_graf_en.webp" type="image/webp"><img src="/assets/app_graf_en.png" alt="Chart and summary of eczema and reflux progress in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>See how your child is doing</h3>
-            <p>A chart shows how symptoms develop over a week or a month, and a plain-language summary tells you whether things are improving and what bothers your child most.</p>
+            <h3>Get an evaluation from the days you log</h3>
           </article>
           <article class="showcase-step__inner" data-shot="test">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_test_en.webp" type="image/webp"><img src="/assets/app_test_en.png" alt="Step-by-step allergen testing in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Test allergens step by step</h3>
-            <p>After the diet, foods come back gradually. Each day the app tells you what to give and how much – through breastfeeding or directly in your little one’s meals – so you find out exactly what the real trigger is.</p>
           </article>
           <article class="showcase-step__inner" data-shot="recepty">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_recepty_en.webp" type="image/webp"><img src="/assets/app_recepty_en.png" alt="Recipes filtered by allergen in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Recipes matched to your diet</h3>
-            <p>The allergen filter automatically hides recipes with foods you’re currently leaving out. Browse by category or prep time too – no more checking every label yourself.</p>
           </article>
           <article class="showcase-step__inner" data-shot="export">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_export_en.webp" type="image/webp"><img src="/assets/app_export_en.png" alt="PDF export of records for the doctor in the Baby Without Allergies app" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Records for your doctor</h3>
-            <p>Export your records to PDF – child profile, eczema, tummy, stool, reflux, sleep, acute reactions and medication – and bring them to your doctor or allergist.</p>
           </article>
         </div>
         <div class="showcase-step" data-shot="vynechat" aria-hidden="true"></div>
@@ -324,18 +337,13 @@
       </div>
     </div>
   </section>
-  <section class="section" id="how" style="content-visibility:auto;"><div class="container"><h2>How the app guides you</h2><ol class="steps"><li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Set your child’s situation</h3><p>The app adapts to where you are in the process.</p></div></li><li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Go through the elimination phase</h3><p>You get clear daily steps without unnecessary guessing.</p></div></li><li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Test allergens gradually</h3><p>Foods are reintroduced step by step and in an organized way.</p></div></li><li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>See patterns more clearly</h3><p>Records help you better understand what may be triggering symptoms.</p></div></li></ol></div></section>
-  <section class="section" id="who" style="content-visibility:auto;"><div class="container"><h2>Who the app is for</h2><div class="cards cards--who"><article class="card reveal reveal--up"><p>Parents of babies and young children with eczema</p></article><article class="card reveal reveal--up"><p>Families dealing with suspected food allergy or intolerance</p></article><article class="card reveal reveal--up"><p>Parents going through an elimination diet</p></article><article class="card reveal reveal--up"><p>Those who have already tried many things and need a clearer system</p></article></div></div></section>
   <section class="section" id="about" style="content-visibility:auto;"><div class="container about-me"><picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="Jiřina Brázdová, nutrition consultant and creator of the Baby Without Allergies app" width="785" height="1046" loading="lazy" decoding="async"></picture><div><h2>Hi, I’m Jiřina</h2><p>I’m a mum of a child with multiple allergies. I went through a period when I didn’t know what was triggering the symptoms – eczema, reactions, endless trying and uncertainty.</p><p>That’s why I created Baby Without Allergies, an app that helps parents manage difficult situations connected with eczema and food allergies in babies and children.</p><p>I wanted to create something parents can always have at hand and use as long-term support. I’m a nutrition consultant and a programming enthusiast.</p><p>I hope the app helps you as much as it helped me.</p><p><a class="btn btn--ghost" href="/en/about/">The whole story behind the app →</a></p></div></div></section>
 
   <!-- DOWNLOAD EN -->
-  <section class="section section--tint" id="testing" style="content-visibility:auto;">
-    <div class="container">
-      <div class="download-card">
-        <p class="download-card__eyebrow">App Store & Google Play</p>
-        <h2>Download Baby Without Allergies</h2>
-        <p class="section__lead">Baby Without Allergies is available on the App Store and Google Play.</p>
-        <div class="store-links" aria-label="App download links">
+  <section class="section" id="testing" style="content-visibility:auto;">
+    <div class="container download">
+      <h2>Download the app</h2>
+      <div class="store-links" aria-label="App download links">
           <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&amp;hl=en&amp;referrer=utm_source%3Dbabyapp.cz%26utm_medium%3Dweb%26utm_campaign%3Dhome-en" target="_blank" rel="noopener noreferrer" aria-label="Get Baby Without Allergies on Google Play">
             <img class="store-badge" src="/assets/google-play-badge-en.png" alt="Get it on Google Play" width="478" height="142" loading="lazy" decoding="async">
           </a>
@@ -343,14 +351,12 @@
             <img class="store-badge" src="/assets/app_store_badge_en.svg" alt="Download on the App Store" width="120" height="40" loading="lazy" decoding="async">
           </a>
         </div>
-      </div>
     </div>
   </section>
 
   <section class="section section--blog" id="articles" style="content-visibility:auto;">
-    <div class="container"><div class="section-heading"><div><p class="eyebrow">Practical, clear guidance</p><h2>Guides for parents</h2></div><p>Health context translated into practical steps to discuss with your pediatrician or allergist.</p></div>
-      <div class="featured-article"><picture><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Baby with a red, flushed cheek" width="613" height="393" loading="lazy" decoding="async"></picture><div><span>Featured article</span><h3>Signs of food allergy in babies</h3><p>Skin, digestive and immediate reactions—and when to seek urgent medical help.</p><a class="btn btn--primary" href="/en/signs/">Read the article</a></div></div>
-      <div class="blog-grid"><a class="blog-card" href="/en/eczema/"><span>Eczema</span><h3>Baby eczema: how to recognize it</h3><p>Possible triggers, skin care and how to track patterns.</p></a><a class="blog-card" href="/en/main-suspects/"><span>Elimination diet</span><h3>Elimination diet for babies and breastfeeding</h3><p>A structured and safer approach to the first phase.</p></a></div>
+    <div class="container"><div class="section-heading"><div><h2>Guides for parents</h2></div><p>Health context translated into practical steps to discuss with your pediatrician or allergist.</p></div>
+      <div class="media-grid"><a class="media-card" href="/en/signs/"><picture class="media-card__photo"><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Baby with a red, flushed cheek" width="613" height="393" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Signs of food allergy</h3><p class="media-card__teaser">Learn which signs on the skin, in the stool or in the tummy can point to an allergy.</p></a><a class="media-card" href="/en/eczema/"><picture class="media-card__photo"><source srcset="/assets/article-eczema.webp" type="image/webp"><img src="/assets/article-eczema.jpg" alt="Hand covered with a small red skin rash" width="1600" height="2400" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Baby eczema</h3><p class="media-card__teaser">Recognize eczema, understand why it develops and know when to moisturize.</p></a><a class="media-card" href="/en/main-suspects/"><picture class="media-card__photo"><source srcset="/assets/article-main.webp" type="image/webp"><img src="/assets/article-main.jpg" alt="Fried eggs and a glass of milk – eggs and milk are among the main suspected foods" width="1600" height="1600" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Main suspects</h3><p class="media-card__teaser">Know how to start the elimination diet – what to remove and for how long.</p></a></div>
       <p class="guide-category__more"><a href="/en/guide/">The full guide: food allergy, elimination diet, eczema and more →</a></p>
     </div>
   </section>

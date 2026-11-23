@@ -226,12 +226,15 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top" class="home">
   <section class="hero hero--intro">
-    <div class="container hero__copy">
-
+    <div class="container hero__split">
+      <picture class="hero__art">
+        <source srcset="/assets/hero-mama.webp" type="image/webp">
+        <img src="/assets/hero-mama.png" alt="Maminka kojí miminko, kolem ní obíhají hlavní alergeny – mléko, vejce, ryba, lepek, ořechy, arašídy, sója a korýši" width="1400" height="808" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__copy">
       <h1>Aplikace pro rodiče miminek s ekzémem a potravinovou alergií</h1>
-      <p class="lead">Pomůže ti přijít na to, co miminku vadí – s klidem a přehledem. Sleduj příznaky, jídlo a souvislosti na jednom místě.</p>
       <div class="store-links store-links--hero" aria-label="Odkazy ke stažení aplikace">
         <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&amp;hl=cs&amp;referrer=utm_source%3Dbabyapp.cz%26utm_medium%3Dweb%26utm_campaign%3Dhome-cz" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
           <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" width="478" height="142" decoding="async">
@@ -240,35 +243,38 @@
           <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" width="120" height="40" decoding="async">
         </a>
       </div>
-      <p class="fine">
-        Dostupné na App Storu i Google Play
-      </p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="problem" style="content-visibility:auto;">
     <div class="container">
       <h2>Ekzém u miminka a podezření na potravinovou alergii?</h2>
-      <ul class="list list--big">
-        <li>Ekzém se zhoršuje a nevíš, jestli za tím je jídlo, zoubky, nebo nemoc.</li>
-        <li>Miminko má hlen ve stolici, koliky nebo časté ublinkávání.</li>
-        <li>Zkoušíš vyřazovat potraviny, ale bez jasného výsledku.</li>
-        <li>Nevíš, jak dlouho dietu držet a kdy potraviny vracet zpět.</li>
+      <p class="section__lead">Možná se poznáš v některé z těchto situací. Takhle ti Bejby bez alergií pomůže.</p>
+      <ul class="fit-list">
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">Ekzém, hlen ve stolici nebo koliky – a nevíš, jestli je to jídlem, zoubky, nebo nemocí.</p>
+          <p class="fit__help">Během chvilky zapíšeš všechny souvislosti a aplikace ti pomůže vyhodnotit stav.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">Vyřazuješ potraviny, ale nic se pořádně nemění.</p>
+          <p class="fit__help">Dostaneš plán eliminační diety den po dni – víš, co vynechat a jak dlouho.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">Nevíš, kdy a jak potraviny vracet zpátky.</p>
+          <p class="fit__help">Aplikace tě testováním alergenů provede krok za krokem.</p>
+        </li>
+        <li class="fit reveal reveal--up">
+          <p class="fit__now">U lékaře si nevzpomeneš na podrobnosti.</p>
+          <p class="fit__help">Záznamy vyexportuješ do PDF a doneseš celý přehled s sebou.</p>
+        </li>
       </ul>
-    </div>
-  </section>
-
-  <section class="section section--soft" id="solution" style="content-visibility:auto;">
-    <div class="container">
-      <h2>Jak Bejby bez alergií pomůže najít, co miminku vadí</h2>
-      <p class="section__lead">Aplikace spojuje <strong>deník příznaků a jídla</strong>, <strong>eliminační dietu</strong> a <strong>testování alergenů</strong> do jednoho postupu. Každý den víš, co jíst, co sledovat a kdy udělat další krok – při kojení i u batolete na příkrmech.</p>
     </div>
   </section>
 
   <section class="app-showcase" id="features" style="content-visibility:auto;">
     <div class="container app-showcase__intro">
       <h2>Co v aplikaci najdeš</h2>
-      <p class="section__lead">Krátký scroll místo dlouhého manuálu. Ukážeme ti přesně, jak tě aplikace provede od podezření na alergii až po klidný jídelníček.</p>
     </div>
     <div class="container app-showcase__grid">
       <div class="app-showcase__stage" aria-hidden="true">
@@ -290,43 +296,35 @@
         <div class="app-showcase__captions">
           <article class="showcase-step__inner is-active" data-shot="vynechat">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_vynechat_cz.webp" type="image/webp"><img src="/assets/app_vynechat_cz.png" alt="Výběr alergenů k vynechání v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Vyber, co vynechat</h3>
-            <p>Vyber alergeny, které chceš z jídelníčku vyřadit. Aplikace doporučí výchozí sadu hlavních podezřelých a upozorní i na zkřížené reakce – třeba u drůbeže.</p>
+            <h3>Nastav si eliminační dietu</h3>
           </article>
           <article class="showcase-step__inner" data-shot="plan">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_plan_cz.webp" type="image/webp"><img src="/assets/app_plan_cz.png" alt="Plán eliminační diety „Hlavní podezřelí“ s počítadlem dnů v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Plán diety den po dni</h3>
-            <p>Na hlavní obrazovce vidíš, kolikátý den diety právě běží a kolik zbývá do vyhodnocení. Jedním klepnutím zaznamenáš den nebo snědený alergen.</p>
+            <h3>Sleduj den za dnem</h3>
           </article>
           <article class="showcase-step__inner" data-shot="jidla">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_jidla_cz.webp" type="image/webp"><img src="/assets/app_jidla_cz.png" alt="Seznam potravin, které můžeš jíst a které vynecháváš, v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Co jíst a co ne</h3>
-            <p>Přehled alergenů a potravin, které můžeš jíst, i těch, které teď vynecháváš. Seznam si stáhneš i jako PDF k vytištění – třeba na lednici.</p>
+            <h3>Seznam potravin hned po ruce</h3>
           </article>
           <article class="showcase-step__inner" data-shot="zapis">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_zapis_cz.webp" type="image/webp"><img src="/assets/app_zapis_cz.png" alt="Rychlý zápis příznaků zkopírováním posledního záznamu v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Zápis symptomů za pár vteřin</h3>
-            <p>Když se nic nezměnilo, jen potvrdíš, že byl den stejný, a poslední záznam se zkopíruje. Jinak upravíš jen to, co je jinak – ekzém, bříško, stolici, reflux i spánek.</p>
           </article>
           <article class="showcase-step__inner" data-shot="graf">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_graf_cz.webp" type="image/webp"><img src="/assets/app_graf_cz.png" alt="Graf a shrnutí vývoje ekzému a refluxu v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
-            <h3>Uvidíš, jak se dítěti daří</h3>
-            <p>Graf ukáže vývoj příznaků za týden i za měsíc a srozumitelné shrnutí řekne, jestli se stav zlepšuje a co dítě trápí nejvíc.</p>
+            <h3>Ze zapsaných dnů získáš vyhodnocení</h3>
           </article>
           <article class="showcase-step__inner" data-shot="test">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_test_cz.webp" type="image/webp"><img src="/assets/app_test_cz.png" alt="Testování alergenů krok za krokem v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Otestuj alergeny krok za krokem</h3>
-            <p>Po dietě vracíš potraviny zpět postupně. Aplikace ti každý den řekne, co a v jakém množství podat – při kojení i u batolete na příkrmech – abys přesně zjistila, co je skutečný spouštěč.</p>
           </article>
           <article class="showcase-step__inner" data-shot="recepty">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_recepty_cz.webp" type="image/webp"><img src="/assets/app_recepty_cz.png" alt="Recepty filtrované podle alergenů v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Recepty přesně na míru dietě</h3>
-            <p>Alergenový filtr automaticky skryje recepty s potravinami, které právě vynecháváš. Hledat můžeš i podle kategorie nebo času přípravy – nemusíš kontrolovat každé složení sama.</p>
           </article>
           <article class="showcase-step__inner" data-shot="export">
             <div class="mini-phone" aria-hidden="true"><div class="mini-phone__screen"><picture><source srcset="/assets/app_export_cz.webp" type="image/webp"><img src="/assets/app_export_cz.png" alt="Export záznamů do PDF pro lékaře v aplikaci Bejby bez alergií" width="1206" height="2622" loading="lazy" decoding="async"></picture></div><picture><source srcset="/assets/frame1.webp" type="image/webp"><img class="mini-phone__frame" src="/assets/frame1.png" alt="" width="389" height="800" loading="lazy" decoding="async"></picture></div>
             <h3>Podklady pro lékaře</h3>
-            <p>Záznamy vyexportuješ do PDF – profil dítěte, ekzém, bříško, stolici, reflux, spánek, akutní reakce i léky – a vezmeš je s sebou k lékaři nebo alergologovi.</p>
           </article>
         </div>
         <div class="showcase-step" data-shot="vynechat" aria-hidden="true"></div>
@@ -337,30 +335,6 @@
         <div class="showcase-step" data-shot="test" aria-hidden="true"></div>
         <div class="showcase-step" data-shot="recepty" aria-hidden="true"></div>
         <div class="showcase-step" data-shot="export" aria-hidden="true"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="how" style="content-visibility:auto;">
-    <div class="container">
-      <h2>Jak tě aplikace provede</h2>
-      <ol class="steps">
-        <li class="step reveal reveal--left"><span class="step__num">1</span><div><h3>Nastavíš situaci dítěte</h3><p>Aplikace se přizpůsobí tomu, kde se právě nacházíte.</p></div></li>
-        <li class="step reveal reveal--right"><span class="step__num">2</span><div><h3>Projdeš eliminační fází</h3><p>Získáš jasné denní kroky bez zbytečného tápání.</p></div></li>
-        <li class="step reveal reveal--left"><span class="step__num">3</span><div><h3>Postupně testuješ alergeny</h3><p>Potraviny se vrací zpět systematicky a s přehledem.</p></div></li>
-        <li class="step reveal reveal--right"><span class="step__num">4</span><div><h3>Vidíš souvislosti</h3><p>Záznamy pomáhají lépe pochopit, co dítěti skutečně vadí.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section" id="who" style="content-visibility:auto;">
-    <div class="container">
-      <h2>Pro koho je aplikace</h2>
-      <div class="cards cards--who">
-        <article class="card reveal reveal--up"><p>Pro ty, kteří mají podezření na potravinovou alergii</p></article>
-        <article class="card reveal reveal--up"><p>Pro ty, kteří již vyřadili nejčastější alergeny a nepomohlo jim to</p></article>
-        <article class="card reveal reveal--up"><p>Pro ty, kteří mají vyřazeno vícero potravin a neví, které skutečně vadí</p></article>
-        <article class="card reveal reveal--up"><p>Pro ty, kteří chtějí navracet alergeny zpět do jídelníčku</p></article>
       </div>
     </div>
   </section>
@@ -380,13 +354,10 @@
   </section>
 
   <!-- DOWNLOAD CZ -->
-  <section class="section section--tint" id="testovani" style="content-visibility:auto;">
-    <div class="container">
-      <div class="download-card">
-        <p class="download-card__eyebrow">App Store & Google Play</p>
-        <h2>Stáhněte si aplikaci Bejby bez alergií</h2>
-        <p class="section__lead">Aplikaci Bejby bez alergií si můžete stáhnout na App Storu i Google Play.</p>
-        <div class="store-links" aria-label="Odkazy ke stažení aplikace">
+  <section class="section" id="testovani" style="content-visibility:auto;">
+    <div class="container download">
+      <h2>Stáhněte si aplikaci</h2>
+      <div class="store-links" aria-label="Odkazy ke stažení aplikace">
           <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=cz.babyapp.app&amp;hl=cs&amp;referrer=utm_source%3Dbabyapp.cz%26utm_medium%3Dweb%26utm_campaign%3Dhome-cz" target="_blank" rel="noopener noreferrer" aria-label="Stáhnout aplikaci Bejby bez alergií na Google Play">
             <img class="store-badge" src="/assets/google-play-badge-cs.png" alt="Stáhnout na Google Play" width="478" height="142" loading="lazy" decoding="async">
           </a>
@@ -394,14 +365,12 @@
             <img class="store-badge" src="/assets/app_store_badge_cs.svg" alt="Stáhnout v App Storu" width="120" height="40" loading="lazy" decoding="async">
           </a>
         </div>
-      </div>
     </div>
   </section>
 
   <section class="section section--blog" id="articles" style="content-visibility:auto;">
-    <div class="container"><div class="section-heading"><div><p class="eyebrow">Prakticky a srozumitelně</p><h2>Průvodce pro rodiče</h2></div><p>Odborné souvislosti přeložené do kroků, které můžete probrat s pediatrem nebo alergologem.</p></div>
-      <div class="featured-article"><picture><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Miminko se zarudlou tvářičkou" width="613" height="393" loading="lazy" decoding="async"></picture><div><span>Doporučený článek</span><h3>Jak poznat potravinovou alergii u miminka</h3><p>Kožní, zažívací i rychlé reakce a situace, kdy nečekat s lékařskou pomocí.</p><a class="btn btn--primary" href="/signs/">Přečíst článek</a></div></div>
-      <div class="blog-grid"><a class="blog-card" href="/eczema/"><span>Ekzém</span><h3>Ekzém u miminka: jak ho poznat</h3><p>Možné spouštěče, péče o kůži a sledování souvislostí.</p></a><a class="blog-card" href="/main-suspects/"><span>Dieta</span><h3>Eliminační dieta při kojení a u miminka</h3><p>Jak k první fázi přistoupit systematicky a bezpečně.</p></a></div>
+    <div class="container"><div class="section-heading"><div><h2>Průvodce pro rodiče</h2></div><p>Odborné souvislosti přeložené do kroků, které můžete probrat s pediatrem nebo alergologem.</p></div>
+      <div class="media-grid"><a class="media-card" href="/signs/"><picture class="media-card__photo"><source srcset="/assets/article-signs.webp" type="image/webp"><img src="/assets/article-signs.png" alt="Miminko se zarudlou tvářičkou" width="613" height="393" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Projevy potravinové alergie</h3><p class="media-card__teaser">Poznáš, které projevy na kůži, ve stolici nebo v bříšku můžou ukazovat na alergii.</p></a><a class="media-card" href="/eczema/"><picture class="media-card__photo"><source srcset="/assets/article-eczema.webp" type="image/webp"><img src="/assets/article-eczema.jpg" alt="Ruka s drobnou červenou vyrážkou na kůži" width="1600" height="2400" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Ekzém u miminka</h3><p class="media-card__teaser">Poznáš ekzém, pochopíš, proč vzniká, a budeš vědět, kdy promazávat.</p></a><a class="media-card" href="/main-suspects/"><picture class="media-card__photo"><source srcset="/assets/article-main.webp" type="image/webp"><img src="/assets/article-main.jpg" alt="Volská oka a sklenice mléka – vejce a mléko patří mezi hlavní podezřelé potraviny" width="1600" height="1600" loading="lazy" decoding="async"></picture><h3 class="media-card__title">Hlavní podezřelí</h3><p class="media-card__teaser">Budeš vědět, jak začít s eliminační dietou – co a na jak dlouho vyřadit.</p></a></div>
       <p class="guide-category__more"><a href="/pruvodce/">Celý průvodce: potravinová alergie, eliminační dieta, ekzém a další témata →</a></p>
     </div>
   </section>
