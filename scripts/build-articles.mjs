@@ -281,7 +281,7 @@ function relatedCards(lang, categorySlug, currentHref) {
   const g = GUIDE[lang];
   const items = g.mod.categoryItems(categorySlug).filter((item) => item.href !== currentHref);
   const category = g.mod.categories.find((c) => c.slug === categorySlug);
-  return `<section class="related"><h2>${g.t.more(category.title)}</h2><div class="related-grid">${items.map((item) => `<a class="related-card" href="${item.href}"><span>${g.t.readNext}</span><strong>${item.title}</strong></a>`).join('')}</div><p class="related__more"><a href="${g.mod.categoryPath(categorySlug)}">${g.t.allIn(category.title)}</a> · <a href="${g.root}">${g.t.fullGuide}</a></p></section>`;
+  return `<section class="related"><h2>${g.t.more(category.title)}</h2><div class="media-grid">${items.map((item) => card(item)).join('')}</div><p class="related__more"><a href="${g.mod.categoryPath(categorySlug)}">${g.t.allIn(category.title)}</a> · <a href="${g.root}">${g.t.fullGuide}</a></p></section>`;
 }
 
 // ── Legacy articles (/eczema/, /signs/, /main-suspects/ + EN) ──────────
@@ -382,8 +382,21 @@ function guideArticlePage(lang, article, markdown) {
 
 // ── Hubs ───────────────────────────────────────────────────────────────
 
-function card(item, eyebrow) {
-  return `<a class="blog-card" href="${item.href}"><span>${eyebrow}</span><h3>${item.title}</h3><p>${item.description}</p></a>`;
+// Photo card like in the app: rounded photo, title and short description loose below.
+function cardPhoto(item) {
+  if (item.cover) {
+    return `<picture class="media-card__photo"><source srcset="${storyblokImage(item.cover, 800, 600, true)}" type="image/webp"><img src="${storyblokImage(item.cover, 800, 600)}" alt="${escapeHtml(item.coverAlt || '')}" width="800" height="600" loading="lazy" decoding="async"></picture>`;
+  }
+  if (item.image) {
+    const [w, h] = item.imageSize;
+    return `<picture class="media-card__photo"><source srcset="${item.imageWebp}" type="image/webp"><img src="${item.image}" alt="${escapeHtml(item.imageAlt || '')}" width="${w}" height="${h}" loading="lazy" decoding="async"></picture>`;
+  }
+  return '';
+}
+
+// Small article title on top, the teaser (what the parent gets from it) as the main line.
+function card(item) {
+  return `<a class="media-card" href="${item.href}">${cardPhoto(item)}<h3 class="media-card__title">${item.title}</h3><p class="media-card__teaser">${item.teaser || item.description}</p></a>`;
 }
 
 function collectionLd(lang, name, description, href, items) {
@@ -396,7 +409,7 @@ function guideHubPage(lang) {
   const trail = guideTrail(lang, null);
   const sections = cats.map((c) => `<section class="guide-category" id="${c.slug}">
       <div class="guide-category__head"><h2><a href="${catPath(c.slug)}">${c.title}</a></h2><p>${c.intro}</p></div>
-      <div class="blog-grid">${catItems(c.slug).map((item) => card(item, c.title)).join('')}</div>
+      <div class="media-grid">${catItems(c.slug).map((item) => card(item)).join('')}</div>
       <p class="guide-category__more"><a href="${catPath(c.slug)}">${g.t.allAbout(c.title)}</a></p>
     </section>`).join('\n    ');
   const main = `  <section class="section guide-hub">
@@ -434,7 +447,7 @@ function categoryHubPage(lang, category) {
   <section class="section guide-hub">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">${g.t.catEyebrow}</p><h1>${category.title}</h1></div><p>${category.intro}</p></div>
-      <div class="blog-grid">${items.map((item) => card(item, category.title)).join('')}</div>
+      <div class="media-grid">${items.map((item) => card(item)).join('')}</div>
       <nav class="guide-chips guide-chips--others" aria-label="${g.t.otherTopicsLabel}"><span>${g.t.otherTopics}</span>${others.map((c) => `<a href="${g.mod.categoryPath(c.slug)}">${c.title}</a>`).join('')}</nav>
       ${appCta(lang, g.categoryCta[category.slug], `${category.slug}-${lang === 'cs' ? 'cz' : 'en'}`)}
     </div>

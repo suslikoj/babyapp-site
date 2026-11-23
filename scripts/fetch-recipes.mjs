@@ -39,6 +39,26 @@ async function fetchAll(params, language) {
   return stories;
 }
 
+// First image asset in a Storyblok content object (field names differ between content types).
+function firstImage(content) {
+  for (const value of Object.values(content || {})) {
+    if (value && typeof value === 'object' && /\.(png|jpe?g|webp|svg)$/i.test(value.filename || '')) return value.filename;
+  }
+  return null;
+}
+
+// Recipe author block (name, link, logo). Empty → the recipe is by Bejby bez alergií.
+function recipeAuthor(field) {
+  const block = Array.isArray(field) ? field[0] : field;
+  const name = (block?.name || '').trim();
+  if (!name) return null;
+  const link = block.link;
+  let url = typeof link === 'string' ? link : link?.url || (link?.linktype === 'url' ? link?.cached_url : '') || '';
+  url = url.trim();
+  if (url && !/^https?:\/\//i.test(url) && /^[\w.-]+\.[a-z]{2,}/i.test(url)) url = `https://${url}`;
+  return { name, url: /^https?:\/\//i.test(url) ? url : '', logo: block.logo?.filename || null };
+}
+
 function number(value) {
   const n = Number(String(value ?? '').replace(',', '.'));
   return Number.isFinite(n) && n > 0 ? n : null;
@@ -75,6 +95,8 @@ async function main() {
 
   const categoryByUuid = Object.fromEntries(categories.map((c) => [c.uuid, { slug: c.slug, name: c.name, nameEn: enCategoryTitle[c.uuid] || c.name }]));
   const allergenByUuid = Object.fromEntries(allergens.map((a) => [a.uuid, a.slug]));
+  // Allergen photos (shown as tiles on the recipe detail, like in the app).
+  const allergenImages = Object.fromEntries(allergens.map((a) => [a.slug, firstImage(a.content)]).filter(([, img]) => img));
   const allergenList = (ids) => [...new Set((ids || []).map((id) => allergenByUuid[id]).filter(Boolean))];
 
   const webRecipes = recipes.filter((story) => String(story.content?.component).toLowerCase() === 'recipe' && story.content.web === true);
@@ -112,8 +134,11 @@ async function main() {
       slugEn: webSlugEn(story),
       storyblokSlug: story.slug,
       ...texts(c, story.name),
-      image: c.image?.filename || null,
-      imageAlt: c.image?.alt || '',
+      // image2 = full photo used in the app; image = older cut-out (fallback).
+      image: c.image2?.filename || c.image?.filename || null,
+      imageAlt: c.image2?.alt || c.image?.alt || '',
+      photo: Boolean(c.image2?.filename),
+      author: recipeAuthor(c.author),
       category: categoryByUuid[c.category] || null,
       tagKeys: (c.tags || []).map((t) => (t.startsWith('no_allergen') || t === 'allergen_free' ? 'no_allergen' : t)),
       servings: number(c.servings),
@@ -132,6 +157,7 @@ async function main() {
 
   const snapshot = {
     totalInApp: recipes.filter((story) => String(story.content?.component).toLowerCase() === 'recipe').length,
+    allergenImages,
     categories: categories.map((c) => ({ slug: c.slug, name: c.name, nameEn: enCategoryTitle[c.uuid] || c.name })),
     recipes: normalized,
   };

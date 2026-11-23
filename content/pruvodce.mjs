@@ -39,9 +39,9 @@ export const categories = [
 
 // Stávající články na původních adresách (generuje je scripts/build-articles.mjs) – v průvodci jen jako karty.
 export const legacyArticles = [
-  { category: 'potravinova-alergie', path: '/signs/', title: 'Projevy potravinové alergie', description: 'Jak poznat potravinovou alergii u miminka: kůže, stolice, bříško, reflux i rychlé reakce.', order: 0 },
-  { category: 'eliminacni-dieta', path: '/main-suspects/', title: 'Hlavní podezřelí', description: '1. fáze eliminační diety: které potraviny na 14 dní vyřadit a co sledovat.', order: 0 },
-  { category: 'ekzem', path: '/eczema/', title: 'Ekzém u miminka', description: 'Jak ekzém u miminka poznat, proč vzniká a kdy promazávat.', order: 0 },
+  { category: 'potravinova-alergie', path: '/signs/', title: 'Projevy potravinové alergie', description: 'Jak poznat potravinovou alergii u miminka: kůže, stolice, bříško, reflux i rychlé reakce.', image: '/assets/article-signs.png', imageWebp: '/assets/article-signs.webp', imageSize: [613, 393], imageAlt: 'Miminko se zarudlou tvářičkou', order: 0 },
+  { category: 'eliminacni-dieta', path: '/main-suspects/', title: 'Hlavní podezřelí', description: '1. fáze eliminační diety: které potraviny na 14 dní vyřadit a co sledovat.', image: '/assets/article-main.jpg', imageWebp: '/assets/article-main.webp', imageSize: [1600, 1600], imageAlt: 'Volská oka a sklenice mléka', order: 0 },
+  { category: 'ekzem', path: '/eczema/', title: 'Ekzém u miminka', description: 'Jak ekzém u miminka poznat, proč vzniká a kdy promazávat.', image: '/assets/article-eczema.jpg', imageWebp: '/assets/article-eczema.webp', imageSize: [1600, 2400], imageAlt: 'Ruka s drobnou červenou vyrážkou na kůži', order: 0 },
 ];
 
 export const articles = [
@@ -330,7 +330,29 @@ export function articlePath(article) {
 
 // Pořadí v kategorii: stávající článek (order 0) první, pak nové v pořadí výše.
 export function categoryItems(categorySlug) {
-  const legacy = legacyArticles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: a.path }));
-  const fresh = articles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: articlePath(a) }));
+  const legacy = legacyArticles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: a.path, teaser: teasers[a.path] }));
+  const fresh = articles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: articlePath(a), teaser: teasers[a.slug] }));
   return [...legacy, ...fresh];
 }
+
+// Card teasers: one line telling the parent what the article gives them (shown under the photo).
+export const teasers = {
+  "/signs/": "Poznáš, které projevy na kůži, ve stolici nebo v bříšku můžou ukazovat na alergii.",
+  "jak-vznika-potravinova-alergie": "Pochopíš, proč imunita dítěte začne brát běžné jídlo jako hrozbu.",
+  "ige-a-non-ige": "Zjistíš, proč reakce přijde hned nebo až za pár dní – a proč test může vyjít negativně.",
+  "psenice-vs-lepek": "Rozlišíš alergii na pšenici, celiakii a nesnášenlivost lepku.",
+  "zkrizene-alergie": "Pochopíš, proč dítě reaguje na syrové jablko, ale pečené snese.",
+  "/main-suspects/": "Budeš vědět, jak začít s eliminační dietou – co a na jak dlouho vyřadit.",
+  "kompletni-vylouceni": "Budeš vědět, jak projít kompletní dietou, když vyřazení hlavních alergenů nepomohlo.",
+  "testovani-alergenu": "Naučíš se vracet alergeny zpět – kdy začít, jak dlouho a co dělat při reakci.",
+  "trenink-alergenu": "Zjistíš, jak malými pravidelnými dávkami pomáhat tělu budovat toleranci.",
+  "nepotravinove-vlivy": "Odlišíš reakci na jídlo od zoubků, nemoci, počasí nebo únavy.",
+  "bezpecne-potraviny": "Získáš přehled potravin s nízkým rizikem alergie pro dny na dietě.",
+  "/eczema/": "Poznáš ekzém, pochopíš, proč vzniká, a budeš vědět, kdy promazávat.",
+  "spoustece-ekzemu": "Zjistíš, co ekzém spouští v různém věku a jak to můžeš ovlivnit.",
+  "kvasinka-a-ekzem": "Pochopíš, proč extrémní diety proti kvasince nepomáhají a co dává smysl.",
+  "svedeni-u-ekzemu": "Získáš tipy, jak ulevit od svědění a dopřát dítěti klidnější noc.",
+  "kozni-projevy-u-miminek": "Odlišíš opruzeniny, mléčnou krustu nebo impetigo od ekzému.",
+  "histaminova-intolerance": "Zjistíš, jak histamin souvisí s ekzémem a které potraviny ho mají hodně.",
+  "lekari-a-ekzem": "Budeš vědět, co dělají masti, kortikoidy a antihistaminika – a kde mají limity.",
+};

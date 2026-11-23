@@ -43,9 +43,9 @@ export const categories = [
 
 // Existing EN articles at their original URLs (built by scripts/build-articles.mjs) – shown as cards only.
 export const legacyArticles = [
-  { category: 'food-allergy', path: '/en/signs/', title: 'Signs of food allergy', description: 'How to recognize a food allergy in a baby: skin, stool, tummy, reflux and fast reactions.', order: 0 },
-  { category: 'elimination-diet', path: '/en/main-suspects/', title: 'Main suspects', description: 'Phase 1 of the elimination diet: which foods to remove for 14 days and what to track.', order: 0 },
-  { category: 'eczema', path: '/en/eczema/', title: 'Baby eczema', description: 'How to recognize baby eczema, why it develops and when to moisturize.', order: 0 },
+  { category: 'food-allergy', path: '/en/signs/', title: 'Signs of food allergy', description: 'How to recognize a food allergy in a baby: skin, stool, tummy, reflux and fast reactions.', image: '/assets/article-signs.png', imageWebp: '/assets/article-signs.webp', imageSize: [613, 393], imageAlt: 'Baby with a red, flushed cheek', order: 0 },
+  { category: 'elimination-diet', path: '/en/main-suspects/', title: 'Main suspects', description: 'Phase 1 of the elimination diet: which foods to remove for 14 days and what to track.', image: '/assets/article-main.jpg', imageWebp: '/assets/article-main.webp', imageSize: [1600, 1600], imageAlt: 'Fried eggs and a glass of milk', order: 0 },
+  { category: 'eczema', path: '/en/eczema/', title: 'Baby eczema', description: 'How to recognize baby eczema, why it develops and when to moisturize.', image: '/assets/article-eczema.jpg', imageWebp: '/assets/article-eczema.webp', imageSize: [1600, 2400], imageAlt: 'Hand covered with a small red skin rash', order: 0 },
 ];
 
 export const articles = [
@@ -348,7 +348,29 @@ export function articlePath(article) {
 }
 
 export function categoryItems(categorySlug) {
-  const legacy = legacyArticles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: a.path }));
-  const fresh = articles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: articlePath(a) }));
+  const legacy = legacyArticles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: a.path, teaser: teasers[a.path] }));
+  const fresh = articles.filter((a) => a.category === categorySlug).map((a) => ({ ...a, href: articlePath(a), teaser: teasers[a.slug] }));
   return [...legacy, ...fresh];
 }
+
+// Card teasers: one line telling the parent what the article gives them (shown under the photo).
+export const teasers = {
+  "/en/signs/": "Learn which signs on the skin, in the stool or in the tummy can point to an allergy.",
+  "how-food-allergy-develops": "Understand why a child’s immune system starts treating everyday food as a threat.",
+  "ige-vs-non-ige": "Find out why a reaction comes right away or days later – and why a test can come back negative.",
+  "wheat-vs-gluten": "Tell a wheat allergy, coeliac disease and gluten intolerance apart.",
+  "cross-reactive-allergies": "Understand why your child reacts to raw apple but is fine with baked.",
+  "/en/main-suspects/": "Know how to start the elimination diet – what to remove and for how long.",
+  "complete-elimination": "Know how to go through complete elimination when removing the main allergens didn’t help.",
+  "allergen-testing": "Learn to bring allergens back – when to start, how long to test and what to do if there’s a reaction.",
+  "allergen-training": "Find out how small, regular doses help the body build tolerance.",
+  "non-food-triggers": "Tell a food reaction apart from teething, illness, weather or tiredness.",
+  "safe-foods": "Get an overview of low-allergy-risk foods for your days on the diet.",
+  "/en/eczema/": "Recognize eczema, understand why it develops and know when to moisturize.",
+  "eczema-triggers": "Find out what triggers eczema at different ages and what you can do about it.",
+  "yeast-and-eczema": "Understand why extreme anti-yeast diets don’t help and what actually makes sense.",
+  "eczema-itching": "Get tips to ease the itch and help your child sleep more calmly.",
+  "baby-skin-rashes": "Tell nappy rash, cradle cap or impetigo apart from eczema.",
+  "histamine-intolerance": "Find out how histamine relates to eczema and which foods are high in it.",
+  "doctors-and-eczema": "Know what creams, steroids and antihistamines do – and where their limits are.",
+};

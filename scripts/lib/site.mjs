@@ -218,8 +218,9 @@ export function storeBadges(lang, campaign) {
   return `<div class="store-links store-links--cta" aria-label="${isEn ? 'App download links' : 'Odkazy ke stažení aplikace'}"><a class="store-badge-link" href="${googlePlayUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Get Baby Without Allergies on Google Play' : 'Stáhnout aplikaci Bejby bez alergií na Google Play'}"><img class="store-badge" src="/assets/google-play-badge-${isEn ? 'en' : 'cs'}.png" alt="${isEn ? 'Get it on Google Play' : 'Stáhnout na Google Play'}" width="478" height="142" loading="lazy" decoding="async"></a><a class="store-badge-link" href="${appStoreUrl(lang, campaign)}" target="_blank" rel="noopener noreferrer" aria-label="${isEn ? 'Download Baby Without Allergies on the App Store' : 'Stáhnout aplikaci Bejby bez alergií v App Storu'}"><img class="store-badge" src="/assets/app_store_badge_${isEn ? 'en' : 'cs'}.svg" alt="${isEn ? 'Download on the App Store' : 'Stáhnout v App Storu'}" width="120" height="40" loading="lazy" decoding="async"></a></div>`;
 }
 
+// Simple download block, same as on the homepage: heading + store badges (cta text kept for callers, not shown).
 export function appCta(lang, cta, campaign) {
-  return `<section class="article-cta"><div><span>${cta.eyebrow}</span><h2>${cta.heading}</h2><p>${cta.text}</p></div>${storeBadges(lang, campaign)}</section>`;
+  return `<section class="download download--inline"><h2>${lang === 'en' ? 'Download the app' : 'Stáhněte si aplikaci'}</h2>${storeBadges(lang, campaign)}</section>`;
 }
 
 export async function write(relPath, html) {

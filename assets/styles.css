@@ -8,7 +8,7 @@
   --primary-2:#d65f5f;    /* darker coral — hover feedback on primary */
   --dark:#241C20;         /* near-black warm brown — text only, never a fill */
   --bg:#FACDBD;           /* soft peach — the one page background */
-  --bg-wash: linear-gradient(145deg, #fff 20%, var(--bg) 90%) fixed;
+  --bg-wash: linear-gradient(180deg, #fff 15%, var(--bg) 100%) fixed;
   --white:#ffffff;
 
   --text:var(--dark);
@@ -1008,3 +1008,213 @@ body{
 }
 .recipe-card__time{margin-bottom:4px}
 .recipe-card__body{padding-bottom:20px}
+
+/* ================================================================ */
+/* Homepage hero — illustration left, heading + store badges right   */
+/* The illustration is a transparent cut-out, so it sits on the     */
+/* page wash with no visible edge while scrolling.                   */
+/* ================================================================ */
+.hero--intro{background:none;padding:28px 0 40px}
+.hero__split{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:clamp(12px,3vw,40px);align-items:center;max-width:1240px;
+}
+.hero__art{display:block;margin-left:-4%}
+.hero__art img{
+  display:block;width:100%;height:auto;
+  animation:fadeUp 1s ease .1s both;
+}
+.hero--intro .hero__copy{max-width:520px;margin:0;text-align:left}
+.hero--intro h1{margin-left:0;margin-right:0;font-size:clamp(2rem,3.4vw,3.1rem)}
+.hero--intro .store-links--hero{justify-content:flex-start}
+@media (max-width:860px){
+  .hero__split{grid-template-columns:1fr;gap:0}
+  .hero__art{margin:0 -8%}
+  .hero--intro .hero__copy{text-align:center;margin:0 auto}
+  .hero--intro .store-links--hero{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.hero__art img{animation:none}}
+
+/* ================================================================ */
+/* Homepage "situation → how the app helps" pairs                    */
+/* ================================================================ */
+#problem .section__lead{margin:-6px 0 26px;font-size:1.12rem;color:var(--muted)}
+.fit-list{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+}
+.fit{
+  background:transparent;
+  border:1.5px solid #fff;
+  border-radius:20px 34px 20px 34px;
+  padding:22px 24px;
+  transition:border-color .25s ease;
+}
+.fit:hover{border-color:var(--primary)}
+.fit p{margin:0}
+.fit__now{color:var(--muted);font-size:1rem;line-height:1.5}
+.fit__help{
+  margin-top:12px !important;padding-left:30px;position:relative;
+  color:var(--dark);font-weight:600;font-size:1.06rem;line-height:1.45;
+}
+.fit__help::before{
+  content:"";position:absolute;left:0;top:.2em;width:20px;height:20px;border-radius:50%;
+  background:var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;
+}
+@media (max-width:700px){.fit-list{grid-template-columns:1fr}}
+/* Homepage rhythm: 64px between the last element of one block and */
+/* the heading of the next (hero badges → first h2 included).       */
+.home{--home-gap:64px}
+.home > .hero--intro{padding-bottom:calc(var(--home-gap) / 2)}
+.home > section:not(.hero){padding-top:calc(var(--home-gap) / 2);padding-bottom:calc(var(--home-gap) / 2)}
+.home > section:not(.hero) > .container > :first-child,
+.home > section:not(.hero) > .container > :first-child > h2:first-child{margin-top:0}
+.home > section:not(.hero) > .container:last-child > :last-child{margin-bottom:0}
+.home .faq > details:last-child{margin-bottom:0}
+
+/* ================================================================ */
+/* Download block on the homepage — heading + badges, no box         */
+/* ================================================================ */
+.download{text-align:center}
+.download h2{margin-bottom:22px}
+.download .store-links{justify-content:center}
+
+/* ================================================================ */
+/* Photo cards like in the app: rounded photo, text loose below      */
+/* (homepage articles = .media-card, recipe listings = .recipe-card) */
+/* ================================================================ */
+.media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.media-card{display:flex;flex-direction:column;color:var(--dark);text-decoration:none}
+.media-card__photo{display:block;overflow:hidden;border-radius:22px;aspect-ratio:4/3;margin-bottom:14px;box-shadow:0 10px 24px rgba(36,28,32,.08)}
+.media-card__photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.media-card:hover .media-card__photo img{transform:scale(1.04)}
+.media-card__tag{font-size:.8rem;font-weight:700;color:var(--primary-2);margin-bottom:4px}
+.media-card h3{margin:0 0 6px;font-size:1.15rem;line-height:1.3}
+.media-card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+@media (max-width:860px){.media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.media-grid{grid-template-columns:1fr}}
+
+.recipe-card,.recipe-card:hover{transform:none}
+.recipe-card__media{
+  position:relative;height:auto;aspect-ratio:1/1;margin:0 0 12px;
+  border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,#fff 0%,#fdeee7 100%);
+  box-shadow:0 10px 24px rgba(36,28,32,.08);
+  align-items:center;pointer-events:auto;
+}
+.recipe-card__media picture{height:84%;align-items:center}
+.recipe-card__media img{max-width:84%;filter:drop-shadow(0 10px 14px rgba(36,28,32,.14));transition:transform .4s ease}
+.recipe-card:hover .recipe-card__media img{transform:scale(1.05)}
+.recipe-card__media .recipe-card__time{
+  position:absolute;left:12px;bottom:12px;margin:0;
+  background:#fff;box-shadow:0 2px 8px rgba(36,28,32,.1);
+}
+.recipe-card__body,.recipe-card:hover .recipe-card__body{
+  padding:0;background:none;box-shadow:none;border-radius:0;
+  align-items:flex-start;text-align:left;
+}
+.recipe-card__body h3{margin:0 0 6px}
+.recipe-card__chips{justify-content:flex-start;padding-top:8px;margin:0}
+.recipe-card__allergens,.recipe-card__warn{margin:4px 0 0}
+.recipe-grid{column-gap:22px;row-gap:32px}
+@media (max-width:600px){
+  .recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px;row-gap:24px}
+  .recipe-card__body h3{font-size:1rem}
+  .recipe-card__chips span{font-size:.72rem;padding:4px 9px}
+}
+.recipe-card__body h3,.media-card h3{font-size:1.15rem !important;line-height:1.3 !important;letter-spacing:-.01em !important}
+@media (max-width:600px){.recipe-card__body h3{font-size:1rem !important}}
+@media (max-width:600px){
+  .recipe-card__allergens,.recipe-card__warn{font-size:.72rem;padding:4px 9px;border-radius:10px}
+  .recipe-card__media .recipe-card__time{left:8px;bottom:8px;font-size:.75rem;padding:4px 9px}
+  .recipe-card__chips{gap:5px}
+}
+.guide-category__head + .media-grid{margin-top:22px}
+.related .media-grid{margin-top:18px}
+.article-content .media-card,.related .media-card{color:var(--dark);text-decoration:none}
+/* Card text: small article title, then the teaser as the main line */
+.media-card .media-card__title{
+  order:0;margin:0 0 4px;
+  font-size:.82rem !important;line-height:1.3 !important;letter-spacing:0 !important;
+  font-weight:700;color:var(--primary-2);
+}
+.media-card .media-card__teaser{margin:0;color:var(--dark);font-weight:600;font-size:1.02rem;line-height:1.45}
+
+/* ================================================================ */
+/* Recipe detail — laid out like the app                             */
+/* ================================================================ */
+.recipe{max-width:760px}
+.recipe-hero{position:relative;margin:4px 0 0}
+.recipe-hero__photo{border-radius:28px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 16px 36px rgba(36,28,32,.12)}
+.recipe-hero__photo picture,.recipe-hero__photo img{display:block;width:100%;height:100%}
+.recipe-hero__photo img{object-fit:cover}
+.recipe-hero__photo--cutout{background:linear-gradient(180deg,#fff 0%,#fdeee7 100%)}
+.recipe-hero__photo--cutout picture{display:flex;justify-content:center;align-items:center;padding:6% 0 14%}
+.recipe-hero__photo--cutout img{width:auto;max-width:80%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(36,28,32,.14))}
+.recipe-hero__card{
+  position:relative;z-index:1;width:min(440px,86%);margin:-64px auto 0;padding:16px 24px 14px;
+  background:#fff;border-radius:22px;text-align:center;box-shadow:0 12px 30px rgba(36,28,32,.12);
+}
+.recipe-hero__category{margin:0 0 4px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+.recipe-hero__card h1{margin:0 0 10px;font-size:clamp(1.5rem,3.4vw,2rem) !important;line-height:1.15 !important}
+.recipe-hero__meta{display:flex;justify-content:center;gap:22px;margin:0;color:var(--muted);font-size:.95rem}
+.recipe-hero__meta span{display:inline-flex;align-items:center;gap:6px}
+.recipe .recipe__excerpt{margin:26px 0 0;color:var(--dark);line-height:1.7;font-size:1.05rem}
+
+.recipe-block{margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.9)}
+.recipe-block h2{margin:0 0 14px;font-size:1.3rem !important;line-height:1.3 !important;letter-spacing:-.01em !important}
+.recipe-block h3{margin:14px 0 8px;font-size:.95rem !important;line-height:1.3 !important;letter-spacing:0 !important}
+.recipe-allergens{padding:24px 0 0;background:none;border-radius:0;border-left:0;border-right:0;border-bottom:0;box-shadow:none}
+.allergen-tiles{display:flex;flex-wrap:wrap;gap:14px;list-style:none;margin:0;padding:0}
+.allergen-tile{display:flex;flex-direction:column;align-items:center;gap:6px;width:80px;text-align:center}
+.allergen-tile__img{display:block;width:72px;height:72px;border-radius:16px;overflow:hidden;background:rgba(229,115,115,.14);box-shadow:0 6px 14px rgba(36,28,32,.1)}
+.allergen-tile__img img{display:block;width:100%;height:100%;object-fit:cover}
+.allergen-tile__name{font-size:.8rem;font-weight:700;line-height:1.25}
+.recipe-allergens__none,.recipe-allergens__free{margin:0;color:var(--muted)}
+.recipe-allergens__free{margin-top:14px;font-size:.92rem}
+
+.recipe-author__row{display:flex;align-items:center;gap:14px}
+.recipe-author__logo{width:56px;height:56px;border-radius:50%;object-fit:contain;background:#fff;padding:6px;box-shadow:0 4px 12px rgba(36,28,32,.1);flex:0 0 auto}
+.recipe-author__logo--empty{display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--primary)}
+.recipe-author__row strong{display:block;font-size:1.05rem}
+.recipe-author__link{display:block;font-size:.85rem;color:var(--muted)}
+
+.recipe .recipe-ingredients,.recipe .recipe-steps{padding:24px 0 0;background:none;border:0;border-top:1px solid rgba(255,255,255,.9);border-radius:0;box-shadow:none}
+.recipe-ingredients__servings{margin:-6px 0 12px;font-weight:700;color:var(--dark)}
+.recipe-ingredients ul{list-style:none;margin:0;padding:0}
+.recipe-ingredients li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:6px 0;border:0;line-height:1.45}
+.recipe-ingredients__amount{font-weight:400;color:var(--muted)}
+.recipe-ingredients__name{font-weight:700}
+.recipe-ingredients__name a{color:var(--dark);text-decoration:underline;text-underline-offset:3px}
+.recipe-ingredients__note{font-weight:400}
+
+.recipe-steps ol{list-style:none;counter-reset:step;margin:0;padding:0}
+.recipe-steps li{counter-increment:step;position:relative;padding:4px 0 0 52px;margin:0 0 18px;line-height:1.65}
+.recipe-steps li::before{
+  content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:#fff;color:var(--primary);
+  font-weight:800;font-size:.85rem;box-shadow:0 4px 10px rgba(36,28,32,.1);
+}
+.recipe .recipe-tip{margin:10px 0 0;padding:20px 24px;border-radius:20px;background:#fff;box-shadow:0 10px 26px rgba(36,28,32,.08)}
+.recipe .recipe-tip strong{display:block;font-size:1rem;letter-spacing:0;text-transform:none;font-weight:700;color:var(--primary)}
+.recipe-nutrition dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0}
+.recipe-nutrition div{padding:0;background:none;text-align:left;display:flex;flex-direction:column}
+.recipe-nutrition dd{order:0;margin:0;font-weight:800;font-size:1.05rem}
+.recipe-nutrition dt{order:1;font-size:.85rem;color:var(--muted)}
+.recipe > .related,.recipe > .app-cta{margin-top:40px}
+@media (max-width:600px){
+  .recipe-hero__photo{border-radius:22px;aspect-ratio:4/3}
+  .recipe-hero__card{margin-top:-48px;width:90%}
+  .recipe-ingredients li{grid-template-columns:78px minmax(0,1fr)}
+}
+
+/* Recipe cards with the full app photo (image2) fill the tile */
+.recipe-card__media--photo{background:none}
+.recipe-card__media--photo picture{height:100%;width:100%}
+.recipe-card__media--photo img{width:100%;max-width:none;height:100%;object-fit:cover;filter:none}
+.allergen-tile--text{width:auto}
+.allergen-tile--text .allergen-tile__name{padding:7px 14px;border-radius:999px;background:#fff;box-shadow:0 4px 10px rgba(36,28,32,.08);font-size:.85rem}
+.recipe-ingredients__amount{color:rgba(36,28,32,.7)}
+.download--inline{margin:56px 0 0;text-align:center}
+.download--inline h2{margin:0 0 22px}
+.download--inline .store-links{justify-content:center}
