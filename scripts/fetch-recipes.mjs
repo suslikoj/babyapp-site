@@ -47,16 +47,24 @@ function firstImage(content) {
   return null;
 }
 
+// Field lookup that ignores case (Storyblok blocks may use Name / name), like the app does.
+function field(obj, key) {
+  if (!obj || typeof obj !== 'object') return undefined;
+  if (key in obj) return obj[key];
+  const hit = Object.keys(obj).find((k) => k.toLowerCase() === key.toLowerCase());
+  return hit ? obj[hit] : undefined;
+}
+
 // Recipe author block (name, link, logo). Empty → the recipe is by Bejby bez alergií.
-function recipeAuthor(field) {
-  const block = Array.isArray(field) ? field[0] : field;
-  const name = (block?.name || '').trim();
+function recipeAuthor(raw) {
+  const block = Array.isArray(raw) ? raw[0] : raw;
+  const name = String(field(block, 'name') || '').trim();
   if (!name) return null;
-  const link = block.link;
+  const link = field(block, 'link');
   let url = typeof link === 'string' ? link : link?.url || (link?.linktype === 'url' ? link?.cached_url : '') || '';
   url = url.trim();
   if (url && !/^https?:\/\//i.test(url) && /^[\w.-]+\.[a-z]{2,}/i.test(url)) url = `https://${url}`;
-  return { name, url: /^https?:\/\//i.test(url) ? url : '', logo: block.logo?.filename || null };
+  return { name, url: /^https?:\/\//i.test(url) ? url : '', logo: field(block, 'logo')?.filename || null };
 }
 
 function number(value) {
@@ -135,10 +143,10 @@ async function main() {
       storyblokSlug: story.slug,
       ...texts(c, story.name),
       // image2 = full photo used in the app; image = older cut-out (fallback).
-      image: c.image2?.filename || c.image?.filename || null,
-      imageAlt: c.image2?.alt || c.image?.alt || '',
-      photo: Boolean(c.image2?.filename),
-      author: recipeAuthor(c.author),
+      image: field(c, 'image2')?.filename || c.image?.filename || null,
+      imageAlt: field(c, 'image2')?.alt || c.image?.alt || '',
+      photo: Boolean(field(c, 'image2')?.filename),
+      author: recipeAuthor(field(c, 'author')),
       category: categoryByUuid[c.category] || null,
       tagKeys: (c.tags || []).map((t) => (t.startsWith('no_allergen') || t === 'allergen_free' ? 'no_allergen' : t)),
       servings: number(c.servings),
@@ -170,5 +178,5 @@ async function main() {
 try {
   await main();
 } catch (error) {
-  console.warn(`fetch-recipes: ${error.message} – používám uložený content/recepty/recipes.json`);
+  console.warn(`fetch-recipes: CHYBA – ${error.message} – používám uložený content/recepty/recipes.json (fotky image2 a autoři se neaktualizují)`);
 }

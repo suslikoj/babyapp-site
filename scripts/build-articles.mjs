@@ -414,7 +414,7 @@ function guideHubPage(lang) {
     </section>`).join('\n    ');
   const main = `  <section class="section guide-hub">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">${g.t.hubEyebrow}</p><h1>${g.t.hubH1}</h1></div><p>${g.t.hubLead}</p></div>
+      <div class="section-heading"><div><h1>${g.t.hubH1}</h1></div></div>
       <nav class="guide-chips" aria-label="${g.t.chipsLabel}">${cats.map((c) => `<a href="#${c.slug}">${c.title}</a>`).join('')}</nav>
     ${sections}
       ${appCta(lang, g.cta.diet, `${lang === 'cs' ? 'pruvodce-cz' : 'guide-en'}`)}
@@ -446,7 +446,7 @@ function categoryHubPage(lang, category) {
   const main = `  ${breadcrumbs(lang, trail)}
   <section class="section guide-hub">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">${g.t.catEyebrow}</p><h1>${category.title}</h1></div><p>${category.intro}</p></div>
+      <div class="section-heading"><div><h1>${category.title}</h1></div><p>${category.intro}</p></div>
       <div class="media-grid">${items.map((item) => card(item)).join('')}</div>
       <nav class="guide-chips guide-chips--others" aria-label="${g.t.otherTopicsLabel}"><span>${g.t.otherTopics}</span>${others.map((c) => `<a href="${g.mod.categoryPath(c.slug)}">${c.title}</a>`).join('')}</nav>
       ${appCta(lang, g.categoryCta[category.slug], `${category.slug}-${lang === 'cs' ? 'cz' : 'en'}`)}
@@ -496,13 +496,11 @@ function aboutPage(lang, markdown) {
       <div class="about-me about-page__head">
         <picture><source srcset="/assets/me.webp" type="image/webp"><img src="/assets/me.jpg" alt="${a.photoAlt}" width="785" height="1046" fetchpriority="high" decoding="async"></picture>
         <div>
-          <p class="eyebrow">${a.eyebrow}</p>
           <h1>${a.h1}</h1>
         </div>
       </div>
       <div class="article-content about-page__body">
         ${body}
-        <aside class="author-box about-page__signature" aria-label="${a.signatureLabel}"><picture><source srcset="${AUTHOR.photoWebp}" type="image/webp"><img class="author-box__photo" src="${AUTHOR.photo}" alt="${AUTHOR.name}" width="320" height="320" loading="lazy" decoding="async"></picture><div class="author-box__body"><strong class="author-box__name">Jiřina</strong><p class="author-box__role">${a.signature}</p></div></aside>
         <section class="about-page__contact" id="${a.contactId}">
           <h2>${a.contact}</h2>
           <p>${a.contactText}</p>
