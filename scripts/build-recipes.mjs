@@ -252,7 +252,7 @@ function listingPage(lang) {
 
   const main = `  <section class="section recipes-hub">
     <div class="container">
-      <div class="section-heading"><div><p class="eyebrow">${t.listEyebrow}</p><h1>${t.listH1}</h1></div><p>${t.listLead}</p></div>
+      <div class="section-heading"><div><h1>${t.listH1}</h1></div><p>${t.listLead}</p></div>
       <div class="recipe-filters" id="recipeFilters" hidden>
         <div class="recipe-filters__row"><span class="recipe-filters__label">${f.category}</span><div class="recipe-filters__options">${chip('category', '', f.all, { pressed: true })}${categoriesUsed.map((c) => chip('category', c.slug, lang === 'en' ? c.nameEn : c.name)).join('')}</div></div>
         <div class="recipe-filters__row"><span class="recipe-filters__label">${f.free}</span><div class="recipe-filters__options">${allergensUsed.map((k) => chip('free', k, t.allergens[k])).join('')}</div></div>

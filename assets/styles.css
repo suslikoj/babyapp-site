@@ -1218,3 +1218,100 @@ body{
 .download--inline{margin:56px 0 0;text-align:center}
 .download--inline h2{margin:0 0 22px}
 .download--inline .store-links{justify-content:center}
+
+/* ================================================================ */
+/* 2026-11-24: phone wash: colour on the left, white on the right  */
+/* language switch moved in from the edge, hero art no longer cut   */
+/* ================================================================ */
+.hero__art{margin-left:0}
+.lang{padding-right:6px}
+@media (max-width:860px){
+  :root{--bg-wash:linear-gradient(270deg,#fff 10%,var(--bg) 100%)}
+  .hero__art{margin:0 auto;max-width:88%}
+  .lang{padding-right:14px}
+}
+
+/* ================================================================ */
+/* 2026-11-24: recipe filters — compact, label above chips, chips    */
+/* without outline: soft raised bubbles (outer + inner shadow)       */
+/* ================================================================ */
+.recipe-filters{gap:18px;padding:0;background:none;border:0;border-radius:0;margin:4px 0 28px}
+.recipe-filters__row{display:block}
+.recipe-filters__label{
+  display:block;padding:0 0 8px;
+  font-size:.95rem;font-weight:700;text-transform:none;letter-spacing:0;color:var(--dark);
+}
+.recipe-filters__options{gap:8px}
+.filter-chip{
+  border:0;background:#fff;padding:8px 15px;
+  box-shadow:0 2px 6px rgba(150,70,55,.14),inset 0 -2px 3px rgba(150,70,55,.08),inset 0 1px 1px rgba(255,255,255,.9);
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;
+}
+.filter-chip:hover{border:0;transform:translateY(-1px);box-shadow:0 5px 12px rgba(150,70,55,.18),inset 0 -2px 3px rgba(150,70,55,.08),inset 0 1px 1px rgba(255,255,255,.9)}
+.filter-chip:active{transform:translateY(0)}
+.filter-chip[aria-pressed="true"]{
+  background:var(--primary);color:#fff;border:0;
+  box-shadow:0 2px 6px rgba(229,115,115,.35),inset 0 2px 4px rgba(120,30,30,.25);
+}
+.filter-chip:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.recipe-filters__count{margin-left:0}
+@media (max-width:640px){
+  .recipe-filters{padding:0;gap:16px}
+  .recipe-filters__label{padding:0 0 6px}
+  .recipe-filters__options{padding:0}
+  .recipe-filters__count{padding:0}
+}
+
+/* 2026-11-24: recipe description bubbles on white */
+.recipe-card__chips span,.recipe-card__allergens,.recipe-tags span{background:#fff !important}
+
+/* ================================================================ */
+/* 2026-11-24: situation cards — plain rounded rectangle, situation */
+/* centred; on hover / focus the answer fades in in its place.      */
+/* Both lines share one grid cell, so the card never jumps in size. */
+/* ================================================================ */
+.fit{
+  display:grid;place-items:center;text-align:center;
+  min-height:150px;padding:26px 28px;
+  border-radius:24px !important;border:1.5px solid #fff;
+  background:rgba(255,255,255,.28);
+  cursor:default;outline:none;
+  transition:border-color .35s ease,background .45s ease,box-shadow .45s ease;
+}
+.fit > p{grid-area:1/1;margin:0;max-width:34ch;transition:opacity .45s ease,transform .5s cubic-bezier(.2,.7,.2,1),filter .45s ease}
+.fit__now{color:var(--dark);font-size:1.08rem;font-weight:500;line-height:1.5}
+.fit__help{
+  display:block;padding:0;color:var(--primary-2);
+  font-size:1.1rem;font-weight:700;line-height:1.45;
+  opacity:0;transform:translateY(10px);filter:blur(3px);
+}
+.fit__help::before{content:none !important;display:none !important}
+.fit:hover,.fit:focus-visible{
+  border-color:var(--primary);background:rgba(255,255,255,.7);
+  box-shadow:0 10px 28px rgba(229,115,115,.16);
+}
+.fit:hover .fit__now,.fit:focus-visible .fit__now{opacity:0;transform:translateY(-10px);filter:blur(3px)}
+.fit:hover .fit__help,.fit:focus-visible .fit__help{opacity:1;transform:none;filter:none;transition-delay:.08s}
+/* touch screens have no hover: tap shows the answer, both stay readable */
+@media (hover:none){
+  .fit:focus .fit__now{opacity:0;transform:translateY(-10px);filter:blur(3px)}
+  .fit:focus .fit__help{opacity:1;transform:none;filter:none}
+  .fit:focus{border-color:var(--primary);background:rgba(255,255,255,.7)}
+}
+@media (prefers-reduced-motion:reduce){.fit > p{transition:opacity .2s ease;transform:none !important;filter:none !important}}
+/* soft outline so the rounded corners read on the white side of the wash too */
+.fit{box-shadow:0 2px 12px rgba(150,70,55,.09)}
+.fit:hover,.fit:focus-visible{box-shadow:0 10px 28px rgba(229,115,115,.18)}
+/* transparent card in both states */
+.fit,.fit:hover,.fit:focus-visible,.fit:focus{background:transparent !important}
+
+/* Touch screens (no hover): situation and answer stacked; the answer  */
+/* fades in on its own once the card scrolls into view (.in-view).     */
+@media (hover:none){
+  .fit{grid-template-rows:auto auto;gap:12px;min-height:0}
+  .fit > p{grid-area:auto}
+  .fit__now{opacity:1 !important;transform:none !important;filter:none !important}
+  .fit__help{opacity:0;transform:translateY(10px);filter:blur(3px);transition-delay:.9s}
+  .fit.in-view .fit__help{opacity:1;transform:none;filter:none}
+  .fit:focus{border-color:#fff}
+}
